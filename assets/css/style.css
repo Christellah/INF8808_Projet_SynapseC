@@ -21,3 +21,103 @@
     position: absolute;
     text-align: center;
 }
+
+/***** Body *****/
+body {
+  margin:0;
+  background-color: #2880B1;
+}
+
+/***** Navigation bar *****/
+.navbar {
+  /* margin-left:0; */
+  overflow: hidden;
+  background-color: #2880B1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Navigation bar options */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  border-right-style: solid;
+  border-color: white;
+  border-width: 1px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change navigation bar options background on mouse-over */
+.navbar a:hover {
+  background: #A5DAF9;
+  color: black;
+}
+
+/***** Footer *****/
+.footer {
+  bottom: 0;
+  background-color: #2880B1;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+/***** Main Page *****/
+.main-page {
+  margin: 30px auto;
+  width: 90%;
+  padding: 16px;
+  background-color: white;
+}
+
+/***** Page title *****/
+.page-title {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 25px;
+}
+
+/***** Normal text *****/
+.normal-text {
+  margin: auto;
+  max-width: 80%;
+  text-align: justify;
+  font-size: 20px;
+  text-indent: 50px;
+}
+/***** Main sections *****/
+.main-sections {
+  padding-top: 50px;
+  margin: auto;
+  max-width: 80%;
+}
+.main-sections h2 {
+  font-size: 28px;
+}
+.main-sections h3 {
+  font-size: 21px;
+}
+.main-sections .normal-text {
+  /* margin-left: 40px; */
+  max-width: 100%;
+}
+.dataviz-name {
+  margin: 50px auto;
+  max-width: 80%;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+/***** Dataviz *****/
+.dataviz {
+  /* margin: auto; */
+  /* width: 50%; */
+  /* display: block;
+  margin-left: 0; */
+  /* margin-right: auto; */
+  /* width: 10%; */
+}
+

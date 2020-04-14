@@ -1,15 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>INF8808 - Projet Synapse C</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <h1>INF8808 - Projet Synapse C</h1>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <a href="#home">INF8808 - Projet Synapse C</a>
+    <a href="#part-1">Offre</a>
+    <a href="#part-2">Demande</a>
+    <a href="#part-3">Offre vs Demande</a>
+  </nav>
+  
+  <!-- Main page -->
+  <div class="main-page" id="home">
+    
+    <!-- Title -->
+    <section class="page-title">
+      <h2>Les bibliothèques de Montréal : <br/>Qu’ont-elles à nous dire ?</h2>
+    </section>
 
-  <div id="heatmap_frequentation"></div>
+    <!-- Visualizations -->
+    <div>
+      <!-- Introduction -->
+      <p class="normal-text">
+        Montréal étant une ville riche en culture, c’est sans surprise que l’on découvre qu’elle possède de nombreuses bibliothèques.
+        Quelques questions se posent alors : qu’ont-elles à offrir ? Comment la population en tire avantage ? Cette offre suit-elle la demande ?
+        Pour apprendre plus sur ces différents aspects, nous nous sommes basés sur les données ouvertes fournies par la ville de Montréal concernant
+        ses bibliothèques, afin d’observer leur évolution entre 2013 et 2018.
+      </p>
+
+      <!-- Part 1 -->
+      <section class="main-sections" id="part-1">
+        <h2>Qu'est-ce que les bibliothèques de Montréal ont à offrir ?</h2>
+          <!-- Dataviz 1 -->
+          <p class="normal-text">Partons tout d’abord à la rencontre des bibliothèques de Montréal. La carte suivante permet de voir 
+            où sont situées ces différentes bibliothèques, ainsi quelques informations les concernant lorsque l’une d’entre elle est 
+            sélectionnée. Cette section permet de se faire une idée de la popularité des bibliothèques et des services qu’elles offrent.
+          </p>
+          <p class="dataviz-name">Carte de Montréal</p> 
+      </section>
+
+      <!-- Part 2 -->
+      <section class="main-sections" id="part-2">
+        <h2>Que révèle l’utilisation des services des bibliothèques ?</h2>
+        <p class="normal-text">Par la suite, on s’intéresse à l’utilisation des services de ces bibliothèques, 
+          afin de voir ce que l’on peut apprendre des habitudes des clients.
+        </p>
+        <!-- Section 2.1 -->
+        <h3>Évolution des emprunts et des fréquentations</h3>
+          <!-- Dataviz 2.1 -->
+          <p class="normal-text">Le premier usage que l’on propose d’analyser est celui des emprunts de titres. 
+            Ci-dessous se trouve une carte de chaleur présentant pour les bibliothèques l’évolution du nombre d’emprunts par années, 
+            permettant de comparer les évolutions et valeurs entre bibliothèques, mais également au cours du temps pour une bibliothèque précise.
+          </p>
+          <p class="dataviz-name">Heatmap - Évolution des emprunts</p>
+          <!-- <div id="heatmap_frequentation" class=dataviz></div> -->
+          <!-- Dataviz 2.2 -->
+          <p class="normal-text">Le second usage concerne les fréquentations physiques dans les bibliothèques. La visualisation suivante est 
+            similaire à la précédente, et permet d’observer comment évolue le nombre de personnes visitant les bibliothèques au cours des mois.
+          </p>
+          <p class="dataviz-name">Heatmap - Évolution des fréquentations</p>
+        <!-- Section 2.2 -->
+        <h3>Répartitions des emprunts selon les types de publics</h3>
+          <!-- Dataviz 3.1 -->
+          <p class="normal-text">À l’image de la ville, les bibliothèques ont des publics très variés. On propose alors dans cette partie de 
+            découvrir comment cette répartition de l’inventaire pour chaque type de public (jeunes, adultes, aînés, etc) a évolué entre 2013 et 2018. 
+          </p>
+          <p class="dataviz-name">Stacked bar chart - Évolution de la répartition des emprunts selon les types de public</p>
+          <!-- Dataviz 3.2 -->
+          <p class="normal-text">Ensuite, l’analyse se porte sur la comparaison de l’inventaire par type de public entre les bibliothèques en 2018. 
+            Ceci permet de mieux repérer les bibliothèques qui sont davantage spécialisées pour un type de public en particulier.
+          </p>
+          <p class="dataviz-name">Stacked bar chart - Répartition des emprunts selon les types de public en 2018</p>
+        <!-- Section 2.3 -->
+        <h3>Évolution des emprunts et des fréquentations</h3>
+          <!-- Dataviz 4 -->
+          <p class="normal-text">Il faut attendre l’année 2013 pour que la majorité des bibliothèques de la ville connaissent l’avènement 
+            des services numériques tels que les automates. Néanmoins on se doute que cela a eu une incidence sur les habitudes des usagers. 
+            Ici, on fait ressortir l’impact des services électroniques pour les emprunts, renouvellements et retours en comparaison avec 
+            les services en personne, ainsi que l’influence des prêts de livres électroniques par rapport aux livres physiques.
+          </p>
+          <p class="dataviz-name">Grille de Heatmaps - Évolution de l’utilisation des services numériques</p>
+      </section>
+
+      <!-- Part 3 -->
+      <section class="main-sections" id="part-3">
+        <h2>L’offre des bibliothèques suit-elle la demande des utilisateurs ?</h2>
+        <p class="normal-text">Maintenant que vous avez une meilleure idée de ce que les bibliothèques de la ville ont à offrir, 
+          du type de public qu’on y retrouve et de ce que ces personnes y font, voyez-vous le lien entre ces différents aspects? 
+          C’est le but de la visualisation qui vous est proposée dans cette dernière partie : faire ressortir les liens (s’il en existe) 
+          en comparant  l’inventaire des bibliothèques aux emprunts. Il est possible d’en faire une étude comparative générale ou de se 
+          focaliser sur une bibliothèque en particulier.
+        </p>
+        <!-- Dataviz 5.1 -->
+        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts pour une bibliothèque</p>
+        <!-- Dataviz 5.2 -->
+        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts en vue d'ensemble</p>
+      </section>
+
+    </div>    
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Ce projet de visualisation de données a été réalisé dans le cadre du cours INF8808 offert à 
+      Polytechnique Montréal, et proposé par Synapse C. <br/>
+      Hiver 2020
+    </p>
+  </footer>
 
   <script type="text/javascript" src="assets/libs/d3.js"></script>
   <script type="text/javascript" src="assets/libs/d3-tip.js"></script>
