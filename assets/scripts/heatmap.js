@@ -23,7 +23,7 @@ HeatMap = class HeatMap {
             .attr("dy", ".35em")
             .attr("text-anchor", "start")
             .attr("transform", "rotate(-45)");
-        
+
         // y axis
         svg.append("g")
             .call(yAxis);
@@ -43,26 +43,79 @@ HeatMap = class HeatMap {
             .enter()
             .append("g")
             .attr("y", d => y(d.bibliotheque))
-            .attr("transform", d =>
-                "translate(0, " + y(d.bibliotheque) + ")")      
+            .attr("transform", d => "translate(0, " + y(d.bibliotheque) + ")")
             .selectAll("g")
-            .data(function (d, i, j) { return d.frequentation})
+            .data(function (d, i, j) { return d.frequentation })
             .enter()
             .append("rect")
-            .attr("x", function(d) { return x(d.time) })
-            .attr("width", x.bandwidth() )
-            .attr("height", y.bandwidth() )
-            .attr("data-test", d => d.count)
-            .style("fill", function(d) { return colorScale(d.count)} )
+            .attr("x", function (d) { return x(d.time) })
+            .attr("width", x.bandwidth())
+            .attr("height", y.bandwidth())
+            .style("fill", function (d) { return colorScale(d.count) })
+            .attr("class", "heatmap-rect")
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip.hide);
+    }
+
+    /**
+     * Creer une legende
+    *  @see https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583
+     * @static
+     * @param {*} svg
+     */
+    static createLegend(div, width, height, startColor, stopColor, max) {
+        var svg = d3.select(div).append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var legend = svg.append("defs")
+            .append("svg:linearGradient")
+            .attr("id", "gradient")
+            .attr("x1", "0%")
+            .attr("y1", "100%")
+            .attr("x2", "100%")
+            .attr("y2", "100%")
+            .attr("spreadMethod", "pad");
+
+        legend.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", startColor)
+
+        legend.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", stopColor)
+
+        svg.append("rect")
+            .attr("width", width)
+            .attr("height", height - 30)
+            .style("fill", "url(#gradient)");
+
+        var y = d3.scaleLinear()
+            .range([300, 0])
+            .domain([max, 0]);
+
+        var yAxis = d3.axisBottom()
+            .scale(y)
+            .ticks(5);
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate(0,30)")
+            .call(yAxis)
+            .append("text")
+            .attr("y", 0)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("axis title");
+
+        svg.attr("transform", "rotate(-90) translate(-200, -100)");
     }
 
     static domainBibliotheque(y, sources) {
         const bibliotheques = d3.set(sources.map(d => d.bibliotheque));
         y.domain(bibliotheques.values());
     }
-    
+
     static domainX(x) {
         var domain = [];
         var months = HeatMap.months();
@@ -72,13 +125,13 @@ HeatMap = class HeatMap {
                 domain.push(m + " " + a);
             });
         }
-    
+
         x.domain(domain);
     }
-    
-    static domainColor(color, sources) {
+
+    static getMaxFrequentation(sources) {
         var maxLocaux = sources.map(d => d3.max(d.frequentation, f => f.count));
-        color.domain([0, d3.max(maxLocaux)]);
+        return d3.max(maxLocaux);
     }
 
     static getTooltip(data) {
@@ -123,7 +176,7 @@ function createFrequentationSources(data) {
             biblio.bibliotheque = d["Bibliotheque"];
             biblio.annee = parseInt(year);
             biblio.frequentation = [];
-    
+
             mois.forEach(function (m, n) {
                 if (d[m] !== undefined) {
                     var freq = new Object();
@@ -132,7 +185,7 @@ function createFrequentationSources(data) {
                     biblio.frequentation.push(freq);
                 }
             });
-    
+
             sources.push(biblio);
         });
     }

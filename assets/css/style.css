@@ -26,6 +26,7 @@
 body {
   margin:0;
   background-color: #2880B1;
+  font-family: arial,sans-serif;
 }
 
 /***** Navigation bar *****/
@@ -121,3 +122,6 @@ body {
   /* width: 10%; */
 }
 
+.flex-div {
+  display: flex;
+}

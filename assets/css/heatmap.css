@@ -1,0 +1,12 @@
+.heatmap-rect {
+    transition: all .5s;
+    cursor: pointer;
+    stroke: #fff;
+    stroke-width: .5;
+}
+
+.heatmap-rect:hover {
+    stroke-width: 4;
+}
+
+
