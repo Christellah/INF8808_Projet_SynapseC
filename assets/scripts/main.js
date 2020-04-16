@@ -47,7 +47,6 @@ Promise.all(promises).then(function (results) {
     /** HeatMap Emprunts */
     // Data
     var empruntsSources = createEmpruntsSources(results[1]);
-    console.log(empruntsSources);
 
     // Color scale
     var maxEmprunts = d3.max(empruntsSources.map(d => d.emprunts.Total));
