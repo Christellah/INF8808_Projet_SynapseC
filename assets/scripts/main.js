@@ -6,45 +6,64 @@ var promises = [];
 
 // Frequentation
 promises.push(d3.json("./data/frequentation.json"));
+// Emprunts
+promises.push(d3.json("./data/emprunts_format.json"));
 
 Promise.all(promises).then(function (results) {
-    frequentationJson = results[0];
-
-    frequentationSources = createFrequentationSources(frequentationJson);
-
-/**
- * Heatmap fréquentation
- * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
- */
+    /** 
+     * Heatmaps
+     * - Frequentation
+     * - Emprunts
+     * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
+     */
+    // Margins, size, colors
     var margin = { top: 50, right: 30, bottom: 30, left: 200 },
         width = 1024 - margin.left - margin.right,
         height = 700 - margin.top - margin.bottom;
+    var startColor = "#fff2e0";
+    var stopColor = "#ff9100";
+    
+    /** Frequentation */
+    // Data
+    frequentationJson = results[0];
+    frequentationSources = createFrequentationSources(frequentationJson);
 
-    // Create the svg
-    var svg = HeatMap.createSVG("#heatmap_frequentation", width, height, margin);
-
-    // Build X and Y axis
-    var x = d3.scaleBand().range([0, width]);
-    HeatMap.domainX(x);
-    xAxis = d3.axisBottom(x).tickSize(0);    
-
-    var y = d3.scaleBand().range([height, 0]);
-    HeatMap.domainBibliotheque(y, frequentationSources);
-    yAxis = d3.axisLeft(y).tickSize(0);
-
-    // Add the axes
-    HeatMap.addAxes(svg, xAxis, yAxis);
-
-    // Build color scale
-    let startColor = "#fff2e0";
-    let stopColor = "#ff9100";
-    let maxFrequentation = HeatMap.getMaxFrequentation(frequentationSources);
+    // Color scale
+    var maxFrequentation = d3.max(frequentationSources.map(d => d3.max(d.frequentation, f => f.count)));
     var colorScale = d3.scaleLinear()
         .range([startColor, stopColor])
         .domain([0, maxFrequentation]);
 
+    // Tip function
+    var frequentationTooltip = function(data) {
+        return data.time + "<br />" + "Frequentation : " + data.count;
+    }
+
     // Create the heatmap
-    HeatMap.create(svg, frequentationSources, x, y, colorScale);
+    HeatMap.create("#heatmap_frequentation", width, height, margin, frequentationSources, HeatMap.domainMonths, HeatMap.domainBibliotheque, colorScale, frequentationTooltip)
     HeatMap.createLegend("#heatmap_frequentation_legend", 300, 50, startColor, stopColor, maxFrequentation);
+
+
+    /** HeatMap Emprunts */
+    // Data
+    var empruntsSources = createEmpruntsSources(results[1]);
+    console.log(empruntsSources);
+
+    // Color scale
+    var maxEmprunts = d3.max(empruntsSources.map(d => d.emprunts.Total));
+    var colorScale = d3.scaleLinear()
+        .range([startColor, stopColor])
+        .domain([0, maxEmprunts]);
+
+    // Tip function
+    var empruntsTooltip = function(data) {
+        return data.bibliotheque + " en " + data.annee + " : " + data.emprunts.Total + " emprunts.";
+    }
+
+    // Create the heatmap
+    HeatMap.create2("#heatmap_emprunts", width, height, margin, empruntsSources, HeatMap.domainYears, HeatMap.domainBibliotheque, colorScale, empruntsTooltip);
+    HeatMap.createLegend("#heatmap_emprunts_legend", 300, 50, startColor, stopColor, maxEmprunts);
+
+
 })
 
