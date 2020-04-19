@@ -1,85 +1,77 @@
 HeatMap = class HeatMap {
 
-    static create(div, width, height, margin, sources, domainX, domainY, colorScale, tipHTML) {
-        // Create the svg
-        var svg = HeatMap.createSVG(div, width, height, margin);
+    static startColor = "#fff2e0";
+    static stopColor = "#ff9100";
 
-        // Build X and Y axis
-        var x = d3.scaleBand().range([0, width]);
-        domainX(x, sources);
-        var xAxis = d3.axisBottom(x).tickSize(0);
+    constructor(div, width, height, margin, createFunction, tip) {
+        this.width = width;
+        this.height = height;
 
-        var y = d3.scaleBand().range([height, 0]);
-        domainY(y, sources)
-        var yAxis = d3.axisLeft(y).tickSize(0);
+        // Create the SVG
+        this.svg = d3.select(div)
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+                
+        // Color scale
+        this.colorScale = d3.scaleLinear().range([HeatMap.startColor, HeatMap.stopColor]);
 
-        // Add the axes
-        HeatMap.addAxes(svg, xAxis, yAxis);
+        // Create function
+        this.createFunction = createFunction;
 
-        // Tooltip
-        var tip = d3.tip()
+        // Tip
+        this.tip = d3.tip()
             .attr('class', 'd3-tip')
             .offset([-8, 0])
-            .html(tipHTML);
-        svg.call(tip);
+            .html(tip);
 
-        // Create the heatmap
-        svg.selectAll()
-            .data(sources)
-            .enter()
-            .append("g")
-            .attr("y", d => y(d.bibliotheque))
-            .attr("transform", d => "translate(0, " + y(d.bibliotheque) + ")")
-            .selectAll("g")
-            .data(function (d) { return d.frequentation })
-            .enter()
-            .append("rect")
-            .attr("x", function (d) { return x(d.time) })
-            .attr("width", x.bandwidth())
-            .attr("height", y.bandwidth())
-            .style("fill", function (d) { return colorScale(d.count) })
-            .attr("class", "heatmap-rect")
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+        // Axes
+        this.x = d3.scaleBand().range([0, width]);
+        this.y = d3.scaleBand().range([height, 0]);
     }
 
-    // TODO: Merger create et create2
-    static create2(div, width, height, margin, sources, domainX, domainY, colorScale, tipHTML) {
-        // Create the svg
-        var svg = HeatMap.createSVG(div, width, height, margin);
-
-        // Build X and Y axis
-        var x = d3.scaleBand().range([0, width]);
-        domainX(x, sources);
-        var xAxis = d3.axisBottom(x).tickSize(0);
-
-        var y = d3.scaleBand().range([height, 0]);
-        domainY(y, sources)
-        var yAxis = d3.axisLeft(y).tickSize(0);
-
-        // Add the axes
-        HeatMap.addAxes(svg, xAxis, yAxis);
-
+    create(sources, domainX, domainY, getMax) {
         // Tooltip
-        var tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([-8, 0])
-            .html(tipHTML);
-        svg.call(tip);
+        this.svg.call(this.tip);
+        this.updateData(sources, domainX, domainY, getMax);
+    }
 
-        // Create the heatmap
-        svg.selectAll()
-            .data(sources)
-            .enter()
-            .append("rect")
-            .attr("x", d => x(d.annee))
-            .attr("y", d => y(d.bibliotheque))
-            .attr("width", x.bandwidth())
-            .attr("height", y.bandwidth())
-            .style("fill", function (d) { return colorScale(d.emprunts.Total) })
-            .attr("class", "heatmap-rect")
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+    updateData(sources, domainX, domainY, getMax) {
+        this.svg.selectAll("*").remove();
+
+        domainX(this.x, sources);
+        var xAxis = d3.axisBottom(this.x).tickSize(0);
+
+        domainY(this.y, sources)
+        var yAxis = d3.axisLeft(this.y).tickSize(0);
+
+        this.colorScale.domain([0, getMax(sources)])
+        
+        this.addAxes(xAxis, yAxis);
+        this.svg.selectAll().call(this.createFunction, sources, this.x, this.y, this.colorScale, this.tip);
+
+        this.addLegend(getMax(sources));
+    }
+
+    addAxes(xAxis, yAxis) {
+        // x axis
+        this.svg.append("g")
+            .attr("class", "x axis")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("text-anchor", "start")
+            .attr("transform", "translate(-10, 0) rotate(-45)");
+
+        // y axis
+        this.svg.append("g")
+        .attr("class", "y axis")
+            .call(yAxis);
     }
 
     /**
@@ -88,12 +80,10 @@ HeatMap = class HeatMap {
      * @static
      * @param {*} svg
      */
-    static createLegend(div, width, height, startColor, stopColor, max) {
-        var svg = d3.select(div).append("svg")
-            .attr("width", width)
-            .attr("height", height);
+    addLegend(max) {
+        var svgLegend = this.svg.append("svg");
 
-        var legend = svg.append("defs")
+        var legend = svgLegend.append("defs")
             .append("svg:linearGradient")
             .attr("id", "gradient")
             .attr("x1", "0%")
@@ -104,28 +94,28 @@ HeatMap = class HeatMap {
 
         legend.append("stop")
             .attr("offset", "0%")
-            .attr("stop-color", startColor)
+            .attr("stop-color", HeatMap.startColor)
 
         legend.append("stop")
             .attr("offset", "100%")
-            .attr("stop-color", stopColor)
+            .attr("stop-color", HeatMap.stopColor)
 
-        svg.append("rect")
-            .attr("width", width)
-            .attr("height", height - 30)
+        svgLegend.append("rect")
+            .attr("width", this.width)
+            .attr("height", 20)
             .style("fill", "url(#gradient)");
 
         var y = d3.scaleLinear()
-            .range([300, 0])
+            .range([this.width, 0])
             .domain([max, 0]);
 
         var yAxis = d3.axisBottom()
             .scale(y)
             .ticks(5);
 
-        svg.append("g")
+        svgLegend.append("g")
             .attr("class", "y axis")
-            .attr("transform", "translate(0,30)")
+            .attr("transform", "translate(0,20)")
             .call(yAxis)
             .append("text")
             .attr("y", 0)
@@ -133,38 +123,12 @@ HeatMap = class HeatMap {
             .style("text-anchor", "end")
             .text("axis title");
 
-        svg.attr("transform", "rotate(-90) translate(-200, -100)");
+        svgLegend.attr("transform", "translate(0, " + (this.height + 10) + ")");
     }
 
     static months() {
         return ["JA", "FE", "MR", "AL", "MI", "JN", "JL", "AU", "SE", "OC", "NO", "DE"];
-    }
-
-    static createSVG(div, width, height, margin) {
-        return d3.select(div)
-            .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
-    }
-
-    static addAxes(svg, xAxis, yAxis) {
-        // x axis
-        svg.append("g")
-            .call(xAxis)
-            .selectAll("text")
-            .attr("y", 0)
-            .attr("x", 9)
-            .attr("dy", ".35em")
-            .attr("text-anchor", "start")
-            .attr("transform", "rotate(-45)");
-
-        // y axis
-        svg.append("g")
-            .call(yAxis);
-    }
+    }        
 
     static domainBibliotheque(y, sources) {
         const bibliotheques = d3.set(sources.map(d => d.bibliotheque));
@@ -172,32 +136,47 @@ HeatMap = class HeatMap {
     }
 
     static domainMonths(x, sources) {
-        var domain = [];
-        var months = HeatMap.months();
-        var a;
-        for (a = 2013; a <= 2018; a++) {
-            months.forEach(function (m, n) {
-                domain.push(m + " " + a);
-            });
-        }
-
+        var years = d3.set(sources.map(d => d.annee)).values();
+        var domain = years.map(a => HeatMap.months().map(m => m + " " + a)).flat();
         x.domain(domain);
     }
 
     static domainYears(y, sources) {
         y.domain([2013, 2014, 2015, 2016, 2017, 2018]);
-    }    
-}
+    }
 
-/**
- * Transforme une chaîne de caractère en nombre entier.
- * La chaîne doit déjà représenter un entier dont les miliers 
- * séparés par des virgules.
- * @param {*} value
- * @returns {int}
- */
-function convertFrequentationValue(value) {
-    return parseInt(value.replace(",", ""));
+    static createHeatMapFrequentation(selection, sources, x, y, colorScale, tip) {       
+        selection.data(sources)
+            .enter()
+            .append("g")
+            .attr("y", d => y(d.bibliotheque))
+            .attr("transform", d => "translate(0, " + y(d.bibliotheque) + ")")
+            .selectAll("g")
+            .data(function (d) { return d.frequentation })
+            .enter()
+            .append("rect")
+            .attr("x", function (d) { return x(d.time) })            
+            .attr("width", x.bandwidth())
+            .attr("height", y.bandwidth())
+            .style("fill", function (d) { return colorScale(d.count) })
+            .attr("class", "heatmap-rect")
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);           
+    }
+
+    static createHeatMapEmprunts(selection, sources, x, y, colorScale, tip) {
+        selection.data(sources)
+        .enter()
+            .append("rect")
+            .attr("x", d => x(d.annee))
+            .attr("y", d => y(d.bibliotheque))
+            .attr("width", x.bandwidth())
+            .attr("height", y.bandwidth())
+            .style("fill", function (d) { return colorScale(d.emprunts.Total) })
+            .attr("class", "heatmap-rect")
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+    }
 }
 
 /**
@@ -222,6 +201,10 @@ function createFrequentationSources(data) {
         data[year].forEach(function (d, i) {
             var biblio = new Object();
             biblio.bibliotheque = d["Bibliotheque"];
+
+            // Recuperer l'arrondissement
+            biblio.arrondissement = getArrondissement(d["Bibliotheque"]);
+
             biblio.annee = parseInt(year);
             biblio.frequentation = [];
 
@@ -229,7 +212,7 @@ function createFrequentationSources(data) {
                 if (d[m] !== undefined) {
                     var freq = new Object();
                     freq.time = mois[n] + " " + year;
-                    freq.count = convertFrequentationValue(d[m]);
+                    freq.count = parseInt(d[m].replace(",", ""));
                     biblio.frequentation.push(freq);
                 }
             });
@@ -274,4 +257,14 @@ function createEmpruntsSources(data) {
     }
 
     return sources;
+}
+
+function getArrondissement(nomBibliotheque) {
+    let regexp = /\(...\)/g;
+    let matches = nomBibliotheque.match(regexp);
+    if (matches !== null) {
+        return matches[0].replace("(", "").replace(")", "");
+    } else {
+        return nomBibliotheque;
+    }
 }
