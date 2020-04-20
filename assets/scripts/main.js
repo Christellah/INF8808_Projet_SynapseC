@@ -19,8 +19,8 @@ Promise.all(promises).then(function (results) {
 
     // Margins, size, colors
     var margin = { top: 60, right: 30, bottom: 60, left: 200 },
-        width = 700 - margin.left - margin.right,
-        height = 700 - margin.top - margin.bottom;
+        width = 500 - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
 
     /** Frequentation */
     // Data

@@ -10,8 +10,10 @@
 }
 
 #yearChoice {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
     margin-bottom: 30px;
-
 }
 
 
