@@ -5,6 +5,8 @@
   <title>INF8808 - Projet Synapse C</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/heatmap.css">
+  <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
+
 </head>
 <body>
 
@@ -68,14 +70,9 @@
             similaire à la précédente, et permet d’observer comment évolue le nombre de personnes visitant les bibliothèques au cours des mois.
           </p>
           <p class="dataviz-name">Heatmap - Évolution des fréquentations</p>
-          Année : <select id="yearChoice">
-            <option>2013</option>
-            <option>2014</option>
-            <option>2015</option>
-            <option>2016</option>
-            <option>2017</option>
-            <option>2018</option>
-          </select>
+          <div class="slidecontainer">
+            <div id="yearChoice"></div>
+          </div>
           <div class="flex-div">
             <div id="heatmap_frequentation" class="dataviz"></div>
             <div id="heatmap_frequentation_legend"></div>
@@ -133,6 +130,9 @@
 
   <script type="text/javascript" src="assets/libs/d3.js"></script>
   <script type="text/javascript" src="assets/libs/d3-tip.js"></script>
+  <script type="text/javascript" src="assets/libs/wNumb.min.js"></script>
+  <script type="text/javascript" src="assets/libs/nouislider/nouislider.min.js"></script>
+
   <script type="text/javascript" src="assets/scripts/heatmap.js"></script>
   <script type="text/javascript" src="assets/scripts/main.js"></script>
 </body>

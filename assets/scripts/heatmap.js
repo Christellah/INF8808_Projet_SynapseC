@@ -3,9 +3,13 @@ HeatMap = class HeatMap {
     static startColor = "#fff2e0";
     static stopColor = "#ff9100";
 
-    constructor(div, width, height, margin, createFunction, tip) {
+    constructor(div, width, height, margin, createFunction, domainX, domainY, getMax, tip) {
         this.width = width;
         this.height = height;
+
+        this.domainX = domainX;
+        this.domainY = domainY;
+        this.getMax = getMax;
 
         // Create the SVG
         this.svg = d3.select(div)
@@ -33,27 +37,31 @@ HeatMap = class HeatMap {
         this.y = d3.scaleBand().range([height, 0]);
     }
 
-    create(sources, domainX, domainY, getMax) {
+    create(sources) {
         // Tooltip
         this.svg.call(this.tip);
-        this.updateData(sources, domainX, domainY, getMax);
+
+        // Sauvegarder la valeur max
+        this.maxValue = this.getMax(sources);
+
+        this.colorScale.domain([0, this.getMax(sources)]);
+        this.updateData(sources);
+
     }
 
-    updateData(sources, domainX, domainY, getMax) {
+    updateData(sources) {
         this.svg.selectAll("*").remove();
 
-        domainX(this.x, sources);
+        this.domainX(this.x, sources);
         var xAxis = d3.axisBottom(this.x).tickSize(0);
 
-        domainY(this.y, sources)
+        this.domainY(this.y, sources)
         var yAxis = d3.axisLeft(this.y).tickSize(0);
-
-        this.colorScale.domain([0, getMax(sources)])
         
         this.addAxes(xAxis, yAxis);
         this.svg.selectAll().call(this.createFunction, sources, this.x, this.y, this.colorScale, this.tip);
 
-        this.addLegend(getMax(sources));
+        this.addLegend();
     }
 
     addAxes(xAxis, yAxis) {
@@ -80,7 +88,7 @@ HeatMap = class HeatMap {
      * @static
      * @param {*} svg
      */
-    addLegend(max) {
+    addLegend() {
         var svgLegend = this.svg.append("svg");
 
         var legend = svgLegend.append("defs")
@@ -107,7 +115,7 @@ HeatMap = class HeatMap {
 
         var y = d3.scaleLinear()
             .range([this.width, 0])
-            .domain([max, 0]);
+            .domain([this.maxValue, 0]);
 
         var yAxis = d3.axisBottom()
             .scale(y)
