@@ -38,18 +38,17 @@ HeatMap = class HeatMap {
     }
 
     create(sources) {
-        // Tooltip
-        this.svg.call(this.tip);
-
         // Sauvegarder la valeur max
         this.maxValue = this.getMax(sources);
 
         this.colorScale.domain([0, this.getMax(sources)]);
         this.updateData(sources);
-
     }
 
     updateData(sources) {
+        // Tooltip
+        this.svg.call(this.tip);
+
         this.svg.selectAll("*").remove();
 
         this.domainX(this.x, sources);

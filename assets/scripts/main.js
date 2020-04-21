@@ -16,6 +16,10 @@ Promise.all(promises).then(function (results) {
      * - Emprunts
      * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
      */
+    // Number format
+    var numberFormat = wNumb({
+        thousand: ' ',
+    });
 
     // Margins, size, colors
     var margin = { top: 60, right: 30, bottom: 60, left: 200 },
@@ -28,7 +32,7 @@ Promise.all(promises).then(function (results) {
 
     // Tip function
     var frequentationTooltip = function (data) {
-        return data.time + "<br />" + "Frequentation : " + data.count;
+        return data.time + "<br />" + "Frequentation : " + numberFormat.to(data.count);
     }
 
     // Max function
@@ -68,18 +72,38 @@ Promise.all(promises).then(function (results) {
 
     // Tip function
     var empruntsTooltip = function (data) {
-        return data.bibliotheque + " en " + data.annee + " : " + data.emprunts.Total + " emprunts.";
+        return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts.Total) + " emprunts.";
     }
 
     // Max function
     function getMaxEmprunts(sources) {
-        console.log(sources);
         return d3.max(sources.map(d => d.emprunts.Total))
     }
 
     // Create the heatmap
     var heatmapEmprunts = new HeatMap("#heatmap_emprunts", width, height, margin, HeatMap.createHeatMapEmprunts, HeatMap.domainYears, HeatMap.domainBibliotheque, getMaxEmprunts, empruntsTooltip);
     heatmapEmprunts.create(empruntsSources);
+
+    d3.select("#selectFormat").on('change', function () {
+        let value = this.value;
+        heatmapEmprunts.maxValue = d3.max(empruntsSources.map(d => d.emprunts[value]));
+
+        heatmapEmprunts.tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-8, 0])
+            .html(function (data) {
+                return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts[value]) + " emprunts.";
+            });
+
+        heatmapEmprunts.colorScale.domain([0, heatmapEmprunts.maxValue]);
+
+        heatmapEmprunts.updateData(empruntsSources);
+
+        d3.select("#heatmap_emprunts")
+            .select("svg")
+            .selectAll(".heatmap-rect")
+            .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
+    });
 
 })
 
