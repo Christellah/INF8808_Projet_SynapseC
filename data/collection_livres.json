@@ -1,0 +1,1419 @@
+{
+    "2013": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
+            "ADULTE": "72738",
+            "JEUNE": "50759"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "41521",
+            "JEUNE": "32920"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "406",
+            "JEUNE": "28739"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "8967",
+            "JEUNE": "6938"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "72918",
+            "JEUNE": "32438"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "26771",
+            "JEUNE": "23693"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "67855",
+            "JEUNE": "42123"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "77863",
+            "JEUNE": "50957"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "23517",
+            "JEUNE": "27245"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "33334",
+            "JEUNE": "19219"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "10485",
+            "JEUNE": "9617"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "67058",
+            "JEUNE": "20203"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "154048",
+            "JEUNE": "61399"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "1700",
+            "JEUNE": "23791"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "32155",
+            "JEUNE": "33021"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "32229",
+            "JEUNE": "21761"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "43084",
+            "JEUNE": "32756"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "17049",
+            "JEUNE": "16745"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "22537",
+            "JEUNE": "18009"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "54623",
+            "JEUNE": "37586"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "29541",
+            "JEUNE": "21995"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "52348",
+            "JEUNE": "20035"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MILE END",
+            "ADULTE": "39323",
+            "JEUNE": "27059"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "36842",
+            "JEUNE": "31240"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "103750",
+            "JEUNE": "79216"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "31421",
+            "JEUNE": "20813"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "42674",
+            "JEUNE": "27522"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "65178",
+            "JEUNE": "37818"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "43181",
+            "JEUNE": "36328"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "39922",
+            "JEUNE": "30144"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "67700",
+            "JEUNE": "48582"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "74636",
+            "JEUNE": "51833"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "96150",
+            "JEUNE": "56185"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "128148",
+            "JEUNE": "62490"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "20399",
+            "JEUNE": "17410"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "29781",
+            "JEUNE": "23903"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "19047",
+            "JEUNE": "20474"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "20389",
+            "JEUNE": "16560"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "31786",
+            "JEUNE": "22102"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "106451",
+            "JEUNE": "30455"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "47544",
+            "JEUNE": "31840"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "19506",
+            "JEUNE": "37648"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "39665",
+            "JEUNE": "38194"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "47279",
+            "JEUNE": "44737"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "43551",
+            "JEUNE": "39874"
+        }
+    ],
+    "2014": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "41485",
+            "JEUNE": "31591"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "39",
+            "JEUNE": "27619"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "8991",
+            "JEUNE": "7021"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "66818",
+            "JEUNE": "31752"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "20615",
+            "JEUNE": "21043"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "66734",
+            "JEUNE": "39471"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "64161",
+            "JEUNE": "51305"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "24103",
+            "JEUNE": "27330"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "32909",
+            "JEUNE": "19136"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "10427",
+            "JEUNE": "10212"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "69386",
+            "JEUNE": "20851"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "148963",
+            "JEUNE": "62101"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "1679",
+            "JEUNE": "24281"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "27464",
+            "JEUNE": "28935"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "27008",
+            "JEUNE": "22571"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "34520",
+            "JEUNE": "30755"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "16728",
+            "JEUNE": "16884"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "23086",
+            "JEUNE": "18646"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "49297",
+            "JEUNE": "36399"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "29135",
+            "JEUNE": "22487"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "50606",
+            "JEUNE": "19133"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
+            "ADULTE": "38190",
+            "JEUNE": "28561"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "38354",
+            "JEUNE": "30804"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "98405",
+            "JEUNE": "78552"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "31447",
+            "JEUNE": "21546"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "37979",
+            "JEUNE": "26869"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "67059",
+            "JEUNE": "39247"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "41421",
+            "JEUNE": "35381"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "40276",
+            "JEUNE": "30274"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "67817",
+            "JEUNE": "48950"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "81102",
+            "JEUNE": "57217"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "87880",
+            "JEUNE": "46348"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "117420",
+            "JEUNE": "61536"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "18993",
+            "JEUNE": "16140"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "28861",
+            "JEUNE": "23033"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "19466",
+            "JEUNE": "19691"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "20350",
+            "JEUNE": "17237"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "31755",
+            "JEUNE": "21006"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "104563",
+            "JEUNE": "30222"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "48035",
+            "JEUNE": "30988"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "18376",
+            "JEUNE": "36011"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "40222",
+            "JEUNE": "36444"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "44594",
+            "JEUNE": "44565"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "44345",
+            "JEUNE": "40497"
+        }
+    ],
+    "2015": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
+            "ADULTE": "69012",
+            "JEUNE": "49293"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "41817",
+            "JEUNE": "32157"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "51",
+            "JEUNE": "26626"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "8954",
+            "JEUNE": "7160"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "67943",
+            "JEUNE": "32267"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "19365",
+            "JEUNE": "19245"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "69691",
+            "JEUNE": "40310"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "52360",
+            "JEUNE": "51881"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "24783",
+            "JEUNE": "27030"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "32863",
+            "JEUNE": "19357"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "11211",
+            "JEUNE": "9691"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "62521",
+            "JEUNE": "17439"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "145223",
+            "JEUNE": "61090"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "1310",
+            "JEUNE": "23785"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "26873",
+            "JEUNE": "27341"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "29550",
+            "JEUNE": "22662"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "33821",
+            "JEUNE": "31411"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "16290",
+            "JEUNE": "17389"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "46292",
+            "JEUNE": "37342"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "27756",
+            "JEUNE": "21196"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "22459",
+            "JEUNE": "18704"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "51548",
+            "JEUNE": "20135"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
+            "ADULTE": "39264",
+            "JEUNE": "30193"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "36819",
+            "JEUNE": "30751"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "89191",
+            "JEUNE": "77826"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "30383",
+            "JEUNE": "22124"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "38976",
+            "JEUNE": "28829"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "70376",
+            "JEUNE": "43955"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "40691",
+            "JEUNE": "36347"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "40003",
+            "JEUNE": "31160"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "66514",
+            "JEUNE": "47275"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "82568",
+            "JEUNE": "60515"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "78322",
+            "JEUNE": "42556"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "114303",
+            "JEUNE": "59207"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "19392",
+            "JEUNE": "16752"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "29386",
+            "JEUNE": "23922"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "19999",
+            "JEUNE": "19850"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "20191",
+            "JEUNE": "19109"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "32565",
+            "JEUNE": "20651"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "98428",
+            "JEUNE": "30884"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "49246",
+            "JEUNE": "33051"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "19012",
+            "JEUNE": "37316"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "41222",
+            "JEUNE": "37493"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "45630",
+            "JEUNE": "46001"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "44199",
+            "JEUNE": "39731"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "ADULTE": "0",
+            "JEUNE": "4647"
+        }
+    ],
+    "2016": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
+            "ADULTE": "64984",
+            "JEUNE": "50230"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "31848",
+            "JEUNE": "31146"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "76",
+            "JEUNE": "27207"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "ADULTE": "1099",
+            "JEUNE": "2954"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "9005",
+            "JEUNE": "7186"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "67219",
+            "JEUNE": "31946"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "66521",
+            "JEUNE": "39192"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "70597",
+            "JEUNE": "39861"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "54250",
+            "JEUNE": "52749"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "23799",
+            "JEUNE": "26526"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "33392",
+            "JEUNE": "19788"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "9124",
+            "JEUNE": "9508"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "62346",
+            "JEUNE": "20604"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "136172",
+            "JEUNE": "58989"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "1292",
+            "JEUNE": "23194"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "27263",
+            "JEUNE": "27815"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "30131",
+            "JEUNE": "23090"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "34260",
+            "JEUNE": "32119"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "16488",
+            "JEUNE": "17978"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "41778",
+            "JEUNE": "37457"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "28493",
+            "JEUNE": "22810"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "23073",
+            "JEUNE": "19437"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "50033",
+            "JEUNE": "19919"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
+            "ADULTE": "36222",
+            "JEUNE": "27749"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "32788",
+            "JEUNE": "26547"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "64936",
+            "JEUNE": "62006"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "28505",
+            "JEUNE": "20817"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "ADULTE": "9226",
+            "JEUNE": "17037"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "38807",
+            "JEUNE": "29105"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "71778",
+            "JEUNE": "45985"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "39546",
+            "JEUNE": "36708"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "37856",
+            "JEUNE": "31897"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "63936",
+            "JEUNE": "40977"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "82881",
+            "JEUNE": "63263"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "66795",
+            "JEUNE": "36481"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "105239",
+            "JEUNE": "53594"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "19755",
+            "JEUNE": "17254"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "28961",
+            "JEUNE": "24239"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "20627",
+            "JEUNE": "19831"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "20642",
+            "JEUNE": "19257"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "28571",
+            "JEUNE": "20792"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "92246",
+            "JEUNE": "31310"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "38124",
+            "JEUNE": "32615"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "19329",
+            "JEUNE": "36094"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "41712",
+            "JEUNE": "38276"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "47362",
+            "JEUNE": "47376"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "45097",
+            "JEUNE": "40315"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "ADULTE": "1099",
+            "JEUNE": "2954"
+        }
+    ],
+    "2017": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
+            "ADULTE": "70387",
+            "JEUNE": "51250"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "31560",
+            "JEUNE": "27985"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "1546",
+            "JEUNE": "27149"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "ADULTE": "1720",
+            "JEUNE": "2797"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "9451",
+            "JEUNE": "6762"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "68904",
+            "JEUNE": "32396"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "76098",
+            "JEUNE": "40666"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "67649",
+            "JEUNE": "39818"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "54239",
+            "JEUNE": "52585"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "23208",
+            "JEUNE": "24436"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "33371",
+            "JEUNE": "20280"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "9704",
+            "JEUNE": "9818"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "63016",
+            "JEUNE": "21391"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "134751",
+            "JEUNE": "57801"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "2996",
+            "JEUNE": "23140"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "31620",
+            "JEUNE": "26617"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "32787",
+            "JEUNE": "23484"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "38839",
+            "JEUNE": "32786"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "17172",
+            "JEUNE": "18494"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "39594",
+            "JEUNE": "35658"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "28341",
+            "JEUNE": "23296"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "22872",
+            "JEUNE": "18843"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "52139",
+            "JEUNE": "20063"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
+            "ADULTE": "42384",
+            "JEUNE": "27764"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "36524",
+            "JEUNE": "25349"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "66968",
+            "JEUNE": "39490"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "26729",
+            "JEUNE": "19267"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "ADULTE": "10267",
+            "JEUNE": "17151"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "42340",
+            "JEUNE": "29887"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "81366",
+            "JEUNE": "48050"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "47001",
+            "JEUNE": "34011"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "39679",
+            "JEUNE": "32466"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "52423",
+            "JEUNE": "34419"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "77209",
+            "JEUNE": "63366"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "62344",
+            "JEUNE": "31648"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
+            "ADULTE": "250",
+            "JEUNE": "1354"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "105179",
+            "JEUNE": "50189"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "22807",
+            "JEUNE": "17202"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "32316",
+            "JEUNE": "24711"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "22131",
+            "JEUNE": "19743"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "21884",
+            "JEUNE": "20141"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "28211",
+            "JEUNE": "19454"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "89810",
+            "JEUNE": "31271"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "42509",
+            "JEUNE": "29378"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "23209",
+            "JEUNE": "36618"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "47296",
+            "JEUNE": "37990"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "49763",
+            "JEUNE": "44245"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "48502",
+            "JEUNE": "39180"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "ADULTE": "141",
+            "JEUNE": "5513"
+        }
+    ],
+    "2018": [
+        {
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
+            "ADULTE": "69996",
+            "JEUNE": "52422"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
+            "ADULTE": "33129",
+            "JEUNE": "28812"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
+            "ADULTE": "1848",
+            "JEUNE": "27014"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "ADULTE": "2271",
+            "JEUNE": "2959"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
+            "ADULTE": "8687",
+            "JEUNE": "6781"
+        },
+        {
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
+            "ADULTE": "65891",
+            "JEUNE": "30847"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) BENNY",
+            "ADULTE": "77561",
+            "JEUNE": "43560"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
+            "ADULTE": "71633",
+            "JEUNE": "33925"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
+            "ADULTE": "55772",
+            "JEUNE": "52603"
+        },
+        {
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "ADULTE": "23839",
+            "JEUNE": "22821"
+        },
+        {
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
+            "ADULTE": "34534",
+            "JEUNE": "20170"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
+            "ADULTE": "10122",
+            "JEUNE": "9493"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
+            "ADULTE": "67871",
+            "JEUNE": "21921"
+        },
+        {
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
+            "ADULTE": "129658",
+            "JEUNE": "53594"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
+            "ADULTE": "2780",
+            "JEUNE": "23574"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
+            "ADULTE": "28256",
+            "JEUNE": "24102"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
+            "ADULTE": "31574",
+            "JEUNE": "21653"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
+            "ADULTE": "36308",
+            "JEUNE": "31758"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
+            "ADULTE": "18456",
+            "JEUNE": "18397"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
+            "ADULTE": "37627",
+            "JEUNE": "33033"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
+            "ADULTE": "29342",
+            "JEUNE": "22932"
+        },
+        {
+            "BIBLIOTHÈQUE": "(MNO) CHARLEROI",
+            "ADULTE": "23497",
+            "JEUNE": "18511"
+        },
+        {
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
+            "ADULTE": "53176",
+            "JEUNE": "17780"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
+            "ADULTE": "43094",
+            "JEUNE": "27065"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
+            "ADULTE": "36731",
+            "JEUNE": "22019"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
+            "ADULTE": "56513",
+            "JEUNE": "33160"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
+            "ADULTE": "23774",
+            "JEUNE": "19496"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "ADULTE": "6712",
+            "JEUNE": "16605"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
+            "ADULTE": "41992",
+            "JEUNE": "27347"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
+            "ADULTE": "80439",
+            "JEUNE": "46186"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
+            "ADULTE": "46040",
+            "JEUNE": "34445"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
+            "ADULTE": "38218",
+            "JEUNE": "28733"
+        },
+        {
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "ADULTE": "55054",
+            "JEUNE": "34040"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
+            "ADULTE": "81699",
+            "JEUNE": "60629"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
+            "ADULTE": "61239",
+            "JEUNE": "29946"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
+            "ADULTE": "480",
+            "JEUNE": "2076"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
+            "ADULTE": "100065",
+            "JEUNE": "42739"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
+            "ADULTE": "21268",
+            "JEUNE": "17141"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
+            "ADULTE": "31981",
+            "JEUNE": "23672"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
+            "ADULTE": "22375",
+            "JEUNE": "19342"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
+            "ADULTE": "21066",
+            "JEUNE": "19191"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
+            "ADULTE": "25933",
+            "JEUNE": "18905"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "ADULTE": "90850",
+            "JEUNE": "29264"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
+            "ADULTE": "42373",
+            "JEUNE": "25076"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
+            "ADULTE": "23068",
+            "JEUNE": "36301"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
+            "ADULTE": "46202",
+            "JEUNE": "37577"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
+            "ADULTE": "51704",
+            "JEUNE": "40778"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
+            "ADULTE": "47259",
+            "JEUNE": "37627"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "ADULTE": "263",
+            "JEUNE": "5822"
+        }
+    ]
+}
