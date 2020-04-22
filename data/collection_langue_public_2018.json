@@ -1,0 +1,484 @@
+﻿{
+    "2018": [
+        {
+            "Bibliothèque": "(AHC) AHUNTSIC",
+            "Secteur Adultes": " 76 620",
+            "Secteur Jeunes": " 61 301",
+            "Secteur Autres": "  0",
+            "Français": " 125 060",
+            "Anglais": " 11 990",
+            "Autres langues": "  871",
+            "Total": " 137 921"
+        },
+        {
+            "Bibliothèque": "(AHC) CARTIERVILLE",
+            "Secteur Adultes": " 38 539",
+            "Secteur Jeunes": " 32 169",
+            "Secteur Autres": "  3",
+            "Français": " 60 245",
+            "Anglais": " 9 105",
+            "Autres langues": " 1 361",
+            "Total": " 70 711"
+        },
+        {
+            "Bibliothèque": "(AHC) SALABERRY",
+            "Secteur Adultes": "  359",
+            "Secteur Jeunes": " 30 113",
+            "Secteur Autres": "  108",
+            "Français": " 27 608",
+            "Anglais": " 2 920",
+            "Autres langues": "  52",
+            "Total": " 30 580"
+        },
+        {
+            "Bibliothèque": "(AHC) LIVROMOBILE",
+            "Secteur Adultes": " 2 296",
+            "Secteur Jeunes": " 2 494",
+            "Secteur Autres": "  3",
+            "Français": " 4 738",
+            "Anglais": "  49",
+            "Autres langues": "  6",
+            "Total": " 4 793"
+        },
+        {
+            "Bibliothèque": "(ANJ) HAUT-ANJOU",
+            "Secteur Adultes": " 9 478",
+            "Secteur Jeunes": " 7 089",
+            "Secteur Autres": "  3",
+            "Français": " 15 212",
+            "Anglais": " 1 342",
+            "Autres langues": "  16",
+            "Total": " 16 570"
+        },
+        {
+            "Bibliothèque": "(ANJ) JEAN-CORBEIL",
+            "Secteur Adultes": " 76 201",
+            "Secteur Jeunes": " 30 577",
+            "Secteur Autres": "  0",
+            "Français": " 91 939",
+            "Anglais": " 13 985",
+            "Autres langues": "  854",
+            "Total": " 106 778"
+        },
+        {
+            "Bibliothèque": "(CND) BENNY",
+            "Secteur Adultes": " 82 384",
+            "Secteur Jeunes": " 49 432",
+            "Secteur Autres": "  152",
+            "Français": " 77 084",
+            "Anglais": " 53 221",
+            "Autres langues": " 1 663",
+            "Total": " 131 968"
+        },
+        {
+            "Bibliothèque": "(CND) C-D-NEIGES",
+            "Secteur Adultes": " 76 919",
+            "Secteur Jeunes": " 39 536",
+            "Secteur Autres": "  20",
+            "Français": " 85 690",
+            "Anglais": " 25 903",
+            "Autres langues": " 4 882",
+            "Total": " 116 475"
+        },
+        {
+            "Bibliothèque": "(CND) INTERCULTURELLE",
+            "Secteur Adultes": " 63 560",
+            "Secteur Jeunes": " 61 000",
+            "Secteur Autres": "  95",
+            "Français": " 87 395",
+            "Anglais": " 26 677",
+            "Autres langues": " 10 583",
+            "Total": " 124 655"
+        },
+        {
+            "Bibliothèque": "(CND) N-D-DE-GRÂCE",
+            "Secteur Adultes": " 26 827",
+            "Secteur Jeunes": " 25 221",
+            "Secteur Autres": "  93",
+            "Français": " 35 826",
+            "Anglais": " 16 176",
+            "Autres langues": "  139",
+            "Total": " 52 141"
+        },
+        {
+            "Bibliothèque": "(IBG) L'ÎLE-BIZARD",
+            "Secteur Adultes": " 43 290",
+            "Secteur Jeunes": " 21 350",
+            "Secteur Autres": "  0",
+            "Français": " 50 553",
+            "Anglais": " 12 638",
+            "Autres langues": " 1 449",
+            "Total": " 64 640"
+        },
+        {
+            "Bibliothèque": "(LAC) SAINT-PIERRE",
+            "Secteur Adultes": " 11 474",
+            "Secteur Jeunes": " 10 519",
+            "Secteur Autres": "  1",
+            "Français": " 16 120",
+            "Anglais": " 5 733",
+            "Autres langues": "  141",
+            "Total": " 21 994"
+        },
+        {
+            "Bibliothèque": "(LAC) SAUL-BELLOW",
+            "Secteur Adultes": " 75 334",
+            "Secteur Jeunes": " 26 225",
+            "Secteur Autres": "  45",
+            "Français": " 66 283",
+            "Anglais": " 34 392",
+            "Autres langues": "  929",
+            "Total": " 101 604"
+        },
+        {
+            "Bibliothèque": "(LAS) L'OCTOGONE",
+            "Secteur Adultes": " 155 688",
+            "Secteur Jeunes": " 57 025",
+            "Secteur Autres": "  11",
+            "Français": " 131 342",
+            "Anglais": " 80 476",
+            "Autres langues": "  906",
+            "Total": " 212 724"
+        },
+        {
+            "Bibliothèque": "(MHM) HOCHELAGA",
+            "Secteur Adultes": " 1 093",
+            "Secteur Jeunes": " 27 026",
+            "Secteur Autres": "  0",
+            "Français": " 27 225",
+            "Anglais": "  737",
+            "Autres langues": "  157",
+            "Total": " 28 119"
+        },
+        {
+            "Bibliothèque": "(MHM) LANGELIER",
+            "Secteur Adultes": " 34 888",
+            "Secteur Jeunes": " 28 761",
+            "Secteur Autres": "  0",
+            "Français": " 56 995",
+            "Anglais": " 5 809",
+            "Autres langues": "  845",
+            "Total": " 63 649"
+        },
+        {
+            "Bibliothèque": "(MHM) MAISONNEUVE",
+            "Secteur Adultes": " 40 097",
+            "Secteur Jeunes": " 25 071",
+            "Secteur Autres": "  0",
+            "Français": " 60 416",
+            "Anglais": " 3 780",
+            "Autres langues": "  972",
+            "Total": " 65 168"
+        },
+        {
+            "Bibliothèque": "(MHM) MERCIER",
+            "Secteur Adultes": " 41 920",
+            "Secteur Jeunes": " 36 122",
+            "Secteur Autres": "  31",
+            "Français": " 72 593",
+            "Anglais": " 4 624",
+            "Autres langues": "  856",
+            "Total": " 78 073"
+        },
+        {
+            "Bibliothèque": "(MNO) BELLEVILLE",
+            "Secteur Adultes": " 20 306",
+            "Secteur Jeunes": " 20 840",
+            "Secteur Autres": "  1",
+            "Français": " 38 258",
+            "Anglais": " 2 484",
+            "Autres langues": "  405",
+            "Total": " 41 147"
+        },
+        {
+            "Bibliothèque": "(MNO) YVES-RYAN",
+            "Secteur Adultes": " 27 469",
+            "Secteur Jeunes": " 20 868",
+            "Secteur Autres": "  0",
+            "Français": " 45 101",
+            "Anglais": " 2 655",
+            "Autres langues": "  581",
+            "Total": " 48 337"
+        },
+        {
+            "Bibliothèque": "(MNO) H-BOURASSA",
+            "Secteur Adultes": " 44 748",
+            "Secteur Jeunes": " 36 667",
+            "Secteur Autres": "  21",
+            "Français": " 73 782",
+            "Anglais": " 6 826",
+            "Autres langues": "  828",
+            "Total": " 81 436"
+        },
+        {
+            "Bibliothèque": "(MNO) MAISON  CULT.",
+            "Secteur Adultes": " 32 910",
+            "Secteur Jeunes": " 26 889",
+            "Secteur Autres": "  102",
+            "Français": " 52 197",
+            "Anglais": " 6 154",
+            "Autres langues": " 1 550",
+            "Total": " 59 901"
+        },
+        {
+            "Bibliothèque": "(OUT) OUTREMONT",
+            "Secteur Adultes": " 59 698",
+            "Secteur Jeunes": " 19 577",
+            "Secteur Autres": "  108",
+            "Français": " 66 097",
+            "Anglais": " 12 261",
+            "Autres langues": " 1 025",
+            "Total": " 79 383"
+        },
+        {
+            "Bibliothèque": "(PMR) MORDECAI-RICHLER",
+            "Secteur Adultes": " 48 262",
+            "Secteur Jeunes": " 32 497",
+            "Secteur Autres": "  1",
+            "Français": " 59 285",
+            "Anglais": " 16 818",
+            "Autres langues": " 4 657",
+            "Total": " 80 760"
+        },
+        {
+            "Bibliothèque": "(PMR) PLATEAU-M-R",
+            "Secteur Adultes": " 39 501",
+            "Secteur Jeunes": " 25 969",
+            "Secteur Autres": "  119",
+            "Français": " 58 570",
+            "Anglais": " 6 703",
+            "Autres langues": "  316",
+            "Total": " 65 589"
+        },
+        {
+            "Bibliothèque": "(PRO) PIERREFONDS",
+            "Secteur Adultes": " 60 852",
+            "Secteur Jeunes": " 35 405",
+            "Secteur Autres": "  93",
+            "Français": " 51 918",
+            "Anglais": " 44 061",
+            "Autres langues": "  371",
+            "Total": " 96 350"
+        },
+        {
+            "Bibliothèque": "(PRO) ROXBORO",
+            "Secteur Adultes": " 30 307",
+            "Secteur Jeunes": " 19 803",
+            "Secteur Autres": "  116",
+            "Français": " 26 239",
+            "Anglais": " 23 791",
+            "Autres langues": "  196",
+            "Total": " 50 226"
+        },
+        {
+            "Bibliothèque": "(PRO) CCE DE PIERREFONDS",
+            "Secteur Adultes": " 14 337",
+            "Secteur Jeunes": " 14 837",
+            "Secteur Autres": "  0",
+            "Français": " 15 020",
+            "Anglais": " 13 983",
+            "Autres langues": "  171",
+            "Total": " 29 174"
+        },
+        {
+            "Bibliothèque": "(RPP) LA PETITE-PATRIE",
+            "Secteur Adultes": " 47 820",
+            "Secteur Jeunes": " 32 902",
+            "Secteur Autres": "  0",
+            "Français": " 75 013",
+            "Anglais": " 4 471",
+            "Autres langues": " 1 238",
+            "Total": " 80 722"
+        },
+        {
+            "Bibliothèque": "(RPP) ROSEMONT",
+            "Secteur Adultes": " 52 418",
+            "Secteur Jeunes": " 42 467",
+            "Secteur Autres": "  0",
+            "Français": " 86 858",
+            "Anglais": " 6 473",
+            "Autres langues": " 1 554",
+            "Total": " 94 885"
+        },
+        {
+            "Bibliothèque": "(RPP) MARC-FAVREAU",
+            "Secteur Adultes": " 88 170",
+            "Secteur Jeunes": " 53 455",
+            "Secteur Autres": "  18",
+            "Français": " 128 481",
+            "Anglais": " 11 337",
+            "Autres langues": " 1 825",
+            "Total": " 141 643"
+        },
+        {
+            "Bibliothèque": "(RPT) P-A-TREMBLES",
+            "Secteur Adultes": " 39 321",
+            "Secteur Jeunes": " 32 015",
+            "Secteur Autres": "  1",
+            "Français": " 69 000",
+            "Anglais": " 2 221",
+            "Autres langues": "  116",
+            "Total": " 71 337"
+        },
+        {
+            "Bibliothèque": "(RPT) RIV-D-PRAIRIES",
+            "Secteur Adultes": " 55 642",
+            "Secteur Jeunes": " 39 293",
+            "Secteur Autres": "  11",
+            "Français": " 77 257",
+            "Anglais": " 15 841",
+            "Autres langues": " 1 848",
+            "Total": " 94 946"
+        },
+        {
+            "Bibliothèque": "(SLA) DU BOISÉ",
+            "Secteur Adultes": " 95 102",
+            "Secteur Jeunes": " 64 041",
+            "Secteur Autres": "  100",
+            "Français": " 90 673",
+            "Anglais": " 60 483",
+            "Autres langues": " 8 087",
+            "Total": " 159 243"
+        },
+        {
+            "Bibliothèque": "(SLA) VIEUX-SAINT-LAURENT",
+            "Secteur Adultes": " 77 012",
+            "Secteur Jeunes": " 35 116",
+            "Secteur Autres": "  47",
+            "Français": " 67 668",
+            "Anglais": " 42 486",
+            "Autres langues": " 2 021",
+            "Total": " 112 175"
+        },
+        {
+            "Bibliothèque": "(SLE) SAINT-LÉONARD",
+            "Secteur Adultes": " 108 243",
+            "Secteur Jeunes": " 47 975",
+            "Secteur Autres": "  0",
+            "Français": " 113 486",
+            "Anglais": " 36 288",
+            "Autres langues": " 6 444",
+            "Total": " 156 218"
+        },
+        {
+            "Bibliothèque": "(SUD) GEORGES-VANIER",
+            "Secteur Adultes": " 23 656",
+            "Secteur Jeunes": " 21 160",
+            "Secteur Autres": "  114",
+            "Français": " 35 771",
+            "Anglais": " 8 685",
+            "Autres langues": "  474",
+            "Total": " 44 930"
+        },
+        {
+            "Bibliothèque": "(SUD) MARIE-UGUAY",
+            "Secteur Adultes": " 38 840",
+            "Secteur Jeunes": " 27 655",
+            "Secteur Autres": "  94",
+            "Français": " 55 012",
+            "Anglais": " 10 448",
+            "Autres langues": " 1 129",
+            "Total": " 66 589"
+        },
+        {
+            "Bibliothèque": "(SUD) SAINT-CHARLES",
+            "Secteur Adultes": " 25 900",
+            "Secteur Jeunes": " 22 942",
+            "Secteur Autres": "  0",
+            "Français": " 37 364",
+            "Anglais": " 10 760",
+            "Autres langues": "  718",
+            "Total": " 48 842"
+        },
+        {
+            "Bibliothèque": "(SUD) SAINT-HENRI",
+            "Secteur Adultes": " 24 732",
+            "Secteur Jeunes": " 21 698",
+            "Secteur Autres": "  0",
+            "Français": " 38 446",
+            "Anglais": " 7 531",
+            "Autres langues": "  453",
+            "Total": " 46 430"
+        },
+        {
+            "Bibliothèque": "(VER) ÎLE-DES-SŒURS",
+            "Secteur Adultes": " 30 208",
+            "Secteur Jeunes": " 21 124",
+            "Secteur Autres": "  0",
+            "Français": " 42 934",
+            "Anglais": " 8 078",
+            "Autres langues": "  320",
+            "Total": " 51 332"
+        },
+        {
+            "Bibliothèque": "(VER) JACQUELINE-DE REPENTIGNY",
+            "Secteur Adultes": " 101 457",
+            "Secteur Jeunes": " 32 824",
+            "Secteur Autres": "  1",
+            "Français": " 102 831",
+            "Anglais": " 30 561",
+            "Autres langues": "  890",
+            "Total": " 134 282"
+        },
+        {
+            "Bibliothèque": "(VMA) FRONTENAC",
+            "Secteur Adultes": " 45 737",
+            "Secteur Jeunes": " 28 972",
+            "Secteur Autres": "  191",
+            "Français": " 71 392",
+            "Anglais": " 2 979",
+            "Autres langues": "  529",
+            "Total": " 74 900"
+        },
+        {
+            "Bibliothèque": "(VMA) PÈRE-AMBROISE",
+            "Secteur Adultes": " 26 814",
+            "Secteur Jeunes": " 40 555",
+            "Secteur Autres": "  79",
+            "Français": " 63 773",
+            "Anglais": " 2 773",
+            "Autres langues": "  902",
+            "Total": " 67 448"
+        },
+        {
+            "Bibliothèque": "(VSP) LE PRÉVOST",
+            "Secteur Adultes": " 50 468",
+            "Secteur Jeunes": " 41 337",
+            "Secteur Autres": "  93",
+            "Français": " 85 083",
+            "Anglais": " 6 079",
+            "Autres langues": "  736",
+            "Total": " 91 898"
+        },
+        {
+            "Bibliothèque": "(VSP) PARC-EXTENSION",
+            "Secteur Adultes": " 55 978",
+            "Secteur Jeunes": " 46 072",
+            "Secteur Autres": "  0",
+            "Français": " 68 123",
+            "Anglais": " 23 051",
+            "Autres langues": " 10 876",
+            "Total": " 102 050"
+        },
+        {
+            "Bibliothèque": "(VSP) ROULIVRE",
+            "Secteur Adultes": "  0",
+            "Secteur Jeunes": " 6 488",
+            "Secteur Autres": "  10",
+            "Français": " 6 322",
+            "Anglais": "  173",
+            "Autres langues": "  3",
+            "Total": " 6 498"
+        },
+        {
+            "Bibliothèque": "(VSP) SAINT-MICHEL",
+            "Secteur Adultes": " 51 809",
+            "Secteur Jeunes": " 42 114",
+            "Secteur Autres": "  95",
+            "Français": " 87 174",
+            "Anglais": " 5 833",
+            "Autres langues": " 1 011",
+            "Total": " 94 018"
+        }
+    ]
+}
