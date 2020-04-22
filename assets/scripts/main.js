@@ -10,13 +10,7 @@ promises.push(d3.json("./data/frequentation.json"));
 promises.push(d3.json("./data/emprunts_format.json"));
 // TODO
 // Libraries info
-promises.push(d3.json("./data/bm_stats_consol_2018.json"));
-// Collection languages and public
-promises.push(d3.json("./data/collection_langue_public_2018.json"));
-// Collection formats
-promises.push(d3.json("./data/emprunts_format.json"));
-// Population
-promises.push(d3.json("./data/population.json"));
+promises.push(d3.json("./data/biblio_info_2018.json"));
 
 Promise.all(promises).then(function (results) {
     /** 
@@ -124,8 +118,9 @@ Promise.all(promises).then(function (results) {
     //     width = 500 - margin.left - margin.right,
     //     height = 800 - margin.top - margin.bottom;
 
-    // Data
-    // frequentationSources = createFrequentationSources(results[0]);
+    // Load Libraries info data
+    libInfoSources = createLibInfoSources(results[2]);
+    // console.log(libInfoSources);
 
     // // Tip function
     // var frequentationTooltip = function (data) {
