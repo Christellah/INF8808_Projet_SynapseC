@@ -47,11 +47,14 @@ function findMinMaxJeune(year, library, collectionLivres, pretsPublic) {
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
 
-            min_jeune.value = d["Jeunes"] <= library["JEUNE"] ? d["Jeunes"] : library["JEUNE"];
-            min_jeune.category = d["Jeunes"] <= library["JEUNE"] ? "Emprunts" : "Inventaire";
+            var collectNumb = parseInt(library["JEUNE"]);
+            var empruntNumb = parseInt(d["Jeunes"].replace(",", ""));
 
-            max_jeune.value = d["Jeunes"] > library["JEUNE"] ? d["Jeunes"] : library["JEUNE"];
-            max_jeune.category = d["Jeunes"] > library["JEUNE"] ? "Emprunts" : "Inventaire";
+            min_jeune.value = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            min_jeune.category = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
+
+            max_jeune.value = empruntNumb > collectNumb ? empruntNumb : collectNumb;
+            max_jeune.category = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
 
         }
     })
@@ -76,11 +79,14 @@ function findMinMaxAdult(year, library, collectionLivres, pretsPublic) {
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
 
-            min_adult.value = d["Adultes"] <= library["ADULTE"] ? d["Adultes"] : library["ADULTE"];
-            min_adult.category = d["Adultes"] <= library["ADULTE"] ? "Emprunts" : "Inventaire";
+            var collectNumb = parseInt(library["ADULTE"]);
+            var empruntNumb = parseInt(d["Adultes"].replace(",", ""));
+            
+            min_adult.value = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            min_adult.category = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
 
-            max_adult.value = d["Adultes"] > library["ADULTE"] ? d["Adultes"] : library["ADULTE"];
-            max_adult.category = d["Adultes"] > library["ADULTE"] ? "Emprunts" : "Inventaire";
+            max_adult.value = empruntNumb > collectNumb ? empruntNumb : collectNumb;
+            max_adult.category = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
 
         }
     })
@@ -92,99 +98,6 @@ function findMinMaxAdult(year, library, collectionLivres, pretsPublic) {
 }
 
 // Create a Connected Dot Plot for one library
-/*function createConnectedDotPlot(data) {
-    var libData = data[1];
-    console.log(libData.jeune.max.value);
-    // source : https://www.enigma.com/blog/post/analyzing-public-data-with-d3 
-    var margin = {top: 100, right: 100, bottom: 100, left: 100},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-    var svg = d3.select("#ConnectedDotPlot").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    var y = d3.scaleLinear()
-    .range([height, 0]);
-    
-    var x = d3.scaleBand()
-      .range([0, width]);
-    
-    var lineGenerator = d3.line();
-    
-    var lollipopLinePath = function(d) {
-      return lineGenerator([[x(d.min), 0], [x(d.max), 0]]); 
-    }
-
-
-    // Axis x and y domains
-    x.domain(["Jeune", "Adulte"]);
-    y.domain([0, Math.max(libData.jeune.max.value, libData.adulte.max.value)]);
-    // y.nice();
-
-    var yAxis = d3.axisLeft().scale(y)
-    .tickSize(0);
-
-    var xAxis = d3.axisBottom().scale(x)
-    .tickSize(0);
-
-    // var xAxis = d3.axisTop().scale(x)
-    // .tickFormat(function(d,i) {
-    // if (i == 0) {
-    //     return "$0"
-    // } else {
-    //     return d3.format(".2s")(d);
-    // }
-    // });
-
-    var yAxisGroup = svg.append("g")
-    .attr("class", "y-axis-group");
-
-    yAxisGroup.append("g")
-    .attr("class", "y-axis")
-    .call(yAxis)
-    .select(".domain")
-    .attr("opacity", 1);
-
-    var xAxisGroup = svg.append("g")
-    .attr("class", "x-axis-group");
-
-    xAxisGroup.append("g")
-    .attr("class", "x-axis")
-    .call(xAxis);
-
-    let lollipopsGroup = svg.append("g").attr("class", "lollipops");
-
-    let lollipops = lollipopsGroup.selectAll("g")
-    .data(libData)
-    .enter().append("g")
-    .attr("class", "lollipop")
-    .attr("transform", function(d) {
-        return "translate(0," + (y(d.name) + (y.bandwidth() / 2)) + ")";
-    });
-
-    lollipops.append("path")
-    .attr("class", "lollipop-line")
-    .attr("d", lollipopLinePath);
-
-    let startCircles = lollipops.append("circle")
-    .attr("class", "lollipop-start")
-    .attr("r", 5)
-    .attr("cx", function(d) {
-    return x(d.min);
-    });
-
-    let endCircles = lollipops.append("circle")
-    .attr("class", "lollipop-end")
-    .attr("r", 5)
-    .attr("cx", function(d) {
-    return x(d.max);
-    });
-}*/
-
-
 function createLibConnectedDotPlot(libData) {
     var margin = {
         top: 10,
@@ -227,6 +140,52 @@ function createLibConnectedDotPlot(libData) {
     graph.append("g")
       .attr("class", "y axis")
       .call(yAxis);
+
+    /***** Generate lollipops *****/
+    // TODO : Move into function 
+    var lineGenerator = d3.line();
+
+    var lollipopLinePath = function(d) {
+        // console.log(x("Adulte"));
+        // return lineGenerator([[x("Jeune"), y(d.jeune.min.value)], [x("Jeune"), y(d.jeune.max.value)]]); 
+        return lineGenerator([[x("Adulte"), y(d.adulte.min.value)], [x("Adulte"), y(d.adulte.max.value)]]); 
+    };
+
+    var lollipopsGroup = svg.append("g").attr("class", "lollipops");
+
+    var lollipops = lollipopsGroup.selectAll("g")
+    .data(libData)
+    .enter().append("g")
+    .attr("class", "lollipops")
+    // .attr("transform", function(d) {
+    //     console.log("TOTO")
+    //     return "translate(0," + (x("Jeune") + (x.bandwidth() / 2)) + ")";
+    // });
+
+    lollipops.append("path")
+    .attr("class", "lollipop-line")
+    .attr("d", lollipopLinePath(libData));
+
+    lollipops.append("circle")
+    .attr("class", "lollipop-start")
+    .attr("r", 5)
+    .attr("cx", function(d) {
+        return x("Adulte");
+    })
+    .attr("cy", function(d) {
+        return y(d.adulte.min.value);
+    });
+
+    lollipops.append("circle")
+    .attr("class", "lollipop-end")
+    .attr("r", 5)
+    .attr("cx", function(d) {
+        return x("Adulte");
+    })
+    .attr("cy", function(d) {
+        return y(d.adulte.max.value);
+    });
+
 }
 
 /***** Axis domains  functions *****/
