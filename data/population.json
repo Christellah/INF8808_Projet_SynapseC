@@ -1,0 +1,99 @@
+﻿{
+    "2016": [
+        {
+            "Code arrondissement": "(AHC)",
+            "Arrondissement": "Ahuntsic-Cartierville",
+            "Population": "134245"
+        },
+        {
+            "Code arrondissement": "(ANJ)",
+            "Arrondissement": "Anjou",
+            "Population": "42796"
+        },
+        {
+            "Code arrondissement": "(CND)",
+            "Arrondissement": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+            "Population": "166520"
+        },
+        {
+            "Code arrondissement": "(IBG)",
+            "Arrondissement": "L’Île-Bizard–Sainte-Geneviève",
+            "Population": "18413"
+        },
+        {
+            "Code arrondissement": "(LAC)",
+            "Arrondissement": "Lachine",
+            "Population": "44489"
+        },
+        {
+            "Code arrondissement": "(LAS)",
+            "Arrondissement": "LaSalle",
+            "Population": "76853"
+        },
+        {
+            "Code arrondissement": "(MHM)",
+            "Arrondissement": "Mercier–Hochelaga-Maisonneuve",
+            "Population": "136024"
+        },
+        {
+            "Code arrondissement": "(MNO)",
+            "Arrondissement": "Montréal-Nord",
+            "Population": "84234"
+        },
+        {
+            "Code arrondissement": "(OUT)",
+            "Arrondissement": "Outremont",
+            "Population": "23954"
+        },
+        {
+            "Code arrondissement": "(PMR)",
+            "Arrondissement": "Plateau-Mont-Royal",
+            "Population": "104000"
+        },
+        {
+            "Code arrondissement": "(PRO)",
+            "Arrondissement": "Pierrefonds-Roxboro",
+            "Population": "69297"
+        },
+        {
+            "Code arrondissement": "(RPP)",
+            "Arrondissement": "Rosemont–La Petite-Patrie",
+            "Population": "139590"
+        },
+        {
+            "Code arrondissement": "(RPT)",
+            "Arrondissement": "Rivière-des-Prairies–Pointe-aux-Trembles",
+            "Population": "106743"
+        },
+        {
+            "Code arrondissement": "(SLA)",
+            "Arrondissement": "Saint-Laurent",
+            "Population": "98828"
+        },
+        {
+            "Code arrondissement": "(SLE)",
+            "Arrondissement": "Saint-Léonard",
+            "Population": "78305"
+        },
+        {
+            "Code arrondissement": "(SUD)",
+            "Arrondissement": "Sud-Ouest",
+            "Population": "78151"
+        },
+        {
+            "Code arrondissement": "(VER)",
+            "Arrondissement": "Verdun",
+            "Population": "69229"
+        },
+        {
+            "Code arrondissement": "(VMA)",
+            "Arrondissement": "Ville-Marie",
+            "Population": "89170"
+        },
+        {
+            "Code arrondissement": "(VSP)",
+            "Arrondissement": "Villeray–Saint-Michel–Parc-Extension",
+            "Population": "143853"
+        }
+    ]
+}
