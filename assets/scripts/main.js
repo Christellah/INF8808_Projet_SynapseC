@@ -8,6 +8,15 @@ var promises = [];
 promises.push(d3.json("./data/frequentation.json"));
 // Emprunts
 promises.push(d3.json("./data/emprunts_format.json"));
+// TODO
+// Libraries info
+promises.push(d3.json("./data/bm_stats_consol_2018.json"));
+// Collection languages and public
+promises.push(d3.json("./data/collection_langue_public_2018.json"));
+// Collection formats
+promises.push(d3.json("./data/emprunts_format.json"));
+// Population
+promises.push(d3.json("./data/population.json"));
 
 Promise.all(promises).then(function (results) {
     /** 
@@ -104,6 +113,36 @@ Promise.all(promises).then(function (results) {
             .selectAll(".heatmap-rect")
             .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
     });
+
+
+    // TODO
+    /** 
+     * Libraries Map
+     */
+    // Margins, size, colors
+    // var margin = { top: 60, right: 30, bottom: 60, left: 200 },
+    //     width = 500 - margin.left - margin.right,
+    //     height = 800 - margin.top - margin.bottom;
+
+    // Data
+    // frequentationSources = createFrequentationSources(results[0]);
+
+    // // Tip function
+    // var frequentationTooltip = function (data) {
+    //     return data.time + "<br />" + "Frequentation : " + numberFormat.to(data.count);
+    // }
+
+    // // Max function
+    // function getMaxFrequentation(sources) {
+    //     return d3.max(sources.map(d => d3.max(d.frequentation, f => f.count)));
+    // }
+
+    // Create the libraries map
+    var heatmapFrequentation = new LibrariesMap("libraries_map");
+    // var heatmapFrequentation = new HeatMap("#heatmap_frequentation", width, height, margin, HeatMap.createHeatMapFrequentation, HeatMap.domainMonths, HeatMap.domainBibliotheque, getMaxFrequentation, frequentationTooltip);
+    // heatmapFrequentation.create(frequentationSources);
+    // heatmapFrequentation.updateData(frequentationSources.filter(d => d.annee == 2013));
+
 
 })
 

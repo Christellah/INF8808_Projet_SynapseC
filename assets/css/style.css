@@ -126,3 +126,9 @@ body {
   display: flex;
 }
 
+/***** Dataviz - Libraries Map *****/
+#libraries_map { 
+  margin: auto;
+  height: 600px; 
+}
+

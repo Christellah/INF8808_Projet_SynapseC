@@ -1,0 +1,340 @@
+﻿{
+    "2018": [
+        {
+            "Code arrondissement": "(AHC)",
+            "Code bibliothèque": "a78",
+            "Bibliothèque": "Ahuntsic",
+            "Latitude": "45.553423",
+            "Longitude": "-73.662799"
+        },
+        {
+            "Code arrondissement": "(AHC)",
+            "Code bibliothèque": "a79",
+            "Bibliothèque": "Cartierville",
+            "Latitude": "45.527226",
+            "Longitude": "-73.713057"
+        },
+        {
+            "Code arrondissement": "(AHC)",
+            "Code bibliothèque": "a80",
+            "Bibliothèque": "Salaberry",
+            "Latitude": "45.534662",
+            "Longitude": "-73.70386"
+        },
+        {
+            "Code arrondissement": "(ANJ)",
+            "Code bibliothèque": "j15",
+            "Bibliothèque": "Haut-Anjou",
+            "Latitude": "45.601179",
+            "Longitude": "-73.575591"
+        },
+        {
+            "Code arrondissement": "(ANJ)",
+            "Code bibliothèque": "j14",
+            "Bibliothèque": "Jean-Corbeil",
+            "Latitude": "45.602966",
+            "Longitude": " -73.558438"
+        },
+        {
+            "Code arrondissement": "(CND)",
+            "Code bibliothèque": "c56",
+            "Bibliothèque": "Benny",
+            "Latitude": "45.466118",
+            "Longitude": "-73.630975"
+        },
+        {
+            "Code arrondissement": "(CND)",
+            "Code bibliothèque": "c57",
+            "Bibliothèque": "Côte-des-Neiges",
+            "Latitude": "45.496021",
+            "Longitude": "-73.622199"
+        },
+        {
+            "Code arrondissement": "(CND)",
+            "Code bibliothèque": "c58",
+            "Bibliothèque": "Interculturelle",
+            "Latitude": "45.503244",
+            "Longitude": "-73.636877"
+        },
+        {
+            "Code arrondissement": "(CND)",
+            "Code bibliothèque": "c59",
+            "Bibliothèque": "Notre-Dame-de-Grâce",
+            "Latitude": "45.47555",
+            "Longitude": "-73.614585"
+        },
+        {
+            "Code arrondissement": "(IBG)",
+            "Code bibliothèque": "i90",
+            "Bibliothèque": "L'Île-Bizard",
+            "Latitude": "45.488565",
+            "Longitude": "-73.882244"
+        },
+        {
+            "Code arrondissement": "(LAC)",
+            "Code bibliothèque": "b69",
+            "Bibliothèque": "Saint-Pierre",
+            "Latitude": "45.445771",
+            "Longitude": "-73.651529"
+        },
+        {
+            "Code arrondissement": "(LAC)",
+            "Code bibliothèque": "b68",
+            "Bibliothèque": "Saul-Bellow",
+            "Latitude": "45.440093",
+            "Longitude": "-73.691779"
+        },
+        {
+            "Code arrondissement": "(LAS)",
+            "Code bibliothèque": "l71",
+            "Bibliothèque": "L'Octogone",
+            "Latitude": "45.42451",
+            "Longitude": "-73.62367"
+        },
+        {
+            "Code arrondissement": "(MHM)",
+            "Code bibliothèque": "h26",
+            "Bibliothèque": "Hochelaga",
+            "Latitude": "45.542575",
+            "Longitude": "-73.545299"
+        },
+        {
+            "Code arrondissement": "(MHM)",
+            "Code bibliothèque": "h27",
+            "Bibliothèque": "Langelier",
+            "Latitude": "45.581698",
+            "Longitude": "-73.544081"
+        },
+        {
+            "Code arrondissement": "(MHM)",
+            "Code bibliothèque": "h29",
+            "Bibliothèque": "Maisonneuve",
+            "Latitude": "45.550602",
+            "Longitude": "-73.540599"
+        },
+        {
+            "Code arrondissement": "(MHM)",
+            "Code bibliothèque": "h28",
+            "Bibliothèque": "Mercier",
+            "Latitude": "45.595375",
+            "Longitude": "-73.523881"
+        },
+        {
+            "Code arrondissement": "(MNO)",
+            "Code bibliothèque": "m18",
+            "Bibliothèque": "Belleville",
+            "Latitude": "45.581948",
+            "Longitude": "-73.642202"
+        },
+        {
+            "Code arrondissement": "(MNO)",
+            "Code bibliothèque": "m17",
+            "Bibliothèque": "Henri-Bourassa",
+            "Latitude": "45.604672",
+            "Longitude": "-73.625198"
+        },
+        {
+            "Code arrondissement": "(MNO)",
+            "Code bibliothèque": "m20",
+            "Bibliothèque": "Maison culturelle et communautaire",
+            "Latitude": "45.616505",
+            "Longitude": "-73.62084"
+        },
+        {
+            "Code arrondissement": "(MNO)",
+            "Code bibliothèque": "m19",
+            "Bibliothèque": "Yves-Ryan",
+            "Latitude": "45.596457",
+            "Longitude": "-73.631392"
+        },
+        {
+            "Code arrondissement": "(OUT)",
+            "Code bibliothèque": "o45",
+            "Bibliothèque": "Robert-Bourassa",
+            "Latitude": "45.517713",
+            "Longitude": "-73.608455"
+        },
+        {
+            "Code arrondissement": "(PMR)",
+            "Code bibliothèque": "y47",
+            "Bibliothèque": "Mordecai-Richler",
+            "Latitude": "45.521531",
+            "Longitude": "-73.601647"
+        },
+        {
+            "Code arrondissement": "(PMR)",
+            "Code bibliothèque": "y48",
+            "Bibliothèque": "Plateau Mont-Royal",
+            "Latitude": "45.524874",
+            "Longitude": "-73.582475"
+        },
+        {
+            "Code arrondissement": "(PRO)",
+            "Code bibliothèque": "p87",
+            "Bibliothèque": "Pierrefonds",
+            "Latitude": "45.496196",
+            "Longitude": "-73.847223"
+        },
+        {
+            "Code arrondissement": "(PRO)",
+            "Code bibliothèque": "p88",
+            "Bibliothèque": "Roxboro",
+            "Latitude": "45.502624",
+            "Longitude": "-73.814632"
+        },
+        {
+            "Code arrondissement": "(PRO)",
+            "Code bibliothèque": "p88",
+            "Bibliothèque": "Centre communautaire de L'Est",
+            "Latitude": "45.504838",
+            "Longitude": "-73.784402"
+        },
+        {
+            "Code arrondissement": "(RPP)",
+            "Code bibliothèque": "r39",
+            "Bibliothèque": "La Petite Patrie",
+            "Latitude": "45.547522",
+            "Longitude": "-73.598195"
+        },
+        {
+            "Code arrondissement": "(RPP)",
+            "Code bibliothèque": "r41",
+            "Bibliothèque": "Marc-Favreau",
+            "Latitude": "45.531959",
+            "Longitude": "-73.597244"
+        },
+        {
+            "Code arrondissement": "(RPP)",
+            "Code bibliothèque": "r40",
+            "Bibliothèque": "Rosemont",
+            "Latitude": "45.551926",
+            "Longitude": "-73.582276"
+        },
+        {
+            "Code arrondissement": "(RPT)",
+            "Code bibliothèque": "t10",
+            "Bibliothèque": "Pointe-aux-Trembles",
+            "Latitude": "45.668032",
+            "Longitude": "-73.494905"
+        },
+        {
+            "Code arrondissement": "(RPT)",
+            "Code bibliothèque": "t11",
+            "Bibliothèque": "Rivière-des-Prairies",
+            "Latitude": "45.649767",
+            "Longitude": "-73.578971"
+        },
+        {
+            "Code arrondissement": "(SLA)",
+            "Code bibliothèque": "s85",
+            "Bibliothèque": "Du Boisé",
+            "Latitude": "45.504104",
+            "Longitude": "-73.705471"
+        },
+        {
+            "Code arrondissement": "(SLA)",
+            "Code bibliothèque": "s84",
+            "Bibliothèque": "Vieux-Saint-Laurent",
+            "Latitude": "45.512707",
+            "Longitude": "-73.676428"
+        },
+        {
+            "Code arrondissement": "(SLA)",
+            "Code bibliothèque": "s86",
+            "Bibliothèque": "Chameran",
+            "Latitude": "45.529173",
+            "Longitude": "-73.676005"
+        },
+        {
+            "Code arrondissement": "(SLE)",
+            "Code bibliothèque": "n22",
+            "Bibliothèque": "Saint-Léonard",
+            "Latitude": "45.586557",
+            "Longitude": "-73.597535"
+        },
+        {
+            "Code arrondissement": "(SUD)",
+            "Code bibliothèque": "g63",
+            "Bibliothèque": "Georges-Vanier",
+            "Latitude": "45.483583",
+            "Longitude": "-73.575105"
+        },
+        {
+            "Code arrondissement": "(SUD)",
+            "Code bibliothèque": "g64",
+            "Bibliothèque": "Marie-Uguay",
+            "Latitude": "45.457723",
+            "Longitude": "-73.595522"
+        },
+        {
+            "Code arrondissement": "(SUD)",
+            "Code bibliothèque": "g66",
+            "Bibliothèque": "Saint-Charles",
+            "Latitude": "45.479184",
+            "Longitude": "-73.563621"
+        },
+        {
+            "Code arrondissement": "(SUD)",
+            "Code bibliothèque": "g65",
+            "Bibliothèque": "Saint-Henri",
+            "Latitude": "45.472488",
+            "Longitude": "-73.589203"
+        },
+        {
+            "Code arrondissement": "(VER)",
+            "Code bibliothèque": "v76",
+            "Bibliothèque": "Île des Sœurs",
+            "Latitude": "45.457202",
+            "Longitude": "-73.547312"
+        },
+        {
+            "Code arrondissement": "(VER)",
+            "Code bibliothèque": "v75",
+            "Bibliothèque": "Jacqueline-De Repentigny",
+            "Latitude": "45.448588",
+            "Longitude": "-73.577953"
+        },
+        {
+            "Code arrondissement": "(VMA)",
+            "Code bibliothèque": "f53",
+            "Bibliothèque": "Frontenac",
+            "Latitude": "45.532902",
+            "Longitude": "-73.551668"
+        },
+        {
+            "Code arrondissement": "(VMA)",
+            "Code bibliothèque": "f52",
+            "Bibliothèque": "Père-Ambroise",
+            "Latitude": "45.522788",
+            "Longitude": "-73.562671"
+        },
+        {
+            "Code arrondissement": "(VSP)",
+            "Code bibliothèque": "x33",
+            "Bibliothèque": "Le Prévost",
+            "Latitude": "45.543885",
+            "Longitude": "-73.614578"
+        },
+        {
+            "Code arrondissement": "(VSP)",
+            "Code bibliothèque": "x34",
+            "Bibliothèque": "Parc-Extension",
+            "Latitude": "45.531532",
+            "Longitude": "-73.629513"
+        },
+        {
+            "Code arrondissement": "(VSP)",
+            "Code bibliothèque": "x35",
+            "Bibliothèque": "Saint-Michel",
+            "Latitude": "45.562308",
+            "Longitude": "-73.601951"
+        },
+        {
+            "Code arrondissement": "(VSP)",
+            "Code bibliothèque": "x32",
+            "Bibliothèque": "Roulivre",
+            "Latitude": "45.570597",
+            "Longitude": "-73.624031"
+        }
+    ]
+}
