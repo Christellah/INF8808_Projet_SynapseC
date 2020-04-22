@@ -9,6 +9,12 @@ promises.push(d3.json("./data/frequentation.json"));
 // Emprunts
 promises.push(d3.json("./data/emprunts_format.json"));
 
+// Maquette 5
+promises.push(d3.json("/data/collection_livres.json")); 
+promises.push(d3.json("/data/collection_format.json")); 
+promises.push(d3.json("/data/prets_public.json")); 
+
+
 Promise.all(promises).then(function (results) {
     /** 
      * Heatmaps
@@ -29,22 +35,22 @@ Promise.all(promises).then(function (results) {
     /** Frequentation */
     // Data
     frequentationSources = createFrequentationSources(results[0]);
-
+    
     // Tip function
     var frequentationTooltip = function (data) {
         return data.time + "<br />" + "Frequentation : " + numberFormat.to(data.count);
     }
-
+    
     // Max function
     function getMaxFrequentation(sources) {
         return d3.max(sources.map(d => d3.max(d.frequentation, f => f.count)));
     }
-
+    
     // Create the heatmap
     var heatmapFrequentation = new HeatMap("#heatmap_frequentation", width, height, margin, HeatMap.createHeatMapFrequentation, HeatMap.domainMonths, HeatMap.domainBibliotheque, getMaxFrequentation, frequentationTooltip);
     heatmapFrequentation.create(frequentationSources);
     heatmapFrequentation.updateData(frequentationSources.filter(d => d.annee == 2013));
-
+    
     // Choix de l'annee
     var yearChoice = document.getElementById('yearChoice');
     noUiSlider.create(yearChoice, {
@@ -59,17 +65,17 @@ Promise.all(promises).then(function (results) {
             decimals: 0,
         })
     });
-
+    
     yearChoice.noUiSlider.on('change', function () {
         var newSources = frequentationSources.filter(d => d.annee == this.get());
         heatmapFrequentation.updateData(newSources);
-
+        
     })
-
+    
     /** HeatMap Emprunts */
     // Data
     var empruntsSources = createEmpruntsSources(results[1]);
-
+    
     // Tip function
     var empruntsTooltip = function (data) {
         return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts.Total) + " emprunts.";
@@ -104,6 +110,21 @@ Promise.all(promises).then(function (results) {
             .selectAll(".heatmap-rect")
             .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
     });
+
+
+    /*
+    * Maquette 5 - Connected Dot Plot
+     */ 
+
+    var collectionLivres = results[2];
+    var collectionFormat = results[3];
+    var pretsPublic = results[4];
+    
+    var publicCDPlotSources = createConnectedDotPlotSources(collectionLivres, pretsPublic);
+    // console.log(publicCDPlotSources);
+
+    // createConnectedDotPlot(publicCDPlotSources[5][1]);
+    createLibConnectedDotPlot(publicCDPlotSources[5][1]);
 
 })
 
