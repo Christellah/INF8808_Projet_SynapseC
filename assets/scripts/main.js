@@ -8,6 +8,8 @@ var promises = [];
 promises.push(d3.json("./data/frequentation.json"));
 // Emprunts
 promises.push(d3.json("./data/emprunts_format.json"));
+// Prets selon public
+promises.push(d3.json("./data/prets_public.json"));
 
 Promise.all(promises).then(function (results) {
     /** 
@@ -105,5 +107,10 @@ Promise.all(promises).then(function (results) {
             .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
     });
 
+    /* Frequentation par public */
+    // Data
+    let publicLoanSources = createPublicLoanSources(results[2]);
+    let stackedBarPublic = new StackedBar("#emprunts_biblio", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque);
+    stackedBarPublic.create(publicLoanSources.reverse());
 })
 

@@ -98,11 +98,27 @@
             découvrir comment cette répartition de l’inventaire pour chaque type de public (jeunes, adultes, aînés, etc) a évolué entre 2013 et 2018. 
           </p>
           <p class="dataviz-name">Stacked bar chart - Évolution de la répartition des emprunts selon les types de public</p>
+          Bibliothèque selectionnée :
+            <select id="selectBiblio">
+              <option selected>Biblio 1</option>
+              <option>Biblio 2</option>
+              <option>Biblio 3</option>
+              <option>Biblio 4</option>
+            </select>
+            <div class="flex-div">
+              <div id="emprunts_biblio" class="dataviz" width="960"></div>
+              <div id="emprunts_biblio_legend"></div>
+            </div>
           <!-- Dataviz 3.2 -->
           <p class="normal-text">Ensuite, l’analyse se porte sur la comparaison de l’inventaire par type de public entre les bibliothèques en 2018. 
             Ceci permet de mieux repérer les bibliothèques qui sont davantage spécialisées pour un type de public en particulier.
           </p>
           <p class="dataviz-name">Stacked bar chart - Répartition des emprunts selon les types de public en 2018</p>
+            <div class="flex-div">
+              <div id="emprunts_biblio_2018" class="dataviz"></div>
+              <div id="emprunts_biblio_2018_legend"></div>
+            </div>
+
         <!-- Section 2.3 -->
         <h3>Évolution des emprunts et des fréquentations</h3>
           <!-- Dataviz 4 -->
@@ -146,6 +162,7 @@
   <script type="text/javascript" src="assets/libs/nouislider/nouislider.min.js"></script>
 
   <script type="text/javascript" src="assets/scripts/heatmap.js"></script>
+  <script type="text/javascript" src="assets/scripts/stackedbar.js"></script>
   <script type="text/javascript" src="assets/scripts/main.js"></script>
 </body>
 </html>

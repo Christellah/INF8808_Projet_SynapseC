@@ -229,7 +229,6 @@ function createFrequentationSources(data) {
             sources.push(biblio);
         });
     }
-
     return sources;
 }
 
