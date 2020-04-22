@@ -110,7 +110,8 @@ HeatMap = class HeatMap {
         svgLegend.append("rect")
             .attr("width", this.width)
             .attr("height", 20)
-            .style("fill", "url(#gradient)");
+            .style("fill", "url(#gradient)")
+            .attr("transform", "translate(0, " + (this.height + 10) + ")");
 
         var y = d3.scaleLinear()
             .range([this.width, 0])
@@ -122,15 +123,16 @@ HeatMap = class HeatMap {
 
         svgLegend.append("g")
             .attr("class", "y axis")
-            .attr("transform", "translate(0,20)")
+            .attr("transform", "translate(0, " + (this.height + 30) + ")")
             .call(yAxis)
             .append("text")
             .attr("y", 0)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("axis title");
+            .text("axis title")
+            ;
 
-        svgLegend.attr("transform", "translate(0, " + (this.height + 10) + ")");
+
     }
 
     static months() {
