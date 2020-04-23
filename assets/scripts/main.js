@@ -119,7 +119,7 @@ Promise.all(promises).then(function (results) {
     //     height = 800 - margin.top - margin.bottom;
 
     // Load Libraries info data
-    libInfoSources = createLibInfoSources(results[2]);
+    var libInfoSources = createLibInfoSources(results[2]);
     // console.log(libInfoSources);
 
     // // Tip function
@@ -133,7 +133,7 @@ Promise.all(promises).then(function (results) {
     // }
 
     // Create the libraries map
-    var heatmapFrequentation = new LibrariesMap("libraries_map");
+    var heatmapFrequentation = new LibrariesMap("libraries_map", libInfoSources);
     // var heatmapFrequentation = new HeatMap("#heatmap_frequentation", width, height, margin, HeatMap.createHeatMapFrequentation, HeatMap.domainMonths, HeatMap.domainBibliotheque, getMaxFrequentation, frequentationTooltip);
     // heatmapFrequentation.create(frequentationSources);
     // heatmapFrequentation.updateData(frequentationSources.filter(d => d.annee == 2013));

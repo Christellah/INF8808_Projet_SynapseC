@@ -1,23 +1,28 @@
 
 // Constants
-const mapLat = 45.5439, 
-        mapLong = -73.6547,
+const mapLat = 45.539699, 
+        mapLong = -73.698378,
         mapInitZoom = 11,
         mapMinZoom = 9,
         mapMaxZoom = 16;
 
 /**
- * Libraries Map
- *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/backgroundmap_leaflet.html
- *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/bubblemap_leaflet_basic.html
+ * Libraries Map Class
  * */ 
 
 LibrariesMap = class LibrariesMap {
+    /**
+     * Constructs Libraries Map
+     *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/backgroundmap_leaflet.html
+     *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/bubblemap_leaflet_basic.html
+    * */ 
+    constructor(divId, libInfoSources) {
 
-    constructor(divId) {
+        this.divId = '#' + divId;
+        this.libInfoSources = libInfoSources;
 
         // Initialize map
-        this.libMap = L.map(divId)
+        var libMap = L.map(divId)
                         .setView([mapLat, mapLong], mapInitZoom)
 
         // Create map's background (from OpenStreetmap)
@@ -26,13 +31,56 @@ LibrariesMap = class LibrariesMap {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
             minZoom: mapMinZoom,
             maxZoom: mapMaxZoom,
-        }).addTo(this.libMap);
+        }).addTo(libMap);
 
+        this.createSymbols(libMap);
+        // Update circles positions on map deplacements or zoom
+        libMap.on("moveend", function () { LibrariesMap.update(libMap) });
     }
+
+
+    /**
+     * Creates the svg layer on the map to display the symbols
+     * @param libMap : The map
+     */
+    createSymbols(libMap) {
+        // Initialize the svg layer in libMap
+        libMap._initPathRoot();
+        // Get the svg to create the symbols at the libs locations
+        var svg = d3.select(this.divId).select("svg");
+
+        // Apend the libraries infos data
+        var circleGroup = svg.append("g")
+            .selectAll("circle")
+			.data(this.libInfoSources)
+            .enter();
+
+        // Draw the circles
+        circleGroup.append("circle")
+            .attr("r", 14)
+			.style("stroke", "black")  
+			.style("opacity", .8) 
+			.style("fill", "#FE390F");
+        
+        // Place the circles
+        LibrariesMap.update(libMap);
+    }
+
+    /**
+     * Updates the circles positions
+     * @param {*} libMap : the map
+     */
+    static update(libMap) {
+        d3.selectAll("circle")
+        .attr("cx", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).x })
+        .attr("cy", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).y })
+    }
+    
+    
 }
 
 /**
- * Transforme les données de fréquentation à partir des données json.
+ * Transforme les données des informations des bibliothèques à partir des données json.
  * Format de retour :
  * [
  *     {
