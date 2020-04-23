@@ -15,16 +15,16 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
     /***** Create Year Selection DropDown  *****/
     createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
-        var svg = d3.select("#ConnectedDotPlot")
-        this.yearDropdown = svg.insert("select", "svg")
+        // var svg = d3.select("#ConnectedDotPlot")
+
+        this.yearDropdown = d3.select("#selectYear")
             .on("change", function() {
                 ConnectedDotPlot.selectedYear = this.value;
                 var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
                 ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
-                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
-            });
-        
-        this.yearDropdown.selectAll("option")
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup);
+            })
+            .selectAll("option")
             .data(data)
             .enter().append("option")
             .attr("value", function (d) { return d.year; })
@@ -43,11 +43,10 @@ ConnectedDotPlot = class ConnectedDotPlot {
         });
         
         var svg = d3.select("#ConnectedDotPlot")
-        var libDropdown = svg.insert("select", "svg")
-            .attr("label", "Sélectionner la bibliothèque")
+        var libDropdown = d3.select("#selectLibrary")
             .on("change", function() {
                 ConnectedDotPlot.selectedLibName = this.value;
-                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup);
             });
 
         libDropdown.selectAll("option")
@@ -63,20 +62,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
     static createLibConnectedDotPlot(data, year, libName, x, y, group, height, lollipopsGroup, multiple) {
 
         ConnectedDotPlot.selectedYear = year;
-
-        // TODO : Move to function
-        var libData = [];
-        data.forEach(function(d) {
-            if(d.year == year) {
-                var lib = d.libraries;
-                lib.forEach(function(e) {
-                    if(e.name == libName) {
-                        libData = e.public;
-                    }
-                });
-            }
-        });
-
+        ConnectedDotPlot.selectedLibName = libName;
+        var libData = ConnectedDotPlot.selectedLibraryData(data, year, libName);
         
         /***** Axis domains *****/
         if(multiple) {
@@ -87,10 +74,10 @@ ConnectedDotPlot = class ConnectedDotPlot {
             ConnectedDotPlot.domainY(y, libData);
         }
         
-        
         /***** Append Axis *****/
-                var xAxis = d3.axisBottom(x);
+        var xAxis = d3.axisBottom(x);
         var yAxis = d3.axisLeft(y);
+        
         group.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
@@ -105,9 +92,19 @@ ConnectedDotPlot = class ConnectedDotPlot {
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
             .attr("dy", ".71em")
-            .attr("font-size", "small")
+            .attr("font-size", "x-small")
             .style("text-anchor", "end")
             .text("Nombre de titres ");
+
+        group.append('text')
+            .attr("id", "libNameLabel")
+            .attr("y", 20)
+            .attr("x", 80)
+            .attr("dx", "-2em")
+            .attr("dy", "-.60em")
+            .attr("style", "bold")
+            .attr("font-size", "x-small")
+            .text(libName);
         
         /***** Update lollipops *****/
         ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y);
@@ -172,8 +169,9 @@ ConnectedDotPlot = class ConnectedDotPlot {
         return librariesNames;
     };
 
-    /***** Library selection function - updates the connected dot plot *****/
-    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, height, lollipopsGroup) {
+    /***** Find current selected library data *****/
+    static selectedLibraryData(data, selectedYear, selectedLibName) {
+        console.log("IN selectedLibraryData ", selectedLibName);
         var libData = [];
         data.forEach(function(d) {
             if(d.year == selectedYear) {
@@ -186,6 +184,12 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         });
 
+        return libData;
+    }
+
+    /***** Library selection function - updates the connected dot plot *****/
+    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, lollipopsGroup) {
+        var libData = ConnectedDotPlot.selectedLibraryData(data, selectedYear, selectedLibName);
         /***** Update Axis domains *****/
         ConnectedDotPlot.domainX(x, libData);
         ConnectedDotPlot.domainY(y, libData);
@@ -201,6 +205,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
             
         group.select(".y.axis")
             .call(yAxis);
+
+        // group.append('text')
+        //     .attr("y", 20)
+        //     .attr("x", 80)
+        //     .attr("dx", "-2em")
+        //     .attr("dy", "-.60em")
+        //     .attr("style", "bold")
+        //     .attr("font-size", "x-small")
+        //     .text(ConnectedDotPlot.selectedLibName);
     }
 
     

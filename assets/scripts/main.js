@@ -11,7 +11,6 @@ promises.push(d3.json("./data/emprunts_format.json"));
 
 // Maquette 5
 promises.push(d3.json("/data/collection_livres.json")); 
-// promises.push(d3.json("/data/collection_format.json")); 
 promises.push(d3.json("/data/prets_public.json")); 
 
 
@@ -118,7 +117,6 @@ Promise.all(promises).then(function (results) {
 
     /*******5.1*******/
     var collectionLivres = results[2];
-    // var collectionFormat = results[3];
     var pretsPublic = results[3];
 
     var marginCD = {
@@ -161,7 +159,8 @@ Promise.all(promises).then(function (results) {
             .attr("height", heightCD + marginCD.top + marginCD.bottom);
             
     ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
-    /*******5.1*******/
+
+    /*******5.2*******/
     
     publicCDPlotSources[publicCDPlotSources.length - 1].libraries.forEach(function(d){
         var svgMultiple = d3.select("#MultipleConnectedDotPlots")
