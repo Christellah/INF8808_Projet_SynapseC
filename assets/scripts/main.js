@@ -6,8 +6,10 @@ var promises = [];
 
 // Frequentation
 promises.push(d3.json("./data/frequentation.json"));
-// Emprunts
+// Emprunts (format)
 promises.push(d3.json("./data/emprunts_format.json"));
+// Emprunts (public)
+promises.push(d3.json("./data/prets_public.json"));
 
 Promise.all(promises).then(function (results) {
     /** 
@@ -69,40 +71,69 @@ Promise.all(promises).then(function (results) {
     /** HeatMap Emprunts */
     // Data
     var empruntsSources = createEmpruntsSources(results[1]);
+    var empruntsPublicSources = createEmpruntsSources(results[2]);
+
 
     // Tip function
     var empruntsTooltip = function (data) {
-        return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts.Total) + " emprunts.";
+        return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts.TOTAL) + " emprunts.";
     }
 
     // Max function
     function getMaxEmprunts(sources) {
-        return d3.max(sources.map(d => d.emprunts.Total))
+        return d3.max(sources.map(d => d.emprunts.TOTAL))
     }
 
     // Create the heatmap
     var heatmapEmprunts = new HeatMap("#heatmap_emprunts", width, height, margin, HeatMap.createHeatMapEmprunts, HeatMap.domainYears, HeatMap.domainBibliotheque, getMaxEmprunts, empruntsTooltip);
     heatmapEmprunts.create(empruntsSources);
 
+    // Valeurs initiales des selecteurs.
+    d3.select("#selectFormat").property('value', 'TOTAL');
+    d3.select("#selectPublic").property('value', '');
+
+    // Change event
     d3.select("#selectFormat").on('change', function () {
         let value = this.value;
-        heatmapEmprunts.maxValue = d3.max(empruntsSources.map(d => d.emprunts[value]));
 
-        heatmapEmprunts.tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([-8, 0])
-            .html(function (data) {
+        if (value.length > 0) {
+            d3.select("#selectPublic").property('value', '');
+            heatmapEmprunts.maxValue = d3.max(empruntsSources.map(d => d.emprunts[value]));
+
+            heatmapEmprunts.setTip(function (data) {
                 return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts[value]) + " emprunts.";
             });
 
-        heatmapEmprunts.colorScale.domain([0, heatmapEmprunts.maxValue]);
+            heatmapEmprunts.updateColorDomain();
+            heatmapEmprunts.updateData(empruntsSources);
 
-        heatmapEmprunts.updateData(empruntsSources);
+            // Mettre a jour le fill
+            d3.select("#heatmap_emprunts")
+                .select("svg")
+                .selectAll(".heatmap-rect")
+                .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) });
 
-        d3.select("#heatmap_emprunts")
-            .select("svg")
-            .selectAll(".heatmap-rect")
-            .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
+        }
+    });
+
+    d3.select("#selectPublic").on('change', function () {
+        let value = this.value;
+        
+        if (value.length > 0) {
+            d3.select("#selectFormat").property('value', '');
+            heatmapEmprunts.maxValue = d3.max(empruntsPublicSources.map(d => d.emprunts[value]));
+            heatmapEmprunts.setTip(function (data) {
+                return data.bibliotheque + " en " + data.annee + " : " + numberFormat.to(data.emprunts[value]) + " emprunts.";
+            });
+            heatmapEmprunts.updateColorDomain();
+            heatmapEmprunts.updateData(empruntsPublicSources);
+
+            d3.select("#heatmap_emprunts")
+                .select("svg")
+                .selectAll(".heatmap-rect")
+                .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) });
+        }
+
     });
 
 })

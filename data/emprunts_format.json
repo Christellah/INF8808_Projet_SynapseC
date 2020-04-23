@@ -1,7 +1,7 @@
 {
     "2013": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 99965,
             "Livres": 345314,
             "Périodiques": 27590,
@@ -10,10 +10,10 @@
             "Électronique": 928,
             "Multisupports": 3897,
             "Autres": 126,
-            "Total": 606917
+            "TOTAL": 606917
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 24176,
             "Livres": 111479,
             "Périodiques": 10015,
@@ -22,10 +22,10 @@
             "Électronique": 331,
             "Multisupports": 1357,
             "Autres": 55,
-            "Total": 190588
+            "TOTAL": 190588
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 11238,
             "Livres": 64737,
             "Périodiques": 3716,
@@ -34,10 +34,10 @@
             "Électronique": 144,
             "Multisupports": 1564,
             "Autres": 47,
-            "Total": 101955
+            "TOTAL": 101955
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 8521,
             "Livres": 35122,
             "Périodiques": 1520,
@@ -46,10 +46,10 @@
             "Électronique": 15,
             "Multisupports": 142,
             "Autres": 0,
-            "Total": 51210
+            "TOTAL": 51210
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 36254,
             "Livres": 142300,
             "Périodiques": 5734,
@@ -58,10 +58,10 @@
             "Électronique": 72,
             "Multisupports": 549,
             "Autres": 9,
-            "Total": 236713
+            "TOTAL": 236713
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 32892,
             "Livres": 124394,
             "Périodiques": 9054,
@@ -70,10 +70,10 @@
             "Électronique": 808,
             "Multisupports": 2780,
             "Autres": 96,
-            "Total": 212506
+            "TOTAL": 212506
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 47293,
             "Livres": 203611,
             "Périodiques": 19002,
@@ -82,10 +82,10 @@
             "Électronique": 328,
             "Multisupports": 5168,
             "Autres": 100,
-            "Total": 370986
+            "TOTAL": 370986
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 37455,
             "Livres": 156065,
             "Périodiques": 11336,
@@ -94,10 +94,10 @@
             "Électronique": 1039,
             "Multisupports": 8482,
             "Autres": 96,
-            "Total": 295134
+            "TOTAL": 295134
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 29582,
             "Livres": 113781,
             "Périodiques": 8694,
@@ -106,10 +106,10 @@
             "Électronique": 171,
             "Multisupports": 1613,
             "Autres": 40,
-            "Total": 198933
+            "TOTAL": 198933
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 1895,
             "Livres": 61349,
             "Périodiques": 3305,
@@ -118,10 +118,10 @@
             "Électronique": 17,
             "Multisupports": 143,
             "Autres": 19,
-            "Total": 79985
+            "TOTAL": 79985
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 687,
             "Livres": 24338,
             "Périodiques": 670,
@@ -130,10 +130,10 @@
             "Électronique": 9,
             "Multisupports": 98,
             "Autres": 1,
-            "Total": 34258
+            "TOTAL": 34258
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 3116,
             "Livres": 129764,
             "Périodiques": 6445,
@@ -142,10 +142,10 @@
             "Électronique": 30,
             "Multisupports": 484,
             "Autres": 2,
-            "Total": 183968
+            "TOTAL": 183968
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 4993,
             "Livres": 471444,
             "Périodiques": 20238,
@@ -154,10 +154,10 @@
             "Électronique": 722,
             "Multisupports": 6004,
             "Autres": 5494,
-            "Total": 675945
+            "TOTAL": 675945
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 13157,
             "Livres": 41898,
             "Périodiques": 1671,
@@ -166,10 +166,10 @@
             "Électronique": 122,
             "Multisupports": 1108,
             "Autres": 8,
-            "Total": 71080
+            "TOTAL": 71080
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 50645,
             "Livres": 172004,
             "Périodiques": 16868,
@@ -178,10 +178,10 @@
             "Électronique": 1012,
             "Multisupports": 2007,
             "Autres": 169,
-            "Total": 340037
+            "TOTAL": 340037
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 23461,
             "Livres": 105028,
             "Périodiques": 10198,
@@ -190,10 +190,10 @@
             "Électronique": 657,
             "Multisupports": 1862,
             "Autres": 44,
-            "Total": 248216
+            "TOTAL": 248216
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 27558,
             "Livres": 130412,
             "Périodiques": 13555,
@@ -202,10 +202,10 @@
             "Électronique": 362,
             "Multisupports": 1083,
             "Autres": 45,
-            "Total": 241414
+            "TOTAL": 241414
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 1226,
             "Livres": 48339,
             "Périodiques": 3314,
@@ -214,10 +214,10 @@
             "Électronique": 222,
             "Multisupports": 98,
             "Autres": 859,
-            "Total": 71994
+            "TOTAL": 71994
         },
         {
-            "Bibliotheque": "(MNO) CHARLEROI",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 1818,
             "Livres": 65437,
             "Périodiques": 4078,
@@ -226,10 +226,10 @@
             "Électronique": 79,
             "Multisupports": 180,
             "Autres": 587,
-            "Total": 99536
+            "TOTAL": 99536
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 4548,
             "Livres": 163124,
             "Périodiques": 8813,
@@ -238,10 +238,10 @@
             "Électronique": 272,
             "Multisupports": 1701,
             "Autres": 954,
-            "Total": 253327
+            "TOTAL": 253327
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 1976,
             "Livres": 95767,
             "Périodiques": 4955,
@@ -250,10 +250,10 @@
             "Électronique": 351,
             "Multisupports": 177,
             "Autres": 37,
-            "Total": 158673
+            "TOTAL": 158673
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 33042,
             "Livres": 111253,
             "Périodiques": 8212,
@@ -262,10 +262,10 @@
             "Électronique": 80,
             "Multisupports": 543,
             "Autres": 173,
-            "Total": 183955
+            "TOTAL": 183955
         },
         {
-            "Bibliotheque": "(PMR) MILE END",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 44519,
             "Livres": 110353,
             "Périodiques": 10363,
@@ -274,10 +274,10 @@
             "Électronique": 128,
             "Multisupports": 2660,
             "Autres": 2156,
-            "Total": 244697
+            "TOTAL": 244697
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 30029,
             "Livres": 185840,
             "Périodiques": 21196,
@@ -286,10 +286,10 @@
             "Électronique": 335,
             "Multisupports": 2499,
             "Autres": 90,
-            "Total": 311496
+            "TOTAL": 311496
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 5844,
             "Livres": 319131,
             "Périodiques": 12372,
@@ -298,10 +298,10 @@
             "Électronique": 670,
             "Multisupports": 5013,
             "Autres": 1,
-            "Total": 408488
+            "TOTAL": 408488
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 998,
             "Livres": 28217,
             "Périodiques": 1789,
@@ -310,10 +310,10 @@
             "Électronique": 21,
             "Multisupports": 787,
             "Autres": 0,
-            "Total": 42673
+            "TOTAL": 42673
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 45201,
             "Livres": 123894,
             "Périodiques": 11797,
@@ -322,10 +322,10 @@
             "Électronique": 337,
             "Multisupports": 2587,
             "Autres": 522,
-            "Total": 230351
+            "TOTAL": 230351
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 1076,
             "Livres": 15627,
             "Périodiques": 483,
@@ -334,10 +334,10 @@
             "Électronique": 3,
             "Multisupports": 196,
             "Autres": 6,
-            "Total": 25801
+            "TOTAL": 25801
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 51906,
             "Livres": 225981,
             "Périodiques": 20384,
@@ -346,10 +346,10 @@
             "Électronique": 940,
             "Multisupports": 3113,
             "Autres": 1800,
-            "Total": 375526
+            "TOTAL": 375526
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 31969,
             "Livres": 175349,
             "Périodiques": 9713,
@@ -358,10 +358,10 @@
             "Électronique": 524,
             "Multisupports": 1120,
             "Autres": 619,
-            "Total": 231334
+            "TOTAL": 231334
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 23678,
             "Livres": 155931,
             "Périodiques": 9047,
@@ -370,10 +370,10 @@
             "Électronique": 313,
             "Multisupports": 1704,
             "Autres": 350,
-            "Total": 204284
+            "TOTAL": 204284
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 1151,
             "Livres": 192733,
             "Périodiques": 7566,
@@ -382,10 +382,10 @@
             "Électronique": 60,
             "Multisupports": 3484,
             "Autres": 1280,
-            "Total": 289069
+            "TOTAL": 289069
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 3618,
             "Livres": 280046,
             "Périodiques": 14559,
@@ -394,10 +394,10 @@
             "Électronique": 217,
             "Multisupports": 2835,
             "Autres": 12,
-            "Total": 430144
+            "TOTAL": 430144
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 43185,
             "Livres": 231048,
             "Périodiques": 20478,
@@ -406,10 +406,10 @@
             "Électronique": 1999,
             "Multisupports": 196,
             "Autres": 47,
-            "Total": 367273
+            "TOTAL": 367273
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 17505,
             "Livres": 48764,
             "Périodiques": 3705,
@@ -418,10 +418,10 @@
             "Électronique": 79,
             "Multisupports": 430,
             "Autres": 17,
-            "Total": 108625
+            "TOTAL": 108625
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 15842,
             "Livres": 78789,
             "Périodiques": 5378,
@@ -430,10 +430,10 @@
             "Électronique": 155,
             "Multisupports": 595,
             "Autres": 108,
-            "Total": 152348
+            "TOTAL": 152348
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 19814,
             "Livres": 50918,
             "Périodiques": 3797,
@@ -442,10 +442,10 @@
             "Électronique": 146,
             "Multisupports": 792,
             "Autres": 127,
-            "Total": 119426
+            "TOTAL": 119426
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 15032,
             "Livres": 54916,
             "Périodiques": 4429,
@@ -454,10 +454,10 @@
             "Électronique": 189,
             "Multisupports": 1317,
             "Autres": 27,
-            "Total": 118094
+            "TOTAL": 118094
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 9027,
             "Livres": 89004,
             "Périodiques": 1920,
@@ -466,10 +466,10 @@
             "Électronique": 29,
             "Multisupports": 327,
             "Autres": 7,
-            "Total": 133299
+            "TOTAL": 133299
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 15097,
             "Livres": 137871,
             "Périodiques": 4636,
@@ -478,10 +478,10 @@
             "Électronique": 62,
             "Multisupports": 492,
             "Autres": 82,
-            "Total": 220988
+            "TOTAL": 220988
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 32816,
             "Livres": 96614,
             "Périodiques": 5352,
@@ -490,10 +490,10 @@
             "Électronique": 155,
             "Multisupports": 1559,
             "Autres": 2205,
-            "Total": 215578
+            "TOTAL": 215578
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 14050,
             "Livres": 76844,
             "Périodiques": 4288,
@@ -502,10 +502,10 @@
             "Électronique": 152,
             "Multisupports": 1336,
             "Autres": 1860,
-            "Total": 135206
+            "TOTAL": 135206
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 63819,
             "Livres": 243076,
             "Périodiques": 18707,
@@ -514,10 +514,10 @@
             "Électronique": 846,
             "Multisupports": 2630,
             "Autres": 188,
-            "Total": 430572
+            "TOTAL": 430572
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 22979,
             "Livres": 151680,
             "Périodiques": 9420,
@@ -526,10 +526,10 @@
             "Électronique": 231,
             "Multisupports": 3675,
             "Autres": 4665,
-            "Total": 253216
+            "TOTAL": 253216
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 32612,
             "Livres": 142941,
             "Périodiques": 11150,
@@ -538,60 +538,12 @@
             "Électronique": 554,
             "Multisupports": 1587,
             "Autres": 876,
-            "Total": 243138
-        },
-        {
-            "Bibliotheque": "BIBLIOBUS",
-            "Nouveautés": 401,
-            "Livres": 36771,
-            "Périodiques": 1548,
-            "Audio": 42,
-            "Vidéo": 4593,
-            "Électronique": 1,
-            "Multisupports": 973,
-            "Autres": 17,
-            "Total": 44346
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 209,
-            "Livres": 17048,
-            "Périodiques": 1036,
-            "Audio": 764,
-            "Vidéo": 1228,
-            "Électronique": 0,
-            "Multisupports": 42,
-            "Autres": 3,
-            "Total": 20330
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 119701,
-            "Livres": 706301,
-            "Périodiques": 44706,
-            "Audio": 30684,
-            "Vidéo": 238868,
-            "Électronique": 1808,
-            "Multisupports": 13180,
-            "Autres": 956,
-            "Total": 1156204
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 641,
-            "Livres": 12349,
-            "Périodiques": 163,
-            "Audio": 142,
-            "Vidéo": 144,
-            "Électronique": 0,
-            "Multisupports": 169,
-            "Autres": 115,
-            "Total": 13723
+            "TOTAL": 243138
         }
     ],
     "2014": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 91093,
             "Livres": 334477,
             "Périodiques": 24812,
@@ -600,10 +552,10 @@
             "Électronique": 721,
             "Multisupports": 3514,
             "Autres": 109,
-            "Total": 586665
+            "TOTAL": 586665
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 20902,
             "Livres": 98637,
             "Périodiques": 8443,
@@ -612,10 +564,10 @@
             "Électronique": 188,
             "Multisupports": 998,
             "Autres": 28,
-            "Total": 173048
+            "TOTAL": 173048
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 10594,
             "Livres": 62013,
             "Périodiques": 3002,
@@ -624,10 +576,10 @@
             "Électronique": 38,
             "Multisupports": 1469,
             "Autres": 19,
-            "Total": 92759
+            "TOTAL": 92759
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 8882,
             "Livres": 30497,
             "Périodiques": 1566,
@@ -636,10 +588,10 @@
             "Électronique": 16,
             "Multisupports": 72,
             "Autres": 4,
-            "Total": 47478
+            "TOTAL": 47478
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 35836,
             "Livres": 138827,
             "Périodiques": 5517,
@@ -648,10 +600,10 @@
             "Électronique": 52,
             "Multisupports": 282,
             "Autres": 15,
-            "Total": 229682
+            "TOTAL": 229682
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 32827,
             "Livres": 115373,
             "Périodiques": 8390,
@@ -660,10 +612,10 @@
             "Électronique": 436,
             "Multisupports": 2384,
             "Autres": 62,
-            "Total": 199566
+            "TOTAL": 199566
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 42063,
             "Livres": 190754,
             "Périodiques": 16250,
@@ -672,10 +624,10 @@
             "Électronique": 246,
             "Multisupports": 3741,
             "Autres": 148,
-            "Total": 334858
+            "TOTAL": 334858
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 34248,
             "Livres": 134535,
             "Périodiques": 8590,
@@ -684,10 +636,10 @@
             "Électronique": 645,
             "Multisupports": 5731,
             "Autres": 83,
-            "Total": 245336
+            "TOTAL": 245336
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 25939,
             "Livres": 110114,
             "Périodiques": 8082,
@@ -696,10 +648,10 @@
             "Électronique": 84,
             "Multisupports": 1502,
             "Autres": 405,
-            "Total": 186531
+            "TOTAL": 186531
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 1933,
             "Livres": 55980,
             "Périodiques": 3585,
@@ -708,10 +660,10 @@
             "Électronique": 21,
             "Multisupports": 85,
             "Autres": 26,
-            "Total": 75003
+            "TOTAL": 75003
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 800,
             "Livres": 24562,
             "Périodiques": 706,
@@ -720,10 +672,10 @@
             "Électronique": 5,
             "Multisupports": 63,
             "Autres": 2,
-            "Total": 35844
+            "TOTAL": 35844
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 3834,
             "Livres": 134550,
             "Périodiques": 8559,
@@ -732,10 +684,10 @@
             "Électronique": 44,
             "Multisupports": 310,
             "Autres": 12,
-            "Total": 190640
+            "TOTAL": 190640
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 5315,
             "Livres": 451954,
             "Périodiques": 21321,
@@ -744,10 +696,10 @@
             "Électronique": 671,
             "Multisupports": 5136,
             "Autres": 5702,
-            "Total": 639442
+            "TOTAL": 639442
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 12478,
             "Livres": 43607,
             "Périodiques": 1478,
@@ -756,10 +708,10 @@
             "Électronique": 69,
             "Multisupports": 1169,
             "Autres": 27,
-            "Total": 71581
+            "TOTAL": 71581
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 50980,
             "Livres": 166451,
             "Périodiques": 15613,
@@ -768,10 +720,10 @@
             "Électronique": 639,
             "Multisupports": 1703,
             "Autres": 69,
-            "Total": 324904
+            "TOTAL": 324904
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 24893,
             "Livres": 111441,
             "Périodiques": 9129,
@@ -780,10 +732,10 @@
             "Électronique": 540,
             "Multisupports": 1563,
             "Autres": 39,
-            "Total": 260820
+            "TOTAL": 260820
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 22783,
             "Livres": 139276,
             "Périodiques": 11041,
@@ -792,10 +744,10 @@
             "Électronique": 285,
             "Multisupports": 1235,
             "Autres": 60,
-            "Total": 235891
+            "TOTAL": 235891
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 1329,
             "Livres": 52512,
             "Périodiques": 3138,
@@ -804,10 +756,10 @@
             "Électronique": 133,
             "Multisupports": 90,
             "Autres": 631,
-            "Total": 75106
+            "TOTAL": 75106
         },
         {
-            "Bibliotheque": "(MNO) CHARLEROI",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 2630,
             "Livres": 67543,
             "Périodiques": 3657,
@@ -816,10 +768,10 @@
             "Électronique": 68,
             "Multisupports": 197,
             "Autres": 569,
-            "Total": 104476
+            "TOTAL": 104476
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 6889,
             "Livres": 153898,
             "Périodiques": 8018,
@@ -828,10 +780,10 @@
             "Électronique": 142,
             "Multisupports": 1543,
             "Autres": 985,
-            "Total": 241811
+            "TOTAL": 241811
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 1970,
             "Livres": 91963,
             "Périodiques": 4577,
@@ -840,10 +792,10 @@
             "Électronique": 213,
             "Multisupports": 240,
             "Autres": 41,
-            "Total": 151981
+            "TOTAL": 151981
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 33316,
             "Livres": 105981,
             "Périodiques": 8167,
@@ -852,10 +804,10 @@
             "Électronique": 69,
             "Multisupports": 563,
             "Autres": 724,
-            "Total": 177078
+            "TOTAL": 177078
         },
         {
-            "Bibliotheque": "(PMR) MILE END",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 40880,
             "Livres": 101196,
             "Périodiques": 9158,
@@ -864,10 +816,10 @@
             "Électronique": 69,
             "Multisupports": 1888,
             "Autres": 2502,
-            "Total": 223326
+            "TOTAL": 223326
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 26748,
             "Livres": 167034,
             "Périodiques": 17951,
@@ -876,10 +828,10 @@
             "Électronique": 132,
             "Multisupports": 1819,
             "Autres": 33,
-            "Total": 273685
+            "TOTAL": 273685
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 4912,
             "Livres": 297569,
             "Périodiques": 11693,
@@ -888,10 +840,10 @@
             "Électronique": 414,
             "Multisupports": 4060,
             "Autres": 1173,
-            "Total": 375845
+            "TOTAL": 375845
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 1456,
             "Livres": 40125,
             "Périodiques": 2600,
@@ -900,10 +852,10 @@
             "Électronique": 23,
             "Multisupports": 735,
             "Autres": 7,
-            "Total": 58632
+            "TOTAL": 58632
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 45535,
             "Livres": 107234,
             "Périodiques": 10590,
@@ -912,10 +864,10 @@
             "Électronique": 192,
             "Multisupports": 2546,
             "Autres": 411,
-            "Total": 215677
+            "TOTAL": 215677
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 36740,
             "Livres": 297242,
             "Périodiques": 11224,
@@ -924,10 +876,10 @@
             "Électronique": 59,
             "Multisupports": 3863,
             "Autres": 449,
-            "Total": 482625
+            "TOTAL": 482625
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 62262,
             "Livres": 199715,
             "Périodiques": 19190,
@@ -936,10 +888,10 @@
             "Électronique": 717,
             "Multisupports": 2044,
             "Autres": 1509,
-            "Total": 349298
+            "TOTAL": 349298
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 33059,
             "Livres": 162614,
             "Périodiques": 9630,
@@ -948,10 +900,10 @@
             "Électronique": 305,
             "Multisupports": 1035,
             "Autres": 1155,
-            "Total": 222086
+            "TOTAL": 222086
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 20996,
             "Livres": 152372,
             "Périodiques": 7598,
@@ -960,10 +912,10 @@
             "Électronique": 323,
             "Multisupports": 1534,
             "Autres": 453,
-            "Total": 197637
+            "TOTAL": 197637
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 3244,
             "Livres": 360458,
             "Périodiques": 16001,
@@ -972,10 +924,10 @@
             "Électronique": 60,
             "Multisupports": 5308,
             "Autres": 2126,
-            "Total": 516109
+            "TOTAL": 516109
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 2834,
             "Livres": 186605,
             "Périodiques": 10405,
@@ -984,10 +936,10 @@
             "Électronique": 61,
             "Multisupports": 2789,
             "Autres": 615,
-            "Total": 291599
+            "TOTAL": 291599
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 46885,
             "Livres": 232297,
             "Périodiques": 21736,
@@ -996,10 +948,10 @@
             "Électronique": 1565,
             "Multisupports": 463,
             "Autres": 34,
-            "Total": 389792
+            "TOTAL": 389792
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 15642,
             "Livres": 50104,
             "Périodiques": 4134,
@@ -1008,10 +960,10 @@
             "Électronique": 67,
             "Multisupports": 480,
             "Autres": 703,
-            "Total": 107010
+            "TOTAL": 107010
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 16227,
             "Livres": 83819,
             "Périodiques": 5040,
@@ -1020,10 +972,10 @@
             "Électronique": 80,
             "Multisupports": 445,
             "Autres": 204,
-            "Total": 159557
+            "TOTAL": 159557
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 19314,
             "Livres": 51621,
             "Périodiques": 3989,
@@ -1032,10 +984,10 @@
             "Électronique": 51,
             "Multisupports": 721,
             "Autres": 89,
-            "Total": 114857
+            "TOTAL": 114857
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 14390,
             "Livres": 53260,
             "Périodiques": 3448,
@@ -1044,10 +996,10 @@
             "Électronique": 94,
             "Multisupports": 797,
             "Autres": 19,
-            "Total": 111558
+            "TOTAL": 111558
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 9629,
             "Livres": 83844,
             "Périodiques": 1705,
@@ -1056,10 +1008,10 @@
             "Électronique": 3,
             "Multisupports": 224,
             "Autres": 28,
-            "Total": 125752
+            "TOTAL": 125752
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 16401,
             "Livres": 140566,
             "Périodiques": 5199,
@@ -1068,10 +1020,10 @@
             "Électronique": 25,
             "Multisupports": 517,
             "Autres": 591,
-            "Total": 219466
+            "TOTAL": 219466
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 29570,
             "Livres": 96782,
             "Périodiques": 5366,
@@ -1080,10 +1032,10 @@
             "Électronique": 120,
             "Multisupports": 1362,
             "Autres": 3622,
-            "Total": 206624
+            "TOTAL": 206624
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 12516,
             "Livres": 75377,
             "Périodiques": 3821,
@@ -1092,10 +1044,10 @@
             "Électronique": 117,
             "Multisupports": 1006,
             "Autres": 2463,
-            "Total": 129367
+            "TOTAL": 129367
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 49955,
             "Livres": 205652,
             "Périodiques": 14792,
@@ -1104,10 +1056,10 @@
             "Électronique": 470,
             "Multisupports": 1481,
             "Autres": 676,
-            "Total": 347000
+            "TOTAL": 347000
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 23859,
             "Livres": 154863,
             "Périodiques": 9145,
@@ -1116,10 +1068,10 @@
             "Électronique": 218,
             "Multisupports": 3339,
             "Autres": 5772,
-            "Total": 259090
+            "TOTAL": 259090
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 26798,
             "Livres": 141731,
             "Périodiques": 9376,
@@ -1128,60 +1080,12 @@
             "Électronique": 376,
             "Multisupports": 1187,
             "Autres": 1303,
-            "Total": 224740
-        },
-        {
-            "Bibliotheque": "BIBLIOBUS",
-            "Nouveautés": 354,
-            "Livres": 40633,
-            "Périodiques": 1376,
-            "Audio": 101,
-            "Vidéo": 6137,
-            "Électronique": 3,
-            "Multisupports": 1167,
-            "Autres": 24,
-            "Total": 49795
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 223,
-            "Livres": 17729,
-            "Périodiques": 1180,
-            "Audio": 700,
-            "Vidéo": 1352,
-            "Électronique": 0,
-            "Multisupports": 37,
-            "Autres": 1,
-            "Total": 21222
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 141566,
-            "Livres": 900123,
-            "Périodiques": 52655,
-            "Audio": 36861,
-            "Vidéo": 290586,
-            "Électronique": 1452,
-            "Multisupports": 15706,
-            "Autres": 1162,
-            "Total": 1440111
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 599,
-            "Livres": 10767,
-            "Périodiques": 109,
-            "Audio": 37,
-            "Vidéo": 251,
-            "Électronique": 2,
-            "Multisupports": 70,
-            "Autres": 54,
-            "Total": 11889
+            "TOTAL": 224740
         }
     ],
     "2015": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 93413,
             "Livres": 333774,
             "Périodiques": 24141,
@@ -1190,10 +1094,10 @@
             "Électronique": 476,
             "Multisupports": 3599,
             "Autres": 112,
-            "Total": 579340
+            "TOTAL": 579340
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 20639,
             "Livres": 95694,
             "Périodiques": 7484,
@@ -1202,10 +1106,10 @@
             "Électronique": 100,
             "Multisupports": 309,
             "Autres": 84,
-            "Total": 164613
+            "TOTAL": 164613
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 14013,
             "Livres": 66912,
             "Périodiques": 2850,
@@ -1214,10 +1118,10 @@
             "Électronique": 25,
             "Multisupports": 798,
             "Autres": 37,
-            "Total": 97463
+            "TOTAL": 97463
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 8319,
             "Livres": 28783,
             "Périodiques": 1357,
@@ -1226,10 +1130,10 @@
             "Électronique": 9,
             "Multisupports": 113,
             "Autres": 0,
-            "Total": 44769
+            "TOTAL": 44769
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 34513,
             "Livres": 136371,
             "Périodiques": 5487,
@@ -1238,10 +1142,10 @@
             "Électronique": 73,
             "Multisupports": 367,
             "Autres": 15,
-            "Total": 222630
+            "TOTAL": 222630
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 29352,
             "Livres": 96507,
             "Périodiques": 7718,
@@ -1250,10 +1154,10 @@
             "Électronique": 216,
             "Multisupports": 1819,
             "Autres": 40,
-            "Total": 168313
+            "TOTAL": 168313
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 37659,
             "Livres": 181534,
             "Périodiques": 14408,
@@ -1262,10 +1166,10 @@
             "Électronique": 236,
             "Multisupports": 2136,
             "Autres": 77,
-            "Total": 302386
+            "TOTAL": 302386
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 35763,
             "Livres": 124743,
             "Périodiques": 7080,
@@ -1274,10 +1178,10 @@
             "Électronique": 363,
             "Multisupports": 2853,
             "Autres": 53,
-            "Total": 223258
+            "TOTAL": 223258
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 23500,
             "Livres": 113660,
             "Périodiques": 7943,
@@ -1286,10 +1190,10 @@
             "Électronique": 37,
             "Multisupports": 1368,
             "Autres": 1214,
-            "Total": 184864
+            "TOTAL": 184864
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 1732,
             "Livres": 55620,
             "Périodiques": 3792,
@@ -1298,10 +1202,10 @@
             "Électronique": 9,
             "Multisupports": 72,
             "Autres": 5,
-            "Total": 73486
+            "TOTAL": 73486
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 935,
             "Livres": 24782,
             "Périodiques": 660,
@@ -1310,10 +1214,10 @@
             "Électronique": 5,
             "Multisupports": 23,
             "Autres": 0,
-            "Total": 35168
+            "TOTAL": 35168
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 9063,
             "Livres": 164653,
             "Périodiques": 9910,
@@ -1322,10 +1226,10 @@
             "Électronique": 18,
             "Multisupports": 168,
             "Autres": 443,
-            "Total": 238082
+            "TOTAL": 238082
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 5725,
             "Livres": 426321,
             "Périodiques": 20727,
@@ -1334,10 +1238,10 @@
             "Électronique": 468,
             "Multisupports": 4945,
             "Autres": 5273,
-            "Total": 600081
+            "TOTAL": 600081
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 11262,
             "Livres": 47364,
             "Périodiques": 1773,
@@ -1346,10 +1250,10 @@
             "Électronique": 26,
             "Multisupports": 859,
             "Autres": 44,
-            "Total": 72186
+            "TOTAL": 72186
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 48704,
             "Livres": 168856,
             "Périodiques": 14218,
@@ -1358,10 +1262,10 @@
             "Électronique": 308,
             "Multisupports": 737,
             "Autres": 44,
-            "Total": 323215
+            "TOTAL": 323215
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 26778,
             "Livres": 124944,
             "Périodiques": 9101,
@@ -1370,10 +1274,10 @@
             "Électronique": 266,
             "Multisupports": 1174,
             "Autres": 65,
-            "Total": 265516
+            "TOTAL": 265516
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 23607,
             "Livres": 133768,
             "Périodiques": 10387,
@@ -1382,10 +1286,10 @@
             "Électronique": 188,
             "Multisupports": 769,
             "Autres": 23,
-            "Total": 222317
+            "TOTAL": 222317
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 1433,
             "Livres": 55880,
             "Périodiques": 3081,
@@ -1394,10 +1298,10 @@
             "Électronique": 85,
             "Multisupports": 90,
             "Autres": 568,
-            "Total": 77908
+            "TOTAL": 77908
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 21634,
             "Livres": 139545,
             "Périodiques": 5800,
@@ -1406,10 +1310,10 @@
             "Électronique": 102,
             "Multisupports": 1481,
             "Autres": 682,
-            "Total": 234106
+            "TOTAL": 234106
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 9495,
             "Livres": 82843,
             "Périodiques": 3700,
@@ -1418,10 +1322,10 @@
             "Électronique": 154,
             "Multisupports": 157,
             "Autres": 23,
-            "Total": 146419
+            "TOTAL": 146419
         },
         {
-            "Bibliotheque": "(MNO) YVES-RYAN",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 7666,
             "Livres": 63191,
             "Périodiques": 3215,
@@ -1430,10 +1334,10 @@
             "Électronique": 32,
             "Multisupports": 121,
             "Autres": 353,
-            "Total": 100271
+            "TOTAL": 100271
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 27250,
             "Livres": 111966,
             "Périodiques": 8719,
@@ -1442,10 +1346,10 @@
             "Électronique": 13,
             "Multisupports": 509,
             "Autres": 1357,
-            "Total": 175117
+            "TOTAL": 175117
         },
         {
-            "Bibliotheque": "(PMR) MORDECAI-RICHLER",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 37284,
             "Livres": 98093,
             "Périodiques": 9448,
@@ -1454,10 +1358,10 @@
             "Électronique": 50,
             "Multisupports": 1465,
             "Autres": 2094,
-            "Total": 210003
+            "TOTAL": 210003
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 23761,
             "Livres": 157920,
             "Périodiques": 16334,
@@ -1466,10 +1370,10 @@
             "Électronique": 76,
             "Multisupports": 1581,
             "Autres": 34,
-            "Total": 260174
+            "TOTAL": 260174
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 4316,
             "Livres": 277125,
             "Périodiques": 12684,
@@ -1478,10 +1382,10 @@
             "Électronique": 372,
             "Multisupports": 3520,
             "Autres": 1653,
-            "Total": 346504
+            "TOTAL": 346504
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 1312,
             "Livres": 41420,
             "Périodiques": 3268,
@@ -1490,10 +1394,10 @@
             "Électronique": 22,
             "Multisupports": 711,
             "Autres": 0,
-            "Total": 61368
+            "TOTAL": 61368
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 36524,
             "Livres": 107636,
             "Périodiques": 9939,
@@ -1502,10 +1406,10 @@
             "Électronique": 69,
             "Multisupports": 2528,
             "Autres": 1394,
-            "Total": 207770
+            "TOTAL": 207770
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 55902,
             "Livres": 300763,
             "Périodiques": 13820,
@@ -1514,10 +1418,10 @@
             "Électronique": 30,
             "Multisupports": 4243,
             "Autres": 563,
-            "Total": 494104
+            "TOTAL": 494104
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 65737,
             "Livres": 206666,
             "Périodiques": 18273,
@@ -1526,10 +1430,10 @@
             "Électronique": 555,
             "Multisupports": 2174,
             "Autres": 1626,
-            "Total": 363791
+            "TOTAL": 363791
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 34291,
             "Livres": 154171,
             "Périodiques": 8556,
@@ -1538,10 +1442,10 @@
             "Électronique": 32,
             "Multisupports": 877,
             "Autres": 890,
-            "Total": 213803
+            "TOTAL": 213803
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 18891,
             "Livres": 139008,
             "Périodiques": 7499,
@@ -1550,10 +1454,10 @@
             "Électronique": 222,
             "Multisupports": 1394,
             "Autres": 401,
-            "Total": 181283
+            "TOTAL": 181283
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 4358,
             "Livres": 374399,
             "Périodiques": 17140,
@@ -1562,10 +1466,10 @@
             "Électronique": 81,
             "Multisupports": 4906,
             "Autres": 8137,
-            "Total": 517898
+            "TOTAL": 517898
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 2940,
             "Livres": 189324,
             "Périodiques": 9817,
@@ -1574,10 +1478,10 @@
             "Électronique": 55,
             "Multisupports": 2898,
             "Autres": 990,
-            "Total": 282274
+            "TOTAL": 282274
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 42653,
             "Livres": 230996,
             "Périodiques": 21708,
@@ -1586,10 +1490,10 @@
             "Électronique": 648,
             "Multisupports": 1091,
             "Autres": 81,
-            "Total": 404299
+            "TOTAL": 404299
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 17910,
             "Livres": 50769,
             "Périodiques": 3887,
@@ -1598,10 +1502,10 @@
             "Électronique": 37,
             "Multisupports": 440,
             "Autres": 805,
-            "Total": 104086
+            "TOTAL": 104086
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 15303,
             "Livres": 92766,
             "Périodiques": 5761,
@@ -1610,10 +1514,10 @@
             "Électronique": 69,
             "Multisupports": 346,
             "Autres": 936,
-            "Total": 164948
+            "TOTAL": 164948
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 21482,
             "Livres": 52556,
             "Périodiques": 4074,
@@ -1622,10 +1526,10 @@
             "Électronique": 20,
             "Multisupports": 615,
             "Autres": 100,
-            "Total": 115704
+            "TOTAL": 115704
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 13378,
             "Livres": 53478,
             "Périodiques": 3706,
@@ -1634,10 +1538,10 @@
             "Électronique": 43,
             "Multisupports": 598,
             "Autres": 10,
-            "Total": 107316
+            "TOTAL": 107316
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 10157,
             "Livres": 82595,
             "Périodiques": 1880,
@@ -1646,10 +1550,10 @@
             "Électronique": 7,
             "Multisupports": 189,
             "Autres": 2,
-            "Total": 121202
+            "TOTAL": 121202
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 13003,
             "Livres": 144249,
             "Périodiques": 5793,
@@ -1658,10 +1562,10 @@
             "Électronique": 14,
             "Multisupports": 389,
             "Autres": 408,
-            "Total": 214581
+            "TOTAL": 214581
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 30695,
             "Livres": 98254,
             "Périodiques": 6811,
@@ -1670,10 +1574,10 @@
             "Électronique": 38,
             "Multisupports": 1345,
             "Autres": 3145,
-            "Total": 201762
+            "TOTAL": 201762
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 13967,
             "Livres": 82735,
             "Périodiques": 4428,
@@ -1682,10 +1586,10 @@
             "Électronique": 52,
             "Multisupports": 763,
             "Autres": 2917,
-            "Total": 138707
+            "TOTAL": 138707
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 51566,
             "Livres": 204057,
             "Périodiques": 13479,
@@ -1694,10 +1598,10 @@
             "Électronique": 233,
             "Multisupports": 984,
             "Autres": 765,
-            "Total": 335453
+            "TOTAL": 335453
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 26442,
             "Livres": 148378,
             "Périodiques": 8526,
@@ -1706,10 +1610,10 @@
             "Électronique": 207,
             "Multisupports": 2145,
             "Autres": 5764,
-            "Total": 252874
+            "TOTAL": 252874
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 29865,
             "Livres": 138876,
             "Périodiques": 9401,
@@ -1718,48 +1622,12 @@
             "Électronique": 268,
             "Multisupports": 1183,
             "Autres": 1310,
-            "Total": 218052
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 317,
-            "Livres": 17218,
-            "Périodiques": 1284,
-            "Audio": 1130,
-            "Vidéo": 1133,
-            "Électronique": 0,
-            "Multisupports": 37,
-            "Autres": 0,
-            "Total": 21119
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 154026,
-            "Livres": 950773,
-            "Périodiques": 58039,
-            "Audio": 34685,
-            "Vidéo": 283620,
-            "Électronique": 921,
-            "Multisupports": 13747,
-            "Autres": 1113,
-            "Total": 1496924
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 505,
-            "Livres": 10685,
-            "Périodiques": 120,
-            "Audio": 44,
-            "Vidéo": 358,
-            "Électronique": 0,
-            "Multisupports": 63,
-            "Autres": 6027,
-            "Total": 17802
+            "TOTAL": 218052
         }
     ],
     "2016": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 94884,
             "Livres": 354601,
             "Périodiques": 22319,
@@ -1767,10 +1635,11 @@
             "Vidéo": 94243,
             "Multisupports": 399,
             "Électronique": 14095.93163,
-            "Total": 591763.9316
+            "Autres": 0,
+            "TOTAL": 591763.9316
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 20424,
             "Livres": 100119,
             "Périodiques": 7029,
@@ -1778,10 +1647,11 @@
             "Vidéo": 31091,
             "Multisupports": 771,
             "Électronique": 3883.950314,
-            "Total": 166948.9503
+            "Autres": 0,
+            "TOTAL": 166948.9503
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 14889,
             "Livres": 72558,
             "Périodiques": 3450,
@@ -1789,21 +1659,23 @@
             "Vidéo": 10633,
             "Multisupports": 1116,
             "Électronique": 188.8734845,
-            "Total": 103182.8735
+            "Autres": 0,
+            "TOTAL": 103182.8735
         },
         {
-            "Bibliotheque": "(AHC) LIVROMOBILE",
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
             "Nouveautés": 1280,
             "Livres": 16373,
             "Périodiques": 627,
             "Audio": 724,
             "Vidéo": 1632,
             "Multisupports": 23,
-            "Électronique": "",
-            "Total": 20659
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 20659
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 8772,
             "Livres": 30415,
             "Périodiques": 1372,
@@ -1811,10 +1683,11 @@
             "Vidéo": 5811,
             "Multisupports": 0,
             "Électronique": 2101.770818,
-            "Total": 48711.77082
+            "Autres": 0,
+            "TOTAL": 48711.77082
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 38965,
             "Livres": 137253,
             "Périodiques": 4515,
@@ -1822,10 +1695,11 @@
             "Vidéo": 32632,
             "Multisupports": 13,
             "Électronique": 5130.228002,
-            "Total": 228186.228
+            "Autres": 0,
+            "TOTAL": 228186.228
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 35117,
             "Livres": 254935,
             "Périodiques": 8632,
@@ -1833,10 +1707,11 @@
             "Vidéo": 79570,
             "Multisupports": 9630,
             "Électronique": 2013.901267,
-            "Total": 405160.9013
+            "Autres": 0,
+            "TOTAL": 405160.9013
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 35450,
             "Livres": 174926,
             "Périodiques": 13341,
@@ -1844,10 +1719,11 @@
             "Vidéo": 56075,
             "Multisupports": 818,
             "Électronique": 2693.538135,
-            "Total": 286364.5381
+            "Autres": 0,
+            "TOTAL": 286364.5381
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 36886,
             "Livres": 129215,
             "Périodiques": 6696,
@@ -1855,10 +1731,11 @@
             "Vidéo": 42691,
             "Multisupports": 60,
             "Électronique": 1782.191847,
-            "Total": 225275.1918
+            "Autres": 0,
+            "TOTAL": 225275.1918
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 20879,
             "Livres": 91294,
             "Périodiques": 6898,
@@ -1866,10 +1743,11 @@
             "Vidéo": 27132,
             "Multisupports": 1219,
             "Électronique": 1472.857419,
-            "Total": 151121.8574
+            "Autres": 0,
+            "TOTAL": 151121.8574
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 1831,
             "Livres": 70888,
             "Périodiques": 3526,
@@ -1877,10 +1755,11 @@
             "Vidéo": 12412,
             "Multisupports": 1,
             "Électronique": 2378.662515,
-            "Total": 94532.66251
+            "Autres": 0,
+            "TOTAL": 94532.66251
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 425,
             "Livres": 18873,
             "Périodiques": 375,
@@ -1888,10 +1767,11 @@
             "Vidéo": 8064,
             "Multisupports": 8,
             "Électronique": 587.9435001,
-            "Total": 28950.9435
+            "Autres": 0,
+            "TOTAL": 28950.9435
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 8113,
             "Livres": 190772,
             "Périodiques": 11188,
@@ -1899,10 +1779,11 @@
             "Vidéo": 56832,
             "Multisupports": 138,
             "Électronique": 5575.124688,
-            "Total": 287259.1247
+            "Autres": 0,
+            "TOTAL": 287259.1247
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 5801,
             "Livres": 417260,
             "Périodiques": 18759,
@@ -1910,10 +1791,11 @@
             "Vidéo": 104776,
             "Multisupports": 5278,
             "Électronique": 6444.00556,
-            "Total": 575168.0056
+            "Autres": 0,
+            "TOTAL": 575168.0056
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 14012,
             "Livres": 51518,
             "Périodiques": 2013,
@@ -1921,10 +1803,11 @@
             "Vidéo": 7663,
             "Multisupports": 33,
             "Électronique": 131.0197053,
-            "Total": 76476.01971
+            "Autres": 0,
+            "TOTAL": 76476.01971
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 42932,
             "Livres": 154886,
             "Périodiques": 11797,
@@ -1932,10 +1815,11 @@
             "Vidéo": 68286,
             "Multisupports": 411,
             "Électronique": 7346.035171,
-            "Total": 294934.0352
+            "Autres": 0,
+            "TOTAL": 294934.0352
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 28143,
             "Livres": 117584,
             "Périodiques": 7015,
@@ -1943,10 +1827,11 @@
             "Vidéo": 85894,
             "Multisupports": 44,
             "Électronique": 4994.002435,
-            "Total": 255693.0024
+            "Autres": 0,
+            "TOTAL": 255693.0024
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 27510,
             "Livres": 147243,
             "Périodiques": 9736,
@@ -1954,10 +1839,11 @@
             "Vidéo": 50819,
             "Multisupports": 39,
             "Électronique": 8420.253628,
-            "Total": 251411.2536
+            "Autres": 0,
+            "TOTAL": 251411.2536
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 3743,
             "Livres": 48068,
             "Périodiques": 2192,
@@ -1965,10 +1851,11 @@
             "Vidéo": 11964,
             "Multisupports": 374,
             "Électronique": 1980.463472,
-            "Total": 70082.46347
+            "Autres": 0,
+            "TOTAL": 70082.46347
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 17078,
             "Livres": 133457,
             "Périodiques": 5067,
@@ -1976,10 +1863,11 @@
             "Vidéo": 47239,
             "Multisupports": 587,
             "Électronique": 1478.896678,
-            "Total": 210339.8967
+            "Autres": 0,
+            "TOTAL": 210339.8967
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 9619,
             "Livres": 84525,
             "Périodiques": 3257,
@@ -1987,10 +1875,11 @@
             "Vidéo": 39443,
             "Multisupports": 590,
             "Électronique": 1546.764851,
-            "Total": 142030.7649
+            "Autres": 0,
+            "TOTAL": 142030.7649
         },
         {
-            "Bibliotheque": "(MNO) YVES-RYAN",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 6199,
             "Livres": 61512,
             "Périodiques": 3134,
@@ -1998,10 +1887,11 @@
             "Vidéo": 19305,
             "Multisupports": 337,
             "Électronique": 1171.674395,
-            "Total": 93754.6744
+            "Autres": 0,
+            "TOTAL": 93754.6744
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 29470,
             "Livres": 123418,
             "Périodiques": 7813,
@@ -2009,10 +1899,11 @@
             "Vidéo": 16559,
             "Multisupports": 1873,
             "Électronique": 4271.546221,
-            "Total": 188549.5462
+            "Autres": 0,
+            "TOTAL": 188549.5462
         },
         {
-            "Bibliotheque": "(PMR) MORDECAI-RICHLER",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 36461,
             "Livres": 94892,
             "Périodiques": 8238,
@@ -2020,10 +1911,11 @@
             "Vidéo": 43766,
             "Multisupports": 1511,
             "Électronique": 1610.628266,
-            "Total": 193343.6283
+            "Autres": 0,
+            "TOTAL": 193343.6283
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 26314,
             "Livres": 148421,
             "Périodiques": 15008,
@@ -2031,10 +1923,11 @@
             "Vidéo": 52470,
             "Multisupports": 92,
             "Électronique": 6668.984615,
-            "Total": 252293.9846
+            "Autres": 0,
+            "TOTAL": 252293.9846
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 2594,
             "Livres": 165072,
             "Périodiques": 6580,
@@ -2042,10 +1935,11 @@
             "Vidéo": 20753,
             "Multisupports": 834,
             "Électronique": 2951.191187,
-            "Total": 205065.1912
+            "Autres": 0,
+            "TOTAL": 205065.1912
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 2116,
             "Livres": 70985,
             "Périodiques": 3889,
@@ -2053,21 +1947,23 @@
             "Vidéo": 15775,
             "Multisupports": 1,
             "Électronique": 1367.82493,
-            "Total": 97033.82493
+            "Autres": 0,
+            "TOTAL": 97033.82493
         },
         {
-            "Bibliotheque": "(PRO) CENTRE COMMUNAUTAIRE",
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
             "Nouveautés": 259,
             "Livres": 6522,
             "Périodiques": 37,
             "Audio": 153,
             "Vidéo": 646,
             "Multisupports": 0,
-            "Électronique": "",
-            "Total": 7617
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 7617
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 33596,
             "Livres": 108798,
             "Périodiques": 9660,
@@ -2075,10 +1971,11 @@
             "Vidéo": 36571,
             "Multisupports": 2853,
             "Électronique": 3849.629219,
-            "Total": 202218.6292
+            "Autres": 0,
+            "TOTAL": 202218.6292
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 56847,
             "Livres": 316981,
             "Périodiques": 16215,
@@ -2086,10 +1983,11 @@
             "Vidéo": 90413,
             "Multisupports": 492,
             "Électronique": 4024.262666,
-            "Total": 505919.2627
+            "Autres": 0,
+            "TOTAL": 505919.2627
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 68450,
             "Livres": 214517,
             "Périodiques": 19448,
@@ -2097,10 +1995,11 @@
             "Vidéo": 70852,
             "Multisupports": 858,
             "Électronique": 14000.60052,
-            "Total": 401732.6005
+            "Autres": 0,
+            "TOTAL": 401732.6005
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 31437,
             "Livres": 153126,
             "Périodiques": 9069,
@@ -2108,10 +2007,11 @@
             "Vidéo": 13674,
             "Multisupports": 840,
             "Électronique": 11790.84473,
-            "Total": 222146.8447
+            "Autres": 0,
+            "TOTAL": 222146.8447
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 18323,
             "Livres": 138369,
             "Périodiques": 7060,
@@ -2119,10 +2019,11 @@
             "Vidéo": 12467,
             "Multisupports": 152,
             "Électronique": 4541.475619,
-            "Total": 182248.4756
+            "Autres": 0,
+            "TOTAL": 182248.4756
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 4433,
             "Livres": 374562,
             "Périodiques": 14940,
@@ -2130,10 +2031,11 @@
             "Vidéo": 95174,
             "Multisupports": 4890,
             "Électronique": 2836.275996,
-            "Total": 508005.276
+            "Autres": 0,
+            "TOTAL": 508005.276
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 3172,
             "Livres": 197049,
             "Périodiques": 10197,
@@ -2141,10 +2043,11 @@
             "Vidéo": 65060,
             "Multisupports": 2360,
             "Électronique": 3442.816386,
-            "Total": 289664.8164
+            "Autres": 0,
+            "TOTAL": 289664.8164
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 47942,
             "Livres": 219023,
             "Périodiques": 20530,
@@ -2152,10 +2055,11 @@
             "Vidéo": 83591,
             "Multisupports": 3263,
             "Électronique": 3394.85803,
-            "Total": 388012.858
+            "Autres": 0,
+            "TOTAL": 388012.858
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 19826,
             "Livres": 49291,
             "Périodiques": 3117,
@@ -2163,10 +2067,11 @@
             "Vidéo": 23610,
             "Multisupports": 293,
             "Électronique": 1143.506817,
-            "Total": 99894.50682
+            "Autres": 0,
+            "TOTAL": 99894.50682
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 12809,
             "Livres": 71270,
             "Périodiques": 3971,
@@ -2174,10 +2079,11 @@
             "Vidéo": 26895,
             "Multisupports": 573,
             "Électronique": 2884.89801,
-            "Total": 122496.898
+            "Autres": 0,
+            "TOTAL": 122496.898
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 21810,
             "Livres": 61795,
             "Périodiques": 4419,
@@ -2185,10 +2091,11 @@
             "Vidéo": 27106,
             "Multisupports": 139,
             "Électronique": 1443.443,
-            "Total": 122274.443
+            "Autres": 0,
+            "TOTAL": 122274.443
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 9756,
             "Livres": 53824,
             "Périodiques": 3663,
@@ -2196,10 +2103,11 @@
             "Vidéo": 31154,
             "Multisupports": 36,
             "Électronique": 1114.207429,
-            "Total": 102308.2074
+            "Autres": 0,
+            "TOTAL": 102308.2074
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 15763,
             "Livres": 77877,
             "Périodiques": 2091,
@@ -2207,10 +2115,11 @@
             "Vidéo": 21013,
             "Multisupports": 8,
             "Électronique": 3421.164617,
-            "Total": 123532.1646
+            "Autres": 0,
+            "TOTAL": 123532.1646
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 15738,
             "Livres": 127167,
             "Périodiques": 5180,
@@ -2218,10 +2127,11 @@
             "Vidéo": 36677,
             "Multisupports": 233,
             "Électronique": 5552.439152,
-            "Total": 199855.4392
+            "Autres": 0,
+            "TOTAL": 199855.4392
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 30162,
             "Livres": 92774,
             "Périodiques": 7842,
@@ -2229,10 +2139,11 @@
             "Vidéo": 46880,
             "Multisupports": 2857,
             "Électronique": 1130.563466,
-            "Total": 188548.5635
+            "Autres": 0,
+            "TOTAL": 188548.5635
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 15112,
             "Livres": 93616,
             "Périodiques": 4286,
@@ -2240,10 +2151,11 @@
             "Vidéo": 24348,
             "Multisupports": 3662,
             "Électronique": 1889.885463,
-            "Total": 146979.8855
+            "Autres": 0,
+            "TOTAL": 146979.8855
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 54082,
             "Livres": 217200,
             "Périodiques": 14287,
@@ -2251,10 +2163,11 @@
             "Vidéo": 49990,
             "Multisupports": 1082,
             "Électronique": 3977.256993,
-            "Total": 347625.257
+            "Autres": 0,
+            "TOTAL": 347625.257
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 26247,
             "Livres": 154497,
             "Périodiques": 7717,
@@ -2262,10 +2175,11 @@
             "Vidéo": 45994,
             "Multisupports": 5369,
             "Électronique": 2436.762387,
-            "Total": 248786.7624
+            "Autres": 0,
+            "TOTAL": 248786.7624
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 32108,
             "Livres": 141489,
             "Périodiques": 7371,
@@ -2273,56 +2187,25 @@
             "Vidéo": 27841,
             "Multisupports": 1743,
             "Électronique": 3735.844775,
-            "Total": 217894.8448
+            "Autres": 0,
+            "TOTAL": 217894.8448
         },
         {
-            "Bibliotheque": "(VSP) ROULIVRE",
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
             "Nouveautés": 266,
             "Livres": 6757,
             "Périodiques": 117,
             "Audio": 22,
             "Vidéo": 1149,
             "Multisupports": 1,
-            "Électronique": "",
-            "Total": 8312
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 286,
-            "Livres": 16548,
-            "Périodiques": 1534,
-            "Audio": 1097,
-            "Vidéo": 1306,
-            "Multisupports": 7,
-            "Électronique": "",
-            "Total": 20778
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 189243,
-            "Livres": 1162714,
-            "Périodiques": 64580,
-            "Audio": 43427,
-            "Vidéo": 319150,
-            "Multisupports": 1694,
-            "Électronique": "",
-            "Total": 1780808
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 712,
-            "Livres": 9219,
-            "Périodiques": 150,
-            "Audio": 38,
-            "Vidéo": 216,
-            "Multisupports": 8,
-            "Électronique": "",
-            "Total": 10343
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 8312
         }
     ],
     "2017": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 91782,
             "Livres": 348709,
             "Périodiques": 20791,
@@ -2330,10 +2213,11 @@
             "Vidéo": 89815,
             "Multisupports": 463,
             "Électronique": 18629.04653,
-            "Total": 578977.0465
+            "Autres": 0,
+            "TOTAL": 578977.0465
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 22376,
             "Livres": 101443,
             "Périodiques": 5816,
@@ -2341,10 +2225,11 @@
             "Vidéo": 29792,
             "Multisupports": 2814,
             "Électronique": 5231.897454,
-            "Total": 169996.8975
+            "Autres": 0,
+            "TOTAL": 169996.8975
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 14472,
             "Livres": 83771,
             "Périodiques": 3956,
@@ -2352,21 +2237,23 @@
             "Vidéo": 8525,
             "Multisupports": 1984,
             "Électronique": 403.6271805,
-            "Total": 113502.6272
+            "Autres": 0,
+            "TOTAL": 113502.6272
         },
         {
-            "Bibliotheque": "(AHC) LIVROMOBILE",
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
             "Nouveautés": 473,
             "Livres": 19808,
             "Périodiques": 1243,
             "Audio": 1845,
             "Vidéo": 3634,
             "Multisupports": 3,
-            "Électronique": "",
-            "Total": 27006
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 27006
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 7821,
             "Livres": 31382,
             "Périodiques": 1302,
@@ -2374,10 +2261,11 @@
             "Vidéo": 4935,
             "Multisupports": 98,
             "Électronique": 2501.113603,
-            "Total": 48416.1136
+            "Autres": 0,
+            "TOTAL": 48416.1136
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 31231,
             "Livres": 120004,
             "Périodiques": 3838,
@@ -2385,10 +2273,11 @@
             "Vidéo": 31433,
             "Multisupports": 110,
             "Électronique": 6353.6646,
-            "Total": 199208.6646
+            "Autres": 0,
+            "TOTAL": 199208.6646
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 44376,
             "Livres": 279764,
             "Périodiques": 9595,
@@ -2396,10 +2285,11 @@
             "Vidéo": 85889,
             "Multisupports": 10525,
             "Électronique": 3189.465538,
-            "Total": 448802.4655
+            "Autres": 0,
+            "TOTAL": 448802.4655
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 40783,
             "Livres": 168682,
             "Périodiques": 12340,
@@ -2407,10 +2297,11 @@
             "Vidéo": 51916,
             "Multisupports": 3580,
             "Électronique": 4778.362244,
-            "Total": 284796.3622
+            "Autres": 0,
+            "TOTAL": 284796.3622
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 44720,
             "Livres": 130269,
             "Périodiques": 6275,
@@ -2418,10 +2309,11 @@
             "Vidéo": 42916,
             "Multisupports": 3898,
             "Électronique": 2902.938853,
-            "Total": 236913.9389
+            "Autres": 0,
+            "TOTAL": 236913.9389
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 17952,
             "Livres": 76222,
             "Périodiques": 5329,
@@ -2429,10 +2321,11 @@
             "Vidéo": 21756,
             "Multisupports": 1430,
             "Électronique": 2479.770584,
-            "Total": 126873.7706
+            "Autres": 0,
+            "TOTAL": 126873.7706
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 2124,
             "Livres": 80560,
             "Périodiques": 3903,
@@ -2440,10 +2333,11 @@
             "Vidéo": 12718,
             "Multisupports": 68,
             "Électronique": 3682.130617,
-            "Total": 105855.1306
+            "Autres": 0,
+            "TOTAL": 105855.1306
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 417,
             "Livres": 19191,
             "Périodiques": 381,
@@ -2451,10 +2345,11 @@
             "Vidéo": 8386,
             "Multisupports": 19,
             "Électronique": 1274.443202,
-            "Total": 30442.4432
+            "Autres": 0,
+            "TOTAL": 30442.4432
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 6226,
             "Livres": 191071,
             "Périodiques": 11070,
@@ -2462,10 +2357,11 @@
             "Vidéo": 57282,
             "Multisupports": 442,
             "Électronique": 7279.236681,
-            "Total": 286342.2367
+            "Autres": 0,
+            "TOTAL": 286342.2367
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 5312,
             "Livres": 383978,
             "Périodiques": 17108,
@@ -2473,10 +2369,11 @@
             "Vidéo": 98461,
             "Multisupports": 6185,
             "Électronique": 9702.438192,
-            "Total": 537238.4382
+            "Autres": 0,
+            "TOTAL": 537238.4382
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 10927,
             "Livres": 51411,
             "Périodiques": 1457,
@@ -2484,10 +2381,11 @@
             "Vidéo": 5636,
             "Multisupports": 518,
             "Électronique": 28.41387472,
-            "Total": 70791.41387
+            "Autres": 0,
+            "TOTAL": 70791.41387
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 44399,
             "Livres": 160312,
             "Périodiques": 11504,
@@ -2495,10 +2393,11 @@
             "Vidéo": 59723,
             "Multisupports": 1521,
             "Électronique": 10039.34105,
-            "Total": 297122.3411
+            "Autres": 0,
+            "TOTAL": 297122.3411
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 29592,
             "Livres": 116237,
             "Périodiques": 6671,
@@ -2506,10 +2405,11 @@
             "Vidéo": 70511,
             "Multisupports": 334,
             "Électronique": 7543.902603,
-            "Total": 240404.9026
+            "Autres": 0,
+            "TOTAL": 240404.9026
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 26644,
             "Livres": 148115,
             "Périodiques": 8794,
@@ -2517,10 +2417,11 @@
             "Vidéo": 43607,
             "Multisupports": 288,
             "Électronique": 13006.87714,
-            "Total": 247180.8771
+            "Autres": 0,
+            "TOTAL": 247180.8771
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 4698,
             "Livres": 40982,
             "Périodiques": 1497,
@@ -2528,10 +2429,11 @@
             "Vidéo": 9185,
             "Multisupports": 547,
             "Électronique": 2600.789434,
-            "Total": 60674.78943
+            "Autres": 0,
+            "TOTAL": 60674.78943
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 20221,
             "Livres": 131790,
             "Périodiques": 4563,
@@ -2539,10 +2441,11 @@
             "Vidéo": 35164,
             "Multisupports": 819,
             "Électronique": 2456.73476,
-            "Total": 199724.7348
+            "Autres": 0,
+            "TOTAL": 199724.7348
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 12767,
             "Livres": 83859,
             "Périodiques": 3250,
@@ -2550,10 +2453,11 @@
             "Vidéo": 32912,
             "Multisupports": 2922,
             "Électronique": 2389.303134,
-            "Total": 140743.3031
+            "Autres": 0,
+            "TOTAL": 140743.3031
         },
         {
-            "Bibliotheque": "(MNO) YVES-RYAN",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 6131,
             "Livres": 54426,
             "Périodiques": 2609,
@@ -2561,10 +2465,11 @@
             "Vidéo": 14248,
             "Multisupports": 487,
             "Électronique": 1608.620284,
-            "Total": 81271.62028
+            "Autres": 0,
+            "TOTAL": 81271.62028
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 25337,
             "Livres": 124463,
             "Périodiques": 8076,
@@ -2572,10 +2477,11 @@
             "Vidéo": 15788,
             "Multisupports": 2336,
             "Électronique": 6367.690914,
-            "Total": 186682.6909
+            "Autres": 0,
+            "TOTAL": 186682.6909
         },
         {
-            "Bibliotheque": "(PMR) MORDECAI-RICHLER",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 35429,
             "Livres": 93563,
             "Périodiques": 7329,
@@ -2583,10 +2489,11 @@
             "Vidéo": 37520,
             "Multisupports": 1453,
             "Électronique": 2375.048833,
-            "Total": 182527.0488
+            "Autres": 0,
+            "TOTAL": 182527.0488
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 25262,
             "Livres": 151407,
             "Périodiques": 13040,
@@ -2594,10 +2501,11 @@
             "Vidéo": 48891,
             "Multisupports": 475,
             "Électronique": 10999.60233,
-            "Total": 252666.6023
+            "Autres": 0,
+            "TOTAL": 252666.6023
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 753,
             "Livres": 58004,
             "Périodiques": 1830,
@@ -2605,10 +2513,11 @@
             "Vidéo": 6429,
             "Multisupports": 469,
             "Électronique": 5046.966003,
-            "Total": 74937.966
+            "Autres": 0,
+            "TOTAL": 74937.966
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 1966,
             "Livres": 92316,
             "Périodiques": 4650,
@@ -2616,21 +2525,23 @@
             "Vidéo": 15730,
             "Multisupports": 151,
             "Électronique": 3248.89419,
-            "Total": 121123.8942
+            "Autres": 0,
+            "TOTAL": 121123.8942
         },
         {
-            "Bibliotheque": "(PRO) CENTRE COMMUNAUTAIRE",
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
             "Nouveautés": 680,
             "Livres": 23731,
             "Périodiques": 1241,
             "Audio": 608,
             "Vidéo": 4130,
             "Multisupports": 35,
-            "Électronique": "",
-            "Total": 30425
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 30425
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 35342,
             "Livres": 111722,
             "Périodiques": 9089,
@@ -2638,10 +2549,11 @@
             "Vidéo": 31337,
             "Multisupports": 3340,
             "Électronique": 5473.892378,
-            "Total": 202831.8924
+            "Autres": 0,
+            "TOTAL": 202831.8924
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 63112,
             "Livres": 315272,
             "Périodiques": 15343,
@@ -2649,10 +2561,11 @@
             "Vidéo": 82526,
             "Multisupports": 548,
             "Électronique": 5475.626143,
-            "Total": 498578.6261
+            "Autres": 0,
+            "TOTAL": 498578.6261
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 70469,
             "Livres": 190117,
             "Périodiques": 16263,
@@ -2660,10 +2573,11 @@
             "Vidéo": 65308,
             "Multisupports": 1182,
             "Électronique": 20460.6758,
-            "Total": 373616.6758
+            "Autres": 0,
+            "TOTAL": 373616.6758
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 30893,
             "Livres": 144506,
             "Périodiques": 7409,
@@ -2671,10 +2585,11 @@
             "Vidéo": 18000,
             "Multisupports": 716,
             "Électronique": 13753.50381,
-            "Total": 217745.5038
+            "Autres": 0,
+            "TOTAL": 217745.5038
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 17812,
             "Livres": 138536,
             "Périodiques": 6617,
@@ -2682,10 +2597,11 @@
             "Vidéo": 16755,
             "Multisupports": 700,
             "Électronique": 6447.48662,
-            "Total": 188316.4866
+            "Autres": 0,
+            "TOTAL": 188316.4866
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 4250,
             "Livres": 391066,
             "Périodiques": 15186,
@@ -2693,10 +2609,11 @@
             "Vidéo": 80313,
             "Multisupports": 3782,
             "Électronique": 4652.974672,
-            "Total": 509469.9747
+            "Autres": 0,
+            "TOTAL": 509469.9747
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 2985,
             "Livres": 209124,
             "Périodiques": 10483,
@@ -2704,21 +2621,23 @@
             "Vidéo": 55634,
             "Multisupports": 3376,
             "Électronique": 4231.749241,
-            "Total": 293859.7492
+            "Autres": 0,
+            "TOTAL": 293859.7492
         },
         {
-            "Bibliotheque": "(SLA) CHAMERAN",
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
             "Nouveautés": 9,
             "Livres": 1604,
             "Périodiques": 34,
             "Audio": 7,
             "Vidéo": 309,
             "Multisupports": 2,
-            "Électronique": "",
-            "Total": 1965
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 1965
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 47898,
             "Livres": 207290,
             "Périodiques": 18957,
@@ -2726,10 +2645,11 @@
             "Vidéo": 60196,
             "Multisupports": 3594,
             "Électronique": 4560.884568,
-            "Total": 351857.8846
+            "Autres": 0,
+            "TOTAL": 351857.8846
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 18955,
             "Livres": 48676,
             "Périodiques": 2976,
@@ -2737,10 +2657,11 @@
             "Vidéo": 22469,
             "Multisupports": 645,
             "Électronique": 1806.66536,
-            "Total": 98129.66536
+            "Autres": 0,
+            "TOTAL": 98129.66536
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 20642,
             "Livres": 95987,
             "Périodiques": 4564,
@@ -2748,10 +2669,11 @@
             "Vidéo": 40150,
             "Multisupports": 1355,
             "Électronique": 5130.68855,
-            "Total": 172556.6885
+            "Autres": 0,
+            "TOTAL": 172556.6885
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 22197,
             "Livres": 62943,
             "Périodiques": 4421,
@@ -2759,10 +2681,11 @@
             "Vidéo": 21958,
             "Multisupports": 439,
             "Électronique": 1879.171062,
-            "Total": 117340.1711
+            "Autres": 0,
+            "TOTAL": 117340.1711
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 9768,
             "Livres": 50607,
             "Périodiques": 3132,
@@ -2770,10 +2693,11 @@
             "Vidéo": 24981,
             "Multisupports": 237,
             "Électronique": 1512.930304,
-            "Total": 92232.9303
+            "Autres": 0,
+            "TOTAL": 92232.9303
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 16145,
             "Livres": 91978,
             "Périodiques": 2247,
@@ -2781,10 +2705,11 @@
             "Vidéo": 19058,
             "Multisupports": 72,
             "Électronique": 4499.536657,
-            "Total": 137187.5367
+            "Autres": 0,
+            "TOTAL": 137187.5367
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 18407,
             "Livres": 132532,
             "Périodiques": 5167,
@@ -2792,10 +2717,11 @@
             "Vidéo": 32720,
             "Multisupports": 281,
             "Électronique": 8252.052676,
-            "Total": 204710.0527
+            "Autres": 0,
+            "TOTAL": 204710.0527
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 23458,
             "Livres": 97883,
             "Périodiques": 7279,
@@ -2803,10 +2729,11 @@
             "Vidéo": 38138,
             "Multisupports": 3735,
             "Électronique": 1532.554934,
-            "Total": 177533.5549
+            "Autres": 0,
+            "TOTAL": 177533.5549
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 14500,
             "Livres": 95234,
             "Périodiques": 3821,
@@ -2814,10 +2741,11 @@
             "Vidéo": 17651,
             "Multisupports": 3042,
             "Électronique": 2155.641617,
-            "Total": 138971.6416
+            "Autres": 0,
+            "TOTAL": 138971.6416
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 58735,
             "Livres": 227081,
             "Périodiques": 12476,
@@ -2825,10 +2753,11 @@
             "Vidéo": 44499,
             "Multisupports": 1651,
             "Électronique": 7007.601306,
-            "Total": 357697.6013
+            "Autres": 0,
+            "TOTAL": 357697.6013
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 27787,
             "Livres": 156890,
             "Périodiques": 7362,
@@ -2836,10 +2765,11 @@
             "Vidéo": 35683,
             "Multisupports": 12639,
             "Électronique": 3924.859333,
-            "Total": 249866.8593
+            "Autres": 0,
+            "TOTAL": 249866.8593
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 28773,
             "Livres": 143218,
             "Périodiques": 7432,
@@ -2847,56 +2777,25 @@
             "Vidéo": 22750,
             "Multisupports": 3011,
             "Électronique": 4660.185145,
-            "Total": 212791.1851
+            "Autres": 0,
+            "TOTAL": 212791.1851
         },
         {
-            "Bibliotheque": "(VSP) ROULIVRE",
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
             "Nouveautés": 256,
             "Livres": 8928,
             "Périodiques": 15,
             "Audio": 4,
             "Vidéo": 1458,
             "Multisupports": 0,
-            "Électronique": "",
-            "Total": 10661
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 430,
-            "Livres": 16584,
-            "Périodiques": 1616,
-            "Audio": 955,
-            "Vidéo": 1539,
-            "Multisupports": 27,
-            "Électronique": "",
-            "Total": 21151
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 229478,
-            "Livres": 1304912,
-            "Périodiques": 69192,
-            "Audio": 44410,
-            "Vidéo": 330090,
-            "Multisupports": 2500,
-            "Électronique": "",
-            "Total": 1980582
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 455,
-            "Livres": 11193,
-            "Périodiques": 29,
-            "Audio": 14,
-            "Vidéo": 47,
-            "Multisupports": 8,
-            "Électronique": "",
-            "Total": 11746
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 10661
         }
     ],
     "2018": [
         {
-            "Bibliotheque": "(AHC) AHUNTSIC",
+            "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
             "Nouveautés": 87762,
             "Livres": 338586,
             "Périodiques": 19162,
@@ -2904,10 +2803,11 @@
             "Vidéo": 79957,
             "Multisupports": 356,
             "Électronique": 24450,
-            "Total": 557795
+            "Autres": 0,
+            "TOTAL": 557795
         },
         {
-            "Bibliotheque": "(AHC) CARTIERVILLE",
+            "BIBLIOTHÈQUE": "(AHC) CARTIERVILLE",
             "Nouveautés": 21172,
             "Livres": 92694,
             "Périodiques": 5235,
@@ -2915,10 +2815,11 @@
             "Vidéo": 26386,
             "Multisupports": 5200,
             "Électronique": 6868,
-            "Total": 159039
+            "Autres": 0,
+            "TOTAL": 159039
         },
         {
-            "Bibliotheque": "(AHC) SALABERRY",
+            "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": 14618,
             "Livres": 79657,
             "Périodiques": 4171,
@@ -2926,21 +2827,23 @@
             "Vidéo": 6536,
             "Multisupports": 2189,
             "Électronique": 296,
-            "Total": 107689
+            "Autres": 0,
+            "TOTAL": 107689
         },
         {
-            "Bibliotheque": "(AHC) LIVROMOBILE",
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
             "Nouveautés": 791,
             "Livres": 20385,
             "Périodiques": 1490,
             "Audio": 2051,
             "Vidéo": 4288,
             "Multisupports": 9,
-            "Électronique": "",
-            "Total": 29014
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 29014
         },
         {
-            "Bibliotheque": "(ANJ) HAUT-ANJOU",
+            "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Nouveautés": 8615,
             "Livres": 29580,
             "Périodiques": 1301,
@@ -2948,10 +2851,11 @@
             "Vidéo": 4627,
             "Multisupports": 71,
             "Électronique": 2684,
-            "Total": 47213
+            "Autres": 0,
+            "TOTAL": 47213
         },
         {
-            "Bibliotheque": "(ANJ) JEAN-CORBEIL",
+            "BIBLIOTHÈQUE": "(ANJ) JEAN-CORBEIL",
             "Nouveautés": 31475,
             "Livres": 130717,
             "Périodiques": 5222,
@@ -2959,10 +2863,11 @@
             "Vidéo": 29638,
             "Multisupports": 910,
             "Électronique": 8463,
-            "Total": 212862
+            "Autres": 0,
+            "TOTAL": 212862
         },
         {
-            "Bibliotheque": "(CND) BENNY",
+            "BIBLIOTHÈQUE": "(CND) BENNY",
             "Nouveautés": 49730,
             "Livres": 286825,
             "Périodiques": 9625,
@@ -2970,10 +2875,11 @@
             "Vidéo": 80703,
             "Multisupports": 18554,
             "Électronique": 4487,
-            "Total": 462615
+            "Autres": 0,
+            "TOTAL": 462615
         },
         {
-            "Bibliotheque": "(CND) CÔTE-DES-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": 41674,
             "Livres": 165702,
             "Périodiques": 11175,
@@ -2981,10 +2887,11 @@
             "Vidéo": 44254,
             "Multisupports": 5015,
             "Électronique": 6503,
-            "Total": 277298
+            "Autres": 0,
+            "TOTAL": 277298
         },
         {
-            "Bibliotheque": "(CND) INTERCULTURELLE",
+            "BIBLIOTHÈQUE": "(CND) INTERCULTURELLE",
             "Nouveautés": 48287,
             "Livres": 123738,
             "Périodiques": 6099,
@@ -2992,10 +2899,11 @@
             "Vidéo": 39938,
             "Multisupports": 9778,
             "Électronique": 4098,
-            "Total": 236524
+            "Autres": 0,
+            "TOTAL": 236524
         },
         {
-            "Bibliotheque": "(CND) NOTRE-DAME-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": 18720,
             "Livres": 68184,
             "Périodiques": 4642,
@@ -3003,10 +2911,11 @@
             "Vidéo": 17701,
             "Multisupports": 2201,
             "Électronique": 3801,
-            "Total": 116561
+            "Autres": 0,
+            "TOTAL": 116561
         },
         {
-            "Bibliotheque": "(IBG) L'ÎLE-BIZARD",
+            "BIBLIOTHÈQUE": "(IBG) L'ÎLE-BIZARD",
             "Nouveautés": 13305,
             "Livres": 70499,
             "Périodiques": 3717,
@@ -3014,10 +2923,11 @@
             "Vidéo": 11631,
             "Multisupports": 53,
             "Électronique": 4617,
-            "Total": 105942
+            "Autres": 0,
+            "TOTAL": 105942
         },
         {
-            "Bibliotheque": "(LAC) SAINT-PIERRE",
+            "BIBLIOTHÈQUE": "(LAC) SAINT-PIERRE",
             "Nouveautés": 1511,
             "Livres": 16707,
             "Périodiques": 256,
@@ -3025,10 +2935,11 @@
             "Vidéo": 7052,
             "Multisupports": 17,
             "Électronique": 1253,
-            "Total": 27288
+            "Autres": 0,
+            "TOTAL": 27288
         },
         {
-            "Bibliotheque": "(LAC) SAUL-BELLOW",
+            "BIBLIOTHÈQUE": "(LAC) SAUL-BELLOW",
             "Nouveautés": 28984,
             "Livres": 163624,
             "Périodiques": 10718,
@@ -3036,10 +2947,11 @@
             "Vidéo": 51627,
             "Multisupports": 514,
             "Électronique": 9185,
-            "Total": 274869
+            "Autres": 0,
+            "TOTAL": 274869
         },
         {
-            "Bibliotheque": "(LAS) L'OCTOGONE",
+            "BIBLIOTHÈQUE": "(LAS) L'OCTOGONE",
             "Nouveautés": 6769,
             "Livres": 350477,
             "Périodiques": 17031,
@@ -3047,10 +2959,11 @@
             "Vidéo": 75831,
             "Multisupports": 6924,
             "Électronique": 12261,
-            "Total": 480530
+            "Autres": 0,
+            "TOTAL": 480530
         },
         {
-            "Bibliotheque": "(MHM) HOCHELAGA",
+            "BIBLIOTHÈQUE": "(MHM) HOCHELAGA",
             "Nouveautés": 9723,
             "Livres": 54249,
             "Périodiques": 1607,
@@ -3058,10 +2971,11 @@
             "Vidéo": 3937,
             "Multisupports": 694,
             "Électronique": 50,
-            "Total": 70924
+            "Autres": 0,
+            "TOTAL": 70924
         },
         {
-            "Bibliotheque": "(MHM) LANGELIER",
+            "BIBLIOTHÈQUE": "(MHM) LANGELIER",
             "Nouveautés": 45680,
             "Livres": 157791,
             "Périodiques": 11776,
@@ -3069,10 +2983,11 @@
             "Vidéo": 48384,
             "Multisupports": 2052,
             "Électronique": 12219,
-            "Total": 284211
+            "Autres": 0,
+            "TOTAL": 284211
         },
         {
-            "Bibliotheque": "(MHM) MAISONNEUVE",
+            "BIBLIOTHÈQUE": "(MHM) MAISONNEUVE",
             "Nouveautés": 30116,
             "Livres": 116706,
             "Périodiques": 6861,
@@ -3080,10 +2995,11 @@
             "Vidéo": 52575,
             "Multisupports": 380,
             "Électronique": 9624,
-            "Total": 223713
+            "Autres": 0,
+            "TOTAL": 223713
         },
         {
-            "Bibliotheque": "(MHM) MERCIER",
+            "BIBLIOTHÈQUE": "(MHM) MERCIER",
             "Nouveautés": 24500,
             "Livres": 143112,
             "Périodiques": 8213,
@@ -3091,10 +3007,11 @@
             "Vidéo": 36178,
             "Multisupports": 659,
             "Électronique": 15538,
-            "Total": 233541
+            "Autres": 0,
+            "TOTAL": 233541
         },
         {
-            "Bibliotheque": "(MNO) BELLEVILLE",
+            "BIBLIOTHÈQUE": "(MNO) BELLEVILLE",
             "Nouveautés": 5202,
             "Livres": 39121,
             "Périodiques": 1463,
@@ -3102,10 +3019,11 @@
             "Vidéo": 7541,
             "Multisupports": 648,
             "Électronique": 3548,
-            "Total": 58325
+            "Autres": 0,
+            "TOTAL": 58325
         },
         {
-            "Bibliotheque": "(MNO) HENRI-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": 20435,
             "Livres": 130159,
             "Périodiques": 4272,
@@ -3113,10 +3031,11 @@
             "Vidéo": 24827,
             "Multisupports": 1156,
             "Électronique": 3053,
-            "Total": 188514
+            "Autres": 0,
+            "TOTAL": 188514
         },
         {
-            "Bibliotheque": "(MNO) MAISON CULTURELLE",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": 16024,
             "Livres": 86169,
             "Périodiques": 3031,
@@ -3124,10 +3043,11 @@
             "Vidéo": 28601,
             "Multisupports": 2322,
             "Électronique": 2876,
-            "Total": 141142
+            "Autres": 0,
+            "TOTAL": 141142
         },
         {
-            "Bibliotheque": "(MNO) YVES-RYAN",
+            "BIBLIOTHÈQUE": "(MNO) YVES-RYAN",
             "Nouveautés": 7475,
             "Livres": 50073,
             "Périodiques": 1982,
@@ -3135,10 +3055,11 @@
             "Vidéo": 12917,
             "Multisupports": 877,
             "Électronique": 2302,
-            "Total": 77388
+            "Autres": 0,
+            "TOTAL": 77388
         },
         {
-            "Bibliotheque": "(OUT) ROBERT-BOURASSA",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": 30234,
             "Livres": 120735,
             "Périodiques": 8867,
@@ -3146,10 +3067,11 @@
             "Vidéo": 14030,
             "Multisupports": 3256,
             "Électronique": 8565,
-            "Total": 189379
+            "Autres": 0,
+            "TOTAL": 189379
         },
         {
-            "Bibliotheque": "(PMR) MORDECAI-RICHLER",
+            "BIBLIOTHÈQUE": "(PMR) MORDECAI-RICHLER",
             "Nouveautés": 35815,
             "Livres": 89169,
             "Périodiques": 7227,
@@ -3157,10 +3079,11 @@
             "Vidéo": 29119,
             "Multisupports": 312,
             "Électronique": 3488,
-            "Total": 169027
+            "Autres": 0,
+            "TOTAL": 169027
         },
         {
-            "Bibliotheque": "(PMR) PLATEAU MONT-ROYAL",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": 28494,
             "Livres": 149364,
             "Périodiques": 12117,
@@ -3168,10 +3091,11 @@
             "Vidéo": 40398,
             "Multisupports": 971,
             "Électronique": 13412,
-            "Total": 246976
+            "Autres": 0,
+            "TOTAL": 246976
         },
         {
-            "Bibliotheque": "(PRO) PIERREFONDS",
+            "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
             "Nouveautés": 1963,
             "Livres": 57203,
             "Périodiques": 1125,
@@ -3179,10 +3103,11 @@
             "Vidéo": 7476,
             "Multisupports": 928,
             "Électronique": 5070,
-            "Total": 76226
+            "Autres": 0,
+            "TOTAL": 76226
         },
         {
-            "Bibliotheque": "(PRO) ROXBORO",
+            "BIBLIOTHÈQUE": "(PRO) ROXBORO",
             "Nouveautés": 3977,
             "Livres": 86554,
             "Périodiques": 4295,
@@ -3190,21 +3115,23 @@
             "Vidéo": 13915,
             "Multisupports": 133,
             "Électronique": 2926,
-            "Total": 114447
+            "Autres": 0,
+            "TOTAL": 114447
         },
         {
-            "Bibliotheque": "(PRO) CENTRE COMMUNAUTAIRE",
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
             "Nouveautés": 588,
             "Livres": 21491,
             "Périodiques": 1201,
             "Audio": 843,
             "Vidéo": 3350,
             "Multisupports": 21,
-            "Électronique": "",
-            "Total": 27494
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 27494
         },
         {
-            "Bibliotheque": "(RPP) LA PETITE-PATRIE",
+            "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
             "Nouveautés": 40076,
             "Livres": 106456,
             "Périodiques": 7447,
@@ -3212,10 +3139,11 @@
             "Vidéo": 26284,
             "Multisupports": 3441,
             "Électronique": 7784,
-            "Total": 197176
+            "Autres": 0,
+            "TOTAL": 197176
         },
         {
-            "Bibliotheque": "(RPP) MARC-FAVREAU",
+            "BIBLIOTHÈQUE": "(RPP) MARC-FAVREAU",
             "Nouveautés": 63817,
             "Livres": 295546,
             "Périodiques": 15262,
@@ -3223,10 +3151,11 @@
             "Vidéo": 70556,
             "Multisupports": 472,
             "Électronique": 6822,
-            "Total": 466682
+            "Autres": 0,
+            "TOTAL": 466682
         },
         {
-            "Bibliotheque": "(RPP) ROSEMONT",
+            "BIBLIOTHÈQUE": "(RPP) ROSEMONT",
             "Nouveautés": 72665,
             "Livres": 189985,
             "Périodiques": 14912,
@@ -3234,10 +3163,11 @@
             "Vidéo": 54823,
             "Multisupports": 331,
             "Électronique": 28230,
-            "Total": 369068
+            "Autres": 0,
+            "TOTAL": 369068
         },
         {
-            "Bibliotheque": "(RPT) POINTE-AUX-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": 33388,
             "Livres": 133141,
             "Périodiques": 6895,
@@ -3245,10 +3175,11 @@
             "Vidéo": 15552,
             "Multisupports": 969,
             "Électronique": 16731,
-            "Total": 208756
+            "Autres": 0,
+            "TOTAL": 208756
         },
         {
-            "Bibliotheque": "(RPT) RIVIÈRE-DES-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": 26013,
             "Livres": 121579,
             "Périodiques": 6831,
@@ -3256,10 +3187,11 @@
             "Vidéo": 15716,
             "Multisupports": 1111,
             "Électronique": 8174,
-            "Total": 180454
+            "Autres": 0,
+            "TOTAL": 180454
         },
         {
-            "Bibliotheque": "(SLA) DU BOISÉ",
+            "BIBLIOTHÈQUE": "(SLA) DU BOISÉ",
             "Nouveautés": 31148,
             "Livres": 360968,
             "Périodiques": 14335,
@@ -3267,10 +3199,11 @@
             "Vidéo": 55563,
             "Multisupports": 11701,
             "Électronique": 7003,
-            "Total": 486676
+            "Autres": 0,
+            "TOTAL": 486676
         },
         {
-            "Bibliotheque": "(SLA) VIEUX-SAINT-LAURENT",
+            "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Nouveautés": 22468,
             "Livres": 192567,
             "Périodiques": 9654,
@@ -3278,21 +3211,23 @@
             "Vidéo": 44687,
             "Multisupports": 4814,
             "Électronique": 5267,
-            "Total": 286233
+            "Autres": 0,
+            "TOTAL": 286233
         },
         {
-            "Bibliotheque": "(SLA) CHAMERAN",
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
             "Nouveautés": 464,
             "Livres": 6532,
             "Périodiques": 143,
             "Audio": 30,
             "Vidéo": 956,
             "Multisupports": 82,
-            "Électronique": "",
-            "Total": 8207
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 8207
         },
         {
-            "Bibliotheque": "(SLE) SAINT-LÉONARD",
+            "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
             "Nouveautés": 60361,
             "Livres": 177917,
             "Périodiques": 15521,
@@ -3300,10 +3235,11 @@
             "Vidéo": 42020,
             "Multisupports": 8887,
             "Électronique": 5574,
-            "Total": 317172
+            "Autres": 0,
+            "TOTAL": 317172
         },
         {
-            "Bibliotheque": "(SUD) GEORGES-VANIER",
+            "BIBLIOTHÈQUE": "(SUD) GEORGES-VANIER",
             "Nouveautés": 24213,
             "Livres": 56456,
             "Périodiques": 2674,
@@ -3311,10 +3247,11 @@
             "Vidéo": 25260,
             "Multisupports": 923,
             "Électronique": 2268,
-            "Total": 114498
+            "Autres": 0,
+            "TOTAL": 114498
         },
         {
-            "Bibliotheque": "(SUD) MARIE-UGUAY",
+            "BIBLIOTHÈQUE": "(SUD) MARIE-UGUAY",
             "Nouveautés": 19748,
             "Livres": 89500,
             "Périodiques": 4651,
@@ -3322,10 +3259,11 @@
             "Vidéo": 28992,
             "Multisupports": 1690,
             "Électronique": 5979,
-            "Total": 155195
+            "Autres": 0,
+            "TOTAL": 155195
         },
         {
-            "Bibliotheque": "(SUD) SAINT-CHARLES",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-CHARLES",
             "Nouveautés": 23857,
             "Livres": 62556,
             "Périodiques": 4840,
@@ -3333,10 +3271,11 @@
             "Vidéo": 23018,
             "Multisupports": 914,
             "Électronique": 2389,
-            "Total": 120810
+            "Autres": 0,
+            "TOTAL": 120810
         },
         {
-            "Bibliotheque": "(SUD) SAINT-HENRI",
+            "BIBLIOTHÈQUE": "(SUD) SAINT-HENRI",
             "Nouveautés": 11471,
             "Livres": 45430,
             "Périodiques": 2218,
@@ -3344,10 +3283,11 @@
             "Vidéo": 20577,
             "Multisupports": 469,
             "Électronique": 1658,
-            "Total": 83756
+            "Autres": 0,
+            "TOTAL": 83756
         },
         {
-            "Bibliotheque": "(VER) ÎLE-DES-SŒURS",
+            "BIBLIOTHÈQUE": "(VER) ÎLE-DES-SŒURS",
             "Nouveautés": 16086,
             "Livres": 96859,
             "Périodiques": 2104,
@@ -3355,10 +3295,11 @@
             "Vidéo": 14989,
             "Multisupports": 416,
             "Électronique": 7139,
-            "Total": 139830
+            "Autres": 0,
+            "TOTAL": 139830
         },
         {
-            "Bibliotheque": "(VER) VERDUN",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": 23589,
             "Livres": 144073,
             "Périodiques": 4456,
@@ -3366,10 +3307,11 @@
             "Vidéo": 28225,
             "Multisupports": 285,
             "Électronique": 9384,
-            "Total": 215232
+            "Autres": 0,
+            "TOTAL": 215232
         },
         {
-            "Bibliotheque": "(VMA) FRONTENAC",
+            "BIBLIOTHÈQUE": "(VMA) FRONTENAC",
             "Nouveautés": 26922,
             "Livres": 102708,
             "Périodiques": 5610,
@@ -3377,10 +3319,11 @@
             "Vidéo": 32902,
             "Multisupports": 4887,
             "Électronique": 2287,
-            "Total": 180090
+            "Autres": 0,
+            "TOTAL": 180090
         },
         {
-            "Bibliotheque": "(VMA) PÈRE-AMBROISE",
+            "BIBLIOTHÈQUE": "(VMA) PÈRE-AMBROISE",
             "Nouveautés": 16424,
             "Livres": 94622,
             "Périodiques": 4109,
@@ -3388,10 +3331,11 @@
             "Vidéo": 12565,
             "Multisupports": 2752,
             "Électronique": 2840,
-            "Total": 135382
+            "Autres": 0,
+            "TOTAL": 135382
         },
         {
-            "Bibliotheque": "(VSP) LE PRÉVOST",
+            "BIBLIOTHÈQUE": "(VSP) LE PRÉVOST",
             "Nouveautés": 55691,
             "Livres": 213003,
             "Périodiques": 11235,
@@ -3399,10 +3343,11 @@
             "Vidéo": 37525,
             "Multisupports": 1991,
             "Électronique": 10513,
-            "Total": 334829
+            "Autres": 0,
+            "TOTAL": 334829
         },
         {
-            "Bibliotheque": "(VSP) PARC-EXTENSION",
+            "BIBLIOTHÈQUE": "(VSP) PARC-EXTENSION",
             "Nouveautés": 25920,
             "Livres": 151030,
             "Périodiques": 6929,
@@ -3410,10 +3355,11 @@
             "Vidéo": 32479,
             "Multisupports": 17763,
             "Électronique": 5637,
-            "Total": 245359
+            "Autres": 0,
+            "TOTAL": 245359
         },
         {
-            "Bibliotheque": "(VSP) SAINT-MICHEL",
+            "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": 26519,
             "Livres": 138674,
             "Périodiques": 6722,
@@ -3421,51 +3367,20 @@
             "Vidéo": 20312,
             "Multisupports": 3768,
             "Électronique": 6513,
-            "Total": 204692
+            "Autres": 0,
+            "TOTAL": 204692
         },
         {
-            "Bibliotheque": "(VSP) ROULIVRE",
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
             "Nouveautés": 795,
             "Livres": 13069,
             "Périodiques": 117,
             "Audio": 23,
             "Vidéo": 1547,
             "Multisupports": 4,
-            "Électronique": "",
-            "Total": 15555
-        },
-        {
-            "Bibliotheque": "BIBLIO-COURRIER",
-            "Nouveautés": 692,
-            "Livres": 14767,
-            "Périodiques": 1533,
-            "Audio": 872,
-            "Vidéo": 1183,
-            "Multisupports": 135,
-            "Électronique": "",
-            "Total": 19182
-        },
-        {
-            "Bibliotheque": "SERVICES EN LIGNE",
-            "Nouveautés": 313709,
-            "Livres": 1556246,
-            "Périodiques": 80009,
-            "Audio": 42975,
-            "Vidéo": 338284,
-            "Multisupports": 5838,
-            "Électronique": "",
-            "Total": 2337061
-        },
-        {
-            "Bibliotheque": "Autres",
-            "Nouveautés": 252,
-            "Livres": 12485,
-            "Périodiques": 13,
-            "Audio": 1,
-            "Vidéo": 72,
-            "Multisupports": 1,
-            "Électronique": "",
-            "Total": 12824
+            "Électronique": 0,
+            "Autres": 0,
+            "TOTAL": 15555
         }
     ]
 }
