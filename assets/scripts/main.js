@@ -8,10 +8,10 @@ var promises = [];
 promises.push(d3.json("./data/frequentation.json"));
 // Emprunts (format)
 promises.push(d3.json("./data/emprunts_format.json"));
-// Libraries info
-promises.push(d3.json("./data/biblio_info_2018.json"));
 // Emprunts (public)
 promises.push(d3.json("./data/prets_public.json"));
+// Libraries info
+promises.push(d3.json("./data/biblio_info_2018.json"));
 
 Promise.all(promises).then(function (results) {
     /** 
@@ -147,7 +147,7 @@ Promise.all(promises).then(function (results) {
     //     height = 800 - margin.top - margin.bottom;
 
     // Load Libraries info data
-    var libInfoSources = createLibInfoSources(results[2]);
+    var libInfoSources = createLibInfoSources(results[3]);
     // console.log(libInfoSources);
 
     // // Tip function
@@ -159,10 +159,8 @@ Promise.all(promises).then(function (results) {
     // function getMaxFrequentation(sources) {
     //     return d3.max(sources.map(d => d3.max(d.frequentation, f => f.count)));
     // }
-    // Load Libraries info data
-    var libInfoSources = createLibInfoSources(results[2]);
     // Create the libraries map
-    var heatmapFrequentation = new LibrariesMap("libraries_map", libInfoSources);
+    var librariesMap = new LibrariesMap("libraries_map", libInfoSources);
     // var heatmapFrequentation = new HeatMap("#heatmap_frequentation", width, height, margin, HeatMap.createHeatMapFrequentation, HeatMap.domainMonths, HeatMap.domainBibliotheque, getMaxFrequentation, frequentationTooltip);
     // heatmapFrequentation.create(frequentationSources);
     // heatmapFrequentation.updateData(frequentationSources.filter(d => d.annee == 2013));
@@ -207,7 +205,6 @@ Promise.all(promises).then(function (results) {
 
     let stackedBarPublic2018 = new StackedBar("#emprunts_biblio_2018", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque, stackedBarPublic2018Tip, "2018");
 
-    console.log(publicLoan2018Sources);
     stackedBarPublic2018.updateData2018(publicLoan2018Sources.reverse(), -1);
 
     let stackedBarPublicTip = function(d) {
