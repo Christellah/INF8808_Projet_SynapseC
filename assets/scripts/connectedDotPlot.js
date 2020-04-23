@@ -5,18 +5,66 @@ ConnectedDotPlot = class ConnectedDotPlot {
     static selectedYear = "";
     static selectedLibName = "";
 
-    static legendData = [{"name " : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 150, "heightPad" : 90},
-                         {"name " : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 25, "heightPad" : 90}]
+    static legendData = [{"name" : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 100, "heightPad" : 180, "textWidthPad" : 190, "textHeightPad" : 175},
+                         {"name" : "Emprunts", "color" : "lollipop-Emprunts", "widthPad" : - 25, "heightPad" : 180, "textWidthPad" : 65, "textHeightPad" : 175}]
 
+    /***** Class Constructor  *****/
     constructor(data) {
         this.data = data
     };
 
-    // Create a Connected Dot Plot for one library
+    /***** Create Year Selection DropDown  *****/
+    createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
+        var svg = d3.select("#ConnectedDotPlot")
+        this.yearDropdown = svg.insert("select", "svg")
+            .on("change", function() {
+                ConnectedDotPlot.selectedYear = this.value;
+                var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
+                ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
+            });
+        
+        this.yearDropdown.selectAll("option")
+            .data(data)
+            .enter().append("option")
+            .attr("value", function (d) { return d.year; })
+            .text(function (d) { return d.year; });            
+    };
+        
+    /***** Create Library Selection DropDown  *****/
+    createLibraryDropDown(data, year, x, y, group, height, lollipopsGroup) {
+        var librariesNames = [];
+        data.forEach(function(c) {
+            if(c.year == year) {
+                c.libraries.forEach(function(d) {
+                    librariesNames.push({"name" : d.name});
+                })
+            }
+        });
+        
+        var svg = d3.select("#ConnectedDotPlot")
+        var libDropdown = svg.insert("select", "svg")
+            .attr("label", "Sélectionner la bibliothèque")
+            .on("change", function() {
+                ConnectedDotPlot.selectedLibName = this.value;
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
+            });
+
+        libDropdown.selectAll("option")
+            .data(librariesNames)
+            .enter().append("option")
+            .attr("value", function (d) { return d.name; })
+            .text(function (d) { return d.name; });
+        
+        return libDropdown;
+    };
+
+    /***** Create a Connected Dot Plot for one library *****/
     static createLibConnectedDotPlot(data, year, libName, x, y, group, height, lollipopsGroup, multiple) {
 
         ConnectedDotPlot.selectedYear = year;
 
+        // TODO : Move to function
         var libData = [];
         data.forEach(function(d) {
             if(d.year == year) {
@@ -29,70 +77,63 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         });
 
-        var xAxis = d3.axisBottom(x);
-        var yAxis = d3.axisLeft(y);
-
+        
         /***** Axis domains *****/
         if(multiple) {
-            console.log("IN IF", data[5].libraries);
             ConnectedDotPlot.domainX(x, libData);
             ConnectedDotPlot.domainYMultiple(y, data[data.length - 1].libraries);
         } else {
             ConnectedDotPlot.domainX(x, libData);
             ConnectedDotPlot.domainY(y, libData);
         }
-            
+        
         
         /***** Append Axis *****/
+                var xAxis = d3.axisBottom(x);
+        var yAxis = d3.axisLeft(y);
         group.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
         
         group.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
-
+            .attr("class", "y axis")
+            .call(yAxis);
         
+        /***** Append Legend to axis *****/
+        group.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .attr("font-size", "small")
+            .style("text-anchor", "end")
+            .text("Nombre de titres ");
+        
+        /***** Update lollipops *****/
         ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y);
         
     }
 
-    /***** Append Legend to axis *****/
-    static legend(svg, data, width, height) {
+    /***** Append Legend for color coding *****/
+    static legend(svg, width, height) {
         const legend = svg.selectAll("svg")
-        .data(data)
-        .enter()
-        .append("svg");
+            .data(ConnectedDotPlot.legendData)
+            .enter()
+            .append("svg");
 
         legend.append("circle")
-            .attr("class", "lollipop-Inventaire")
+            .attr("class", function(d) { return d.color; })
             .attr("r", 5)
-            .attr("cx", width - 150)
-            .attr("cy", height + 90);
-        
-        legend.append("circle")
-        .attr("class", "lollipop-Emprunts")
-        .attr("r", 5)
-        .attr("cx", width - 25)
-        .attr("cy", height + 90);
+            .attr("cx", function(d) { return width - d.widthPad; })
+            .attr("cy", function(d) { return height - d.heightPad; })
 
         legend.append("text")
-        .attr("x", width - 185)
-        .attr("y", height + 70)
-        .text("Inventaire")
-        .attr("text-anchor", "left")
-        .style("alignment-baseline", "middle")
-
-        legend.append("text")
-        .attr("x", width - 55)
-        .attr("y", height + 70)
-        .text("Emprunts")
-        .attr("text-anchor", "left")
-        .style("alignment-baseline", "middle")
-
+            .attr("x", function(d) { return width - d.textWidthPad; })
+            .attr("y", function(d) { return height - d.textHeightPad ;})
+            .text( function(d) { return d.name; })
+            .attr("text-anchor", "left")
+            .style("alignment-baseline", "middle")
     }
-
 
     /***** Axis domains  functions *****/
     static domainX(x, libData) {
@@ -104,84 +145,22 @@ ConnectedDotPlot = class ConnectedDotPlot {
     }
     
     static domainYMultiple(y, data) {
-        console.log("IN DOMAIN", data);
         return y.domain([0, d3.max(data, function(d) { return Math.max(d.public[0].max, d.public[1].max)})]);
     }
-
-    createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
-        var svg = d3.select("#ConnectedDotPlot")
-        // var value = "";
-        this.yearDropdown = svg.insert("select", "svg")
-        .on("change", function() {
-            ConnectedDotPlot.selectedYear = this.value;
-            var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
-            ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
-            ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
-        });
-
-        this.yearDropdown.selectAll("option")
-            .data(data)
-            .enter().append("option")
-            .attr("value", function (d) { 
-                return d.year; })
-            .text(function (d) {
-                return d.year; 
-            })
-            ;
-
-    };
-
-    createLibraryDropDown(data, year, x, y, group, height, lollipopsGroup) {
-        var librariesNames = [];
-
-        data.forEach(function(c) {
-            if(c.year == year) {
-                c.libraries.forEach(function(d) {
-                    librariesNames.push({"name" : d.name});
-                })
-            }
-        })
-
-        
-        var svg = d3.select("#ConnectedDotPlot")
-        var libDropdown = svg.insert("select", "svg")
-                    .on("change", function() {
-                        ConnectedDotPlot.selectedLibName = this.value;
-                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
-                    });
-
-        libDropdown.selectAll("option")
-            .data(librariesNames)
-            .enter().append("option")
-            .attr("value", function (d) { 
-                return d.name;
-            })
-            .text(function (d) {
-                return d.name; 
-            });
-        
-        return libDropdown;
-    };
     
+    /***** This updates the library dropdown list when a new year is selected *****/
     static updateLibraryDropdown(newLibrariesNames, libDropDown) {
         libDropDown.selectAll("option").remove();
         libDropDown.selectAll("option")
-        .data(newLibrariesNames)
-        .enter().append("option")
-        .attr("value", function (d) { 
-            return d.name;
-        })
-        .text(function (d) {
-            return d.name; 
-        });
+            .data(newLibrariesNames)
+            .enter().append("option")
+            .attr("value", function (d) { return d.name; })
+            .text(function (d) { return d.name; });
     }
     
-    /***** Year selection function *****/
-    // This update the library dropdown list
-    
+    /***** Year selection function *****/    
     static updateDataYear(data, year){
         var librariesNames = [];
-
         data.forEach(function(c) {
             if(c.year == year) {
                 c.libraries.forEach(function(d) {
@@ -193,9 +172,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
         return librariesNames;
     };
 
-    /***** Library selection function *****/
+    /***** Library selection function - updates the connected dot plot *****/
     static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, height, lollipopsGroup) {
-
         var libData = [];
         data.forEach(function(d) {
             if(d.year == selectedYear) {
@@ -208,7 +186,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         });
 
-        // /***** Update Axis domains *****/
+        /***** Update Axis domains *****/
         ConnectedDotPlot.domainX(x, libData);
         ConnectedDotPlot.domainY(y, libData);
         
@@ -219,15 +197,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var yAxis = d3.axisLeft(y);
 
         group.select(".x.axis")
-        .call(xAxis);
+            .call(xAxis);
             
         group.select(".y.axis")
-        .call(yAxis);
+            .call(yAxis);
     }
 
     
+    /***** Generate new lollipops *****/
     static updateLollipops(lollipopsGroup, libData, x, y) {
-        /***** Generate lollipops *****/
         var lineGenerator = d3.line();
 
         var lollipopLinePath = function(d) {
@@ -237,13 +215,13 @@ ConnectedDotPlot = class ConnectedDotPlot {
         lollipopsGroup.selectAll("*").remove();
 
         var lollipops = lollipopsGroup.selectAll("g")
-        .data(libData)
-        .enter().append("g")
-        .attr("class", "lollipop")
+            .data(libData)
+            .enter().append("g")
+            .attr("class", "lollipop")
         
         lollipops.append("path")
-        .attr("class", "lollipop-line")
-        .attr("d", lollipopLinePath);
+            .attr("class", "lollipop-line")
+            .attr("d", lollipopLinePath);
 
         // Minimum lollipop
         lollipops.append("circle")
@@ -255,12 +233,9 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         })
         .attr("r", 5)
-        .attr("cx", function(d) {
-            return x(d.name) + (x.bandwidth() / 2);
-        })
-        .attr("cy", function(d) {
-            return y(d.min);
-        });
+        .attr("cx", function(d) { return x(d.name) + (x.bandwidth() / 2); })
+        .attr("cy", function(d) { return y(d.min); });
+
         // Maximum lollipop
         lollipops.append("circle")
         .attr("class", function(d) {
@@ -271,12 +246,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         })
         .attr("r", 5)
-        .attr("cx", function(d) {
-            return x(d.name) + (x.bandwidth() / 2);
-        })
-        .attr("cy", function(d) {
-            return y(d.max);
-        });
+        .attr("cx", function(d) { return x(d.name) + (x.bandwidth() / 2); })
+        .attr("cy", function(d) { return y(d.max); });
     }
 
 }
@@ -308,9 +279,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
  *                          ] 
  *                  },
  *                  ...
- * 
  *              ] 
- * 
  * ]
  *
  * @param {*} collectionLivres Données du fichier json
@@ -319,7 +288,6 @@ ConnectedDotPlot = class ConnectedDotPlot {
  */
 
 function createConnectedDotPlotSources(collectionLivres, pretsPublic) {
-
     var publicSources = [];
 
     for (const year in collectionLivres) {
@@ -328,22 +296,15 @@ function createConnectedDotPlotSources(collectionLivres, pretsPublic) {
         var libraries = [];
 
         collectionLivres[year].forEach(function (d, i) {
-            
             var library = new Object();
             library.name = d["BIBLIOTHÈQUE"];
-
             var public = [];
-            var kids = findMinMaxKids(year, d, pretsPublic);
-
-            var adult = findMinMaxAdult(year, d, pretsPublic);
-
+            var kids = findMinMax(year, d, pretsPublic, "JEUNE", "Jeunes");
+            var adult = findMinMax(year, d, pretsPublic, "ADULTE", "Adultes");
             public.push(kids);
             public.push(adult);
-
             library.public = public;
-
             libraries.push(library);
-
         });
 
         perYear.libraries = libraries;
@@ -353,56 +314,28 @@ function createConnectedDotPlotSources(collectionLivres, pretsPublic) {
     return publicSources;
 }
 
-
-function findMinMaxKids(year, library, pretsPublic) {
-    var kids = new Object();
-    kids.name = "Jeune";
-    kids.min = 0;
-    kids.max = 0;
-    kids.minCategory = "";
-    kids.maxCategory = "";
-
-    pretsPublic[year].forEach(function (d, i) {
-        if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
-
-            var collectNumb = parseInt(library["JEUNE"]);
-            var empruntNumb = parseInt(d["Jeunes"].replace(",", ""));
-
-            kids.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
-            kids.minCategory = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
-            kids.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
-            kids.maxCategory = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
-
-        }
-    })
-
-    return kids;
-}
-
-function findMinMaxAdult(year, library, pretsPublic) {
-    var adult = new Object();
-    adult.name = "Adulte";
-    adult.min = 0;
-    adult.max = 0;
-    
-    adult.minCategory = "";
-    adult.maxCategory = "";
+/***** Find min and max category per public *****/
+function findMinMax(year, library, pretsPublic, keyWordLibrary, keyWordLoans) {
+    var public = new Object();
+    public.name = keyWordLoans;
+    public.min = 0;
+    public.max = 0;
+    public.minCategory = "";
+    public.maxCategory = "";
 
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
 
-            var collectNumb = parseInt(library["ADULTE"]);
-            var empruntNumb = parseInt(d["Adultes"].replace(",", ""));
-            
-            adult.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
-            adult.minCategory = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
+            var collectNumb = parseInt(library[keyWordLibrary]);
+            var empruntNumb = parseInt(d[keyWordLoans].replace(",", ""));
 
-            adult.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
-            adult.maxCategory = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
-
+            public.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            public.minCategory = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
+            public.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
+            public.maxCategory = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
 
         }
     })
 
-    return adult;
+    return public;
 }

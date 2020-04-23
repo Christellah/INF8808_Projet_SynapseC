@@ -155,11 +155,15 @@ Promise.all(promises).then(function (results) {
     var initialData = publicCDPlotSources[publicCDPlotSources.length - 1];
     ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
     
-    ConnectedDotPlot.legend(svg, publicCDPlotSources, widthCD, heightCD);
+    var svgLegend = d3.select("#ConnectedDotPlot")
+            .append("svg")
+            .attr("width", widthCD + marginCD.left + marginCD.right)
+            .attr("height", heightCD + marginCD.top + marginCD.bottom);
+            
+    ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
     /*******5.1*******/
     
     publicCDPlotSources[publicCDPlotSources.length - 1].libraries.forEach(function(d){
-        console.log(d);
         var svgMultiple = d3.select("#MultipleConnectedDotPlots")
         .append("svg")
         .attr("width", widthCD + marginCD.left + marginCD.right)
