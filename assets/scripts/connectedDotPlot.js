@@ -5,6 +5,9 @@ ConnectedDotPlot = class ConnectedDotPlot {
     static selectedYear = "";
     static selectedLibName = "";
 
+    static legendData = [{"name " : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 150, "heightPad" : 90},
+                         {"name " : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 25, "heightPad" : 90}]
+
     constructor(data) {
         this.data = data
     };
@@ -50,8 +53,44 @@ ConnectedDotPlot = class ConnectedDotPlot {
         .attr("class", "y axis")
         .call(yAxis);
 
+        
         ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y);
-            
+        
+    }
+
+    /***** Append Legend to axis *****/
+    static legend(svg, data, width, height) {
+        const legend = svg.selectAll("svg")
+        .data(data)
+        .enter()
+        .append("svg");
+
+        legend.append("circle")
+            .attr("class", "lollipop-Inventaire")
+            .attr("r", 5)
+            .attr("cx", width - 150)
+            .attr("cy", height + 90);
+        
+        legend.append("circle")
+        .attr("class", "lollipop-Emprunts")
+        .attr("r", 5)
+        .attr("cx", width - 25)
+        .attr("cy", height + 90);
+
+        legend.append("text")
+        .attr("x", width - 185)
+        .attr("y", height + 70)
+        .text("Inventaire")
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle")
+
+        legend.append("text")
+        .attr("x", width - 55)
+        .attr("y", height + 70)
+        .text("Emprunts")
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle")
+
     }
 
 
