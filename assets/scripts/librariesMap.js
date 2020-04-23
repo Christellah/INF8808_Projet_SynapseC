@@ -46,21 +46,48 @@ LibrariesMap = class LibrariesMap {
     createSymbols(libMap) {
         // Initialize the svg layer in libMap
         libMap._initPathRoot();
+  
+        // Make a range for circles radius, proportional to frequentations/population_arrondissement
+        var circleRadiusScale = d3.scaleLinear()
+            .domain([d3.min(this.libInfoSources, function(d) { return normalizedFrequentations(d); }), 
+                     d3.max(this.libInfoSources, function(d) { return normalizedFrequentations(d); })])
+            .range([5,18]);
+            
+        // Tool tip to display the library's name
+        var nameToolTip = d3.select("body")
+            .append("div")
+            .style("position", "absolute")
+            .style("background", "white")
+            .style("z-index", "10")
+            .style("visibility", "hidden")
+            .style("opacity", "0.8")
+
         // Get the svg to create the symbols at the libs locations
         var svg = d3.select(this.divId).select("svg");
-
+            
         // Apend the libraries infos data
-        var circleGroup = svg.append("g")
-            .selectAll("circle")
-			.data(this.libInfoSources)
+        var circleGroup = svg.selectAll("circle")
+            .data(this.libInfoSources)
             .enter();
 
         // Draw the circles
         circleGroup.append("circle")
-            .attr("r", 14)
-			.style("stroke", "black")  
+            .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
+            .style("stroke", "black")
 			.style("opacity", .8) 
-			.style("fill", "#FE390F");
+            .style("fill", "#FE390F")
+            .attr("class", "leaflet-clickable")
+
+            .on("mouseover", function(d) {
+                return nameToolTip.style("visibility", "visible")
+                    .style("top", (d3.event.pageY-30) + "px")
+                    .style("left", (d3.event.pageX-30) + "px")
+                    .html(d.nom);
+            })
+            .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); });
+            // .on("click", function(d) {
+            //     console.log(this)
+            // });
         
         // Place the circles
         LibrariesMap.update(libMap);
@@ -205,4 +232,12 @@ function extractLocalisation(data) {
     localisation.longitude = convertToFloat(data["Longitude"]);
 
     return localisation;
+}
+/**
+ * Get the normalized frequentation : frequentations / populationArrondissement
+ * @param {*} biblio
+ * @returns {float} normalized frequentation
+ */
+function normalizedFrequentations(biblio) {
+    return (biblio.frequentations / biblio.populationArrondissement).toFixed(1);
 }
