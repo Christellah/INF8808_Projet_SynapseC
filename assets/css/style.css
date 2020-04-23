@@ -37,6 +37,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  display: block;
+  z-index: 100;
 }
 /* Navigation bar options */
 .navbar a {
@@ -126,6 +128,20 @@ body {
   display: flex;
 }
 
+.selected {
+  animation: flash-animation 0.8s ease-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes flash-animation {
+  from {
+      fill-opacity: 0.9;
+  }
+  to {
+      fill-opacity: 0.3;
+  }
+}
+
 /***** Dataviz - Libraries Map *****/
 #libraries_map { 
   margin: auto;
@@ -139,7 +155,7 @@ body {
   cursor: pointer;
 }
 
-@keyframes flash-animation {
+@keyframes circle-flash-animation {
   from {
     fill-opacity: 1;
   }
@@ -148,8 +164,8 @@ body {
   }
 }
 
-.selected {
-  animation: flash-animation 1s ease-out infinite;
+.circle-selected {
+  animation: circle-flash-animation 1s ease-out infinite;
   animation-direction: alternate;
   fill: #591AEF;
 }

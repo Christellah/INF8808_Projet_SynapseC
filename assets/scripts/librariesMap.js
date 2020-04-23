@@ -72,7 +72,7 @@ LibrariesMap = class LibrariesMap {
                 .on("click", function () {
                 // reset(g);
                 panel.style("display", "none");
-                circleGroup.selectAll("circle").classed("selected", false);
+                circleGroup.selectAll("circle").classed("circle-selected", false);
               });
             //////////////
             
@@ -94,8 +94,8 @@ LibrariesMap = class LibrariesMap {
             .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); })
             .on("click", function(d) {
                 nameToolTip.style("visibility", "hidden");
-                circleGroup.selectAll("circle").classed("selected", false);
-                d3.select(this).classed("selected", true);
+                circleGroup.selectAll("circle").classed("circle-selected", false);
+                d3.select(this).classed("circle-selected", true);
 
                 updatePanel(panel, d);
                 panel.style("display", "block");

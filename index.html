@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>INF8808 - Projet Synapse C</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/heatmap.css">
   <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
+  <script src="https://kit.fontawesome.com/1ea77d28ed.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -77,18 +79,56 @@
             permettant de comparer les évolutions et valeurs entre bibliothèques, mais également au cours du temps pour une bibliothèque précise.
           </p>
           <p class="dataviz-name">Heatmap - Évolution des emprunts</p>
-          Format emprunté : 
-          <select id="selectFormat">
-            <option selected>Total</option>
-            <option>Nouveautés</option>
-            <option>Livres</option>
-            <option>Périodiques</option>
-            <option>Audio</option>
-            <option>Vidéo</option>
-            <option>Électronique</option>
-            <option>Multisupports</option>
-            <option>Autres</option>
-          </select>
+
+          <!-- INFO -->
+          <div class="alert alert-primary" role="alert">
+            <div class="row">
+                <div class="col-1 text-center">
+                  <i class="fas fa-info"></i>
+                </div>
+                <div class="col">
+                  Les bibliothèques sont ordonnées par ordre croissant du nombre total d'emprunts sur les 6 années cumulées.<br />
+                  L'echelle de couleur varie selon le filtre appliqué (type de format ou type de public). <br />
+                  Seul un des deux filtres ne peut être appliqué a la fois.
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class='form-inline col-4'>
+              <label for="selectFormat" class="font-weight-bold">Format emprunté</label>
+              <select class="form-control mx-1" id="selectFormat">
+                <option></option>
+                <option selected>TOTAL</option>
+                <option>Nouveautés</option>
+                <option>Livres</option>
+                <option>Périodiques</option>
+                <option>Audio</option>
+                <option>Vidéo</option>
+                <option>Électronique</option>
+                <option>Multisupports</option>
+                <option>Autres</option>
+              </select>
+            </div>
+
+            <div class='form-inline col-4'>
+              <label for="selectPublic ml-5" class="font-weight-bold">Public</label>
+              <select class="form-control mx-1" id="selectPublic">
+                <option></option>
+                <option>TOTAL</option>
+                <option>Adultes</option>
+                <option>Jeunes</option>
+                <option>Aînés</option>
+                <option>Prêt à domicile</option>
+                <option>Projets spéciaux</option>
+                <option>Organismes Adultes</option>
+                <option>Organismes Jeunes</option>
+                <option>Dépôt temporaire</option>
+                <option>Autres</option>
+              </select>
+            </div>
+        </div>
+
           <div class="flex-div">
             <div id="heatmap_emprunts" class="dataviz"></div>
             <div id="heatmap_emprunts_legend"></div>
@@ -97,10 +137,28 @@
           <p class="normal-text">Le second usage concerne les fréquentations physiques dans les bibliothèques. La visualisation suivante est 
             similaire à la précédente, et permet d’observer comment évolue le nombre de personnes visitant les bibliothèques au cours des mois.
           </p>
+          
           <p class="dataviz-name">Heatmap - Évolution des fréquentations</p>
+
+          <!-- INFO -->
+          <div class="alert alert-primary" role="alert">
+            <div class="row">
+                <div class="col-1 text-center">
+                  <i class="fas fa-info"></i>
+                </div>
+                <div class="col">
+                  Les bibliothèques sont ordonnées par ordre croissant du nombre total de fréquentation dans l'année. <br />
+                  L'echelle de couleur est fixe, ce qui permet de visualiser l'évolution au cours des années.
+                </div>
+            </div>
+          </div>
+
+          <!-- Curseur annees -->
           <div class="slidecontainer">
             <div id="yearChoice"></div>
           </div>
+
+          <!-- Heatmap + legend -->
           <div class="flex-div">
             <div id="heatmap_frequentation" class="dataviz"></div>
             <div id="heatmap_frequentation_legend"></div>
@@ -114,11 +172,23 @@
             découvrir comment cette répartition de l’inventaire pour chaque type de public (jeunes, adultes, aînés, etc) a évolué entre 2013 et 2018. 
           </p>
           <p class="dataviz-name">Stacked bar chart - Évolution de la répartition des emprunts selon les types de public</p>
+          Bibliothèque selectionnée :
+            <select id="selectBiblio">
+            </select>
+            <div class="flex-div">
+              <div id="emprunts_biblio" class="dataviz"></div>
+              <div id="emprunts_biblio_legend"></div>
+            </div>
           <!-- Dataviz 3.2 -->
           <p class="normal-text">Ensuite, l’analyse se porte sur la comparaison de l’inventaire par type de public entre les bibliothèques en 2018. 
             Ceci permet de mieux repérer les bibliothèques qui sont davantage spécialisées pour un type de public en particulier.
           </p>
           <p class="dataviz-name">Stacked bar chart - Répartition des emprunts selon les types de public en 2018</p>
+            <div class="flex-div">
+              <div id="emprunts_biblio_2018" class="dataviz"></div>
+              <div id="emprunts_biblio_2018_legend"></div>
+            </div>
+
         <!-- Section 2.3 -->
         <h3>Évolution des emprunts et des fréquentations</h3>
           <!-- Dataviz 4 -->
@@ -164,6 +234,7 @@
 
   <script type="text/javascript" src="assets/scripts/librariesMap.js"></script>
   <script type="text/javascript" src="assets/scripts/heatmap.js"></script>
+  <script type="text/javascript" src="assets/scripts/stackedbar.js"></script>
   <script type="text/javascript" src="assets/scripts/main.js"></script>
 </body>
 </html>
