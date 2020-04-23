@@ -62,24 +62,29 @@ LibrariesMap = class LibrariesMap {
             .style("visibility", "hidden")
             .style("opacity", "0.8")
 
-        // Get the svg to create the symbols at the libs locations
-        var svg = d3.select(this.divId).select("svg");
+            // Get the svg to create the symbols at the libs locations
+            var svg = d3.select(this.divId).select("svg");
+
+            ///////////////
+            var panel = d3.select("#panel");//.style("display", "block"); // TODO
+            var panelButton = panel.append("button")
+                .text("Fermer")
+                .on("click", function () {
+                // reset(g);
+                panel.style("display", "none");
+                circleGroup.selectAll("circle").classed("selected", false);
+              });
+            //////////////
             
         // Apend the libraries infos data
         var circleGroup = svg.selectAll("circle")
             .data(this.libInfoSources)
             .enter();
-                
-        var popup = L.popup();
 
         // Draw the circles
         circleGroup.append("circle")
             .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
-            .style("stroke", "black")
-			.style("opacity", .8) 
-            .style("fill", "#FE390F")
-            .attr("class", "leaflet-clickable")
-
+            .attr("class", "lib-circle")
             .on("mouseover", function(d) {
                 return nameToolTip.style("visibility", "visible")
                     .style("top", (d3.event.pageY-30) + "px")
@@ -88,102 +93,19 @@ LibrariesMap = class LibrariesMap {
             })
             .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); })
             .on("click", function(d) {
-                console.log(this)
                 nameToolTip.style("visibility", "hidden");
+                circleGroup.selectAll("circle").classed("selected", false);
+                d3.select(this).classed("selected", true);
 
-                // var popup = L.popup()
-                popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
-                .setContent("I am a standalone popup.")
-                .openOn(libMap);
-                /*var width = 200;
-                var height = 200;
-                var margin = {left: 10, top: 10, right: 6, bottom: 10};
-                var div = d3.create("div");
-  
-                var svg_2 = div.append("svg")
-                    .attr("width",width+margin.left+margin.right)
-                    .attr("height",height+margin.top+margin.bottom);
-                
-                var g_2 = svg_2.append("g")
-                    .attr("transform","translate("+[margin.left,margin.top]+")");
-                    
-                var colors = d3.scaleLinear().domain([0,99]).range(["yellow","steelblue"]);
+                updatePanel(panel, d);
+                panel.style("display", "block");
 
-                var rects = g_2.selectAll("rect")
-                    .data(d3.range(100))
-                    .enter()
-                    .append("rect")
-                    .attr("width", width/10 - 2)
-                    .attr("height", height/10 - 2)
-                    .attr("x", function(d,i) { return i%10 * width/10; })
-                    .attr("y", function(d,i) { return Math.floor(i/10) * height/10; })
-                    .attr("fill", function(d,i) { return colors(i);	})
-                
-                    // popup.setLatLng(e.latlng)
-                    popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
-                    .setContent(div.node())
-                    .openOn(libMap);*/
             });
+
+            
         
         // Place the circles
         LibrariesMap.update(libMap);
-
-        /* POPUP TEST
-        var popup = L.popup();
-
-        // Draw the circles
-        circleGroup.append("circle")
-            .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
-            .style("stroke", "black")
-			.style("opacity", .8) 
-            .style("fill", "#FE390F")
-            .attr("class", "leaflet-clickable")
-
-            .on("mouseover", function(d) {
-                return nameToolTip.style("visibility", "visible")
-                    .style("top", (d3.event.pageY-30) + "px")
-                    .style("left", (d3.event.pageX-30) + "px")
-                    .html(d.nom);
-            })
-            .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); })
-            .on("click", function(d) {
-                console.log(this)
-                nameToolTip.style("visibility", "hidden");
-                var width = 200;
-                var height = 200;
-                var margin = {left: 10, top: 10, right: 6, bottom: 10};
-                var div = d3.create("div");
-  
-                var svg_2 = div.append("svg")
-                    .attr("width",width+margin.left+margin.right)
-                    .attr("height",height+margin.top+margin.bottom);
-                
-                var g_2 = svg_2.append("g")
-                    .attr("transform","translate("+[margin.left,margin.top]+")");
-                    
-                var colors = d3.scaleLinear().domain([0,99]).range(["yellow","steelblue"]);
-
-                var rects = g_2.selectAll("rect")
-                    .data(d3.range(100))
-                    .enter()
-                    .append("rect")
-                    .attr("width", width/10 - 2)
-                    .attr("height", height/10 - 2)
-                    .attr("x", function(d,i) { return i%10 * width/10; })
-                    .attr("y", function(d,i) { return Math.floor(i/10) * height/10; })
-                    .attr("fill", function(d,i) { return colors(i);	})
-                
-                    // popup.setLatLng(e.latlng)
-                    popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
-                    .setContent(div.node())
-                    .openOn(libMap);
-            });
-            // .bindPopup("I am a polygon.");
-        // var popup = L.popup()
-        //     .setLatLng([this.libInfoSources[0].localisation.latitude, this.libInfoSources[0].localisation.longitude])
-        //     .setContent("I am a standalone popup.")
-        //     .openOn(libMap);
-        */
     }
 
     /**
@@ -210,7 +132,7 @@ LibrariesMap = class LibrariesMap {
  *          "codeArrondissement": "(AHC)",
  *          "inventaire": "133,819",
  *          "frequentations": "306,670",
- *          "superficie": "2,033.50",
+ *          "superficie": 2033.50,
  *          "heuresOuverture": "53.00",
  *          "public": {"adultes": 76620, "jeunes": 61301, "autres": 0},
  *          "langues": {"francais": 125060, "anglais": 11990, "autres": 871},
@@ -222,10 +144,6 @@ LibrariesMap = class LibrariesMap {
  *
  * @param {*} data Données du fichier json
  * @returns {array}
- */
-
- /*
- *          "populationArrondissement": 134245
  */
 function createLibInfoSources(data) {
     var sources = [];
@@ -241,7 +159,7 @@ function createLibInfoSources(data) {
 
         biblio.inventaire = convertToInt(d["Inventaire"]);
         biblio.frequentations = convertToInt(d["Fréquentations"]);
-        biblio.superficie = d["Superficie en m2"];
+        biblio.superficie = convertToInt(d["Superficie en m2"]);
         biblio.heuresOuverture = d["Heures d'ouverture par semaine"];
 
         biblio.public = extractPublicTypes(d);
@@ -265,7 +183,7 @@ function createLibInfoSources(data) {
  * @returns {int}
  */
 function convertToInt(value) {
-    return parseInt(value.replace(",", "").replace(" ", ""));
+    return value ? parseInt(value.replace(",", "").replace(" ", "")) : undefined;
 }
 /**
  * Converts string to float
@@ -333,4 +251,23 @@ function extractLocalisation(data) {
  */
 function normalizedFrequentations(biblio) {
     return (biblio.frequentations / biblio.populationArrondissement).toFixed(1);
+}
+/**
+ * Updates the info panel html
+ * @param {*} panel
+ * @param {*} biblio
+ */
+function updatePanel(panel, biblio) {
+    // Get the value normalized by the population in the borough
+    var normalized = function (biblio, value) { 
+        if (!value) return "-";
+        return (value / biblio.populationArrondissement).toFixed(2); }
+        
+    panel.select("#lib-name").text("Bibliothèque " + biblio.nom);
+    panel.select("#nb-h").text("Nombre d'heures d'ouverture par semaine : " + biblio.heuresOuverture + " h/sem");
+    panel.select("#surf").text("Surface moyenne par habitant : " + normalized(biblio, biblio.superficie) + " m2");
+    panel.select("#nb-titres").text("Nombre de titres par habitant : " + normalized(biblio, biblio.inventaire));
+    panel.select("#nb-freq").text("Nombre de visites par habitant : " + normalized(biblio, biblio.frequentations));
+
+    panel.select("#services").text("Types de titres offerts :" + "SVG");
 }

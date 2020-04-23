@@ -132,3 +132,73 @@ body {
   height: 600px; 
 }
 
+.lib-circle {
+  stroke: black;
+  opacity: 0.8;
+  fill: #FE390F;
+  cursor: pointer;
+}
+
+@keyframes flash-animation {
+  from {
+    fill-opacity: 1;
+  }
+  to {
+    fill-opacity: 0.6;
+  }
+}
+
+.selected {
+  animation: flash-animation 1s ease-out infinite;
+  animation-direction: alternate;
+  fill: #591AEF;
+}
+
+#panel {
+  position : relative;
+  padding : 4px;
+  border : 1px solid gray;	
+  border-radius : 4px;
+  background : lightblue;
+  width : 30%;
+  height : 45%;
+  float : right;
+  z-index : 10;
+  margin-top : 2px;
+  margin-right : 2px;
+  cursor : default;
+  display : none;
+}
+
+#panel button {
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  float: right;
+  background-color: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  font-size: 0.8em;
+  cursor: pointer;
+  outline: none;
+}
+#panel button:hover {
+  background-color: #ccc;
+}
+
+#panel h1 {
+  margin-top: 20;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#panel .info-list {
+  font-size: 1.1em;
+  list-style-position: inside;
+  padding-left: 0px;
+  /* margin-left: 2px; */
+  /* text-align: left; */
+  /* padding: 5px; */
+}
