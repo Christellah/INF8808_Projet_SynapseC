@@ -1,7 +1,13 @@
 
 /***** ConnectedDotPlot Class  *****/
 
+// ConnectedDotPlot.selectedYear;
+
 ConnectedDotPlot = class ConnectedDotPlot {
+
+    static selectedYear = "";
+    static selectedLibName = "";
+
     constructor(data) {
         this.data = data
     };
@@ -21,84 +27,74 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         });
 
-        // var margin = {
-        //     top: 10,
-        //     right: 10,
-        //     bottom: 100,
-        //     left: 60
-        // };
-
-        // var width = 300 - margin.left - margin.right;
-        // var height = 300 - margin.top - margin.bottom;
-
-        // /***** Scales *****/
-        // var x = d3.scaleBand().range([0, width]);
-        // var y = d3.scaleLinear().range([height, 0]);
-
         var xAxis = d3.axisBottom(x);
         var yAxis = d3.axisLeft(y);
 
-        /***** Create Elements *****/
-        // var svg = d3.select("#ConnectedDotPlot")
-        // .append("svg")
-        // .attr("width", width + margin.left + margin.right)
-        // .attr("height", height + margin.top + margin.bottom);
+        if(libData.length > 0) {
 
-        // var graph = svg.append("g")
-        // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            
+            /***** Axis domains *****/
+            ConnectedDotPlot.domainX(x, libData);
+            ConnectedDotPlot.domainY(y, libData);
+            
+            /***** Append Axis *****/
+            group.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+            
+            group.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+            
+            /***** Generate lollipops *****/
+            var lineGenerator = d3.line();
 
-        /***** Axis domains *****/
-        ConnectedDotPlot.domainX(x, libData);
-        ConnectedDotPlot.domainY(y, libData);
-
-        /***** Append Axis *****/
-        group.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
-
-        group.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
-
-        /***** Generate lollipops *****/
-        var lineGenerator = d3.line();
-
-        var lollipopLinePath = function(d) {
-            return lineGenerator([[x(d.name) + (x.bandwidth() / 2) , y(d.min)], [x(d.name) + (x.bandwidth() / 2), y(d.max)]]); 
-        };
-
-        var lollipopsGroup = group.append("g").attr("class", "lollipops");
-
-        var lollipops = lollipopsGroup.selectAll("g")
-        .data(libData)
-        .enter().append("g")
-        .attr("class", "lollipop")
-
-        lollipops.append("path")
-        .attr("class", "lollipop-line")
-        .attr("d", lollipopLinePath);
-
-        lollipops.append("circle")
-        .attr("class", "lollipop-start")
-        .attr("r", 5)
-        .attr("cx", function(d) {
-            return x(d.name) + (x.bandwidth() / 2);
-        })
-        .attr("cy", function(d) {
-            return y(d.min);
-        });
-
-        lollipops.append("circle")
-        .attr("class", "lollipop-end")
-        .attr("r", 5)
-        .attr("cx", function(d) {
-            return x(d.name) + (x.bandwidth() / 2);
-        })
-        .attr("cy", function(d) {
-            return y(d.max);
-        });
-
+            var lollipopLinePath = function(d) {
+                return lineGenerator([[x(d.name) + (x.bandwidth() / 2) , y(d.min)], [x(d.name) + (x.bandwidth() / 2), y(d.max)]]); 
+            };
+            
+            var lollipopsGroup = group.append("g").attr("class", "lollipops");
+            
+            var lollipops = lollipopsGroup.selectAll("g")
+            .data(libData)
+            .enter().append("g")
+            .attr("class", "lollipop")
+            
+            lollipops.append("path")
+            .attr("class", "lollipop-line")
+            .attr("d", lollipopLinePath);
+            
+            lollipops.append("circle")
+            .attr("class", "lollipop-start")
+            .attr("r", 5)
+            .attr("cx", function(d) {
+                return x(d.name) + (x.bandwidth() / 2);
+            })
+            .attr("cy", function(d) {
+                return y(d.min);
+            });
+            
+            lollipops.append("circle")
+            .attr("class", "lollipop-end")
+            .attr("r", 5)
+            .attr("cx", function(d) {
+                return x(d.name) + (x.bandwidth() / 2);
+            })
+            .attr("cy", function(d) {
+                return y(d.max);
+            });
+            
+        } else {
+            group.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+            
+            group.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+        }
     }
 
     /***** Axis domains  functions *****/
@@ -112,14 +108,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
     createYearDropDown(data, x, y, group, height) {
         var svg = d3.select("#ConnectedDotPlot")
-        var value = "";
+        // var value = "";
         var dropdown = svg.insert("select", "svg")
                     .on("change", function() {
-                        value = this.value;
-                        console.log(value);
-                        ConnectedDotPlot.updateDataYear(data, this.value);
+                        ConnectedDotPlot.selectedYear = this.value;
+                        // ConnectedDotPlot.updateDataYear(data, this.value);
+                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height);
                     });
 
+        
         dropdown.selectAll("option")
             .data(data)
             .enter().append("option")
@@ -145,12 +142,12 @@ ConnectedDotPlot = class ConnectedDotPlot {
             }
         })
 
-        console.log(librariesNames);
-
+        
         var svg = d3.select("#ConnectedDotPlot")
         var dropdown = svg.insert("select", "svg")
                     .on("change", function() {
-                        ConnectedDotPlot.updateDataLibrary(data, year, this.value, x, y, group, height);
+                        ConnectedDotPlot.selectedLibName = this.value;
+                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height);
                     });
 
         dropdown.selectAll("option")
@@ -173,20 +170,18 @@ ConnectedDotPlot = class ConnectedDotPlot {
     /***** Year selection function *****/
     // This update the library dropdown list
     
-    static updateDataYear(data, year){
-        var librariesNames = [];
+    // static updateDataYear(data, year){
+    //     var librariesNames = [];
 
-        data.forEach(function(c) {
-            if(c.year == year) {
-                c.libraries.forEach(function(d) {
-                    librariesNames.push({"name" : d.name});
-                });
-            };
-        });
-
-
-        return year;
-    };
+    //     data.forEach(function(c) {
+    //         if(c.year == year) {
+    //             c.libraries.forEach(function(d) {
+    //                 librariesNames.push({"name" : d.name});
+    //             });
+    //         };
+    //     });
+        
+    // };
 
     /***** Library selection function *****/
     static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, height) {

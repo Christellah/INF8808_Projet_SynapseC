@@ -120,37 +120,33 @@ Promise.all(promises).then(function (results) {
     var collectionFormat = results[3];
     var pretsPublic = results[4];
 
-    var margin = {
+    var marginCD = {
         top: 10,
         right: 10,
         bottom: 100,
         left: 60
     };
 
-    var width = 300 - margin.left - margin.right;
-    var height = 300 - margin.top - margin.bottom;
+    var widthCD = 300 - marginCD.left - marginCD.right;
+    var heightCD = 300 - marginCD.top - marginCD.bottom;
 
     /***** Scales *****/
-    var x = d3.scaleBand().range([0, width]);
-    var y = d3.scaleLinear().range([height, 0]);
+    var x = d3.scaleBand().range([0, widthCD]);
+    var y = d3.scaleLinear().range([heightCD, 0]);
 
     var svg = d3.select("#ConnectedDotPlot")
         .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
+        .attr("width", widthCD + marginCD.left + marginCD.right)
+        .attr("height", heightCD + marginCD.top + marginCD.bottom);
 
         var group = svg.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
     
     var publicCDPlotSources = createConnectedDotPlotSources(collectionLivres, pretsPublic);
-    console.log(publicCDPlotSources);
 
-    var connectedDotPlot = new ConnectedDotPlot(publicCDPlotSources)
-    // createConnectedDotPlot(publicCDPlotSources[5][1]);
-    // createLibConnectedDotPlot(publicCDPlotSources[5].libraries[0].public);
-
+    var connectedDotPlot = new ConnectedDotPlot(publicCDPlotSources);
     
-    connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, height);
+    connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, heightCD);
 
 })
 
