@@ -15,17 +15,15 @@ StackedBar = class StackedBar {
 
         this.svg = d3.select(div)
             .append("svg")
-            .attr("width", "600")
+            .attr("width", "1000")
             .attr("height", height + margin.top + margin.bottom)
-            .append("g");
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top/2 + ")");
     }
 
     static years() {
         return [2013, 2014, 2015, 2016, 2017, 2018]
-    }
-
-    static domainYears(y, sources) {
-        y.domain(StackedBar.years());
     }
 
     static domainBibliotheque(y, sources) {
@@ -43,10 +41,9 @@ StackedBar = class StackedBar {
 
     static createStackedBarBiblios(selection, sources, x, y, colorScale) {
 
-        console.log(sources);
-
         selection.data(sources)
-                .enter().append("g")
+                .enter()
+                .append("g")
                 .selectAll("rect")
                 .data(d => d)
                 .join("rect")
@@ -62,61 +59,136 @@ StackedBar = class StackedBar {
     }
 
     create(sources) {
+        this.updateData(sources, -1);
+    }
 
+    updateData(sources, index) {
+        this.svg.selectAll("*").remove();
         this.domainY(this.y, sources);
+        let yAxis = d3.axisLeft(this.y).tickSize(0);
+        this.addAxes(yAxis);
         let series = d3.stack()
-            .keys(Object.keys(sources[0]).slice(3))
+            .keys(Object.keys(sources[0]).slice(3, 8))
             .offset(d3.stackOffsetExpand)
             (sources)
             .map(d => (d.forEach(v => v.key = d.key), d));
-        this.updateData(series);
+        this.svg.selectAll().call(this.createFunction, series, this.x, this.y, this.colorScale);
+        this.addLegend(this.colorScale, sources, index);
     }
 
-    updateData(sources) {
-        this.svg.selectAll().call(this.createFunction, sources, this.x, this.y, this.colorScale);
+    addAxes(yAxis) {
+        // y axis
+        this.svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .selectAll("text")
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("text-anchor", "end")
+            .attr("transform", "translate(-15, 0)");
+
     }
 
+    addLegend(colorScale, sources, index) {
+        let legend = this.svg.append("g")
+            .attr("class", "legend")
+            .attr("transform", "translate(600,30)")
+            .style("font-size", "12px");
+
+        legend.append("rect")
+            .attr("transform","translate(40,-10)")
+            .attr("width", 170)
+            .attr("height", 250)
+            .attr("opacity",0)
+            .attr("fill", "#FFFFFF");
+
+        legend = legend.selectAll(".colors")
+            .data(colorScale.domain())
+            .enter();
+
+        legend.append("rect")
+            .attr("x", 55)
+            .attr("y", (d, i) => 15*i)
+            .attr("id", (_, i) => { return "Color-" + i})
+            .attr("class", "legendColors")
+            .attr("width", 10)
+            .attr("height", 10)
+            .attr("stroke","#000000")
+            .attr("fill", (d) => colorScale(d))
+            .classed("selected", (d, i) => index === i)
+            .on("click", (d, i) => {
+
+                if (d3.select("#Color-"+i).attr("class") === "legendColors selected") {
+                    d3.selectAll('.legendColors').classed("selected", false);
+                    sources = sources.sort((a, b) => { return b.bibliotheque.localeCompare(a.bibliotheque); });
+                    this.updateData(sources, -1);
+                } else {
+                    d3.selectAll('.legendColors').classed("selected", false);
+                    d3.select("#Color-"+i).classed('selected', true)
+                    switch (d) {
+                        case "adultes":
+                            sources = sources.sort((a, b) => { return (a.adultes / a.total) - (b.adultes / b.total); });
+                            break;
+                        case "jeunes":
+                            sources = sources.sort((a, b) => { return (a.jeunes / a.total) - (b.jeunes / b.total); });
+                            break;
+                        case "aines":
+                            sources = sources.sort((a, b) => { return (a.aines / a.total) - (b.aines / b.total); });
+                            break;
+                        case "org":
+                            sources = sources.sort((a, b) => { return (a.org / a.total) - (b.org / b.total); });
+                            break;
+                        case "autres":
+                            sources = sources.sort((a, b) => { return (a.autres / a.total) - (b.autres / b.total); });
+                            break;
+                    }
+                    this.updateData(sources, i);
+                }
+
+            });
+
+        legend.append("text")
+            .attr("x", 70)
+            .attr("y", (d, i) => 15*i + 9)
+            .attr("class", "legendTexts")
+            .text( (d) => {
+                switch (d) {
+                    case "adultes":
+                        return "Adultes"
+                    case "jeunes":
+                        return "Jeunes"
+                    case "aines":
+                        return "Ainés"
+                    case "org":
+                        return "Organismes et Projets"
+                    case "autres":
+                        return "Autres"
+                }
+            });
+
+    }
 }
 
-/**
- * Transforme les données de fréquentation à partir des données json.
- * Format de retour :
- * [
- *     {
- *         "nom": "(AHC) AHUNTSIC"
- *         "annee": 2018
- *         "frequentation": [25917, ...],
- *     }, ...
- * ]
- *
- * @param {*} data Données du fichier json
- * @returns {array}
- */
 function createPublicLoanSources(data) {
     let sources = [];
+    data["2018"].forEach(function (d) {
+        let bibli = {};
+        bibli.bibliotheque = d["BIBLIOTHÈQUE"];
+        bibli.arrondissement = getArrondissement(d["BIBLIOTHÈQUE"]);
+        bibli.annee = 2018;
+        bibli.adultes = parseInt(d["Adultes"].replace(",", ""));
+        bibli.jeunes = parseInt(d["Jeunes"].replace(",", ""));
+        bibli.aines = parseInt(d["Aînés"].replace(",", ""));
+        bibli.org = parseInt(d["OrganismesAdultes"].replace(",", "")) +
+            parseInt(d["OrganismesJeunes"].replace(",", "")) +
+            parseInt(d["Projets spéciaux"].replace(",", ""));
+        bibli.autres = parseInt(d["Prêt à domicile"].replace(",", "")) +
+            parseInt(d["Dépôt temporaire"].replace(",", "")) +
+            parseInt(d["Autres"].replace(",", ""));
+        bibli.total = d["TOTAL"].replace(",", "");
 
-    for (const year in data) {
-        if (year === '2018') {
-            data[year].forEach(function (d) {
-                let bibli = {};
-                bibli.bibliotheque = d["BIBLIOTHÈQUE"];
-                bibli.arrondissement = getArrondissement(d["BIBLIOTHÈQUE"]);
-                bibli.annee = parseInt(year);
-                bibli.adultes = parseInt(d["Adultes"].replace(",", ""));
-                bibli.jeunes = parseInt(d["Jeunes"].replace(",", ""));
-                bibli.aines = parseInt(d["Aînés"].replace(",", ""));
-                bibli.org = parseInt(d["OrganismesAdultes"].replace(",", "")) +
-                    parseInt(d["OrganismesJeunes"].replace(",", "")) +
-                    parseInt(d["Projets spéciaux"].replace(",", ""));
-                bibli.autres = parseInt(d["Prêt à domicile"].replace(",", "")) +
-                    parseInt(d["Dépôt temporaire"].replace(",", "")) +
-                    parseInt(d["Autres"].replace(",", ""));
-
-                sources.push(bibli);
-            });
-        }
-    }
-
-    // console.log(sources);
+        sources.push(bibli);
+    });
     return sources;
 }

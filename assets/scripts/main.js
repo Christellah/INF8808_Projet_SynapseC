@@ -109,8 +109,12 @@ Promise.all(promises).then(function (results) {
 
     /* Frequentation par public */
     // Data
-    let publicLoanSources = createPublicLoanSources(results[2]);
-    let stackedBarPublic = new StackedBar("#emprunts_biblio", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque);
-    stackedBarPublic.create(publicLoanSources.reverse());
+    let publicLoan2018Sources = createPublicLoanSources(results[2]);
+
+    // Tip
+
+    let stackedBarPublic = new StackedBar("#emprunts_biblio_2018", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque);
+
+    stackedBarPublic.create(publicLoan2018Sources.reverse());
 })
 
