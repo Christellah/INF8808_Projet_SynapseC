@@ -230,13 +230,13 @@ function createPublicLoan2018Sources(data) {
     data["2018"].forEach(function (d) {
         let bibli = {};
         bibli.bibliotheque = d["BIBLIOTHÈQUE"];
-        bibli.arrondissement = getArrondissement(d["BIBLIOTHÈQUE"]);
+        bibli.arrondissement = "";
         bibli.annee = 2018;
         bibli.adultes = parseInt(d["Adultes"].replace(",", ""));
         bibli.jeunes = parseInt(d["Jeunes"].replace(",", ""));
         bibli.aines = parseInt(d["Aînés"].replace(",", ""));
-        bibli.org = parseInt(d["OrganismesAdultes"].replace(",", "")) +
-            parseInt(d["OrganismesJeunes"].replace(",", "")) +
+        bibli.org = parseInt(d["Organismes Adultes"].replace(",", "")) +
+            parseInt(d["Organismes Jeunes"].replace(",", "")) +
             parseInt(d["Projets spéciaux"].replace(",", ""));
         bibli.autres = parseInt(d["Prêt à domicile"].replace(",", "")) +
             parseInt(d["Dépôt temporaire"].replace(",", "")) +
@@ -258,8 +258,8 @@ function createPublicLoanSources(data, bibliotheque) {
                     adultes: parseInt(d["Adultes"].replace(",", "")),
                     jeunes: parseInt(d["Jeunes"].replace(",", "")),
                     aines: parseInt(d["Aînés"].replace(",", "")),
-                    org: parseInt(d["OrganismesAdultes"].replace(",", "")) +
-                        parseInt(d["OrganismesJeunes"].replace(",", "")) +
+                    org: parseInt(d["Organismes Adultes"].replace(",", "")) +
+                        parseInt(d["Organismes Jeunes"].replace(",", "")) +
                         parseInt(d["Projets spéciaux"].replace(",", "")),
                     autres: parseInt(d["Prêt à domicile"].replace(",", "")) +
                         parseInt(d["Dépôt temporaire"].replace(",", "")) +

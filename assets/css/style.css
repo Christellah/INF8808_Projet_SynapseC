@@ -37,6 +37,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  display: block;
+  z-index: 100;
 }
 /* Navigation bar options */
 .navbar a {
