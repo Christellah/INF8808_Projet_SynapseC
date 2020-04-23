@@ -121,10 +121,12 @@ Promise.all(promises).then(function (results) {
     var pretsPublic = results[4];
     
     var publicCDPlotSources = createConnectedDotPlotSources(collectionLivres, pretsPublic);
-    console.log(publicCDPlotSources[5]["libraries"][0].public);
+    console.log(publicCDPlotSources);
 
+    var connectedDotPlot = new ConnectedDotPlot(publicCDPlotSources)
     // createConnectedDotPlot(publicCDPlotSources[5][1]);
-    createLibConnectedDotPlot(publicCDPlotSources[5].libraries[0].public);
+    // createLibConnectedDotPlot(publicCDPlotSources[5].libraries[0].public);
+    connectedDotPlot.createYearDropDown(publicCDPlotSources);
 
 })
 
