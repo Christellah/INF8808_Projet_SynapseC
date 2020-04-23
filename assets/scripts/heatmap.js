@@ -1,7 +1,8 @@
 HeatMap = class HeatMap {
 
-    static startColor = "#fff2e0";
-    static stopColor = "#ff9100";
+    static startColor = "#2d7bb6";
+    static middleColor = "#ffff8c";
+    static stopColor = "#d7191c";
 
     constructor(div, width, height, margin, createFunction, domainX, domainY, getMax, tip) {
         this.width = width;
@@ -21,27 +22,36 @@ HeatMap = class HeatMap {
                 "translate(" + margin.left + "," + margin.top + ")");
                 
         // Color scale
-        this.colorScale = d3.scaleLinear().range([HeatMap.startColor, HeatMap.stopColor]);
+        this.colorScale = d3.scaleLinear().range([HeatMap.startColor, HeatMap.middleColor, HeatMap.stopColor]);
 
         // Create function
         this.createFunction = createFunction;
 
         // Tip
-        this.tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([-8, 0])
-            .html(tip);
+        this.setTip(tip);
 
         // Axes
         this.x = d3.scaleBand().range([0, width]);
         this.y = d3.scaleBand().range([height, 0]);
     }
 
+    setTip(tip) {
+        this.tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-8, 0])
+            .html(tip);
+    }
+
+    updateColorDomain() {
+        this.colorScale.domain([0, this.maxValue / 2, this.maxValue]);
+    }
+
     create(sources) {
         // Sauvegarder la valeur max
         this.maxValue = this.getMax(sources);
 
-        this.colorScale.domain([0, this.getMax(sources)]);
+        this.updateColorDomain();
+        // this.colorScale.domain([0, this.getMax(sources) / 2, this.getMax(sources)]);
         this.updateData(sources);
     }
 
@@ -104,6 +114,10 @@ HeatMap = class HeatMap {
             .attr("stop-color", HeatMap.startColor)
 
         legend.append("stop")
+            .attr("offset", "50%")
+            .attr("stop-color", HeatMap.middleColor)
+
+        legend.append("stop")
             .attr("offset", "100%")
             .attr("stop-color", HeatMap.stopColor)
 
@@ -115,7 +129,7 @@ HeatMap = class HeatMap {
 
         var y = d3.scaleLinear()
             .range([this.width, 0])
-            .domain([this.maxValue, 0]);
+            .domain([this.maxValue, this.maxValue / 2, 0]);
 
         var yAxis = d3.axisBottom()
             .scale(y)
@@ -181,7 +195,7 @@ HeatMap = class HeatMap {
             .attr("y", d => y(d.bibliotheque))
             .attr("width", x.bandwidth())
             .attr("height", y.bandwidth())
-            .style("fill", function (d) { return colorScale(d.emprunts.Total) })
+            .style("fill", function (d) { return colorScale(d.emprunts.TOTAL) })
             .attr("class", "heatmap-rect")
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
@@ -206,6 +220,7 @@ function createFrequentationSources(data) {
     var sources = [];
     var mois = HeatMap.months();
 
+    // Creer le tableau de sources
     for (const year in data) {
         data[year].forEach(function (d, i) {
             var biblio = new Object();
@@ -217,12 +232,15 @@ function createFrequentationSources(data) {
             biblio.annee = parseInt(year);
             biblio.frequentation = [];
 
+            biblio.total = 0;
             mois.forEach(function (m, n) {
                 if (d[m] !== undefined) {
                     var freq = new Object();
                     freq.time = mois[n] + " " + year;
                     freq.count = parseInt(d[m].replace(",", ""));
                     biblio.frequentation.push(freq);
+
+                    biblio.total += freq.count;
                 }
             });
 
@@ -230,7 +248,14 @@ function createFrequentationSources(data) {
         });
     }
 
-    return sources;
+    // Trier
+/*     return sources.sort(function(a, b) {
+        return d3.descending(a.arrondissement, b.arrondissement);
+    }); */
+
+    return sources.sort(function(a, b) {
+        return a.total - b.total;
+    });
 }
 
 /**
@@ -253,19 +278,20 @@ function createEmpruntsSources(data) {
     for (const year in data) {
         data[year].forEach(function (d, i) {
             var biblio = new Object();
-            biblio.bibliotheque = d["Bibliotheque"];
-            delete d["Bibliotheque"];
+            biblio.bibliotheque = d["BIBLIOTHÈQUE"];
             biblio.annee = parseInt(year);
             biblio.emprunts = new Object();
 
             for (const attribute in d) {
-                biblio.emprunts[attribute] = parseInt(d[attribute]);
+                biblio.emprunts[attribute] = parseInt(d[attribute].toString().replace(",", ""));
             }
             sources.push(biblio);
         });
     }
 
-    return sources;
+    return sources.sort(function(a, b) {
+        return a.emprunts["TOTAL"] - b.emprunts["TOTAL"];
+    });
 }
 
 function getArrondissement(nomBibliotheque) {
