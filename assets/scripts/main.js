@@ -9,6 +9,8 @@ promises.push(d3.json("./data/frequentation.json"));
 // Emprunts
 promises.push(d3.json("./data/emprunts_format.json"));
 
+promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
+
 Promise.all(promises).then(function (results) {
     /** 
      * Heatmaps
@@ -104,6 +106,65 @@ Promise.all(promises).then(function (results) {
             .selectAll(".heatmap-rect")
             .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) })
     });
+
+    //////////////////////////////////////////
+    /**
+     * Heatmaps_Numerique
+     * - Prets
+     * - Renouvellements
+     * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
+     */
+        // Number format
+    var numberFormat = wNumb({
+            thousand: ' ',
+        });
+
+    // Margins, size, colors
+    var margin = { top: 60, right: 1, bottom: 60, left: 1 },
+        width = 120 - margin.left - margin.right,
+        height = 1400 - margin.top - margin.bottom;
+
+    /** Frequentation */
+    // Data
+    numeriqueSources = createNumeriqueSources(results[2]);
+    console.log(numeriqueSources);
+
+
+    // Tip function
+    var pretsTooltip = function (data) {
+        if(!isNaN(data.delta)) {
+            var format = d3.format(".2%");
+            return "Variation de : " + format(data.delta);
+        }else {
+            return "Information indisponible"
+        }
+    };
+
+    var tableNameList = ["pretsPhysique", "pretsAuto", "renouvPhysique", "renouvAuto", "locationPhysique", "locationNumerique"];
+
+    // Create the heatmap
+
+    tableNameList.forEach( (name, index) => {
+
+        //On définit les marges en fonction de l'index du graphe
+        if (index == 0) {
+            margin = { top: 150, right: 40, bottom: 60, left: 140 };
+            isFirst = true
+        } else if (index % 2){
+            margin =  { top: 150, right: 60, bottom: 60, left: 1 }
+            isFirst = false
+        } else {
+            margin =  { top: 150, right: 40, bottom: 60, left: 1 };
+            isFirst = false
+        }
+
+        var id = "#heatmap_numerique" + (index + 1).toString();
+        var heatmapNumerique = new HeatMapNumerique(id, width, height, margin, HeatMapNumerique.createHeatNumerique, HeatMapNumerique.domainYears, HeatMapNumerique.domainBibliotheques, pretsTooltip);
+        heatmapNumerique.create(numeriqueSources, isFirst, name);
+
+    });
+
+
 
 })
 
