@@ -113,13 +113,34 @@
           </p>
             <p class="dataviz-name">Heatmap - Variation de l'utlisation du numérique et du physique</p>
             <div class="flex-div">
-              <div id="heatmap_numerique1" class="dataviz-inline"></div>
-              <div id="heatmap_numerique2" class="dataviz-inline"></div>
-              <div id="heatmap_numerique3" class="dataviz-inline"></div>
-              <div id="heatmap_numerique4" class="dataviz-inline"></div>
-              <div id="heatmap_numerique5" class="dataviz-inline"></div>
-              <div id="heatmap_numerique6" class="dataviz-inline"></div>
-              <div id="heatmap_numerique_legend"></div>
+
+              <div class="flex-div vert">
+                <h1 id="h1-1">Emprunts</h1>
+                <div class="flex-div">
+                  <div id="heatmap_numerique1" class="dataviz-inline"></div>
+                  <div id="heatmap_numerique2" class="dataviz-inline"></div>
+                </div>
+              </div>
+
+              <div class="flex-div vert">
+                <h1 id="h1-2">Renouvellements</h1>
+                <div class="flex-div">
+                  <div id="heatmap_numerique3" class="dataviz-inline"></div>
+                  <div id="heatmap_numerique4" class="dataviz-inline"></div>
+                </div>
+              </div>
+
+              <div class="flex-div vert">
+                <h1 id="h1-3">Types de livres</h1>
+                <div class="flex-div">
+                  <div id="heatmap_numerique5" class="dataviz-inline"></div>
+                  <div id="heatmap_numerique6" class="dataviz-inline"></div>
+                </div>
+              </div>
+
+
+
+        <div id="heatmap_numerique_legend"></div>
             </div>
       </section>
 
@@ -150,6 +171,7 @@
   </footer>
 
   <script type="text/javascript" src="assets/libs/d3.js"></script>
+  <script type="text/javascript" src="assets/libs/d3-legend.min.js"></script>
   <script type="text/javascript" src="assets/libs/d3-tip.js"></script>
   <script type="text/javascript" src="assets/libs/wNumb.min.js"></script>
   <script type="text/javascript" src="assets/libs/nouislider/nouislider.min.js"></script>

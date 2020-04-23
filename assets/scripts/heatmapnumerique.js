@@ -33,7 +33,8 @@ HeatMapNumerique = class HeatMapNumerique {
         // Color scale
         this.colorScale =  d3.scaleThreshold()
             .domain([-1, -0.75, -0.5, 0, 0.5, 1, 5])
-            .range(d3.schemeRdYlGn[7]);
+            .range(d3.schemeRdYlGn[8])
+            .unknown("#A9A9A9");
 
         // Create function
         this.createFunction = createFunction;
@@ -71,13 +72,13 @@ HeatMapNumerique = class HeatMapNumerique {
         this.svg.append("text")
             .attr("class", "title")
             .attr("x", this.width/2)
-            .attr("y", 0 - (this.margin.top / 2))
+            .attr("y", 0 - ((this.margin.top / 2) + 20))
             .attr("text-anchor", "middle")
             .text(HeatMapNumerique.titles[name]);
 
 
         this.svg.selectAll().call(this.createFunction, sources, this.x, this.y, this.colorScale, this.tip, name);
-        if(isFirst) {
+        if(name === "locationNumerique") {
             this.addLegend();
         }
     }
@@ -105,59 +106,71 @@ HeatMapNumerique = class HeatMapNumerique {
             this.svg.append("g")
                 .attr("class", "y axis")
                 .call(yAxis)
+                .attr("font-size", "15px")
                 .select('.domain').attr('stroke-opacity', 0);
         }
     }
 
     /**
      * Creer une legende
-    *  @see https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583
+    *  @see https://d3-legend.susielu.com/#color
      * @static
      * @param {*} svg
      */
     addLegend() {
-        var svgLegend = this.svg.append("svg");
 
-        var legend = svgLegend.append("defs")
-            .append("svg:linearGradient")
-            .attr("id", "gradient2")
-            .attr("x1", "0%")
-            .attr("y1", "100%")
-            .attr("x2", "100%")
-            .attr("y2", "100%")
-            .attr("spreadMethod", "pad");
+        var horizontalTranslation = 160;
 
-        legend.append("stop")
-            .attr("offset", "0%")
-            .attr("stop-color", HeatMapNumerique.startColor);
+        var thresholdLabels = function({
+                                           i,
+                                           genLength,
+                                           generatedLabels,
+                                           labelDelimiter
+                                       }) {
+            if (i === 0) {
+                const values = generatedLabels[i].split(` ${labelDelimiter} `)
+                return `Moins de ${values[1]}`
+            } else if (i === genLength - 1) {
+                const values = generatedLabels[i].split(` ${labelDelimiter} `)
+                return `${values[0]} ou plus`
+            } else {
+                const values = generatedLabels[i].split(` ${labelDelimiter} `)
+                return `${values[0]} à ${values[1]}`
+            }
+            return generatedLabels[i]
+        }
 
-        legend.append("stop")
-            .attr("offset", "100%")
-            .attr("stop-color", HeatMapNumerique.stopColor);
+        this.svg.append("g")
+            .attr("class", "legendQuant")
+            .attr("transform", ` translate( ${horizontalTranslation} ,20) `);
 
-        svgLegend.append("rect")
-            .attr("width", this.width)
-            .attr("height", 20)
-            .style("fill", "url(#gradient2)")
-            .attr("transform", "translate(0, " + (this.height + 10) + ")");
+        var legend = d3.legendColor()
+            .labelFormat(d3.format(".0%"))
+            .labels(thresholdLabels)
+            .useClass(false)
+            .title("Légende")
+            .scale(this.colorScale);
 
-        var y = d3.scaleLinear()
-            .range([this.width, 0])
-            .domain([1, -1]);
+        this.svg.select(".legendQuant")
+            .call(legend);
 
-        var yAxis = d3.axisBottom()
-            .scale(y)
-            .ticks(5);
+        //AJOUT DE INDÉFINI
+        var indefScale = d3.scaleOrdinal()
+            .domain(['Donnée indisponible'])
+            .range([HeatMapNumerique.undefinedColor] );
 
-        svgLegend.append("g")
-            .attr("class", "y axis")
-            .attr("transform", "translate(0, " + (this.height + 30) + ")")
-            .call(yAxis)
-            .append("text")
-            .attr("y", 0)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("axis title");
+        this.svg.append("g")
+            .attr("class", "legendIndef")
+            .attr("transform", ` translate( ${horizontalTranslation} , 220) `);
+
+        var indefLegend = d3.legendColor()
+            .scale(indefScale)
+            .orient("vertical")
+            .labelWrap(30)
+
+        this.svg.select(".legendIndef")
+            .call(indefLegend);
+
 
 
     }
@@ -185,13 +198,12 @@ HeatMapNumerique = class HeatMapNumerique {
             .enter()
             .append("rect")
             .filter(function(d) { return (d.year > 2014 || d.year == "GLOBAL") })
+            .attr("name")
             .attr("x", function (d) { return x(d.year) })
             .attr("width", x.bandwidth())
             .attr("height", y.bandwidth())
             .style("fill", function (d) {
-
-            return isNaN(d.delta) ? HeatMapNumerique.undefinedColor : colorScale(d.delta)
-
+                return isNaN(d.delta) ? HeatMapNumerique.undefinedColor : colorScale(d.delta)
             })
             .attr("class", "heatmap-rect")
             .on('mouseover', tip.show)
