@@ -139,14 +139,20 @@ Promise.all(promises).then(function (results) {
         .attr("width", widthCD + marginCD.left + marginCD.right)
         .attr("height", heightCD + marginCD.top + marginCD.bottom);
 
-        var group = svg.append("g")
-        .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+    var group = svg.append("g")
+    .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+    
+    var lollipopsGroup = group.append("g").attr("class", "lollipops");
     
     var publicCDPlotSources = createConnectedDotPlotSources(collectionLivres, pretsPublic);
 
     var connectedDotPlot = new ConnectedDotPlot(publicCDPlotSources);
     
-    connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, heightCD);
+    var libDropDown = connectedDotPlot.createLibraryDropDown(publicCDPlotSources, publicCDPlotSources[5].year, x, y, group, heightCD, lollipopsGroup);
+    connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, heightCD, libDropDown, lollipopsGroup);
+
+    var initialData = publicCDPlotSources[publicCDPlotSources.length - 1];
+    ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup);
 
 })
 

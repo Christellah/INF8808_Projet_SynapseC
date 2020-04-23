@@ -1,7 +1,4 @@
-
 /***** ConnectedDotPlot Class  *****/
-
-// ConnectedDotPlot.selectedYear;
 
 ConnectedDotPlot = class ConnectedDotPlot {
 
@@ -13,7 +10,9 @@ ConnectedDotPlot = class ConnectedDotPlot {
     };
 
     // Create a Connected Dot Plot for one library
-    static createLibConnectedDotPlot(data, year, libName, x, y, group, height) {
+    static createLibConnectedDotPlot(data, year, libName, x, y, group, height, lollipopsGroup) {
+
+        ConnectedDotPlot.selectedYear = data[data.length - 1].year;
 
         var libData = [];
         data.forEach(function(d) {
@@ -30,122 +29,57 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var xAxis = d3.axisBottom(x);
         var yAxis = d3.axisLeft(y);
 
-        if(libData.length > 0) {
+        /***** Axis domains *****/
+        ConnectedDotPlot.domainX(x, libData);
+        ConnectedDotPlot.domainY(y, libData);
+        
+        /***** Append Axis *****/
+        group.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+        
+        group.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
 
+        ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y);
             
-            /***** Axis domains *****/
-            ConnectedDotPlot.domainX(x, libData);
-            ConnectedDotPlot.domainY(y, libData);
-            
-            /***** Append Axis *****/
-            group.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
-            
-            group.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-            
-            /***** Generate lollipops *****/
-            var lineGenerator = d3.line();
-
-            var lollipopLinePath = function(d) {
-                return lineGenerator([[x(d.name) + (x.bandwidth() / 2) , y(d.min)], [x(d.name) + (x.bandwidth() / 2), y(d.max)]]); 
-            };
-            
-            var lollipopsGroup = group.append("g").attr("class", "lollipops");
-            
-            var lollipops = lollipopsGroup.selectAll("g")
-            .data(libData)
-            .enter().append("g")
-            .attr("class", "lollipop")
-            
-            lollipops.append("path")
-            .attr("class", "lollipop-line")
-            .attr("d", lollipopLinePath);
-            
-            // Minimum lollipop
-            lollipops.append("circle")
-            .attr("class", function(d) {
-                if(d.minCategory == "Inventaire") {
-                    return "lollipop-Inventaire";
-                } else {
-                    return "lollipop-Emprunts";
-                }
-            })
-            .attr("r", 5)
-            .attr("cx", function(d) {
-                return x(d.name) + (x.bandwidth() / 2);
-            })
-            .attr("cy", function(d) {
-                return y(d.min);
-            });
-            
-            lollipops.append("circle")
-            .attr("class", function(d) {
-                if(d.maxCategory == "Inventaire") {
-                    return "lollipop-Inventaire";
-                } else {
-                    return "lollipop-Emprunts";
-                }
-            })
-            .attr("r", 5)
-            .attr("cx", function(d) {
-                return x(d.name) + (x.bandwidth() / 2);
-            })
-            .attr("cy", function(d) {
-                return y(d.max);
-            });
-            
-        } else {
-            group.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
-            
-            group.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-        }
-
     }
 
     /***** Axis domains  functions *****/
     static domainX(x, libData) {
         return x.domain(libData.map(function(d) { return d.name }));
     }
-
+    
     static domainY(y, libData) {
         return y.domain([0, Math.max(libData[0].max, libData[1].max)]);
     }
 
-    createYearDropDown(data, x, y, group, height) {
+    createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
         var svg = d3.select("#ConnectedDotPlot")
         // var value = "";
-        var dropdown = svg.insert("select", "svg")
-                    .on("change", function() {
-                        ConnectedDotPlot.selectedYear = this.value;
-                        // ConnectedDotPlot.updateDataYear(data, this.value);
-                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height);
-                    });
+        this.yearDropdown = svg.insert("select", "svg")
+        .on("change", function() {
+            ConnectedDotPlot.selectedYear = this.value;
+            var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
+            ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
+            ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
+        });
 
-        
-        dropdown.selectAll("option")
+        this.yearDropdown.selectAll("option")
             .data(data)
             .enter().append("option")
             .attr("value", function (d) { 
                 return d.year; })
             .text(function (d) {
                 return d.year; 
-            });
+            })
+            ;
 
-        this.createLibraryDropDown(data, data[0].year, x, y, group, height);
-
-        return dropdown;
     };
 
-    createLibraryDropDown(data, year, x, y, group, height) {
+    createLibraryDropDown(data, year, x, y, group, height, lollipopsGroup) {
         var librariesNames = [];
 
         data.forEach(function(c) {
@@ -158,13 +92,13 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
         
         var svg = d3.select("#ConnectedDotPlot")
-        var dropdown = svg.insert("select", "svg")
+        var libDropdown = svg.insert("select", "svg")
                     .on("change", function() {
                         ConnectedDotPlot.selectedLibName = this.value;
-                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height);
+                        ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, height, lollipopsGroup);
                     });
 
-        dropdown.selectAll("option")
+        libDropdown.selectAll("option")
             .data(librariesNames)
             .enter().append("option")
             .attr("value", function (d) { 
@@ -174,36 +108,128 @@ ConnectedDotPlot = class ConnectedDotPlot {
                 return d.name; 
             });
         
-        // Take the last year data as the initial data 
-        var initialData = data[data.length - 1];
-        ConnectedDotPlot.createLibConnectedDotPlot(data, initialData.year, initialData.libraries[0].name,  x, y, group, height);
-
+        return libDropdown;
     };
     
+    static updateLibraryDropdown(newLibrariesNames, libDropDown) {
+        libDropDown.selectAll("option").remove();
+        libDropDown.selectAll("option")
+        .data(newLibrariesNames)
+        .enter().append("option")
+        .attr("value", function (d) { 
+            return d.name;
+        })
+        .text(function (d) {
+            return d.name; 
+        });
+    }
     
     /***** Year selection function *****/
     // This update the library dropdown list
     
-    // static updateDataYear(data, year){
-    //     var librariesNames = [];
+    static updateDataYear(data, year){
+        var librariesNames = [];
 
-    //     data.forEach(function(c) {
-    //         if(c.year == year) {
-    //             c.libraries.forEach(function(d) {
-    //                 librariesNames.push({"name" : d.name});
-    //             });
-    //         };
-    //     });
+        data.forEach(function(c) {
+            if(c.year == year) {
+                c.libraries.forEach(function(d) {
+                    librariesNames.push({"name" : d.name});
+                });
+            };
+        });
         
-    // };
+        return librariesNames;
+    };
 
     /***** Library selection function *****/
-    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, height) {
-        group.selectAll("*").remove();
-        ConnectedDotPlot.createLibConnectedDotPlot(data, selectedYear, selectedLibName,  x, y, group, height);
+    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, height, lollipopsGroup) {
+
+        var libData = [];
+        data.forEach(function(d) {
+            if(d.year == selectedYear) {
+                var lib = d.libraries;
+                lib.forEach(function(e) {
+                    if(e.name == selectedLibName) {
+                        libData = e.public;
+                    }
+                });
+            }
+        });
+
+        // /***** Update Axis domains *****/
+        ConnectedDotPlot.domainX(x, libData);
+        ConnectedDotPlot.domainY(y, libData);
+        
+        /***** Update Lollipops *****/
+        ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y)
+
+        var xAxis = d3.axisBottom(x);
+        var yAxis = d3.axisLeft(y);
+
+        group.select(".x.axis")
+        .call(xAxis);
+            
+        group.select(".y.axis")
+        .call(yAxis);
+    }
+
+    
+    static updateLollipops(lollipopsGroup, libData, x, y) {
+        /***** Generate lollipops *****/
+        var lineGenerator = d3.line();
+
+        var lollipopLinePath = function(d) {
+            return lineGenerator([[x(d.name) + (x.bandwidth() / 2) , y(d.min)], [x(d.name) + (x.bandwidth() / 2), y(d.max)]]); 
+        };
+
+        lollipopsGroup.selectAll("*").remove();
+
+        var lollipops = lollipopsGroup.selectAll("g")
+        .data(libData)
+        .enter().append("g")
+        .attr("class", "lollipop")
+        
+        lollipops.append("path")
+        .attr("class", "lollipop-line")
+        .attr("d", lollipopLinePath);
+
+        // Minimum lollipop
+        lollipops.append("circle")
+        .attr("class", function(d) {
+            if(d.minCategory == "Inventaire") {
+                return "lollipop-Inventaire";
+            } else {
+                return "lollipop-Emprunts";
+            }
+        })
+        .attr("r", 5)
+        .attr("cx", function(d) {
+            return x(d.name) + (x.bandwidth() / 2);
+        })
+        .attr("cy", function(d) {
+            return y(d.min);
+        });
+        // Maximum lollipop
+        lollipops.append("circle")
+        .attr("class", function(d) {
+            if(d.maxCategory == "Inventaire") {
+                return "lollipop-Inventaire";
+            } else {
+                return "lollipop-Emprunts";
+            }
+        })
+        .attr("r", 5)
+        .attr("cx", function(d) {
+            return x(d.name) + (x.bandwidth() / 2);
+        })
+        .attr("cy", function(d) {
+            return y(d.max);
+        });
     }
 
 }
+
+
 
 /**
  * Transforme les données d'emprunts à partir des données json.
