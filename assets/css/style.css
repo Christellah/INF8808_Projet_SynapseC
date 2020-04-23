@@ -128,3 +128,17 @@ body {
   display: flex;
 }
 
+.selected {
+    animation: flash-animation 0.8s ease-out infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flash-animation {
+    from {
+        fill-opacity: 0.9;
+    }
+    to {
+        fill-opacity: 0.3;
+    }
+}
+

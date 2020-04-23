@@ -279,7 +279,6 @@ function createEmpruntsSources(data) {
         data[year].forEach(function (d, i) {
             var biblio = new Object();
             biblio.bibliotheque = d["BIBLIOTHÈQUE"];
-            delete d["BIBLIOTHÈQUE"];
             biblio.annee = parseInt(year);
             biblio.emprunts = new Object();
 

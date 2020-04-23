@@ -136,5 +136,81 @@ Promise.all(promises).then(function (results) {
 
     });
 
+    /* Frequentation par public */
+    // Data
+    let publicLoan2018Sources = createPublicLoan2018Sources(results[2]);
+    const bibliotheques = d3.set(publicLoan2018Sources.map(d => d.bibliotheque));
+
+    let selectBiblio = d3.select("#selectBiblio");
+
+    selectBiblio.selectAll('options')
+        .data(bibliotheques.values())
+        .enter()
+        .append('option')
+        .text((d) => d);
+
+    // Tip
+    let stackedBarPublic2018Tip = function(d) {
+        let publicType = "";
+        switch (d.key) {
+            case "adultes":
+                publicType = "les adultes";
+                break;
+            case "jeunes":
+                publicType = "les jeunes";
+                break;
+            case "aines":
+                publicType = "les aînés";
+                break;
+            case "org":
+                publicType = "les organsimes et les projets";
+                break;
+            case "autres":
+                publicType = "les autres";
+                break;
+        }
+        let pourcentage = ((d[1] - d[0])*100).toFixed(2);
+        return "Pourcentage d'emprunts effectués par " + publicType + " à la bibliothèque " + d.data.bibliotheque + " en 2018 : " + pourcentage + "%";
+    }
+
+    let stackedBarPublic2018 = new StackedBar("#emprunts_biblio_2018", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque, stackedBarPublic2018Tip, "2018");
+
+    console.log(publicLoan2018Sources);
+    stackedBarPublic2018.updateData2018(publicLoan2018Sources.reverse(), -1);
+
+    let stackedBarPublicTip = function(d) {
+        let publicType = "";
+        switch (d.key) {
+            case "adultes":
+                publicType = "les adultes";
+                break;
+            case "jeunes":
+                publicType = "les jeunes";
+                break;
+            case "aines":
+                publicType = "les aînés";
+                break;
+            case "org":
+                publicType = "les organsimes et les projets";
+                break;
+            case "autres":
+                publicType = "les autres";
+                break;
+        }
+        let pourcentage = ((d[1] - d[0])*100).toFixed(2);
+        return "Pourcentage d'emprunts effectués par " + publicType + " à la bibliothèque " + selectBiblio.property('value') + " en " + d.data.annee + " : " + pourcentage + "%";
+    }
+
+    let stackedBarPublic = new StackedBar("#emprunts_biblio", width, height/8, margin, StackedBar.createStackedBarBiblios, StackedBar.domainYears, stackedBarPublicTip, "");
+
+    let sources = createPublicLoanSources(results[2], "(AHC) AHUNTSIC");
+    stackedBarPublic.updateData(sources.reverse(), -1);
+
+    selectBiblio.on('change', () => {
+        let value = selectBiblio.property('value');
+        let sources = createPublicLoanSources(results[2], value);
+        stackedBarPublic.updateData(sources.reverse(), -1);
+    })
+
 })
 
