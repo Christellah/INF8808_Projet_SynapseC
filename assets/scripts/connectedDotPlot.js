@@ -1,48 +1,77 @@
+/**
+ * Transforme les données d'emprunts à partir des données json.
+ * Format de retour :
+ * [
+ *     {
+ *              "year " : 2018,
+ *              "librairies" : [ 
+ *                 {"name" : "(AHC) ",
+ *                 public : [ {
+ *                          "name" : "Jeune",
+ *                          "min" : 25566,
+ *                          "max" : 98765,
+ *                          },
+ *                          {
+ *                          "name" : "Adulte",
+ *                          "min" : 45566,
+ *                          "max" : 87765,
+ *                          },
+ *                          ] 
+ *                  },
+ *                  ...
+ * 
+ *              ] 
+ * 
+ * ]
+ *
+ * @param {*} collectionLivres Données du fichier json
+ * @param {*} pretsPublic Données du fichier json
+ * @returns {array}
+ */
 
 function createConnectedDotPlotSources(collectionLivres, pretsPublic) {
 
     var publicSources = [];
 
     for (const year in collectionLivres) {
-        var perYear = [];
-        var year_string = new Object();
-        year_string.annee = year;
-        perYear.push(year_string);
+        var perYear = new Object();
+        perYear.year = year;
+        var libraries = [];
 
         collectionLivres[year].forEach(function (d, i) {
             
             var library = new Object();
-            library.bibliotheque = d["BIBLIOTHÈQUE"];
-            // console.log(d["ADULTE"])
-            // console.log(d["JEUNE"])
+            library.name = d["BIBLIOTHÈQUE"];
 
-            var jeune = findMinMaxJeune(year, d, collectionLivres, pretsPublic);
-            library.jeune  = jeune; 
+            var public = [];
+            var kids = findMinMaxKids(year, d, pretsPublic);
 
-            var adult = findMinMaxAdult(year, d, collectionLivres, pretsPublic);
-            library.adulte = adult; 
+            var adult = findMinMaxAdult(year, d, pretsPublic);
 
-            perYear.push(library);
-        })
+            public.push(kids);
+            public.push(adult);
+
+            library.public = public;
+
+            libraries.push(library);
+
+        });
+
+        perYear.libraries = libraries;
         publicSources.push(perYear)
     };
 
-    // console.log(publicSources);
+    console.log(publicSources);
 
     return publicSources;
 }
 
 
-function findMinMaxJeune(year, library, collectionLivres, pretsPublic) {
-    var jeune = new Object();
-
-    var max_jeune = new Object();
-    max_jeune.value = 0;
-    max_jeune.category = 0;
-
-    var min_jeune = new Object();
-    min_jeune.value = 0;
-    min_jeune.category = 0;
+function findMinMaxKids(year, library, pretsPublic) {
+    var kids = new Object();
+    kids.name = "Jeune";
+    kids.min = 0;
+    kids.max = 0;
 
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
@@ -50,31 +79,20 @@ function findMinMaxJeune(year, library, collectionLivres, pretsPublic) {
             var collectNumb = parseInt(library["JEUNE"]);
             var empruntNumb = parseInt(d["Jeunes"].replace(",", ""));
 
-            min_jeune.value = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
-            min_jeune.category = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
-
-            max_jeune.value = empruntNumb > collectNumb ? empruntNumb : collectNumb;
-            max_jeune.category = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
+            kids.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            kids.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
 
         }
     })
 
-    jeune.max = max_jeune;
-    jeune.min = min_jeune;
-    // console.log(jeune);
-    return jeune;
+    return kids;
 }
 
-function findMinMaxAdult(year, library, collectionLivres, pretsPublic) {
+function findMinMaxAdult(year, library, pretsPublic) {
     var adult = new Object();
-
-    var max_adult = new Object();
-    max_adult.value = 0;
-    max_adult.category = 0;
-
-    var min_adult = new Object();
-    min_adult.value = 0;
-    min_adult.category = 0;
+    adult.name = "Adulte";
+    adult.min = 0;
+    adult.max = 0;
 
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
@@ -82,18 +100,12 @@ function findMinMaxAdult(year, library, collectionLivres, pretsPublic) {
             var collectNumb = parseInt(library["ADULTE"]);
             var empruntNumb = parseInt(d["Adultes"].replace(",", ""));
             
-            min_adult.value = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
-            min_adult.category = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
-
-            max_adult.value = empruntNumb > collectNumb ? empruntNumb : collectNumb;
-            max_adult.category = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
+            adult.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            adult.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
 
         }
     })
 
-    adult.max = max_adult;
-    adult.min = min_adult;
-    // console.log(adult);
     return adult;
 }
 
@@ -146,54 +158,57 @@ function createLibConnectedDotPlot(libData) {
     var lineGenerator = d3.line();
 
     var lollipopLinePath = function(d) {
-        // console.log(x("Adulte"));
-        // return lineGenerator([[x("Jeune"), y(d.jeune.min.value)], [x("Jeune"), y(d.jeune.max.value)]]); 
-        return lineGenerator([[x("Adulte"), y(d.adulte.min.value)], [x("Adulte"), y(d.adulte.max.value)]]); 
+        return lineGenerator([[x(d.name) + (x.bandwidth() / 2) , y(d.min)], [x(d.name) + (x.bandwidth() / 2), y(d.max)]]); 
     };
 
-    var lollipopsGroup = svg.append("g").attr("class", "lollipops");
+    var lollipopsGroup = graph.append("g").attr("class", "lollipops");
 
     var lollipops = lollipopsGroup.selectAll("g")
     .data(libData)
     .enter().append("g")
-    .attr("class", "lollipops")
-    // .attr("transform", function(d) {
-    //     console.log("TOTO")
-    //     return "translate(0," + (x("Jeune") + (x.bandwidth() / 2)) + ")";
-    // });
+    .attr("class", "lollipop")
+
+    console.log(libData);
+    console.log(lollipops);
 
     lollipops.append("path")
     .attr("class", "lollipop-line")
-    .attr("d", lollipopLinePath(libData));
+    .attr("d", lollipopLinePath);
 
     lollipops.append("circle")
     .attr("class", "lollipop-start")
     .attr("r", 5)
     .attr("cx", function(d) {
-        return x("Adulte");
+        console.log('IN LOLLIPOP', x("Adulte"));
+        return x(d.name) + (x.bandwidth() / 2);
     })
     .attr("cy", function(d) {
-        return y(d.adulte.min.value);
+        return y(d.min);
     });
 
     lollipops.append("circle")
     .attr("class", "lollipop-end")
     .attr("r", 5)
     .attr("cx", function(d) {
-        return x("Adulte");
+        return x(d.name) + (x.bandwidth() / 2);
     })
     .attr("cy", function(d) {
-        return y(d.adulte.max.value);
+        return y(d.max);
     });
 
+    console.log(lollipops);
 }
 
 /***** Axis domains  functions *****/
 function domainX(x, libData) {
-    return x.domain(["Jeune", "Adulte"]);
+    return x.domain(libData.map(function(d) { return d.name }));
 }
 
 function domainY(y, libData) {
-    return y.domain([0, Math.max(libData.jeune.max.value, libData.adulte.max.value)]);
+    return y.domain([0, Math.max(libData[0].max, libData[1].max)]);
     
 }
+
+/***** Year selection function *****/
+/***** Library selection function *****/
+
