@@ -69,6 +69,8 @@ LibrariesMap = class LibrariesMap {
         var circleGroup = svg.selectAll("circle")
             .data(this.libInfoSources)
             .enter();
+                
+        var popup = L.popup();
 
         // Draw the circles
         circleGroup.append("circle")
@@ -84,13 +86,104 @@ LibrariesMap = class LibrariesMap {
                     .style("left", (d3.event.pageX-30) + "px")
                     .html(d.nom);
             })
-            .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); });
-            // .on("click", function(d) {
-            //     console.log(this)
-            // });
+            .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); })
+            .on("click", function(d) {
+                console.log(this)
+                nameToolTip.style("visibility", "hidden");
+
+                // var popup = L.popup()
+                popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
+                .setContent("I am a standalone popup.")
+                .openOn(libMap);
+                /*var width = 200;
+                var height = 200;
+                var margin = {left: 10, top: 10, right: 6, bottom: 10};
+                var div = d3.create("div");
+  
+                var svg_2 = div.append("svg")
+                    .attr("width",width+margin.left+margin.right)
+                    .attr("height",height+margin.top+margin.bottom);
+                
+                var g_2 = svg_2.append("g")
+                    .attr("transform","translate("+[margin.left,margin.top]+")");
+                    
+                var colors = d3.scaleLinear().domain([0,99]).range(["yellow","steelblue"]);
+
+                var rects = g_2.selectAll("rect")
+                    .data(d3.range(100))
+                    .enter()
+                    .append("rect")
+                    .attr("width", width/10 - 2)
+                    .attr("height", height/10 - 2)
+                    .attr("x", function(d,i) { return i%10 * width/10; })
+                    .attr("y", function(d,i) { return Math.floor(i/10) * height/10; })
+                    .attr("fill", function(d,i) { return colors(i);	})
+                
+                    // popup.setLatLng(e.latlng)
+                    popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
+                    .setContent(div.node())
+                    .openOn(libMap);*/
+            });
         
         // Place the circles
         LibrariesMap.update(libMap);
+
+        /* POPUP TEST
+        var popup = L.popup();
+
+        // Draw the circles
+        circleGroup.append("circle")
+            .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
+            .style("stroke", "black")
+			.style("opacity", .8) 
+            .style("fill", "#FE390F")
+            .attr("class", "leaflet-clickable")
+
+            .on("mouseover", function(d) {
+                return nameToolTip.style("visibility", "visible")
+                    .style("top", (d3.event.pageY-30) + "px")
+                    .style("left", (d3.event.pageX-30) + "px")
+                    .html(d.nom);
+            })
+            .on("mouseout", function(){ return nameToolTip.style("visibility", "hidden"); })
+            .on("click", function(d) {
+                console.log(this)
+                nameToolTip.style("visibility", "hidden");
+                var width = 200;
+                var height = 200;
+                var margin = {left: 10, top: 10, right: 6, bottom: 10};
+                var div = d3.create("div");
+  
+                var svg_2 = div.append("svg")
+                    .attr("width",width+margin.left+margin.right)
+                    .attr("height",height+margin.top+margin.bottom);
+                
+                var g_2 = svg_2.append("g")
+                    .attr("transform","translate("+[margin.left,margin.top]+")");
+                    
+                var colors = d3.scaleLinear().domain([0,99]).range(["yellow","steelblue"]);
+
+                var rects = g_2.selectAll("rect")
+                    .data(d3.range(100))
+                    .enter()
+                    .append("rect")
+                    .attr("width", width/10 - 2)
+                    .attr("height", height/10 - 2)
+                    .attr("x", function(d,i) { return i%10 * width/10; })
+                    .attr("y", function(d,i) { return Math.floor(i/10) * height/10; })
+                    .attr("fill", function(d,i) { return colors(i);	})
+                
+                    // popup.setLatLng(e.latlng)
+                    popup.setLatLng([d.localisation.latitude, d.localisation.longitude])
+                    .setContent(div.node())
+                    .openOn(libMap);
+            });
+            // .bindPopup("I am a polygon.");
+        // var popup = L.popup()
+        //     .setLatLng([this.libInfoSources[0].localisation.latitude, this.libInfoSources[0].localisation.longitude])
+        //     .setContent("I am a standalone popup.")
+        //     .openOn(libMap);
+        */
     }
 
     /**
