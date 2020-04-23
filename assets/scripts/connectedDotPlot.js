@@ -65,8 +65,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
             .attr("class", "lollipop-line")
             .attr("d", lollipopLinePath);
             
+            // Minimum lollipop
             lollipops.append("circle")
-            .attr("class", "lollipop-start")
+            .attr("class", function(d) {
+                if(d.minCategory == "Inventaire") {
+                    return "lollipop-Inventaire";
+                } else {
+                    return "lollipop-Emprunts";
+                }
+            })
             .attr("r", 5)
             .attr("cx", function(d) {
                 return x(d.name) + (x.bandwidth() / 2);
@@ -76,7 +83,13 @@ ConnectedDotPlot = class ConnectedDotPlot {
             });
             
             lollipops.append("circle")
-            .attr("class", "lollipop-end")
+            .attr("class", function(d) {
+                if(d.maxCategory == "Inventaire") {
+                    return "lollipop-Inventaire";
+                } else {
+                    return "lollipop-Emprunts";
+                }
+            })
             .attr("r", 5)
             .attr("cx", function(d) {
                 return x(d.name) + (x.bandwidth() / 2);
@@ -95,6 +108,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
             .attr("class", "y axis")
             .call(yAxis);
         }
+
     }
 
     /***** Axis domains  functions *****/
@@ -203,11 +217,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
  *                          "name" : "Jeune",
  *                          "min" : 25566,
  *                          "max" : 98765,
+ *                          "minCategory" : "Inventaire",
+ *                          "maxCategory" : "Emprunts"
  *                          },
  *                          {
  *                          "name" : "Adulte",
  *                          "min" : 45566,
  *                          "max" : 87765,
+ *                          "minCategory" : "Inventaire",
+ *                          "maxCategory" : "Emprunts"
  *                          },
  *                          ] 
  *                  },
@@ -263,6 +281,8 @@ function findMinMaxKids(year, library, pretsPublic) {
     kids.name = "Jeune";
     kids.min = 0;
     kids.max = 0;
+    kids.minCategory = "";
+    kids.maxCategory = "";
 
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
@@ -271,7 +291,9 @@ function findMinMaxKids(year, library, pretsPublic) {
             var empruntNumb = parseInt(d["Jeunes"].replace(",", ""));
 
             kids.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            kids.minCategory = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
             kids.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
+            kids.maxCategory = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
 
         }
     })
@@ -284,6 +306,9 @@ function findMinMaxAdult(year, library, pretsPublic) {
     adult.name = "Adulte";
     adult.min = 0;
     adult.max = 0;
+    
+    adult.minCategory = "";
+    adult.maxCategory = "";
 
     pretsPublic[year].forEach(function (d, i) {
         if(d["BIBLIOTHÈQUE"] == library["BIBLIOTHÈQUE"]) {
@@ -292,7 +317,11 @@ function findMinMaxAdult(year, library, pretsPublic) {
             var empruntNumb = parseInt(d["Adultes"].replace(",", ""));
             
             adult.min = empruntNumb <= collectNumb ? empruntNumb : collectNumb;
+            adult.minCategory = empruntNumb <= collectNumb ? "Emprunts" : "Inventaire";
+
             adult.max = empruntNumb > collectNumb ? empruntNumb : collectNumb;
+            adult.maxCategory = empruntNumb > collectNumb ? "Emprunts" : "Inventaire";
+
 
         }
     })

@@ -11,7 +11,7 @@ promises.push(d3.json("./data/emprunts_format.json"));
 
 // Maquette 5
 promises.push(d3.json("/data/collection_livres.json")); 
-promises.push(d3.json("/data/collection_format.json")); 
+// promises.push(d3.json("/data/collection_format.json")); 
 promises.push(d3.json("/data/prets_public.json")); 
 
 
@@ -117,8 +117,8 @@ Promise.all(promises).then(function (results) {
      */ 
 
     var collectionLivres = results[2];
-    var collectionFormat = results[3];
-    var pretsPublic = results[4];
+    // var collectionFormat = results[3];
+    var pretsPublic = results[3];
 
     var marginCD = {
         top: 10,
