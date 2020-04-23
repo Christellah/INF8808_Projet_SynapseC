@@ -10,9 +10,9 @@ ConnectedDotPlot = class ConnectedDotPlot {
     };
 
     // Create a Connected Dot Plot for one library
-    static createLibConnectedDotPlot(data, year, libName, x, y, group, height, lollipopsGroup) {
+    static createLibConnectedDotPlot(data, year, libName, x, y, group, height, lollipopsGroup, multiple) {
 
-        ConnectedDotPlot.selectedYear = data[data.length - 1].year;
+        ConnectedDotPlot.selectedYear = year;
 
         var libData = [];
         data.forEach(function(d) {
@@ -30,8 +30,15 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var yAxis = d3.axisLeft(y);
 
         /***** Axis domains *****/
-        ConnectedDotPlot.domainX(x, libData);
-        ConnectedDotPlot.domainY(y, libData);
+        if(multiple) {
+            console.log("IN IF", data[5].libraries);
+            ConnectedDotPlot.domainX(x, libData);
+            ConnectedDotPlot.domainYMultiple(y, data[data.length - 1].libraries);
+        } else {
+            ConnectedDotPlot.domainX(x, libData);
+            ConnectedDotPlot.domainY(y, libData);
+        }
+            
         
         /***** Append Axis *****/
         group.append("g")
@@ -47,6 +54,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
             
     }
 
+
     /***** Axis domains  functions *****/
     static domainX(x, libData) {
         return x.domain(libData.map(function(d) { return d.name }));
@@ -54,6 +62,11 @@ ConnectedDotPlot = class ConnectedDotPlot {
     
     static domainY(y, libData) {
         return y.domain([0, Math.max(libData[0].max, libData[1].max)]);
+    }
+    
+    static domainYMultiple(y, data) {
+        console.log("IN DOMAIN", data);
+        return y.domain([0, d3.max(data, function(d) { return Math.max(d.public[0].max, d.public[1].max)})]);
     }
 
     createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {

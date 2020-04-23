@@ -116,6 +116,7 @@ Promise.all(promises).then(function (results) {
     * Maquette 5 - Connected Dot Plot
      */ 
 
+    /*******5.1*******/
     var collectionLivres = results[2];
     // var collectionFormat = results[3];
     var pretsPublic = results[3];
@@ -152,7 +153,25 @@ Promise.all(promises).then(function (results) {
     connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, heightCD, libDropDown, lollipopsGroup);
 
     var initialData = publicCDPlotSources[publicCDPlotSources.length - 1];
-    ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup);
-
+    ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
+    
+    /*******5.1*******/
+    
+    publicCDPlotSources[publicCDPlotSources.length - 1].libraries.forEach(function(d){
+        console.log(d);
+        var svgMultiple = d3.select("#MultipleConnectedDotPlots")
+        .append("svg")
+        .attr("width", widthCD + marginCD.left + marginCD.right)
+        .attr("height", heightCD + marginCD.top + marginCD.bottom);
+        
+        var groupMultiple = svgMultiple.append("g")
+        .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+        
+        var lollipopsGroupMultiple = groupMultiple.append("g").attr("class", "lollipops");
+        
+        ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
+    });
+    
+    
 })
 
