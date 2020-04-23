@@ -171,7 +171,6 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
     /***** Find current selected library data *****/
     static selectedLibraryData(data, selectedYear, selectedLibName) {
-        console.log("IN selectedLibraryData ", selectedLibName);
         var libData = [];
         data.forEach(function(d) {
             if(d.year == selectedYear) {
@@ -226,12 +225,16 @@ ConnectedDotPlot = class ConnectedDotPlot {
         };
 
         lollipopsGroup.selectAll("*").remove();
+        var lollipopTip = ConnectedDotPlot.createLollipopTip();
 
         var lollipops = lollipopsGroup.selectAll("g")
             .data(libData)
             .enter().append("g")
             .attr("class", "lollipop")
+            .on('mouseover', lollipopTip.show)
+            .on('mouseout', lollipopTip.hide);
         
+
         lollipops.append("path")
             .attr("class", "lollipop-line")
             .attr("d", lollipopLinePath);
@@ -247,7 +250,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
         })
         .attr("r", 5)
         .attr("cx", function(d) { return x(d.name) + (x.bandwidth() / 2); })
-        .attr("cy", function(d) { return y(d.min); });
+        .attr("cy", function(d) { return y(d.min); })
+        
 
         // Maximum lollipop
         lollipops.append("circle")
@@ -261,6 +265,21 @@ ConnectedDotPlot = class ConnectedDotPlot {
         .attr("r", 5)
         .attr("cx", function(d) { return x(d.name) + (x.bandwidth() / 2); })
         .attr("cy", function(d) { return y(d.max); });
+
+        lollipops.call(lollipopTip);
+    }
+
+    /***** Handle tip on lollipop *****/
+    static createLollipopTip() {
+        var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0]);
+
+        tip.html(function(d) {
+            return d.minCategory + " : " + d.min + "<br>" + d.maxCategory + " : " + d.max;
+        });
+
+        return tip;
     }
 
 }
