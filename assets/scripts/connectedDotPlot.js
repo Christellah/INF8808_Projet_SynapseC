@@ -15,8 +15,6 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
     /***** Create Year Selection DropDown  *****/
     createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
-        // var svg = d3.select("#ConnectedDotPlot")
-
         this.yearDropdown = d3.select("#selectYear")
             .on("change", function() {
                 ConnectedDotPlot.selectedYear = this.value;
@@ -66,17 +64,19 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var libData = ConnectedDotPlot.selectedLibraryData(data, year, libName);
         
         /***** Axis domains *****/
+        ConnectedDotPlot.domainX(x, libData);
         if(multiple) {
-            ConnectedDotPlot.domainX(x, libData);
             ConnectedDotPlot.domainYMultiple(y, data[data.length - 1].libraries);
         } else {
-            ConnectedDotPlot.domainX(x, libData);
             ConnectedDotPlot.domainY(y, libData);
         }
         
         /***** Append Axis *****/
         var xAxis = d3.axisBottom(x);
-        var yAxis = d3.axisLeft(y);
+        var yAxis = d3.axisLeft(y).ticks(5);
+        if(multiple && libName != data[data.length - 1].libraries[0].name) {
+            yAxis.ticks(0);
+        }
         
         group.append("g")
             .attr("class", "x axis")
@@ -95,9 +95,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
             .attr("font-size", "x-small")
             .style("text-anchor", "end")
             .text("Nombre de titres ");
-
-        group.append('text')
-            .attr("id", "libNameLabel")
+        
+        var libNameLabel = group.append('text')
             .attr("y", 20)
             .attr("x", 80)
             .attr("dx", "-2em")
@@ -105,6 +104,13 @@ ConnectedDotPlot = class ConnectedDotPlot {
             .attr("style", "bold")
             .attr("font-size", "x-small")
             .text(libName);
+
+        if(multiple) {
+            libNameLabel.attr("id", "libNameLabelMultiple")
+            
+        } else {
+            libNameLabel.attr("id", "libNameLabel")
+        }
         
         /***** Update lollipops *****/
         ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y);
@@ -197,7 +203,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
         ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y)
 
         var xAxis = d3.axisBottom(x);
-        var yAxis = d3.axisLeft(y);
+        var yAxis = d3.axisLeft(y).ticks(5);
 
         group.select(".x.axis")
             .call(xAxis);
@@ -205,14 +211,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
         group.select(".y.axis")
             .call(yAxis);
 
-        // group.append('text')
-        //     .attr("y", 20)
-        //     .attr("x", 80)
-        //     .attr("dx", "-2em")
-        //     .attr("dy", "-.60em")
-        //     .attr("style", "bold")
-        //     .attr("font-size", "x-small")
-        //     .text(ConnectedDotPlot.selectedLibName);
+        group.select("#libNameLabel").text(selectedLibName);
     }
 
     
