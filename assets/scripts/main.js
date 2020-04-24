@@ -127,15 +127,11 @@ Promise.all(promises).then(function (results) {
     /** Frequentation */
     // Data
     numeriqueSources = createNumeriqueSources(results[2]);
-    console.log(numeriqueSources);
-
 
     // Tip function
     var numeriqueTooltip = function (data) {
-        console.log(data);
-        HeatMapNumerique.domainBibliotheques(data)
 
-        tooltipText = "Nom: " + data.bibliotheque + '<br>' +
+        tooltipText = "Bibliothèque: " + data.bibliotheque + '<br>' +
                      "Annee: " + data.year + '<br>' +
                     "Pourcentage de variation: ";
 

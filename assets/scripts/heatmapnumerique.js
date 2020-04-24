@@ -186,7 +186,6 @@ HeatMapNumerique = class HeatMapNumerique {
 
     static createHeatNumerique(selection, sources, x, y, colorScale, tip, name) {
 
-        console.log(sources);
 
         selection.data(sources)
             .enter()
@@ -194,16 +193,22 @@ HeatMapNumerique = class HeatMapNumerique {
             .attr("y", d => y(d.bibliotheque))
             .attr("transform", d => "translate(0, " + y(d.bibliotheque) + ")")
             .selectAll("g")
-            .data(function (d) { return d[name] })
+            .data(function (d) {
+                var tempObject = d[name];
+                tempObject.forEach( yearData => {
+                    yearData.bibliotheque = d.bibliotheque
+                });
+                return tempObject })
             .enter()
             .append("rect")
-            .filter(function(d) { return (d.year > 2014 || d.year == "GLOBAL") })
-            .attr("name")
+            .filter(function(d) {return (d.year > 2014 || d.year == "GLOBAL") })
             .attr("x", function (d) { return x(d.year) })
             .attr("width", x.bandwidth())
             .attr("height", y.bandwidth())
             .style("fill", function (d) {
-                return isNaN(d.delta) ? HeatMapNumerique.undefinedColor : colorScale(d.delta)
+
+            return isNaN(d.delta) ? HeatMapNumerique.undefinedColor : colorScale(d.delta)
+
             })
             .attr("class", "heatmap-rect")
             .on('mouseover', tip.show)
