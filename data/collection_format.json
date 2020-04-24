@@ -1,4 +1,4 @@
-﻿{
+{
     "2013": [
         {
             "BIBLIOTHÈQUE": "(AHC) AHUNTSIC",
@@ -469,7 +469,7 @@
             "TOTAL": "63,498"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": "2,411",
             "Livres": "136,906",
             "Périodiques": "2,891",
@@ -1011,7 +1011,7 @@
             "TOTAL": "62,826"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": " 2 611",
             "Livres": " 134 785",
             "Périodiques": " 3 716",
@@ -1553,7 +1553,7 @@
             "TOTAL": "63,654"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": " 2 555",
             "Livres": " 129 312",
             "Périodiques": " 3 905",
@@ -1623,18 +1623,6 @@
             "Multisupports": " 1 095",
             "Autres": "  272",
             "TOTAL": "100,530"
-        },
-        {
-            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
-            "Nouveautés": "  86",
-            "Livres": " 4 647",
-            "Périodiques": "  75",
-            "Audio": "  18",
-            "Vidéo": "  247",
-            "Électronique": "  0",
-            "Multisupports": "  105",
-            "Autres": "  5",
-            "TOTAL": "5,183"
         }
     ],
     "2016": [
@@ -1663,18 +1651,6 @@
             "TOTAL": " 75 785"
         },
         {
-            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
-            "Nouveautés": "  2",
-            "Livres": " 4 053",
-            "Périodiques": "  0",
-            "Audio": "  2",
-            "Vidéo": "  0",
-            "Électronique": "  0",
-            "Multisupports": "  40",
-            "Autres": "  18",
-            "TOTAL": " 4 115"
-        },
-        {
             "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Nouveautés": " 1 489",
             "Livres": " 27 283",
@@ -1685,6 +1661,18 @@
             "Multisupports": "  387",
             "Autres": "  153",
             "TOTAL": " 31 850"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "Nouveautés": "  2",
+            "Livres": " 4 053",
+            "Périodiques": "  0",
+            "Audio": "  2",
+            "Vidéo": "  0",
+            "Électronique": "  0",
+            "Multisupports": "  40",
+            "Autres": "  18",
+            "TOTAL": " 4 115"
         },
         {
             "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
@@ -1723,7 +1711,7 @@
             "TOTAL": " 126 725"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) C-D-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Nouveautés": " 7 132",
             "Livres": " 110 458",
             "Périodiques": " 6 354",
@@ -1747,7 +1735,7 @@
             "TOTAL": " 133 203"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) N-D-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Nouveautés": " 2 463",
             "Livres": " 50 325",
             "Périodiques": " 2 446",
@@ -1867,7 +1855,7 @@
             "TOTAL": " 40 312"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) H-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Nouveautés": " 1 724",
             "Livres": " 79 235",
             "Périodiques": " 4 387",
@@ -1879,7 +1867,7 @@
             "TOTAL": " 95 732"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) MAISON  CULT.",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Nouveautés": " 1 308",
             "Livres": " 51 303",
             "Périodiques": " 2 110",
@@ -1903,7 +1891,7 @@
             "TOTAL": " 50 315"
         },
         {
-            "BIBLIOTHÈQUE": "(OUT) OUTRMONT",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Nouveautés": " 2 957",
             "Livres": " 69 952",
             "Périodiques": " 4 308",
@@ -1927,7 +1915,7 @@
             "TOTAL": " 83 402"
         },
         {
-            "BIBLIOTHÈQUE": "(PMR) PLATEAU-M-R",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Nouveautés": " 3 666",
             "Livres": " 59 335",
             "Périodiques": " 5 631",
@@ -1937,18 +1925,6 @@
             "Multisupports": "  689",
             "Autres": "  348",
             "TOTAL": " 74 435"
-        },
-        {
-            "BIBLIOTHÈQUE": "(PRO) CCE DE PIERREFONDS",
-            "Nouveautés": "  138",
-            "Livres": " 26 263",
-            "Périodiques": "  0",
-            "Audio": " 1 478",
-            "Vidéo": " 1 849",
-            "Électronique": "  0",
-            "Multisupports": "  354",
-            "Autres": "  0",
-            "TOTAL": " 30 082"
         },
         {
             "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
@@ -1973,6 +1949,18 @@
             "Multisupports": "  545",
             "Autres": "  55",
             "TOTAL": " 56 759"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "Nouveautés": "  138",
+            "Livres": " 26 263",
+            "Périodiques": "  0",
+            "Audio": " 1 478",
+            "Vidéo": " 1 849",
+            "Électronique": "  0",
+            "Multisupports": "  354",
+            "Autres": "  0",
+            "TOTAL": " 30 082"
         },
         {
             "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
@@ -2011,7 +1999,7 @@
             "TOTAL": " 100 710"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) P-A-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Nouveautés": " 3 315",
             "Livres": " 69 753",
             "Périodiques": " 1 896",
@@ -2023,7 +2011,7 @@
             "TOTAL": " 78 264"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) RIV-D-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Nouveautés": " 4 145",
             "Livres": " 104 913",
             "Périodiques": " 3 040",
@@ -2131,7 +2119,7 @@
             "TOTAL": " 59 973"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Nouveautés": " 4 278",
             "Livres": " 123 556",
             "Périodiques": " 3 159",
@@ -2191,18 +2179,6 @@
             "TOTAL": " 111 523"
         },
         {
-            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
-            "Nouveautés": "  37",
-            "Livres": " 5 318",
-            "Périodiques": "  128",
-            "Audio": "  18",
-            "Vidéo": "  251",
-            "Électronique": "  0",
-            "Multisupports": "  120",
-            "Autres": "  5",
-            "TOTAL": " 5 877"
-        },
-        {
             "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Nouveautés": " 4 530",
             "Livres": " 85 412",
@@ -2213,6 +2189,18 @@
             "Multisupports": " 1 075",
             "Autres": "  270",
             "TOTAL": " 101 097"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "Nouveautés": "  37",
+            "Livres": " 5 318",
+            "Périodiques": "  128",
+            "Audio": "  18",
+            "Vidéo": "  251",
+            "Électronique": "  0",
+            "Multisupports": "  120",
+            "Autres": "  5",
+            "TOTAL": " 5 877"
         }
     ],
     "2017": [
@@ -2235,15 +2223,6 @@
             "TOTAL": " 68 532"
         },
         {
-            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
-            "Livres": " 4 517",
-            "Périodiques": "  0",
-            "Audio": "  2",
-            "Vidéo": "  3",
-            "Autres": "  4",
-            "TOTAL": " 4 526"
-        },
-        {
             "BIBLIOTHÈQUE": "(AHC) SALABERRY",
             "Livres": " 28 695",
             "Périodiques": "  869",
@@ -2251,6 +2230,15 @@
             "Vidéo": " 1 459",
             "Autres": "  191",
             "TOTAL": " 31 259"
+        },
+        {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "Livres": " 4 517",
+            "Périodiques": "  0",
+            "Audio": "  2",
+            "Vidéo": "  3",
+            "Autres": "  4",
+            "TOTAL": " 4 526"
         },
         {
             "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
@@ -2280,7 +2268,7 @@
             "TOTAL": " 132 774"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) C-D-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Livres": " 107 467",
             "Périodiques": " 5 876",
             "Audio": " 1 505",
@@ -2298,7 +2286,7 @@
             "TOTAL": " 125 575"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) N-D-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Livres": " 47 644",
             "Périodiques": " 2 382",
             "Audio": "  924",
@@ -2388,7 +2376,7 @@
             "TOTAL": " 40 640"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) H-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Livres": " 75 252",
             "Périodiques": " 4 211",
             "Audio": " 3 694",
@@ -2397,7 +2385,7 @@
             "TOTAL": " 88 732"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) MAISON  CULT.",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Livres": " 51 637",
             "Périodiques": " 2 639",
             "Audio": " 1 806",
@@ -2415,7 +2403,7 @@
             "TOTAL": " 49 126"
         },
         {
-            "BIBLIOTHÈQUE": "(OUT) OUTREMONT",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Livres": " 72 202",
             "Périodiques": " 3 547",
             "Audio": " 3 821",
@@ -2433,22 +2421,13 @@
             "TOTAL": " 82 768"
         },
         {
-            "BIBLIOTHÈQUE": "(PMR) PLATEAU-M-R",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Livres": " 61 873",
             "Périodiques": " 2 946",
             "Audio": "  768",
             "Vidéo": " 4 570",
             "Autres": "  459",
             "TOTAL": " 70 616"
-        },
-        {
-            "BIBLIOTHÈQUE": "(PRO) CCE DE PIERREFONDS",
-            "Livres": " 27 418",
-            "Périodiques": " 3 341",
-            "Audio": " 1 787",
-            "Vidéo": " 2 093",
-            "Autres": "  56",
-            "TOTAL": " 34 695"
         },
         {
             "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
@@ -2467,6 +2446,15 @@
             "Vidéo": " 3 166",
             "Autres": "  136",
             "TOTAL": " 54 097"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "Livres": " 27 418",
+            "Périodiques": " 3 341",
+            "Audio": " 1 787",
+            "Vidéo": " 2 093",
+            "Autres": "  56",
+            "TOTAL": " 34 695"
         },
         {
             "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
@@ -2496,7 +2484,7 @@
             "TOTAL": " 97 630"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) P-A-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Livres": " 72 145",
             "Périodiques": " 2 047",
             "Audio": "  573",
@@ -2505,7 +2493,7 @@
             "TOTAL": " 77 608"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) RIV-D-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Livres": " 86 842",
             "Périodiques": " 3 326",
             "Audio": "  637",
@@ -2523,15 +2511,6 @@
             "TOTAL": " 162 791"
         },
         {
-            "BIBLIOTHÈQUE": "(SLA) MINI-BIBLIOTHÈQUE CHAMERAN",
-            "Livres": " 1 604",
-            "Périodiques": "  26",
-            "Audio": "  14",
-            "Vidéo": "  98",
-            "Autres": "  2",
-            "TOTAL": " 1 744"
-        },
-        {
             "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Livres": " 93 992",
             "Périodiques": " 3 771",
@@ -2539,6 +2518,15 @@
             "Vidéo": " 11 508",
             "Autres": "  808",
             "TOTAL": " 117 739"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
+            "Livres": " 1 604",
+            "Périodiques": "  26",
+            "Audio": "  14",
+            "Vidéo": "  98",
+            "Autres": "  2",
+            "TOTAL": " 1 744"
         },
         {
             "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
@@ -2595,7 +2583,7 @@
             "TOTAL": " 55 083"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Livres": " 121 081",
             "Périodiques": " 3 427",
             "Audio": " 6 578",
@@ -2640,15 +2628,6 @@
             "TOTAL": " 106 678"
         },
         {
-            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
-            "Livres": " 5 654",
-            "Périodiques": "  246",
-            "Audio": "  27",
-            "Vidéo": "  330",
-            "Autres": "  8",
-            "TOTAL": " 6 265"
-        },
-        {
             "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Livres": " 87 682",
             "Périodiques": " 3 867",
@@ -2656,6 +2635,15 @@
             "Vidéo": " 3 288",
             "Autres": "  475",
             "TOTAL": " 98 059"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "Livres": " 5 654",
+            "Périodiques": "  246",
+            "Audio": "  27",
+            "Vidéo": "  330",
+            "Autres": "  8",
+            "TOTAL": " 6 265"
         }
     ],
     "2018": [
@@ -2693,6 +2681,15 @@
             "TOTAL": " 29 343"
         },
         {
+            "BIBLIOTHÈQUE": "(AHC) LIVROMOBILE",
+            "Livres": " 4 517",
+            "Périodiques": "  0",
+            "Audio": "  2",
+            "Vidéo": "  3",
+            "Autres": "  4",
+            "TOTAL": " 4 526"
+        },
+        {
             "BIBLIOTHÈQUE": "(ANJ) HAUT-ANJOU",
             "Livres": " 14 270",
             "Périodiques": "  640",
@@ -2726,7 +2723,7 @@
             "TOTAL": " 126 298"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) C-D-NEIGES",
+            "BIBLIOTHÈQUE": "(CND) CÔTE-DES-NEIGES",
             "Livres": " 96 105",
             "Périodiques": " 5 840",
             "Audio": "  788",
@@ -2748,7 +2745,7 @@
             "TOTAL": " 117 630"
         },
         {
-            "BIBLIOTHÈQUE": "(CND) N-D-DE-GRÂCE",
+            "BIBLIOTHÈQUE": "(CND) NOTRE-DAME-DE-GRÂCE",
             "Livres": " 43 368",
             "Périodiques": " 2 141",
             "Audio": "  591",
@@ -2858,7 +2855,7 @@
             "TOTAL": " 39 543"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) H-BOURASSA",
+            "BIBLIOTHÈQUE": "(MNO) HENRI-BOURASSA",
             "Livres": " 67 555",
             "Périodiques": " 3 578",
             "Audio": " 3 028",
@@ -2869,7 +2866,7 @@
             "TOTAL": " 79 160"
         },
         {
-            "BIBLIOTHÈQUE": "(MNO) MAISON  CULT.",
+            "BIBLIOTHÈQUE": "(MNO) MAISON CULTURELLE",
             "Livres": " 49 229",
             "Périodiques": " 2 451",
             "Audio": " 1 464",
@@ -2891,7 +2888,7 @@
             "TOTAL": " 46 817"
         },
         {
-            "BIBLIOTHÈQUE": "(OUT) OUTREMONT",
+            "BIBLIOTHÈQUE": "(OUT) ROBERT-BOURASSA",
             "Livres": " 66 815",
             "Périodiques": " 3 487",
             "Audio": " 3 537",
@@ -2913,7 +2910,7 @@
             "TOTAL": " 74 770"
         },
         {
-            "BIBLIOTHÈQUE": "(PMR) PLATEAU-M-R",
+            "BIBLIOTHÈQUE": "(PMR) PLATEAU MONT-ROYAL",
             "Livres": " 52 086",
             "Périodiques": " 3 967",
             "Audio": "  393",
@@ -2922,17 +2919,6 @@
             "Multisupports": "  575",
             "Autres": "  378",
             "TOTAL": " 61 471"
-        },
-        {
-            "BIBLIOTHÈQUE": "(PRO) CCE DE PIERREFONDS",
-            "Livres": " 22 882",
-            "Périodiques": " 3 230",
-            "Audio": "  811",
-            "Vidéo": " 1 813",
-            "Électronique": "  12",
-            "Multisupports": "  352",
-            "Autres": "  2",
-            "TOTAL": " 29 102"
         },
         {
             "BIBLIOTHÈQUE": "(PRO) PIERREFONDS",
@@ -2955,6 +2941,17 @@
             "Multisupports": "  585",
             "Autres": "  84",
             "TOTAL": " 49 548"
+        },
+        {
+            "BIBLIOTHÈQUE": "(PRO) CENTRE COMMUNAUTAIRE",
+            "Livres": " 22 882",
+            "Périodiques": " 3 230",
+            "Audio": "  811",
+            "Vidéo": " 1 813",
+            "Électronique": "  12",
+            "Multisupports": "  352",
+            "Autres": "  2",
+            "TOTAL": " 29 102"
         },
         {
             "BIBLIOTHÈQUE": "(RPP) LA PETITE-PATRIE",
@@ -2990,7 +2987,7 @@
             "TOTAL": " 87 068"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) P-A-TREMBLES",
+            "BIBLIOTHÈQUE": "(RPT) POINTE-AUX-TREMBLES",
             "Livres": " 62 714",
             "Périodiques": " 2 102",
             "Audio": "  374",
@@ -3001,7 +2998,7 @@
             "TOTAL": " 68 191"
         },
         {
-            "BIBLIOTHÈQUE": "(RPT) RIV-D-PRAIRIES",
+            "BIBLIOTHÈQUE": "(RPT) RIVIÈRE-DES-PRAIRIES",
             "Livres": " 82 687",
             "Périodiques": " 2 978",
             "Audio": "  289",
@@ -3023,17 +3020,6 @@
             "TOTAL": " 152 143"
         },
         {
-            "BIBLIOTHÈQUE": "(SLA) MINI-BIBLIOTHÈQUE CHAMERAN",
-            "Livres": " 2 208",
-            "Périodiques": "  0",
-            "Audio": "  0",
-            "Vidéo": "  147",
-            "Électronique": "  0",
-            "Multisupports": "  22",
-            "Autres": "  0",
-            "TOTAL": " 2 377"
-        },
-        {
             "BIBLIOTHÈQUE": "(SLA) VIEUX-SAINT-LAURENT",
             "Livres": " 85 329",
             "Périodiques": " 3 645",
@@ -3043,6 +3029,17 @@
             "Multisupports": "  772",
             "Autres": "  627",
             "TOTAL": " 108 239"
+        },
+        {
+            "BIBLIOTHÈQUE": "(SLA) CHAMERAN",
+            "Livres": " 2 208",
+            "Périodiques": "  0",
+            "Audio": "  0",
+            "Vidéo": "  147",
+            "Électronique": "  0",
+            "Multisupports": "  22",
+            "Autres": "  0",
+            "TOTAL": " 2 377"
         },
         {
             "BIBLIOTHÈQUE": "(SLE) SAINT-LÉONARD",
@@ -3111,7 +3108,7 @@
             "TOTAL": " 49 385"
         },
         {
-            "BIBLIOTHÈQUE": "(VER) JACQUELINE-DE REPENTIGNY",
+            "BIBLIOTHÈQUE": "(VER) VERDUN",
             "Livres": " 114 731",
             "Périodiques": " 3 466",
             "Audio": " 5 911",
@@ -3166,17 +3163,6 @@
             "TOTAL": " 98 743"
         },
         {
-            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
-            "Livres": " 5 682",
-            "Périodiques": "  235",
-            "Audio": "  17",
-            "Vidéo": "  287",
-            "Électronique": "  0",
-            "Multisupports": "  120",
-            "Autres": "  5",
-            "TOTAL": " 6 346"
-        },
-        {
             "BIBLIOTHÈQUE": "(VSP) SAINT-MICHEL",
             "Livres": " 80 589",
             "Périodiques": " 3 882",
@@ -3186,6 +3172,17 @@
             "Multisupports": "  624",
             "Autres": "  246",
             "TOTAL": " 90 603"
+        },
+        {
+            "BIBLIOTHÈQUE": "(VSP) ROULIVRE",
+            "Livres": " 5 682",
+            "Périodiques": "  235",
+            "Audio": "  17",
+            "Vidéo": "  287",
+            "Électronique": "  0",
+            "Multisupports": "  120",
+            "Autres": "  5",
+            "TOTAL": " 6 346"
         }
     ]
 }

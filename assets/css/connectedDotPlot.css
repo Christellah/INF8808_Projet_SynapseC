@@ -15,5 +15,10 @@ circle {
 .lollipop-Emprunts {
     fill: #01462A;
 }
+
+.radioButton {
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
     
   

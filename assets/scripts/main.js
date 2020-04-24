@@ -16,6 +16,7 @@ promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
 // Maquette 5
 promises.push(d3.json("/data/collection_livres.json")); 
 promises.push(d3.json("/data/prets_public.json")); 
+promises.push(d3.json("/data/collection_format.json")); 
 
 
 Promise.all(promises).then(function (results) {
@@ -147,50 +148,50 @@ Promise.all(promises).then(function (results) {
     /*
     * Maquette 5 - Connected Dot Plot
      */ 
-
-    /*******5.1*******/
-    var collectionLivres = results[4];
-    var pretsPublic = results[5];
-
-    var marginCD = {
-        top: 10,
-        right: 10,
-        bottom: 100,
-        left: 60
-    };
-
+    var marginCD = { top: 10, right: 10, bottom: 100, left: 60 };
     var widthCD = 300 - marginCD.left - marginCD.right;
     var heightCD = 300 - marginCD.top - marginCD.bottom;
-
+    
     /***** Scales *****/
     var x = d3.scaleBand().range([0, widthCD]);
     var y = d3.scaleLinear().range([heightCD, 0]);
-
+    
     var svg = d3.select("#ConnectedDotPlot")
-        .append("svg")
-        .attr("width", widthCD + marginCD.left + marginCD.right)
-        .attr("height", heightCD + marginCD.top + marginCD.bottom);
-
+    .append("svg")
+    .attr("width", widthCD + marginCD.left + marginCD.right)
+    .attr("height", heightCD + marginCD.top + marginCD.bottom);
+    
     var group = svg.append("g")
     .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
     
+    /***** Get json files data *****/
+    var collectionFormat = results[6];
+    var pretsFormat = results[1];
+    var collectionLivres = results[4];
+    var pretsPublic = results[5];
+    
+    // Public data type is displayed by default
+    var connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
+    
+    /*******5.1*******/   
     var lollipopsGroup = group.append("g").attr("class", "lollipops");
-    var publicCDPlotSources = createConnectedDotPlotSources(collectionLivres, pretsPublic);
-    var connectedDotPlot = new ConnectedDotPlot(publicCDPlotSources);
-    var libDropDown = connectedDotPlot.createLibraryDropDown(publicCDPlotSources, publicCDPlotSources[5].year, x, y, group, heightCD, lollipopsGroup);
-    connectedDotPlot.createYearDropDown(publicCDPlotSources, x, y, group, heightCD, libDropDown, lollipopsGroup);
-
-    var initialData = publicCDPlotSources[publicCDPlotSources.length - 1];
-    ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
+    var connectedDotPlot = new ConnectedDotPlot(connectedDotPlotSources);
+    var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
+    connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+    
+    var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
+    ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
     var svgLegend = d3.select("#ConnectedDotPlot")
-            .append("svg")
-            .attr("width", widthCD + marginCD.left + marginCD.right)
-            .attr("height", heightCD + marginCD.top + marginCD.bottom);
-            
+    .append("svg")
+    .attr("width", widthCD + marginCD.left + marginCD.right)
+    .attr("height", heightCD + marginCD.top + marginCD.bottom);
+    
     ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
-
+    
     /*******5.2*******/
-    publicCDPlotSources[publicCDPlotSources.length - 1].libraries.forEach(function(d){
+    var groupMultipleList = [];
+    var lollipopsGroupMultipleList = [];
+    connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
         var svgMultiple = d3.select("#MultipleConnectedDotPlots")
         .append("svg")
         .attr("width", widthCD + marginCD.left + marginCD.right)
@@ -198,10 +199,31 @@ Promise.all(promises).then(function (results) {
         
         var groupMultiple = svgMultiple.append("g")
         .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+        groupMultipleList[i] = groupMultiple;
         var lollipopsGroupMultiple = groupMultiple.append("g").attr("class", "lollipops");
-        ConnectedDotPlot.createLibConnectedDotPlot(publicCDPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
+        lollipopsGroupMultipleList[i] = lollipopsGroupMultiple;
+        ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
     });
-    
+    /******* Switching between format and public *******/
+    d3.select("#dataTypeButtonPublic").property("checked", "true");
+    d3.selectAll(("input[name='dataTypeButton']")).on("change", function() {
+        if(this.value == "Public") {
+            connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
+        } else if(this.value == "Format") {
+            connectedDotPlotSources = createConnectedDotPlotSourcesFormat(collectionFormat, pretsFormat);
+        }
+        /***** Main graph and multiple graphs - Update domainX, domainY, dropdowns and lollipops *****/
+        var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
+        connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+
+        var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
+        ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, initialData.libraries[0].name, x, y, group, lollipopsGroup, false);
+        
+        connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
+            ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultipleList[i], lollipopsGroupMultipleList[i], true);
+        });
+    });
+         
     
     /* Frequentation par public */
     // Data
