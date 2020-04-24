@@ -177,23 +177,25 @@ body {
   border-radius : 4px;
   background : lightblue;
   width : 30%;
-  height : 45%;
+  height : 50%;
   float : right;
   z-index : 10;
   margin-top : 2px;
   margin-right : 2px;
   cursor : default;
   display : none;
+  overflow: auto;
 }
 
 #panel button {
-  width: 40px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   padding: 0;
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 2px;
+  right: 2px;
   float: right;
+  border-radius: 50%;
   background-color: #f0f0f0;
   border: 1px solid #d0d0d0;
   font-size: 0.8em;
@@ -205,16 +207,23 @@ body {
 }
 
 #panel h1 {
-  margin-top: 20;
+  margin-top: 8px;
   font-size: 1.5em;
   text-align: center;
+  font-weight: bold;
 }
 
 #panel .info-list {
   font-size: 1.1em;
   list-style-position: inside;
   padding-left: 0px;
-  /* margin-left: 2px; */
-  /* text-align: left; */
-  /* padding: 5px; */
+  margin-bottom: 3px !important;
+}
+
+.libNameTooltip {
+  position : absolute;
+  background : white;
+  z-index : 10;
+  visibility : hidden;
+  opacity : 0.8;
 }
