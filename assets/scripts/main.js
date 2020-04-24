@@ -10,6 +10,8 @@ promises.push(d3.json("./data/frequentation.json"));
 promises.push(d3.json("./data/emprunts_format.json"));
 // Emprunts (public)
 promises.push(d3.json("./data/prets_public.json"));
+// Numérique/Automates (public)
+promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
 
 // Maquette 5
 promises.push(d3.json("/data/collection_livres.json")); 
@@ -276,6 +278,72 @@ Promise.all(promises).then(function (results) {
         let sources = createPublicLoanSources(results[2], value);
         stackedBarPublic.updateData(sources.reverse(), -1);
     })
+
+    //////////////////////////////////////////
+    /**
+     * Heatmaps_Numerique
+     * - Prets
+     * - Renouvellements
+     * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
+     */
+        // Number format
+    var numberFormat = wNumb({
+            thousand: ' ',
+        });
+
+    // Margins, size, colors
+    var margin = { top: 120, right: 1, bottom: 60, left: 1 },
+        width = 120 - margin.left - margin.right,
+        height = 1400 - margin.top - margin.bottom;
+
+    /** Frequentation */
+    // Data
+    numeriqueSources = createNumeriqueSources(results[3]);
+
+    // Tip function
+    var numeriqueTooltip = function (data) {
+
+        tooltipText = "Bibliothèque: " + data.bibliotheque + '<br>' +
+                     "Annee: " + data.year + '<br>' +
+                    "Pourcentage de variation: ";
+
+        if(!isNaN(data.delta)) {
+            var format = d3.format(".2%");
+            tooltipText += format(data.delta)
+        }else {
+            tooltipText += "Information indisponible"
+        }
+
+        return tooltipText;
+    };
+
+    var tableNameList = ["pretsPhysique", "pretsAuto", "renouvPhysique", "renouvAuto", "locationPhysique", "locationNumerique"];
+
+    // Create the heatmap
+
+    tableNameList.forEach( (name, index) => {
+
+        //On définit les marges en fonction de l'index du graphe
+        if (index == 0) {
+            margin = { top: 80, right: 40, bottom: 60, left: 220 };
+            isFirst = true
+        } else if (index === tableNameList.length - 1){
+            margin =  { top: 80, right: 200, bottom: 60, left: 1 }
+        } else if (index % 2){
+            margin =  { top: 80, right: 70, bottom: 60, left: 1 }
+            isFirst = false
+        } else {
+            margin =  { top: 80, right: 40, bottom: 60, left: 1 };
+            isFirst = false
+        }
+
+        var id = "#heatmap_numerique" + (index + 1).toString();
+        var heatmapNumerique = new HeatMapNumerique(id, width, height, margin, HeatMapNumerique.createHeatNumerique, HeatMapNumerique.domainYears, HeatMapNumerique.domainBibliotheques, numeriqueTooltip);
+        heatmapNumerique.create(numeriqueSources, isFirst, name);
+
+    });
+
+
 
 })
 
