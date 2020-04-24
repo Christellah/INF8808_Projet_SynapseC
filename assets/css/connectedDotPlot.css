@@ -1,11 +1,13 @@
 .lollipop-line {
     stroke: black;
     stroke-width: 1px;
+    z-index : 10;
 }
 
 circle {
     stroke-width: 1px;
     stroke: black;
+    z-index : 10;
 }
 
 .lollipop-Inventaire {

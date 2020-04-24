@@ -187,8 +187,8 @@ Promise.all(promises).then(function (results) {
     /*******5.1*******/   
     var lollipopsGroup = group.append("g").attr("class", "lollipops");
     var connectedDotPlot = new ConnectedDotPlot(connectedDotPlotSources);
-    var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
-    connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+    var libDropDown = connectedDotPlot.onLibraryDropDownUpdate(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
+    connectedDotPlot.onYearDropDownUpdate(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
     
     var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
     ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
@@ -196,7 +196,6 @@ Promise.all(promises).then(function (results) {
     .append("svg")
     .attr("width", widthCD + marginCD.left + marginCD.right)
     .attr("height", heightCD + marginCD.top + marginCD.bottom);
-    
     ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
     
     /*******5.2*******/
@@ -215,21 +214,27 @@ Promise.all(promises).then(function (results) {
         lollipopsGroupMultipleList[i] = lollipopsGroupMultiple;
         ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
     });
-    /******* Switching between format and public *******/
+
+    /******* Dropdown and swith default values *******/
     d3.select("#dataTypeButtonPublic").property("checked", "true");
+    d3.select("#selectYear").property('value', "2018")
+
+    /******* Switching between format and public *******/
     d3.selectAll(("input[name='dataTypeButton']")).on("change", function() {
         if(this.value == "Public") {
             connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
         } else if(this.value == "Format") {
             connectedDotPlotSources = createConnectedDotPlotSourcesFormat(collectionFormat, pretsFormat);
         }
-        /***** Main graph and multiple graphs - Update domainX, domainY, dropdowns and lollipops *****/
-        var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
-        connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
 
-        var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
-        ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, initialData.libraries[0].name, x, y, group, lollipopsGroup, false);
+        /***** Main graph and multiple graphs - Update domainX, domainY, dropdowns and lollipops *****/
+        ConnectedDotPlot.selectedYear = d3.select("#selectYear").property("value");
+        ConnectedDotPlot.selectedLibName = d3.select("#selectLibrary").property("value");
+        var libDropDown = connectedDotPlot.onLibraryDropDownUpdate(connectedDotPlotSources, ConnectedDotPlot.selectedYear, x, y, group, lollipopsGroup);
+        connectedDotPlot.onYearDropDownUpdate(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+        ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup, false);
         
+        var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
         connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
             ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultipleList[i], lollipopsGroupMultipleList[i], true);
         });
