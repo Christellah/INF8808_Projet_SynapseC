@@ -114,6 +114,31 @@ body {
   text-decoration: underline;
 }
 
+.vert {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+#h1-1 {
+    margin-left: 220px;
+    margin-right: 70px;
+}
+
+#h1-2 {
+    margin-left: 40px;
+    margin-right: 70px;
+}
+
+#h1-3 {
+    margin-right: 200px;
+}
+
+
 /***** Dataviz *****/
 .dataviz {
   margin: auto;
@@ -124,8 +149,14 @@ body {
   /* width: 10%; */
 }
 
+.dataviz-inline{
+    margin: 0;
+}
+
 .flex-div {
   display: flex;
+  justify-content: center
+
 }
 
 .selected {
