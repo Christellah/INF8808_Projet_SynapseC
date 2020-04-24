@@ -182,7 +182,6 @@ StackedBar = class StackedBar {
         if (d3.select("#Color-"+ year + "-" + i).attr("class") === "legendColors selected") {
             d3.selectAll('.legendColors').classed("selected", false);
             sources = sources.sort((a, b) => { return b.annee - a.annee; });
-            console.log(sources);
             this.updateData(sources, -1);
         } else {
             this.orderByType(d, i, year, sources);

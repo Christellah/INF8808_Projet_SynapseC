@@ -39,11 +39,22 @@ const pieChartDim = {
  * */ 
 
 LibrariesMap = class LibrariesMap {
+    // Libraries circles group
+    static libCirclesGroup;
+    // Pie charts color scale
+    static pieLgColorScale = d3.scaleOrdinal().domain(pieLgInfo.domain).range(pieLgInfo.colorRange);
+    static piePubColorScale = d3.scaleOrdinal().domain(piePubInfo.domain).range(piePubInfo.colorRange);
+    static pieFormColorScale = d3.scaleOrdinal().domain(pieFormInfo.domain).range(pieFormInfo.colorRange);
+
+    // Tool tip to display the library's name
+    static nameTooltip = d3.select("body").append("div").attr("class", "libNameTooltip");
+
     /**
      * Constructs Libraries Map
      *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/backgroundmap_leaflet.html
      *  - code adapted from : @see https://www.d3-graph-gallery.com/graph/bubblemap_leaflet_basic.html
     * */ 
+
     constructor(divId, libInfoSources) {
 
         this.divId = '#' + divId;
@@ -79,12 +90,12 @@ LibrariesMap = class LibrariesMap {
         var svg = d3.select(this.divId).select("svg");
         
         // Apend the libraries infos data
-        var circleGroup = svg.selectAll("circle")
-        .data(this.libInfoSources)
-        .enter();
+        LibrariesMap.libCirclesGroup = svg.selectAll("libCircles")
+            .data(this.libInfoSources)
+            .enter();
         
         // Create info panel
-        var panel = this.createInfoPanel(circleGroup);
+        var panel = this.createInfoPanel();
         
         // Make a range for circles radius, proportional to frequentations/population_arrondissement
         var circleRadiusScale = d3.scaleLinear()
@@ -93,7 +104,7 @@ LibrariesMap = class LibrariesMap {
             .range([5,18]);
         
         // Draw the circles
-        circleGroup.append("circle")
+        LibrariesMap.libCirclesGroup.append("circle")
             .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
             .attr("class", "lib-circle")
             .on("mouseover", function(d) {
@@ -115,11 +126,11 @@ LibrariesMap = class LibrariesMap {
             .on("click", function(d) {
                 // Hide tooltip and show selected circle
                 LibrariesMap.nameTooltip.style("visibility", "hidden");
-                circleGroup.selectAll("circle").classed("circle-selected", false);
+                LibrariesMap.libCirclesGroup.selectAll("circle").classed("circle-selected", false);
                 d3.select(this).classed("circle-selected", true);
 
                 // Center the map on the selected library
-                libMap.setView([d.localisation.latitude, d.localisation.longitude], mapPos.initZoom)
+                libMap.setView([d.localisation.latitude, d.localisation.longitude])
 
                 // Display info panel
                 LibrariesMap.displayInfoPanel(panel, d);
@@ -130,7 +141,8 @@ LibrariesMap = class LibrariesMap {
     }
 
 
-    createInfoPanel(circleGroup) {
+    // Create the info panel
+    createInfoPanel() {
         var panel = d3.select("#panel");
 
         // Close panel button
@@ -138,7 +150,7 @@ LibrariesMap = class LibrariesMap {
             .text("X")
             .on("click", function () {
             panel.style("display", "none");
-            circleGroup.selectAll("circle").classed("circle-selected", false);
+            LibrariesMap.libCirclesGroup.selectAll("circle").classed("circle-selected", false);
             });
 
         // Create the pie charts svg
@@ -191,13 +203,6 @@ LibrariesMap = class LibrariesMap {
             .text(function(d) {return pieLegendTexts[d] });
     }
 
-    // Pie charts color scale
-    static pieLgColorScale = d3.scaleOrdinal().domain(pieLgInfo.domain).range(pieLgInfo.colorRange);
-    static piePubColorScale = d3.scaleOrdinal().domain(piePubInfo.domain).range(piePubInfo.colorRange);
-    static pieFormColorScale = d3.scaleOrdinal().domain(pieFormInfo.domain).range(pieFormInfo.colorRange);
-
-    // Tool tip to display the library's name
-    static nameTooltip = d3.select("body").append("div").attr("class", "libNameTooltip");
 
     // Display the info panel
     static displayInfoPanel(panel, data) {
@@ -219,7 +224,6 @@ LibrariesMap = class LibrariesMap {
         // Formats Pie chart
         var pieFormGroup = panel.select("#pie-svg").select("#pieForm-group");
         LibrariesMap.updateSinglePieChart(libData.formats, pieFormGroup, LibrariesMap.pieFormColorScale);
-        console.log(libData.public)
     }
 
     // Update a single pie chart
@@ -265,7 +269,7 @@ LibrariesMap = class LibrariesMap {
 
     // Update circles on map 
     static updateCircles(libMap) {
-        d3.selectAll("circle")
+        LibrariesMap.libCirclesGroup.selectAll("circle")
         .attr("cx", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).x })
         .attr("cy", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).y })
     } 

@@ -1,0 +1,24 @@
+.lollipop-line {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+circle {
+    stroke-width: 1px;
+    stroke: black;
+}
+
+.lollipop-Inventaire {
+    fill: #A1D9D6;
+}
+
+.lollipop-Emprunts {
+    fill: #01462A;
+}
+
+.radioButton {
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+    
+  
