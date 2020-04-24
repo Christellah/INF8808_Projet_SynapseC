@@ -149,8 +149,8 @@ Promise.all(promises).then(function (results) {
      */ 
 
     /*******5.1*******/
-    var collectionLivres = results[3];
-    var pretsPublic = results[4];
+    var collectionLivres = results[4];
+    var pretsPublic = results[5];
 
     var marginCD = {
         top: 10,
