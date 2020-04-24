@@ -3,21 +3,30 @@
  */
 
 var promises = [];
+// Indexes to used for data loading
+const dataIndex = {
+    "biblio_info" : 0,
+    "frequentations" : 1,
+    "emp_format" : 2,
+    "emp_public" : 3,
+    "emp_num_phys" : 4,
+    "collection_livres" : 5,
+    "collection_format" : 6
+}
 
+// Libraries info 2018
+promises.push(d3.json("./data/biblio_info_2018.json"));
 // Frequentation
 promises.push(d3.json("./data/frequentation.json"));
-// Emprunts (format)
+// Emprunts : format
 promises.push(d3.json("./data/emprunts_format.json"));
-// Emprunts (public)
+// Emprunts : public
 promises.push(d3.json("./data/prets_public.json"));
-// Libraries info
-promises.push(d3.json("./data/biblio_info_2018.json"));
 // Numérique/Automates (public)
 promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
-
-// Maquette 5
+// Collection : public
 promises.push(d3.json("/data/collection_livres.json")); 
-promises.push(d3.json("/data/prets_public.json")); 
+// Collection : format
 promises.push(d3.json("/data/collection_format.json")); 
 
 
@@ -40,7 +49,7 @@ Promise.all(promises).then(function (results) {
 
     /** Frequentation */
     // Data
-    frequentationSources = createFrequentationSources(results[0]);
+    frequentationSources = createFrequentationSources(results[dataIndex.frequentations]);
     
     // Tip function
     var frequentationTooltip = function (data) {
@@ -80,8 +89,8 @@ Promise.all(promises).then(function (results) {
     
     /** HeatMap Emprunts */
     // Data
-    var empruntsSources = createEmpruntsSources(results[1]);
-    var empruntsPublicSources = createEmpruntsSources(results[2]);
+    var empruntsSources = createEmpruntsSources(results[dataIndex.emp_format]);
+    var empruntsPublicSources = createEmpruntsSources(results[dataIndex.emp_public]);
 
 
     // Tip function
@@ -150,7 +159,7 @@ Promise.all(promises).then(function (results) {
      * Libraries Map
      */
     // Load Libraries info data
-    var libInfoSources = createLibInfoSources(results[3]);
+    var libInfoSources = createLibInfoSources(results[dataIndex.biblio_info]);
     
     // Create the libraries map
     var librariesMap = new LibrariesMap("libraries_map", libInfoSources);
@@ -176,10 +185,10 @@ Promise.all(promises).then(function (results) {
     .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
     
     /***** Get json files data *****/
-    var collectionFormat = results[7];
-    var pretsFormat = results[1];
-    var collectionLivres = results[5];
-    var pretsPublic = results[6];
+    var collectionFormat = results[dataIndex.collection_format];
+    var pretsFormat = results[dataIndex.emp_format];
+    var collectionLivres = results[dataIndex.collection_livres];
+    var pretsPublic = results[dataIndex.emp_public];
     
     // Public data type is displayed by default
     var connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
@@ -238,7 +247,7 @@ Promise.all(promises).then(function (results) {
     
     /* Frequentation par public */
     // Data
-    let publicLoan2018Sources = createPublicLoan2018Sources(results[2]);
+    let publicLoan2018Sources = createPublicLoan2018Sources(results[dataIndex.emp_public]);
     const bibliotheques = d3.set(publicLoan2018Sources.map(d => d.bibliotheque));
 
     let selectBiblio = d3.select("#selectBiblio");
@@ -302,12 +311,12 @@ Promise.all(promises).then(function (results) {
 
     let stackedBarPublic = new StackedBar("#emprunts_biblio", width, height/8, margin, StackedBar.createStackedBarBiblios, StackedBar.domainYears, stackedBarPublicTip, "");
 
-    let sources = createPublicLoanSources(results[2], "(AHC) AHUNTSIC");
+    let sources = createPublicLoanSources(results[dataIndex.emp_public], "(AHC) AHUNTSIC");
     stackedBarPublic.updateData(sources.reverse(), -1);
 
     selectBiblio.on('change', () => {
         let value = selectBiblio.property('value');
-        let sources = createPublicLoanSources(results[2], value);
+        let sources = createPublicLoanSources(results[dataIndex.emp_public], value);
         stackedBarPublic.updateData(sources.reverse(), -1);
     })
 
@@ -330,7 +339,7 @@ Promise.all(promises).then(function (results) {
 
     /** Frequentation */
     // Data
-    numeriqueSources = createNumeriqueSources(results[4]);
+    numeriqueSources = createNumeriqueSources(results[dataIndex.emp_num_phys]);
 
     // Tip function
     var numeriqueTooltip = function (data) {
