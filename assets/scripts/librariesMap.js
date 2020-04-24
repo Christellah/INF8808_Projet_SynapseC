@@ -20,17 +20,17 @@ const piePubInfo = {
 }
 const pieFormInfo = {
     domain : ["titresPhysiques", "titresElectroniques", "autres"],
-    colorRange : ["#591aef", "#f15cb6", "#ffcccc"],
-    legendTexts : {"titresPhysiques":"Titres physiques", "titresElectroniques":"Titres électoniques", "autres":"Autres"}
+    colorRange : ["#591aef", "#f15cb6", "#fdbaba"],
+    legendTexts : {"titresPhysiques":"Titres phys.", "titresElectroniques":"Titres élect.", "autres":"Autres"}
 }
 const pieChartDim = {
     width : 60,
     height : 60,
     margin : 4,
-    left : 60/2,
-    top : 60/2,
-    offset1 : 60,
-    offset2 : 120
+    left : 30,
+    left1 : 95,
+    left2 : 160,
+    top : 60/2
 }
 
 
@@ -144,13 +144,18 @@ LibrariesMap = class LibrariesMap {
             .attr("transform", "translate(" + pieChartDim.left + "," + pieChartDim.top + ")");
         // Public Pie chart
         this.pieSvg.append("g")
-            .attr("transform", "translate(" + pieChartDim.left + pieChartDim.offset1 + "," + pieChartDim.top + ")");
+            .attr("id", "piePub-group")
+            .attr("transform", "translate(" + pieChartDim.left1 + "," + pieChartDim.top + ")");
         // Format Pie chart
         this.pieSvg.append("g")
-            .attr("transform", "translate(" + pieChartDim.left + pieChartDim.offset2 + "," + pieChartDim.top + ")");
+            .attr("id", "pieForm-group")
+            .attr("transform", "translate(" + pieChartDim.left2 + "," + pieChartDim.top + ")");
         
         // Legend
+        // todo : 8 + offset
         this.createLegend(8, LibrariesMap.pieLgColorScale, pieLgInfo.legendTexts);
+        this.createLegend(pieChartDim.left1*0.75, LibrariesMap.piePubColorScale, piePubInfo.legendTexts);
+        this.createLegend(pieChartDim.left2*0.8, LibrariesMap.pieFormColorScale, pieFormInfo.legendTexts);
 
         return panel;
     }
@@ -159,7 +164,7 @@ LibrariesMap = class LibrariesMap {
         var legend = this.pieSvg.append("g")
             .attr("transform", "translate(" + leftOffset + ", 65)")
             .selectAll(".colors")
-            .data(colorsScale.domain())//
+            .data(colorsScale.domain())
             .enter();
 
         legend.append("rect")
@@ -171,12 +176,15 @@ LibrariesMap = class LibrariesMap {
                 .attr("fill", (d) => colorsScale(d));
 
         legend.append("text")
-            .attr("x", 12)
-            .attr("y", (d, i) => 15*i + 9)
+            .attr("x", 11)
+            .attr("y", (d, i) => 15*i + 8)
+            .style("font-size", "10px")
             .text(function(d) {return pieLegendTexts[d] });
     }
 
     static pieLgColorScale = d3.scaleOrdinal().domain(pieLgInfo.domain).range(pieLgInfo.colorRange);
+    static piePubColorScale = d3.scaleOrdinal().domain(piePubInfo.domain).range(piePubInfo.colorRange);
+    static pieFormColorScale = d3.scaleOrdinal().domain(pieFormInfo.domain).range(pieFormInfo.colorRange);
 
     // Tool tip to display the library's name
     static nameTooltip = d3.select("body").append("div").attr("class", "libNameTooltip");
@@ -191,10 +199,15 @@ LibrariesMap = class LibrariesMap {
     }
 
     static updatePieCharts(panel, libData) {
-        //// Pie charts
+        // Languages Pie chart
         var pieLgGroup = panel.select("#pie-svg").select("#pieLg-group");
         LibrariesMap.updateSinglePieChart(libData.langues, pieLgGroup, LibrariesMap.pieLgColorScale);
-        // TODO OTHERS
+        // Public Pie chart
+        var piePubGroup = panel.select("#pie-svg").select("#piePub-group");
+        LibrariesMap.updateSinglePieChart(libData.public, piePubGroup, LibrariesMap.piePubColorScale);
+        // Formats Pie chart
+        var pieFormGroup = panel.select("#pie-svg").select("#pieForm-group");
+        LibrariesMap.updateSinglePieChart(libData.formats, pieFormGroup, LibrariesMap.pieFormColorScale);
     }
 
     static updateSinglePieChart(libData, pieGroup, colorsScale) {
@@ -378,7 +391,7 @@ function updatePanel(panel, biblio) {
         
     panel.select("#lib-name").text("Bibliothèque " + biblio.nom);
     panel.select("#nb-h").text("Nombre d'heures d'ouverture par semaine : " + biblio.heuresOuverture + " h/sem");
-    panel.select("#surf").text("Surface par 1000 habitants : " + normalized(biblio, biblio.superficie, 1000) + " m2");
+    panel.select("#surf").text("Surface moyenne pour 1000 habitants : " + normalized(biblio, biblio.superficie, 1000) + " m2");
     panel.select("#nb-titres").text("Nombre de titres par habitant : " + normalized(biblio, biblio.inventaire));
     panel.select("#nb-freq").text("Nombre de visites par habitant : " + normalized(biblio, biblio.frequentations));
 
