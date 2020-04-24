@@ -16,17 +16,13 @@ ConnectedDotPlot = class ConnectedDotPlot {
     /***** Create Year Selection DropDown  *****/
     createYearDropDown(data, x, y, group, height, libDropDown, lollipopsGroup) {
         this.yearDropdown = d3.select("#selectYear")
+            .property('value', "2018")
             .on("change", function() {
                 ConnectedDotPlot.selectedYear = this.value;
                 var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
                 ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
-                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup);
-            })
-            .selectAll("option")
-            .data(data)
-            .enter().append("option")
-            .attr("value", function (d) { return d.year; })
-            .text(function (d) { return d.year; });            
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, height, group, lollipopsGroup);
+            })         
     };
         
     /***** Create Library Selection DropDown  *****/
@@ -44,7 +40,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var libDropdown = d3.select("#selectLibrary")
             .on("change", function() {
                 ConnectedDotPlot.selectedLibName = this.value;
-                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup);
+                ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, height, group, lollipopsGroup);
             });
 
         libDropdown.selectAll("option")
@@ -193,25 +189,33 @@ ConnectedDotPlot = class ConnectedDotPlot {
     }
 
     /***** Library selection function - updates the connected dot plot *****/
-    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, group, lollipopsGroup) {
+    static updateDataLibrary(data, selectedYear, selectedLibName,  x, y, height, group, lollipopsGroup) {
         var libData = ConnectedDotPlot.selectedLibraryData(data, selectedYear, selectedLibName);
-        /***** Update Axis domains *****/
-        ConnectedDotPlot.domainX(x, libData);
-        ConnectedDotPlot.domainY(y, libData);
-        
-        /***** Update Lollipops *****/
-        ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y)
-
-        var xAxis = d3.axisBottom(x);
-        var yAxis = d3.axisLeft(y).ticks(5);
-
-        group.select(".x.axis")
+        if(libData.length > 0) {
+            /***** Update Axis domains *****/
+            ConnectedDotPlot.domainX(x, libData);
+            ConnectedDotPlot.domainY(y, libData);
+            
+            /***** Update Lollipops *****/
+            ConnectedDotPlot.updateLollipops(lollipopsGroup, libData, x, y)
+            
+            var xAxis = d3.axisBottom(x);
+            var yAxis = d3.axisLeft(y).ticks(5);
+            
+            group.select(".x.axis")
             .call(xAxis);
             
-        group.select(".y.axis")
+            group.select(".y.axis")
             .call(yAxis);
+            
+            group.select("#libNameLabel").text(selectedLibName);
+            
+        } else {
+            // If the previous selected library doesn't exist for the selected year 
+            group.select("#libNameLabel").text("");
+            lollipopsGroup.selectAll("*").remove();
 
-        group.select("#libNameLabel").text(selectedLibName);
+        }
     }
 
     
@@ -282,7 +286,6 @@ ConnectedDotPlot = class ConnectedDotPlot {
     }
 
 }
-
 
 
 /**

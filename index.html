@@ -190,20 +190,27 @@
         <p class="normal-text">Maintenant que vous avez une meilleure idée de ce que les bibliothèques de la ville ont à offrir, 
           du type de public qu’on y retrouve et de ce que ces personnes y font, voyez-vous le lien entre ces différents aspects? 
           C’est le but de la visualisation qui vous est proposée dans cette dernière partie : faire ressortir les liens (s’il en existe) 
-          en comparant  l’inventaire des bibliothèques aux emprunts. Il est possible d’en faire une étude comparative générale ou de se 
-          focaliser sur une bibliothèque en particulier.
+          en comparant l’inventaire des bibliothèques aux emprunts. Il est possible d’en faire une étude comparative générale des données
+          de l'année 2018 ou de se focaliser sur une bibliothèque en particulier.
         </p>
         <!-- Dataviz 5.1 -->
         <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts pour une bibliothèque</p>
           <div class="label"> <br> Sélectionner une année</div>
-          <select id="selectYear" ></select>
+          <select id="selectYear" >
+              <option selected>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>2014</option>
+              <option>2013</option>
+          </select>
           <div class="label"> <br> Sélectionner une bibliothèque</div>
           <select id="selectLibrary" ></select>
           <div class="flex-div">
             <div id="ConnectedDotPlot" class="dataviz"></div>
           </div>
         <!-- Dataviz 5.2 -->
-        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts en vue d'ensemble</p>
+        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts en vue d'ensemble (2018)</p>
         <div class="flex-div">
           <div id="MultipleConnectedDotPlots" class="dataviz"></div>
         </div>
