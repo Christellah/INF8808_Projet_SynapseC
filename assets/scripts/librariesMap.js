@@ -10,7 +10,7 @@ const mapPos = {
 
 const pieLgInfo = {
     domain : ["francais", "anglais", "autres"],
-    colorRange : ["#fe6135", "#f426a5", "#196aff"],
+    colorRange : ["#196aff", "#fe6135", "#f426a5"],
     legendTexts : {"francais":"Français", "anglais":"Anglais", "autres":"Autres"}
 }
 const piePubInfo = {
@@ -181,7 +181,8 @@ LibrariesMap = class LibrariesMap {
                 .attr("width", 8)
                 .attr("height", 8)
                 .attr("stroke","black")
-                .attr("fill", (d) => colorsScale(d));
+                .attr("fill", (d) => colorsScale(d))
+                .style("opacity", 0.85);
 
         legend.append("text")
             .attr("x", 11)
@@ -190,6 +191,7 @@ LibrariesMap = class LibrariesMap {
             .text(function(d) {return pieLegendTexts[d] });
     }
 
+    // Pie charts color scale
     static pieLgColorScale = d3.scaleOrdinal().domain(pieLgInfo.domain).range(pieLgInfo.colorRange);
     static piePubColorScale = d3.scaleOrdinal().domain(piePubInfo.domain).range(piePubInfo.colorRange);
     static pieFormColorScale = d3.scaleOrdinal().domain(pieFormInfo.domain).range(pieFormInfo.colorRange);
@@ -197,15 +199,16 @@ LibrariesMap = class LibrariesMap {
     // Tool tip to display the library's name
     static nameTooltip = d3.select("body").append("div").attr("class", "libNameTooltip");
 
-    
+    // Display the info panel
     static displayInfoPanel(panel, data) {
         // Updatte and display panel
-        updatePanel(panel, data);
+        LibrariesMap.updatePanel(panel, data);
         panel.style("display", "block");
         // Update pie charts
         LibrariesMap.updatePieCharts(panel, data);
     }
 
+    // Update pie charts
     static updatePieCharts(panel, libData) {
         // Languages Pie chart
         var pieLgGroup = panel.select("#pie-svg").select("#pieLg-group");
@@ -216,8 +219,10 @@ LibrariesMap = class LibrariesMap {
         // Formats Pie chart
         var pieFormGroup = panel.select("#pie-svg").select("#pieForm-group");
         LibrariesMap.updateSinglePieChart(libData.formats, pieFormGroup, LibrariesMap.pieFormColorScale);
+        console.log(libData.public)
     }
 
+    // Update a single pie chart
     static updateSinglePieChart(libData, pieGroup, colorsScale) {
         pieGroup.selectAll("*").remove();
         
@@ -239,20 +244,31 @@ LibrariesMap = class LibrariesMap {
             .attr('fill', function(d) { return(colorsScale(d.data.key)); })
             .attr("stroke", "black")
             .style("stroke-width", "2px")
-            .style("opacity", 0.7);
+            .style("opacity", 0.85);
     }
 
-    /**
-     * Updates the circles positions
-     * @param {*} libMap : the map
-     */
+    // Update the info panel
+    static updatePanel(panel, biblio) {
+        // Get the value normalized by the population in the borough
+        var normalized = function (biblio, value, ratio=1) { 
+            if (!value) return "-";
+            return (value / biblio.populationArrondissement * ratio).toFixed(2); }
+            
+        panel.select("#lib-name").text("Bibliothèque " + biblio.nom);
+        panel.select("#nb-h").text("Nombre d'heures d'ouverture par semaine : " + biblio.heuresOuverture + " h/sem");
+        panel.select("#surf").text("Surface moyenne pour 1000 habitants : " + normalized(biblio, biblio.superficie, 1000) + " m2");
+        panel.select("#nb-titres").text("Nombre de titres par habitant : " + normalized(biblio, biblio.inventaire));
+        panel.select("#nb-freq").text("Nombre de visites par habitant : " + normalized(biblio, biblio.frequentations));
+
+        panel.select("#services").text("Types de titres offerts :");
+    }
+
+    // Update circles on map 
     static updateCircles(libMap) {
         d3.selectAll("circle")
         .attr("cx", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).x })
         .attr("cy", function(d){ return libMap.latLngToLayerPoint([d.localisation.latitude, d.localisation.longitude]).y })
-    }
-    
-    
+    } 
 }
 
 /**
@@ -308,7 +324,6 @@ function createLibInfoSources(data) {
 
     return sources;
 }
-
 
 
 /**
@@ -385,23 +400,4 @@ function extractLocalisation(data) {
  */
 function normalizedFrequentations(biblio) {
     return (biblio.frequentations / biblio.populationArrondissement).toFixed(1);
-}
-/**
- * Updates the info panel html
- * @param {*} panel
- * @param {*} biblio
- */
-function updatePanel(panel, biblio) {
-    // Get the value normalized by the population in the borough
-    var normalized = function (biblio, value, ratio=1) { 
-        if (!value) return "-";
-        return (value / biblio.populationArrondissement * ratio).toFixed(2); }
-        
-    panel.select("#lib-name").text("Bibliothèque " + biblio.nom);
-    panel.select("#nb-h").text("Nombre d'heures d'ouverture par semaine : " + biblio.heuresOuverture + " h/sem");
-    panel.select("#surf").text("Surface moyenne pour 1000 habitants : " + normalized(biblio, biblio.superficie, 1000) + " m2");
-    panel.select("#nb-titres").text("Nombre de titres par habitant : " + normalized(biblio, biblio.inventaire));
-    panel.select("#nb-freq").text("Nombre de visites par habitant : " + normalized(biblio, biblio.frequentations));
-
-    panel.select("#services").text("Types de titres offerts :");
 }
