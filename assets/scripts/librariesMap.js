@@ -97,10 +97,19 @@ LibrariesMap = class LibrariesMap {
             .attr("r", function(d) { return circleRadiusScale(normalizedFrequentations(d)); })
             .attr("class", "lib-circle")
             .on("mouseover", function(d) {
+                // Compute cirlcle positioning for tooltip
+                var circleMatrix = this.getScreenCTM().translate(+ this.getAttribute("cx"), + this.getAttribute("cy"));
+                var cirlceRadius = +this.getAttribute("r");
+                // Display tooltip
                 return LibrariesMap.nameTooltip.style("visibility", "visible")
-                    .style("top", (d3.event.pageY-30) + "px")
-                    .style("left", (d3.event.pageX-30) + "px")
-                    .html(d.nom);
+                    .html(d.nom)
+                    .style("padding", "0 5px")
+                    .style("left", function () {
+                        // Tip div width to center tooltip
+                        var tipWidthOffset = this.getBoundingClientRect().width / 2;
+                        return (circleMatrix.e + window.pageXOffset - tipWidthOffset) + "px";
+                    } )
+                    .style("top", (circleMatrix.f + window.pageYOffset - cirlceRadius-30) + "px")
             })
             .on("mouseout", function(){ return LibrariesMap.nameTooltip.style("visibility", "hidden"); })
             .on("click", function(d) {
@@ -152,7 +161,6 @@ LibrariesMap = class LibrariesMap {
             .attr("transform", "translate(" + pieChartDim.left2 + "," + pieChartDim.top + ")");
         
         // Legend
-        // todo : 8 + offset
         this.createLegend(8, LibrariesMap.pieLgColorScale, pieLgInfo.legendTexts);
         this.createLegend(pieChartDim.left1*0.75, LibrariesMap.piePubColorScale, piePubInfo.legendTexts);
         this.createLegend(pieChartDim.left2*0.8, LibrariesMap.pieFormColorScale, pieFormInfo.legendTexts);
@@ -309,7 +317,7 @@ function createLibInfoSources(data) {
  * @returns {int}
  */
 function convertToInt(value) {
-    return value ? parseInt(value.replace(",", "").replace(" ", "")) : undefined;
+    return value ? parseInt(value.replace(",", "").replace(/ /g, "")) : undefined;
 }
 /**
  * Converts string to float
@@ -317,7 +325,7 @@ function convertToInt(value) {
  * @returns {float}
  */
 function convertToFloat(value) {
-    return parseFloat(value.replace(",", "").replace(" ", ""));
+    return parseFloat(value.replace(",", "").replace(/ /g, ""));
 }
 /**
  * Extracts the public types : {"adultes": 76620, "jeunes": 61301, "autres": 0}
