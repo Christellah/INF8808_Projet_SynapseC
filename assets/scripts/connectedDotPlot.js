@@ -1,5 +1,4 @@
 /***** ConnectedDotPlot Class  *****/
-
 ConnectedDotPlot = class ConnectedDotPlot {
 
     static selectedYear = "";
@@ -13,19 +12,17 @@ ConnectedDotPlot = class ConnectedDotPlot {
     };
 
     /***** Create Year Selection DropDown  *****/
-    createYearDropDown(data, x, y, group, libDropDown, lollipopsGroup) {
+    onYearDropDownUpdate(data, x, y, group, libDropDown, lollipopsGroup) {
         this.yearDropdown = d3.select("#selectYear")
-            .property('value', "2018")
             .on("change", function() {
                 ConnectedDotPlot.selectedYear = this.value;
-                var newLibNames = ConnectedDotPlot.updateDataYear(data, this.value);
-                ConnectedDotPlot.updateLibraryDropdown(newLibNames, libDropDown);
+                ConnectedDotPlot.selectedLibName = libDropDown.property("value");
                 ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup, false);
             })         
     };
 
     /***** Create Library Selection DropDown  *****/
-    createLibraryDropDown(data, year, x, y, group, lollipopsGroup) {
+    onLibraryDropDownUpdate(data, year, x, y, group, lollipopsGroup) {
         var librariesNames = [];
         data.forEach(function(c) {
             if(c.year == year) {
@@ -38,6 +35,7 @@ ConnectedDotPlot = class ConnectedDotPlot {
         var svg = d3.select("#ConnectedDotPlot")
         var libDropdown = d3.select("#selectLibrary")
             .on("change", function() {
+                ConnectedDotPlot.selectedYear = d3.select("#selectYear").property("value");
                 ConnectedDotPlot.selectedLibName = this.value;
                 ConnectedDotPlot.updateDataLibrary(data, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup, false);
             });
@@ -149,30 +147,6 @@ ConnectedDotPlot = class ConnectedDotPlot {
             return d3.max(libData, function(d) { return d.max; }); })]);
     }
     
-    /***** This updates the library dropdown list when a new year is selected *****/
-    static updateLibraryDropdown(newLibrariesNames, libDropDown) {
-        libDropDown.selectAll("option").remove();
-        libDropDown.selectAll("option")
-            .data(newLibrariesNames)
-            .enter().append("option")
-            .attr("value", function (d) { return d.name; })
-            .text(function (d) { return d.name; });
-    }
-    
-    /***** Year selection function *****/    
-    static updateDataYear(data, year){
-        var librariesNames = [];
-        data.forEach(function(c) {
-            if(c.year == year) {
-                c.libraries.forEach(function(d) {
-                    librariesNames.push({"name" : d.name});
-                });
-            };
-        });
-        
-        return librariesNames;
-    };
-
     /***** Find current selected library data *****/
     static selectedLibraryData(data, selectedYear, selectedLibName) {
         var libData = [];

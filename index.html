@@ -5,6 +5,7 @@
   <title>INF8808 - Projet Synapse C</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/libMap.css">
   <link rel="stylesheet" href="assets/css/heatmap.css">
   <link rel="stylesheet" href="assets/css/connectedDotPlot.css">
   <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
@@ -27,7 +28,7 @@
     
     <!-- Title -->
     <section class="page-title">
-      <h2>Les bibliothèques de Montréal : <br/>Qu’ont-elles à nous dire ?</h2>
+      <h1>Les bibliothèques de Montréal : <br/>Qu’ont-elles à nous dire ?</h1>
     </section>
 
     <!-- Visualizations -->
@@ -48,18 +49,15 @@
             où sont situées ces différentes bibliothèques, ainsi que quelques informations (datant de 2018) les concernant lorsque l’une d’entre
             elle est sélectionnée. Cette section permet de se faire une idée de la popularité des bibliothèques et des services qu’elles offrent.
           </p>
-          <p class="dataviz-name">Carte de Montréal</p> 
           <div id="libraries_map" class="dataviz">
             <div id="panel">
               <h1 id="lib-name">Nom bibliothèque</h1>
-              <!-- <button id="close-button">CLOSE</button> -->
               <ul class="info-list">
                 <li id="nb-h">Nombre d'heures d'ouverture par semaine : </li>
                 <li id="surf">Surface moyenne par habitant : </li>
                 <li id="nb-titres">Nombre de titres par habitant : </li>
                 <li id="nb-freq">Nombre de visites par habitant : </li>
                 <li id="services">Types de titres offerts : </li>
-                <!-- <svg id="serv-svg"></svg> -->
               </ul>
             </div>
           </div>
@@ -79,10 +77,9 @@
             Ci-dessous se trouve une carte de chaleur présentant pour les bibliothèques l’évolution du nombre d’emprunts par années, 
             permettant de comparer les évolutions et valeurs entre bibliothèques, mais également au cours du temps pour une bibliothèque précise.
           </p>
-          <p class="dataviz-name">Heatmap - Évolution des emprunts</p>
 
           <!-- INFO -->
-          <div class="alert alert-primary" role="alert">
+          <div class="alert alert-light" role="alert">
             <div class="row">
                 <div class="col-1 text-center">
                   <i class="fas fa-info"></i>
@@ -90,7 +87,7 @@
                 <div class="col">
                   Les bibliothèques sont ordonnées par ordre croissant du nombre total d'emprunts sur les 6 années cumulées.<br />
                   L'echelle de couleur varie selon le filtre appliqué (type de format ou type de public). <br />
-                  Seul un des deux filtres ne peut être appliqué a la fois.
+                  Seul un des deux filtres peut être appliqué a la fois.
                 </div>
             </div>
           </div>
@@ -139,8 +136,6 @@
             similaire à la précédente, et permet d’observer comment évolue le nombre de personnes visitant les bibliothèques au cours des mois.
           </p>
           
-          <p class="dataviz-name">Heatmap - Évolution des fréquentations</p>
-
           <!-- INFO -->
           <div class="alert alert-primary" role="alert">
             <div class="row">
@@ -172,7 +167,6 @@
           <p class="normal-text">À l’image de la ville, les bibliothèques ont des publics très variés. On propose alors dans cette partie de 
             découvrir comment cette répartition de l’inventaire pour chaque type de public (jeunes, adultes, aînés, etc) a évolué entre 2013 et 2018. 
           </p>
-          <p class="dataviz-name">Stacked bar chart - Évolution de la répartition des emprunts selon les types de public</p>
           Bibliothèque selectionnée :
             <select id="selectBiblio">
             </select>
@@ -184,7 +178,6 @@
           <p class="normal-text">Ensuite, l’analyse se porte sur la comparaison de l’inventaire par type de public entre les bibliothèques en 2018. 
             Ceci permet de mieux repérer les bibliothèques qui sont davantage spécialisées pour un type de public en particulier.
           </p>
-          <p class="dataviz-name">Stacked bar chart - Répartition des emprunts selon les types de public en 2018</p>
             <div class="flex-div">
               <div id="emprunts_biblio_2018" class="dataviz"></div>
               <div id="emprunts_biblio_2018_legend"></div>
@@ -198,7 +191,6 @@
             Ici, on fait ressortir l’impact des services électroniques pour les emprunts, renouvellements et retours en comparaison avec 
             les services en personne, ainsi que l’influence des prêts de livres électroniques par rapport aux livres physiques.
           </p>
-            <p class="dataviz-name">Heatmap - Variation de l'utlisation du numérique et du physique</p>
             <div class="flex-div">
 
               <div class="flex-div vert">
@@ -241,7 +233,6 @@
           de l'année 2018 ou de se focaliser sur une bibliothèque en particulier.
         </p>
         <!-- Dataviz 5.1 -->
-        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts pour une bibliothèque</p>
           <div class="label"> <br> Sélectionner les données à visualiser</div>
             <div id="dataTypeRadioButton">
             <input id="dataTypeButtonPublic" class="radioButton" type="radio" name="dataTypeButton" value="Public" checked> Public<br>
@@ -262,7 +253,6 @@
             <div id="ConnectedDotPlot" class="dataviz"></div>
           </div>
         <!-- Dataviz 5.2 -->
-        <p class="dataviz-name">Connected dot plot - Comparaison entre inventaire et emprunts en vue d'ensemble (2018)</p>
         <div class="flex-div">
           <div id="MultipleConnectedDotPlots" class="dataviz"></div>
         </div>
@@ -274,8 +264,9 @@
   <!-- Footer -->
   <footer class="footer">
     <p>Ce projet de visualisation de données a été réalisé dans le cadre du cours INF8808 offert à 
-      Polytechnique Montréal, et proposé par Synapse C. <br/>
-      Hiver 2020
+      Polytechnique Montréal, et mandaté par Synapse C. <br/>
+      Hiver 2020 <br/>
+      Nos données sont issues du portail des données ouvertes de la ville de Montréal : http://donnees.ville.montreal.qc.ca/dataset/bibliotheques-montreal-statistiques.
     </p>
   </footer>
 

@@ -25,18 +25,30 @@ promises.push(d3.json("./data/prets_public.json"));
 // Numérique/Automates (public)
 promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
 // Collection : public
-promises.push(d3.json("/data/collection_livres.json")); 
+promises.push(d3.json("./data/collection_livres.json")); 
 // Collection : format
-promises.push(d3.json("/data/collection_format.json")); 
+promises.push(d3.json("./data/collection_format.json")); 
 
 
 Promise.all(promises).then(function (results) {
-    /** 
-     * Heatmaps
+
+    /*********************
+     * M1 - Libraries Map
+     *********************/
+    // Load Libraries info data
+    var libInfoSources = createLibInfoSources(results[dataIndex.biblio_info]);
+    
+    // Create the libraries map
+    var librariesMap = new LibrariesMap("libraries_map", libInfoSources);
+
+
+
+    /*****************************************************************
+     * M2 - Heatmaps
      * - Frequentation
      * - Emprunts
      * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
-     */
+     *****************************************************************/
     // Number format
     var numberFormat = wNumb({
         thousand: ' ',
@@ -47,7 +59,7 @@ Promise.all(promises).then(function (results) {
         width = 500 - margin.left - margin.right,
         height = 800 - margin.top - margin.bottom;
 
-    /** Frequentation */
+    /** M2.1 - HeatMap Frequentation */
     // Data
     frequentationSources = createFrequentationSources(results[dataIndex.frequentations]);
     
@@ -87,7 +99,7 @@ Promise.all(promises).then(function (results) {
         
     })
     
-    /** HeatMap Emprunts */
+    /** M2.2 - HeatMap Emprunts */
     // Data
     var empruntsSources = createEmpruntsSources(results[dataIndex.emp_format]);
     var empruntsPublicSources = createEmpruntsSources(results[dataIndex.emp_public]);
@@ -152,100 +164,13 @@ Promise.all(promises).then(function (results) {
                 .selectAll(".heatmap-rect")
                 .style("fill", function (d) { return heatmapEmprunts.colorScale(d.emprunts[value]) });
         }
-
     });
-
-    /** 
-     * Libraries Map
-     */
-    // Load Libraries info data
-    var libInfoSources = createLibInfoSources(results[dataIndex.biblio_info]);
-    
-    // Create the libraries map
-    var librariesMap = new LibrariesMap("libraries_map", libInfoSources);
     
 
-    /*
-    * Maquette 5 - Connected Dot Plot
-     */ 
-    var marginCD = { top: 10, right: 10, bottom: 100, left: 60 };
-    var widthCD = 300 - marginCD.left - marginCD.right;
-    var heightCD = 300 - marginCD.top - marginCD.bottom;
-    
-    /***** Scales *****/
-    var x = d3.scaleBand().range([0, widthCD]);
-    var y = d3.scaleLinear().range([heightCD, 0]);
-    
-    var svg = d3.select("#ConnectedDotPlot")
-    .append("svg")
-    .attr("width", widthCD + marginCD.left + marginCD.right)
-    .attr("height", heightCD + marginCD.top + marginCD.bottom);
-    
-    var group = svg.append("g")
-    .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
-    
-    /***** Get json files data *****/
-    var collectionFormat = results[dataIndex.collection_format];
-    var pretsFormat = results[dataIndex.emp_format];
-    var collectionLivres = results[dataIndex.collection_livres];
-    var pretsPublic = results[dataIndex.emp_public];
-    
-    // Public data type is displayed by default
-    var connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
-    
-    /*******5.1*******/   
-    var lollipopsGroup = group.append("g").attr("class", "lollipops");
-    var connectedDotPlot = new ConnectedDotPlot(connectedDotPlotSources);
-    var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
-    connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
-    
-    var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
-    ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
-    var svgLegend = d3.select("#ConnectedDotPlot")
-    .append("svg")
-    .attr("width", widthCD + marginCD.left + marginCD.right)
-    .attr("height", heightCD + marginCD.top + marginCD.bottom);
-    
-    ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
-    
-    /*******5.2*******/
-    var groupMultipleList = [];
-    var lollipopsGroupMultipleList = [];
-    connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
-        var svgMultiple = d3.select("#MultipleConnectedDotPlots")
-        .append("svg")
-        .attr("width", widthCD + marginCD.left + marginCD.right)
-        .attr("height", heightCD + marginCD.top + marginCD.bottom);
-        
-        var groupMultiple = svgMultiple.append("g")
-        .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
-        groupMultipleList[i] = groupMultiple;
-        var lollipopsGroupMultiple = groupMultiple.append("g").attr("class", "lollipops");
-        lollipopsGroupMultipleList[i] = lollipopsGroupMultiple;
-        ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
-    });
-    /******* Switching between format and public *******/
-    d3.select("#dataTypeButtonPublic").property("checked", "true");
-    d3.selectAll(("input[name='dataTypeButton']")).on("change", function() {
-        if(this.value == "Public") {
-            connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
-        } else if(this.value == "Format") {
-            connectedDotPlotSources = createConnectedDotPlotSourcesFormat(collectionFormat, pretsFormat);
-        }
-        /***** Main graph and multiple graphs - Update domainX, domainY, dropdowns and lollipops *****/
-        var libDropDown = connectedDotPlot.createLibraryDropDown(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
-        connectedDotPlot.createYearDropDown(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
-
-        var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
-        ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, initialData.libraries[0].name, x, y, group, lollipopsGroup, false);
-        
-        connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
-            ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultipleList[i], lollipopsGroupMultipleList[i], true);
-        });
-    });
-         
-    
-    /* Frequentation par public */
+           
+    /********************************
+     * M3 - Frequentation par public
+     ********************************/
     // Data
     let publicLoan2018Sources = createPublicLoan2018Sources(results[dataIndex.emp_public]);
     const bibliotheques = d3.set(publicLoan2018Sources.map(d => d.bibliotheque));
@@ -258,6 +183,7 @@ Promise.all(promises).then(function (results) {
         .append('option')
         .text((d) => d);
 
+    /** M3.1 - Public en 2018 */
     // Tip
     let stackedBarPublic2018Tip = function(d) {
         let publicType = "";
@@ -286,6 +212,8 @@ Promise.all(promises).then(function (results) {
 
     stackedBarPublic2018.updateData2018(publicLoan2018Sources.reverse(), -1);
 
+    /** M3.2 - Evolution public */
+    // Tip
     let stackedBarPublicTip = function(d) {
         let publicType = "";
         switch (d.key) {
@@ -320,14 +248,13 @@ Promise.all(promises).then(function (results) {
         stackedBarPublic.updateData(sources.reverse(), -1);
     })
 
-    //////////////////////////////////////////
-    /**
-     * Heatmaps_Numerique
-     * - Prets
-     * - Renouvellements
+
+    
+    /*****************************************************************
+     * M4 - Heatmaps Numerique vs Physique
      * @see https://www.d3-graph-gallery.com/graph/heatmap_basic.html
-     */
-        // Number format
+     *****************************************************************/
+    // Number format
     var numberFormat = wNumb({
             thousand: ' ',
         });
@@ -337,13 +264,11 @@ Promise.all(promises).then(function (results) {
         width = 120 - margin.left - margin.right,
         height = 1400 - margin.top - margin.bottom;
 
-    /** Frequentation */
     // Data
     numeriqueSources = createNumeriqueSources(results[dataIndex.emp_num_phys]);
 
     // Tip function
     var numeriqueTooltip = function (data) {
-
         tooltipText = "Bibliothèque: " + data.bibliotheque + '<br>' +
                      "Annee: " + data.year + '<br>' +
                     "Pourcentage de variation: ";
@@ -354,14 +279,12 @@ Promise.all(promises).then(function (results) {
         }else {
             tooltipText += "Information indisponible"
         }
-
         return tooltipText;
     };
 
     var tableNameList = ["pretsPhysique", "pretsAuto", "renouvPhysique", "renouvAuto", "locationPhysique", "locationNumerique"];
 
     // Create the heatmap
-
     tableNameList.forEach( (name, index) => {
 
         //On définit les marges en fonction de l'index du graphe
@@ -386,5 +309,88 @@ Promise.all(promises).then(function (results) {
 
 
 
-})
+    /************************************************
+     * M5 - Connected Dot Plot - Collection vs Loans
+     ************************************************/ 
+    var marginCD = { top: 10, right: 10, bottom: 100, left: 60 };
+    var widthCD = 300 - marginCD.left - marginCD.right;
+    var heightCD = 300 - marginCD.top - marginCD.bottom;
+    
+    /***** Scales *****/
+    var x = d3.scaleBand().range([0, widthCD]);
+    var y = d3.scaleLinear().range([heightCD, 0]);
+    
+    var svg = d3.select("#ConnectedDotPlot")
+    .append("svg")
+    .attr("width", widthCD + marginCD.left + marginCD.right)
+    .attr("height", heightCD + marginCD.top + marginCD.bottom);
+    
+    var group = svg.append("g")
+    .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+    
+    /***** Get json files data *****/
+    var collectionFormat = results[dataIndex.collection_format];
+    var pretsFormat = results[dataIndex.emp_format];
+    var collectionLivres = results[dataIndex.collection_livres];
+    var pretsPublic = results[dataIndex.emp_public];
+    
+    // Public data type is displayed by default
+    var connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
+    
+    /******* M5.1 *******/   
+    var lollipopsGroup = group.append("g").attr("class", "lollipops");
+    var connectedDotPlot = new ConnectedDotPlot(connectedDotPlotSources);
+    var libDropDown = connectedDotPlot.onLibraryDropDownUpdate(connectedDotPlotSources, connectedDotPlotSources[5].year, x, y, group, lollipopsGroup);
+    connectedDotPlot.onYearDropDownUpdate(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+    
+    var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
+    ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, initialData.libraries[0].name,  x, y, group, heightCD, lollipopsGroup, false);
+    
+    var svgLegend = d3.select("#ConnectedDotPlot")
+        .append("svg")
+        .attr("width", widthCD + marginCD.left + marginCD.right)
+        .attr("height", heightCD + marginCD.top + marginCD.bottom);
+    ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
+    
+    /******* M5.2 *******/
+    var groupMultipleList = [];
+    var lollipopsGroupMultipleList = [];
+    connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
+        var svgMultiple = d3.select("#MultipleConnectedDotPlots")
+        .append("svg")
+        .attr("width", widthCD + marginCD.left + marginCD.right)
+        .attr("height", heightCD + marginCD.top + marginCD.bottom);
+        
+        var groupMultiple = svgMultiple.append("g")
+        .attr("transform", "translate(" + marginCD.left + "," + marginCD.top + ")");
+        groupMultipleList[i] = groupMultiple;
+        var lollipopsGroupMultiple = groupMultiple.append("g").attr("class", "lollipops");
+        lollipopsGroupMultipleList[i] = lollipopsGroupMultiple;
+        ConnectedDotPlot.createLibConnectedDotPlot(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultiple, heightCD, lollipopsGroupMultiple, true);
+    });
 
+    /******* Dropdown and swith default values *******/
+    d3.select("#dataTypeButtonPublic").property("checked", "true");
+    d3.select("#selectYear").property('value', "2018");
+
+    /******* Switching between format and public *******/
+    d3.selectAll(("input[name='dataTypeButton']")).on("change", function() {
+        if(this.value == "Public") {
+            connectedDotPlotSources = createConnectedDotPlotSourcesPublic(collectionLivres, pretsPublic);
+        } else if(this.value == "Format") {
+            connectedDotPlotSources = createConnectedDotPlotSourcesFormat(collectionFormat, pretsFormat);
+        }
+
+        /***** Main graph and multiple graphs - Update domainX, domainY, dropdowns and lollipops *****/
+        ConnectedDotPlot.selectedYear = d3.select("#selectYear").property("value");
+        ConnectedDotPlot.selectedLibName = d3.select("#selectLibrary").property("value");
+        var libDropDown = connectedDotPlot.onLibraryDropDownUpdate(connectedDotPlotSources, ConnectedDotPlot.selectedYear, x, y, group, lollipopsGroup);
+        connectedDotPlot.onYearDropDownUpdate(connectedDotPlotSources, x, y, group, libDropDown, lollipopsGroup);
+        ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, ConnectedDotPlot.selectedYear, ConnectedDotPlot.selectedLibName, x, y, group, lollipopsGroup, false);
+        
+        var initialData = connectedDotPlotSources[connectedDotPlotSources.length - 1];
+        connectedDotPlotSources[connectedDotPlotSources.length - 1].libraries.forEach(function(d, i) {
+            ConnectedDotPlot.updateDataLibrary(connectedDotPlotSources, initialData.year, d.name,  x, y, groupMultipleList[i], lollipopsGroupMultipleList[i], true);
+        });
+    });
+})

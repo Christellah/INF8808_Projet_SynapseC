@@ -81,6 +81,10 @@ body {
   text-align: center;
   font-size: 25px;
 }
+.page-title h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
 
 /***** Normal text *****/
 .normal-text {
@@ -89,18 +93,22 @@ body {
   text-align: justify;
   font-size: 20px;
   text-indent: 50px;
+  padding-bottom: 50px;
 }
 /***** Main sections *****/
 .main-sections {
-  padding-top: 50px;
+  padding-top: 70px;
   margin: auto;
   max-width: 80%;
 }
 .main-sections h2 {
   font-size: 28px;
+  font-weight: bold;
 }
 .main-sections h3 {
+  padding-top: 30px;
   font-size: 21px;
+  font-weight: bold;
 }
 .main-sections .normal-text {
   /* margin-left: 40px; */
@@ -114,29 +122,6 @@ body {
   text-decoration: underline;
 }
 
-.vert {
-    flex-direction: column;
-}
-
-h1 {
-    font-size: 20px;
-    align-content: center;
-    text-align: center;
-}
-
-#h1-1 {
-    margin-left: 220px;
-    margin-right: 70px;
-}
-
-#h1-2 {
-    margin-left: 40px;
-    margin-right: 70px;
-}
-
-#h1-3 {
-    margin-right: 200px;
-}
 
 
 /***** Dataviz *****/
@@ -155,7 +140,8 @@ h1 {
 
 .flex-div {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  padding-bottom: 30px;
 
 }
 
@@ -173,88 +159,26 @@ h1 {
   }
 }
 
-/***** Dataviz - Libraries Map *****/
-#libraries_map { 
-  margin: auto;
-  height: 600px; 
+.vert {
+  flex-direction: column;
 }
 
-.lib-circle {
-  stroke: black;
-  opacity: 0.8;
-  fill: #FE390F;
-  cursor: pointer;
-}
-
-@keyframes circle-flash-animation {
-  from {
-    fill-opacity: 1;
-  }
-  to {
-    fill-opacity: 0.6;
-  }
-}
-
-.circle-selected {
-  animation: circle-flash-animation 1s ease-out infinite;
-  animation-direction: alternate;
-  fill: #591AEF;
-}
-
-#panel {
-  position : relative;
-  padding : 4px;
-  border : 1px solid gray;	
-  border-radius : 4px;
-  background : lightblue;
-  width : 35%;
-  height : 53%;
-  float : right;
-  z-index : 10;
-  margin-top : 2px;
-  margin-right : 2px;
-  cursor : default;
-  display : none;
-  overflow: auto;
-}
-
-#panel button {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  float: right;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  border: 1px solid #d0d0d0;
-  font-size: 0.8em;
-  cursor: pointer;
-  outline: none;
-}
-#panel button:hover {
-  background-color: #ccc;
-}
-
-#panel h1 {
-  margin-top: 8px;
-  font-size: 1.5em;
+h1 {
+  font-size: 20px;
+  align-content: center;
   text-align: center;
-  font-weight: bold;
 }
 
-#panel .info-list {
-  font-size: 1.1em;
-  list-style-position: inside;
-  padding-left: 0px;
-  margin-bottom: 3px !important;
+#h1-1 {
+  margin-left: 220px;
+  margin-right: 70px;
 }
 
-.libNameTooltip {
-  position : absolute;
-  background : white;
-  z-index : 10;
-  visibility : hidden;
-  opacity : 0.8;
+#h1-2 {
+  margin-left: 40px;
+  margin-right: 70px;
+}
+
+#h1-3 {
+  margin-right: 200px;
 }
