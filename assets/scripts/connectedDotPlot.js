@@ -67,8 +67,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
         /***** Append Axis *****/
         var xAxis = d3.axisBottom(x);
         var yAxis = d3.axisLeft(y).ticks(5);
-        if(multiple && libName != data[data.length - 1].libraries[0].name) {
-            yAxis.ticks(0);
+        if(multiple) {
+            yAxis.ticks(3);
         }
         group.append("g")
             .attr("class", "x axis")
@@ -183,8 +183,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
             /***** Update Axis *****/
             var xAxis = d3.axisBottom(x);
             var yAxis = d3.axisLeft(y).ticks(5);
-            if(multiple && selectedLibName != data[data.length - 1].libraries[0].name) {
-                yAxis.ticks(0);
+            if(multiple) {
+                yAxis.ticks(3);
             }
             group.select(".x.axis")
             .call(xAxis)
