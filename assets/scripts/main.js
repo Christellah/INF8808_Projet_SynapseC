@@ -262,7 +262,7 @@ Promise.all(promises).then(function (results) {
     // Margins, size, colors
     var margin = { top: 120, right: 1, bottom: 60, left: 1 },
         width = 110 - margin.left - margin.right,
-        height = 1400 - margin.top - margin.bottom;
+        height = 1100 - margin.top - margin.bottom;
 
     // Data
     numeriqueSources = createNumeriqueSources(results[dataIndex.emp_num_phys]);

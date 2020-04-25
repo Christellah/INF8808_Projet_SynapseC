@@ -4,8 +4,6 @@
     <list default="true" id="711c0579-65c2-437c-bcb0-057a81ae867e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/prets_renouv_numerique_physique.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/prets_renouv_numerique_physique.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <workItem from="1587687805710" duration="148000" />
       <workItem from="1587687968044" duration="457000" />
       <workItem from="1587688468057" duration="266000" />
-      <workItem from="1587848536248" duration="3111000" />
+      <workItem from="1587848536248" duration="3498000" />
     </task>
     <servers />
   </component>
