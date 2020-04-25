@@ -121,19 +121,16 @@ body {
   text-decoration: underline;
 }
 
-.vcenter {
-  padding-top: 50%;
-}
-.vcenter-2 {
-  padding-top: 35%;
-}
-
 #part-2 h2 {
   padding-top: 90px;
 }
 #part-2 .normal-text {
   padding-top: 10px;
   padding-bottom: 5px;
+}
+#part-2-2 .normal-text {
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 #part-3 .normal-text {
@@ -180,6 +177,7 @@ h1 {
   font-size: 20px;
   align-content: center;
   text-align: center;
+  padding-top: 40px;
 }
 
 #h1-1 {
