@@ -23,7 +23,7 @@ promises.push(d3.json("./data/emprunts_format.json"));
 // Emprunts : public
 promises.push(d3.json("./data/prets_public.json"));
 // Numérique/Automates (public)
-promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
+promises.push(d3.json("./data/data_test.json"));
 // Collection : public
 promises.push(d3.json("./data/collection_livres.json")); 
 // Collection : format
@@ -261,7 +261,7 @@ Promise.all(promises).then(function (results) {
 
     // Margins, size, colors
     var margin = { top: 120, right: 1, bottom: 60, left: 1 },
-        width = 120 - margin.left - margin.right,
+        width = 110 - margin.left - margin.right,
         height = 1400 - margin.top - margin.bottom;
 
     // Data
@@ -270,7 +270,7 @@ Promise.all(promises).then(function (results) {
     // Tip function
     var numeriqueTooltip = function (data) {
         tooltipText = "Bibliothèque: " + data.bibliotheque + '<br>' +
-                     "Annee: " + data.year + '<br>' +
+                     "Période: " + data.year + '<br>' +
                     "Pourcentage de variation: ";
 
         if(!isNaN(data.delta)) {
@@ -289,15 +289,15 @@ Promise.all(promises).then(function (results) {
 
         //On définit les marges en fonction de l'index du graphe
         if (index == 0) {
-            margin = { top: 80, right: 40, bottom: 60, left: 220 };
+            margin = { top: 80, right: 20, bottom: 60, left: 220 };
             isFirst = true
         } else if (index === tableNameList.length - 1){
             margin =  { top: 80, right: 200, bottom: 60, left: 1 }
         } else if (index % 2){
-            margin =  { top: 80, right: 70, bottom: 60, left: 1 }
+            margin =  { top: 80, right: 35, bottom: 60, left: 1 }
             isFirst = false
         } else {
-            margin =  { top: 80, right: 40, bottom: 60, left: 1 };
+            margin =  { top: 80, right: 20, bottom: 60, left: 1 };
             isFirst = false
         }
 

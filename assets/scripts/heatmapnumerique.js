@@ -32,8 +32,8 @@ HeatMapNumerique = class HeatMapNumerique {
 
         // Color scale
         this.colorScale =  d3.scaleThreshold()
-            .domain([-1, -0.75, -0.5, 0, 0.5, 1, 5])
-            .range(d3.schemeRdYlGn[8])
+            .domain([-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 1])
+            .range(d3.schemeRdYlGn[9])
             .unknown("#A9A9A9");
 
         // Create function
@@ -89,7 +89,7 @@ HeatMapNumerique = class HeatMapNumerique {
             .attr("class", "x axis")
             .call(xAxis)
             .selectAll("text")
-            .attr("font-size", "16px")
+            .attr("font-size", "10px")
             .attr('stroke-opacity', 1)
             .attr("y", 0)
             .attr("x", 9)
@@ -106,7 +106,7 @@ HeatMapNumerique = class HeatMapNumerique {
             this.svg.append("g")
                 .attr("class", "y axis")
                 .call(yAxis)
-                .attr("font-size", "15px")
+                .attr("font-size", "10px")
                 .select('.domain').attr('stroke-opacity', 0);
         }
     }
@@ -142,7 +142,7 @@ HeatMapNumerique = class HeatMapNumerique {
 
         this.svg.append("g")
             .attr("class", "legendQuant")
-            .attr("transform", ` translate( ${horizontalTranslation} ,20) `);
+            .attr("transform", ` translate( ${horizontalTranslation} , 0) `);
 
         var legend = d3.legendColor()
             .labelFormat(d3.format(".0%"))
@@ -161,7 +161,7 @@ HeatMapNumerique = class HeatMapNumerique {
 
         this.svg.append("g")
             .attr("class", "legendIndef")
-            .attr("transform", ` translate( ${horizontalTranslation} , 220) `);
+            .attr("transform", ` translate( ${horizontalTranslation} , 210) `);
 
         var indefLegend = d3.legendColor()
             .scale(indefScale)

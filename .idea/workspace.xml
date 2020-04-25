@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="711c0579-65c2-437c-bcb0-057a81ae867e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scripts/heatmapnumerique.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/heatmapnumerique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1auL0OylIBT5Ym0H9Joj8RI7Vz2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/scripts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/scripts" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="711c0579-65c2-437c-bcb0-057a81ae867e" name="Default Changelist" comment="" />
+      <created>1587580308056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587580308056</updated>
+      <workItem from="1587580310411" duration="8427000" />
+      <workItem from="1587593223096" duration="33634000" />
+      <workItem from="1587658901962" duration="14299000" />
+      <workItem from="1587686447120" duration="69000" />
+      <workItem from="1587687384447" duration="183000" />
+      <workItem from="1587687587127" duration="191000" />
+      <workItem from="1587687805710" duration="148000" />
+      <workItem from="1587687968044" duration="457000" />
+      <workItem from="1587688468057" duration="266000" />
+      <workItem from="1587848536248" duration="2744000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1196" y="97" width="724" height="855" key="find.popup" timestamp="1587688493992">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="1196" y="97" width="724" height="855" key="find.popup/0.27.1920.996@0.27.1920.996" timestamp="1587688493992" />
+    <state x="2398" y="97" width="724" height="855" key="find.popup/0.27.3600.996@0.27.3600.996" timestamp="1587595406173" />
+    <state x="624" y="239" width="672" height="677" key="run.anything.popup" timestamp="1587673753550">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="624" y="239" width="672" height="677" key="run.anything.popup/0.27.1920.996@0.27.1920.996" timestamp="1587673753550" />
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup" timestamp="1587659714109">
+      <screen x="0" y="27" width="1920" height="996" />
+    </state>
+    <state x="623" y="245" width="672" height="678" key="search.everywhere.popup/0.27.1920.996@0.27.1920.996" timestamp="1587659714109" />
+    <state x="1168" y="245" width="1260" height="678" key="search.everywhere.popup/0.27.3600.996@0.27.3600.996" timestamp="1587594737232" />
+  </component>
+</project>
