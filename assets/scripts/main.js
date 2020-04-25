@@ -23,7 +23,7 @@ promises.push(d3.json("./data/emprunts_format.json"));
 // Emprunts : public
 promises.push(d3.json("./data/prets_public.json"));
 // Numérique/Automates (public)
-promises.push(d3.json("./data/data_test.json"));
+promises.push(d3.json("./data/prets_renouv_numerique_physique.json"));
 // Collection : public
 promises.push(d3.json("./data/collection_livres.json")); 
 // Collection : format
