@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="711c0579-65c2-437c-bcb0-057a81ae867e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scripts/heatmapnumerique.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/heatmapnumerique.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +51,7 @@
       <workItem from="1587687968044" duration="457000" />
       <workItem from="1587688468057" duration="266000" />
       <workItem from="1587848536248" duration="3567000" />
+      <workItem from="1587856101865" duration="883000" />
     </task>
     <servers />
   </component>
@@ -55,10 +59,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1196" y="97" width="724" height="855" key="find.popup" timestamp="1587688493992">
+    <state x="1196" y="97" width="724" height="855" key="find.popup" timestamp="1587856220136">
       <screen x="0" y="27" width="1920" height="996" />
     </state>
-    <state x="1196" y="97" width="724" height="855" key="find.popup/0.27.1920.996@0.27.1920.996" timestamp="1587688493992" />
+    <state x="1196" y="97" width="724" height="855" key="find.popup/0.27.1920.996@0.27.1920.996" timestamp="1587856220136" />
     <state x="2398" y="97" width="724" height="855" key="find.popup/0.27.3600.996@0.27.3600.996" timestamp="1587595406173" />
     <state x="624" y="239" width="672" height="677" key="run.anything.popup" timestamp="1587673753550">
       <screen x="0" y="27" width="1920" height="996" />

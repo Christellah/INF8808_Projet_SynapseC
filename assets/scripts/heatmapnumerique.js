@@ -32,8 +32,8 @@ HeatMapNumerique = class HeatMapNumerique {
 
         // Color scale
         this.colorScale =  d3.scaleThreshold()
-            .domain([-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 1])
-            .range(d3.schemeRdYlGn[9])
+            .domain([-1, -0.75, -0.5, 0, 0.5, 1, 2.5])
+            .range(d3.schemeRdYlGn[8])
             .unknown("#A9A9A9");
 
         // Create function
@@ -119,7 +119,7 @@ HeatMapNumerique = class HeatMapNumerique {
      */
     addLegend() {
 
-        var horizontalTranslation = 160;
+        var horizontalTranslation = 120;
 
         var thresholdLabels = function({
                                            i,

@@ -193,3 +193,11 @@ h1 {
 #h1-3 {
   margin-right: 200px;
 }
+
+.legendIndef {
+  font-size: 11px;
+}
+
+.legendQuant {
+  font-size: 11px;
+}
