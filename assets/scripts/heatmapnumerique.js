@@ -5,9 +5,9 @@ HeatMapNumerique = class HeatMapNumerique {
     static undefinedColor = "#A9A9A9";
 
     static titles = {
-        "pretsPhysique": "Physique",
+        "pretsPhysique": "Comptoir",
         "pretsAuto": "Automate",
-        "renouvPhysique": "Physique",
+        "renouvPhysique": "Comptoir",
         "renouvAuto": "Automate",
         "locationPhysique": "Physique",
         "locationNumerique": "Numérique"
@@ -32,8 +32,8 @@ HeatMapNumerique = class HeatMapNumerique {
 
         // Color scale
         this.colorScale =  d3.scaleThreshold()
-            .domain([-1, -0.75, -0.5, 0, 0.5, 1, 2.5])
-            .range(d3.schemeRdYlGn[8])
+            .domain([-2.5, -1, -0.75, -0.5, 0, 0.5, 1, 2.5])
+            .range(d3.schemeRdYlGn[9])
             .unknown("#A9A9A9");
 
         // Create function
