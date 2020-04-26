@@ -47,7 +47,7 @@ HeatMapNumerique = class HeatMapNumerique {
 
         // Axes
         this.x = d3.scaleBand().range([0, width]).padding(0.05);
-        this.y = d3.scaleBand().range([height, 0]).padding(0.15);
+        this.y = d3.scaleBand().range([height, 0]).padding(0.05);
     }
 
     create(sources, isFirst, name) {
