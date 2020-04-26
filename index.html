@@ -47,7 +47,8 @@
           <!-- Dataviz 1 -->
           <p class="normal-text">Partons tout d’abord à la rencontre des bibliothèques de Montréal. La carte suivante permet de voir 
             où sont situées ces différentes bibliothèques, ainsi que quelques informations (datant de 2018) les concernant lorsque l’une d’entre
-            elle est sélectionnée. Cette section permet de se faire une idée de la popularité des bibliothèques et des services qu’elles offrent.
+            elle est sélectionnée. Cette section permet de se faire une idée de la popularité des bibliothèques à partir de la taille des cercles 
+            les localisant et des services qu’elles offrent.
           </p>
           <div id="libraries_map" class="dataviz">
             <div id="panel">
@@ -80,13 +81,13 @@
 
           <!-- INFO -->
           <div class="alert alert-light" role="alert">
-            <div class="row">
+            <div class="row vcenter">
                 <div class="col-1 text-center">
                   <i class="fas fa-info"></i>
                 </div>
-                <div class="col">
-                  Les bibliothèques sont ordonnées par ordre croissant du nombre total d'emprunts sur les 6 années cumulées.<br />
-                  L'echelle de couleur varie selon le filtre appliqué (type de format ou type de public). <br />
+                <div class="col text-justify">
+                  Les bibliothèques sont ordonnées par ordre croissant du nombre total d'emprunts sur les 6 années cumulées. 
+                  L'echelle de couleur varie selon le filtre appliqué (type de format ou type de public). 
                   Seul un des deux filtres peut être appliqué a la fois.
                 </div>
             </div>
@@ -138,12 +139,12 @@
           
           <!-- INFO -->
           <div class="alert alert-light" role="alert">
-            <div class="row">
+            <div class="row vcenter">
                 <div class="col-1 text-center">
                   <i class="fas fa-info"></i>
                 </div>
-                <div class="col">
-                  Les bibliothèques sont ordonnées par ordre croissant du nombre total de fréquentation dans l'année. <br />
+                <div class="col text-justify">
+                  Les bibliothèques sont ordonnées par ordre croissant du nombre total de fréquentation dans l'année. 
                   L'echelle de couleur est fixe, ce qui permet de visualiser l'évolution au cours des années.
                 </div>
             </div>
@@ -168,6 +169,18 @@
             <p class="normal-text">À l’image de la ville, les bibliothèques ont des publics très variés. On propose alors dans cette partie de 
               découvrir comment cette répartition de l’inventaire pour chaque type de public (jeunes, adultes, aînés, etc) a évolué entre 2013 et 2018. 
             </p>
+            <!-- INFO -->
+            <div class="alert alert-light" role="alert">
+              <div class="row vcenter">
+                  <div class="col-1 text-center">
+                    <i class="fas fa-info"></i>
+                  </div>
+                  <div class="col text-justify">
+                    Pour les deux visualisations ci-dessous, il est possible d'ordonner les lignes par le type de public en cliquant sur 
+                    le carré de la légende d'un public en particulier.
+                  </div>
+              </div>
+            </div>
             Bibliothèque selectionnée :
               <select id="selectBiblio">
               </select>
