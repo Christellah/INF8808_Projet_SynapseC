@@ -156,7 +156,7 @@ HeatMapNumerique = class HeatMapNumerique {
 
         //AJOUT DE INDÉFINI
         var indefScale = d3.scaleOrdinal()
-            .domain(['Donnée indisponible'])
+            .domain(['Données indisponibles'])
             .range([HeatMapNumerique.undefinedColor] );
 
         this.svg.append("g")

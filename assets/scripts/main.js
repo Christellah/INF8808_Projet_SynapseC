@@ -261,7 +261,7 @@ Promise.all(promises).then(function (results) {
 
     // Margins, size, colors
     var margin = { top: 120, right: 1, bottom: 60, left: 1 },
-        width = 70 - margin.left - margin.right,
+        width = 75 - margin.left - margin.right,
         height = 1100 - margin.top - margin.bottom;
 
     // Data
@@ -315,6 +315,7 @@ Promise.all(promises).then(function (results) {
     var marginCD = { top: 10, right: 10, bottom: 100, left: 60 };
     var widthCD = 300 - marginCD.left - marginCD.right;
     var heightCD = 300 - marginCD.top - marginCD.bottom;
+    var widthCD_legend = 100;
     
     /***** Scales *****/
     var x = d3.scaleBand().range([0, widthCD]);
@@ -348,7 +349,7 @@ Promise.all(promises).then(function (results) {
     
     var svgLegend = d3.select("#ConnectedDotPlot")
         .append("svg")
-        .attr("width", widthCD + marginCD.left + marginCD.right)
+        .attr("width", widthCD_legend + marginCD.left + marginCD.right)
         .attr("height", heightCD + marginCD.top + marginCD.bottom);
     ConnectedDotPlot.legend(svgLegend, widthCD, heightCD);
     
