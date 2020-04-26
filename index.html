@@ -235,12 +235,12 @@
           de l'année 2018 ou de se focaliser sur une bibliothèque en particulier.
         </p>
         <!-- Dataviz 5.1 -->
-          <div class="label"> <br> Sélectionner les données à visualiser</div>
-            <div id="dataTypeRadioButton">
+        </br> Sélectionner les données à visualiser (pour les deux sections ci-dessous) :
+          <div id="dataTypeRadioButton">
             <input id="dataTypeButtonPublic" class="radioButton" type="radio" name="dataTypeButton" value="Public" checked> Public<br>
             <input id="dataTypeButtonFormat" class="radioButton" type="radio" name="dataTypeButton" value="Format"> Format<br>
           </div>
-          <div class="label"> <br> Sélectionner une année</div>
+        </br></br> Sélectionner une année : 
           <select id="selectYear" >
               <option selected>2018</option>
               <option>2017</option>
@@ -249,12 +249,14 @@
               <option>2014</option>
               <option>2013</option>
           </select>
-          <div class="label"> <br> Sélectionner une bibliothèque</div>
+        </br></br> Sélectionner une bibliothèque : 
           <select id="selectLibrary" ></select>
+          <h3 id="h5-1">Bibliothèque sélectionnée pour l'année choisie : <br /><br /></h3>
           <div class="flex-div">
             <div id="ConnectedDotPlot" class="dataviz"></div>
           </div>
         <!-- Dataviz 5.2 -->
+        <h3 id="h5-2">Vue d'ensemble de toutes les bibliothèques pour l'année 2028<br /><br /></h3>
         <div class="flex-div">
           <div id="MultipleConnectedDotPlots" class="dataviz"></div>
         </div>
