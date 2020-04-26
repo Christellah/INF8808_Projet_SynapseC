@@ -3,8 +3,8 @@ ConnectedDotPlot = class ConnectedDotPlot {
 
     static selectedYear = "";
     static selectedLibName = "";
-    static legendData = [{"name" : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 100, "heightPad" : 180, "textWidthPad" : 190, "textHeightPad" : 175},
-                         {"name" : "Emprunts", "color" : "lollipop-Emprunts", "widthPad" : -25, "heightPad" : 180, "textWidthPad" : 65, "textHeightPad" : 175}]
+    static legendData = [{"name" : "Emprunts", "color" : "lollipop-Emprunts", "widthPad" : 100, "heightPad" : 180, "textWidthPad" : 190, "textHeightPad" : 175},
+                         {"name" : "Inventaire", "color" : "lollipop-Inventaire", "widthPad" : 100, "heightPad" : 160, "textWidthPad" : 190, "textHeightPad" : 155}]
 
     /***** Class Constructor  *****/
     constructor(data) {
