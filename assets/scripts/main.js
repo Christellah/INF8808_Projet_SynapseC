@@ -210,7 +210,7 @@ Promise.all(promises).then(function (results) {
 
     let stackedBarPublic2018 = new StackedBar("#emprunts_biblio_2018", width, height, margin, StackedBar.createStackedBarBiblios, StackedBar.domainBibliotheque, stackedBarPublic2018Tip, "2018");
 
-    stackedBarPublic2018.updateData2018(publicLoan2018Sources.reverse(), -1);
+    stackedBarPublic2018.updateData2018(publicLoan2018Sources.reverse(), -1, 0);
 
     /** M3.2 - Evolution public */
     // Tip
@@ -240,12 +240,12 @@ Promise.all(promises).then(function (results) {
     let stackedBarPublic = new StackedBar("#emprunts_biblio", width, height/8, margin, StackedBar.createStackedBarBiblios, StackedBar.domainYears, stackedBarPublicTip, "");
 
     let sources = createPublicLoanSources(results[dataIndex.emp_public], "(AHC) AHUNTSIC");
-    stackedBarPublic.updateData(sources.reverse(), -1);
+    stackedBarPublic.updateData(sources.reverse(), -1, 0);
 
     selectBiblio.on('change', () => {
         let value = selectBiblio.property('value');
         let sources = createPublicLoanSources(results[dataIndex.emp_public], value);
-        stackedBarPublic.updateData(sources.reverse(), -1);
+        stackedBarPublic.updateData(sources.reverse(), -1, 0);
     })
 
 

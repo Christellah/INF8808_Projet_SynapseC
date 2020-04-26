@@ -76,14 +76,16 @@ StackedBar = class StackedBar {
                 .on('mouseout', tip.hide);
     }
 
-    updateData2018(sources, index) {
+    updateData2018(sources, index, order) {
+        let publicType = Object.keys(sources[0]).slice(3, 8);
+        [publicType[0], publicType[order]] = [publicType[order], publicType[0]];
         this.svg.call(this.tip);
         this.svg.selectAll("*").remove();
         this.domainY(this.y, sources);
         let yAxis = d3.axisLeft(this.y).tickSize(0);
         this.addYAxis(yAxis);
         let series = d3.stack()
-            .keys(Object.keys(sources[0]).slice(3, 8))
+            .keys(publicType)
             .offset(d3.stackOffsetExpand)
             (sources)
             .map(d => (d.forEach(v => v.key = d.key), d));
@@ -91,14 +93,17 @@ StackedBar = class StackedBar {
         this.addLegend(this.colorScale, sources, index, "2018");
     }
 
-    updateData(sources, index) {
+    updateData(sources, index, order) {
+
+        let publicType = Object.keys(sources[0]).slice(1, 6);
+        [publicType[0], publicType[order]] = [publicType[order], publicType[0]];
         this.svg.call(this.tip);
         this.svg.selectAll("*").remove();
         this.domainY(this.y, sources);
         let yAxis = d3.axisLeft(this.y).tickSize(0);
         this.addYAxis(yAxis);
         let series = d3.stack()
-            .keys(Object.keys(sources[0]).slice(1, 6))
+            .keys(publicType)
             .offset(d3.stackOffsetExpand)
             (sources)
             .map(d => (d.forEach(v => v.key = d.key), d));
@@ -182,10 +187,10 @@ StackedBar = class StackedBar {
         if (d3.select("#Color-"+ year + "-" + i).attr("class") === "legendColors selected") {
             d3.selectAll('.legendColors').classed("selected", false);
             sources = sources.sort((a, b) => { return b.annee - a.annee; });
-            this.updateData(sources, -1);
+            this.updateData(sources, -1, 0);
         } else {
             this.orderByType(d, i, year, sources);
-            this.updateData(sources, i);
+            this.updateData(sources, i, i);
         }
     }
 
@@ -193,10 +198,10 @@ StackedBar = class StackedBar {
         if (d3.select("#Color-"+ year + "-" + i).attr("class") === "legendColors selected") {
             d3.selectAll('.legendColors').classed("selected", false);
             sources = sources.sort((a, b) => { return b.bibliotheque.localeCompare(a.bibliotheque); });
-            this.updateData2018(sources, -1);
+            this.updateData2018(sources, -1, 0);
         } else {
             this.orderByType(d, i, year, sources);
-            this.updateData2018(sources, i);
+            this.updateData2018(sources, i, i);
         }
     }
 
